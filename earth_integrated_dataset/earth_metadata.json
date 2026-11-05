@@ -1,0 +1,2743 @@
+{
+ "title": "TerraTwin earth integrated dataset",
+ "body": "earth",
+ "created": "2026-11-05T21:02:24+00:00",
+ "crs": "EPSG:4326",
+ "grid": {
+  "type": "equirectangular lat/lon cells",
+  "res_deg": 0.125,
+  "shape": [
+   1440,
+   2880
+  ],
+  "cell_size_km_at_equator": 13.9,
+  "radius_km": 6371.0,
+  "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+ },
+ "files": [
+  "earth_feature_dictionary.json",
+  "earth_impact_craters.parquet",
+  "earth_integrated.parquet",
+  "earth_metadata.json",
+  "earth_vectors.gpkg"
+ ],
+ "dimensions": {
+  "geology": {
+   "n_features": 4,
+   "features": [
+    "geo_unit",
+    "geo_unit_frac",
+    "geo_class",
+    "geo_unit_diversity_3x3"
+   ]
+  },
+  "terrain": {
+   "n_features": 17,
+   "features": [
+    "elev_mean_m",
+    "elev_min_m",
+    "elev_max_m",
+    "relief_m",
+    "slope_mean_deg",
+    "slope_median_deg",
+    "slope_p90_deg",
+    "slope_frac_gt_landing",
+    "slope_frac_gt_mobility",
+    "tri_mean_m",
+    "roughness_rms_m",
+    "dem_valid_frac",
+    "crater_density_d1",
+    "crater_density_d5",
+    "crater_density_d20",
+    "crater_largest_d_km",
+    "terrain_class"
+   ]
+  },
+  "environment": {
+   "n_features": 12,
+   "features": [
+    "tsurf_max_k",
+    "tsurf_min_k",
+    "tsurf_mean_k",
+    "tsurf_diurnal_range_k",
+    "tsurf_seasonal_range_k",
+    "lst_sample_coverage",
+    "ps_mean_pa",
+    "ps_min_pa",
+    "insolation_surface_wm2",
+    "albedo_lambert",
+    "insolation_toa_wm2",
+    "cold_trap_flag"
+   ]
+  },
+  "resources": {
+   "n_features": 4,
+   "features": [
+    "h2o_frost_max_kgm2",
+    "soil_water_vol_frac",
+    "cold_trap_flag",
+    "water_indicator_score"
+   ]
+  },
+  "surface_processes": {
+   "n_features": 6,
+   "features": [
+    "wind_mean_ms",
+    "wind_max_seasonal_ms",
+    "surface_stress_mean_npm2",
+    "albedo_lambert",
+    "dune_cover_frac",
+    "dune_field_distance_km"
+   ]
+  },
+  "habitability": {
+   "n_features": 9,
+   "features": [
+    "tsurf_mean_k",
+    "tsurf_diurnal_range_k",
+    "liquid_water_window_frac",
+    "ps_mean_pa",
+    "ps_min_pa",
+    "h2o_frost_max_kgm2",
+    "soil_water_vol_frac",
+    "cold_trap_flag",
+    "water_indicator_score"
+   ]
+  },
+  "subsurface": {
+   "n_features": 4,
+   "features": [
+    "cave_candidate_count",
+    "cave_candidate_distance_km",
+    "nearest_cave_setting",
+    "lava_tube_context_flag"
+   ]
+  },
+  "exploration": {
+   "n_features": 15,
+   "features": [
+    "slope_mean_deg",
+    "slope_median_deg",
+    "slope_p90_deg",
+    "slope_frac_gt_landing",
+    "slope_frac_gt_mobility",
+    "roughness_rms_m",
+    "tsurf_max_k",
+    "tsurf_min_k",
+    "wind_max_seasonal_ms",
+    "insolation_surface_wm2",
+    "cave_candidate_distance_km",
+    "insolation_toa_wm2",
+    "landing_hazard_index",
+    "traversability_index",
+    "solar_power_index"
+   ]
+  }
+ },
+ "measurement_types": {
+  "measurement": 12,
+  "model": 10,
+  "catalog": 9,
+  "derived_measurement": 7,
+  "derived_index": 7,
+  "map_interpretation": 4
+ },
+ "sources": [
+  {
+   "id": "earth_etopo2022",
+   "name": "NOAA ETOPO 2022 15 arc-second global relief model (ice surface) + Natural Earth 1:10M land and lake masks",
+   "provider": "NOAA NCEI (ETOPO 2022); Natural Earth (land polygons)",
+   "measurement_type": "measurement",
+   "native_resolution": "15 arc-seconds (240 px/deg, 463 m at equator)",
+   "citation": "NOAA NCEI (2022) ETOPO 2022 15 Arc-Second Global Relief Model, doi:10.25921/fd45-gt74; Natural Earth 1:10m land v5.",
+   "limitations": "Land mask is 1:10M scale (coastline ~1 km accurate), so coastal cells mix a few sea pixels; large lakes are masked because ETOPO maps their floor (e.g. Baikal), not the water surface."
+  },
+  {
+   "id": "earth_impact_craters",
+   "name": "Confirmed terrestrial impact structures (Wikipedia list compiled from the Earth Impact Database), pinned revision",
+   "provider": "Wikipedia (List of impact structures on Earth, revision 1381890264, 2026-10-25); primary data PASSC Earth Impact Database (UNB)",
+   "measurement_type": "catalog",
+   "native_resolution": "point catalog (name, diameter km, coordinates)",
+   "citation": "Earth Impact Database (2026) Planetary and Space Science Centre, UNB; Wikipedia contributors, List of impact structures on Earth (CC BY-SA 4.0).",
+   "limitations": "Earth keeps very few craters (erosion, plate tectonics, vegetation), so densities are near zero almost everywhere and are not comparable 1:1 with Moon/Mars surface ages; the official EID site (passc.net) was offline, so the Wikipedia transcription is used; coordinates missing from the list are taken from the Wikidata item of the linked article (rows whose link resolves to no item with coordinates are dropped); size-frequency slope cannot be fitted (never >=10 craters in a window) and is omitted."
+  },
+  {
+   "id": "earth_usgs_lithology",
+   "name": "Global lithology class at 250 m from the USGS Global Ecosystem Map (EcoTapestry), OpenLandMap",
+   "provider": "OpenLandMap (T. Hengl) from USGS Global Ecosystems (Sayre et al. 2014)",
+   "measurement_type": "map_interpretation",
+   "native_resolution": "1/480 deg (~232 m)",
+   "citation": "Hengl T. (2018) doi:10.5281/zenodo.1464846; Sayre R. et al. (2014) A New Map of Global Ecological Land Units, AAG.",
+   "limitations": "Lithology only (no chronostratigraphic age, so geo_age is absent for Earth); generalized from the Global Lithological Map (GLiM, ~1:3.75M); no Antarctica."
+  },
+  {
+   "id": "earth_modis_lst",
+   "name": "Long-term MODIS (MOD11A2) land surface temperature, monthly day/night median 2000-2017, 1 km (OpenLandMap)",
+   "provider": "OpenLandMap (T. Hengl) from NASA LP DAAC MOD11A2 v006",
+   "measurement_type": "derived_measurement",
+   "native_resolution": "1/120 deg (~1 km)",
+   "citation": "Hengl T. (2018) doi:10.5281/zenodo.1420115; Wan Z. et al. (2015) MOD11A2 v006, NASA LP DAAC.",
+   "limitations": "Terra overpass times (~10:30 / ~22:30) sample the diurnal cycle twice, so max/min are below the true afternoon peak and pre-dawn minimum; clear-sky only (cloudy regions biased warm at night / cool by day); no Antarctica."
+  },
+  {
+   "id": "earth_era5_climate",
+   "name": "ERA5 reanalysis monthly means 2001-2020 (surface pressure, wind, stress, solar flux, snow, albedo, soil water)",
+   "provider": "ECMWF / Copernicus C3S, distributed by NCAR GDEX dataset d633001 via OSDF (anonymous)",
+   "measurement_type": "model",
+   "native_resolution": "0.25 deg (~28 km)",
+   "citation": "Hersbach H. et al. (2020) QJRMS 146, 1999-2049; ECMWF (2019) ERA5 Reanalysis Monthly Means, NCAR GDEX doi:10.5065/P8GT-0R61.",
+   "limitations": "Reanalysis (model constrained by observations), coarser than the 0.125 deg grid (cells inherit the containing 0.25 deg value); snow depth is capped at 10 m w.e. over glaciers; stress magnitude is taken from monthly-mean components (underestimates gusty stress)."
+  },
+  {
+   "id": "earth_dunes",
+   "name": "Global map of wind-blown sand dune presence (dune-world, Nature Communications 2026)",
+   "provider": "geomorphlab / A. Gunn et al. (GitHub dune-world, rev1)",
+   "measurement_type": "catalog",
+   "native_resolution": "0.1 deg",
+   "citation": "The distribution of Earth's wind-blown sand dunes (2026) Nature Communications, doi:10.1038/s41467-026-75466-y; code/data doi:10.5281/zenodo.20054674.",
+   "limitations": "0.1 deg presence mask (not dune-field polygons as for Mars MGD3); cover fraction is the share of 0.1 deg dune pixels centred in the cell."
+  },
+  {
+   "id": "earth_wikidata_caves",
+   "name": "Natural caves with coordinates from Wikidata (lava tubes flagged)",
+   "provider": "Wikidata Query Service (CC0)",
+   "measurement_type": "catalog",
+   "native_resolution": "point catalog",
+   "citation": "Wikidata contributors, Wikidata (CC0), query of instances of cave (Q35509) on Earth.",
+   "limitations": "Crowd-sourced and incomplete (~15k caves, only ~50 lava tubes); mostly karst caves, unlike lunar/martian pits; no depth/diameter, so nearest_cave_depth_diam_ratio is absent for Earth."
+  },
+  {
+   "id": "earth_model_geometry",
+   "name": "Analytic orbital-geometry model (top-of-atmosphere insolation)",
+   "provider": "TerraTwin derivation from standard celestial mechanics",
+   "measurement_type": "model",
+   "native_resolution": "analytic (per latitude)",
+   "citation": "Standard insolation formula (e.g., Berger 1978); Earth e=0.0167, obliquity 23.44 deg.",
+   "limitations": "Top-of-atmosphere only; ERA5 insolation_surface_wm2 includes cloud and aerosol attenuation."
+  }
+ ],
+ "raw_inputs": {
+  "earth_dunes/dune-mask-rev1.tif": {
+   "sha256": "0a57f644278c57ef6c9edb6191ead83eb53a0715f550b24e4723da3706ec616b",
+   "bytes": 25956772,
+   "url": "https://raw.githubusercontent.com/geomorphlab/dune-world/main/dune-mask-rev1.tif"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "ff6d9ef6a97ab7b9000aee5e3e70e5162e2688c0910475c8be5a9ed44325d45a",
+   "bytes": 9859845,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2001/e5.moda.an.sfc.128_039_swvl1.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "3df41bd5309abaa5f237f08c35eda78ec4205e04f0dc9885325bf0a3ce6f2584",
+   "bytes": 9934495,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2002/e5.moda.an.sfc.128_039_swvl1.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "8654f937c783347e4ca23aff10ddaa9d70e39e4d0b6173f73121266458814b58",
+   "bytes": 10036491,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2003/e5.moda.an.sfc.128_039_swvl1.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "6d345fe9843d54c74257d7eb19a6105dfef8ca86bf1dfed13b538d4285c32130",
+   "bytes": 9951188,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2004/e5.moda.an.sfc.128_039_swvl1.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "35c41b18ba8fc907be34d83814b4029a450d7de12ebd8a09bef0cf86e1d06e18",
+   "bytes": 10008647,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2005/e5.moda.an.sfc.128_039_swvl1.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "df674ce3e9c7e0fdaf761895f378bc70bbfd7991b03be60a9e7ba2bb5c0cce43",
+   "bytes": 10107445,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2006/e5.moda.an.sfc.128_039_swvl1.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "9045cc8e7dda5eae2be15f62a1902eeec9855071afbc674ee2cf53448dc8da61",
+   "bytes": 10123381,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2007/e5.moda.an.sfc.128_039_swvl1.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "400a5125a38fe29267c782ec4cb229ac0d33b3a766e8530094f41c5f151b185c",
+   "bytes": 10139562,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2008/e5.moda.an.sfc.128_039_swvl1.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "ae96976f07d9b621b1312705afe647228f07ab995a9b0f40b86ac1b463e0b105",
+   "bytes": 10130859,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2009/e5.moda.an.sfc.128_039_swvl1.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "6dcd13f62265bc77fe42a5f80937fbfba45e59d9c52fc2bbe9cb316586bac355",
+   "bytes": 9847103,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2010/e5.moda.an.sfc.128_039_swvl1.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "82288e0caa4e038fa89bae78d570bdce7c9f98dde0e77e2c844985141583ed2b",
+   "bytes": 9954861,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2011/e5.moda.an.sfc.128_039_swvl1.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "35f9771a00b7f947da013949e26f4de40b7901a32e0a3d4f8106c42c84a5e67d",
+   "bytes": 9986268,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2012/e5.moda.an.sfc.128_039_swvl1.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "79080475714a9fc718918b8d7d51f14adc6f02da01e922bb8382675c7d7c1153",
+   "bytes": 10058115,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2013/e5.moda.an.sfc.128_039_swvl1.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "74ba37a588678768013218613b819a4d1ab5ce83371ba85be0e655c216704493",
+   "bytes": 10113719,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2014/e5.moda.an.sfc.128_039_swvl1.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "ec0feddbdf00aa178666def7088a9fde1ec07e98a2028fa7c2f611e4c6632160",
+   "bytes": 9826439,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2015/e5.moda.an.sfc.128_039_swvl1.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "7bbc5b964c280f19a8045e78c7efcb606e75e3efaf4dc05c1cb4b9459cf96679",
+   "bytes": 9897213,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2016/e5.moda.an.sfc.128_039_swvl1.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "20c62489e335fc83222822c6cc3cfda19768729c2f4d2fe70cb66e4bdadcd9fd",
+   "bytes": 9979125,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2017/e5.moda.an.sfc.128_039_swvl1.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "3243457019cef98867d2d063e3d7da7131726fd48f016e975c0aabe1b6cc30be",
+   "bytes": 9982097,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2018/e5.moda.an.sfc.128_039_swvl1.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "cbf4096ef018e1ad597b4a644706f2754c724f8648659fb3e9f73de702d64cb0",
+   "bytes": 10022270,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2019/e5.moda.an.sfc.128_039_swvl1.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_039_swvl1.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "0be1d01f85f91d41d60c490574bfb851d8172eef4a65b586d040cd9ff954b92a",
+   "bytes": 10045928,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2020/e5.moda.an.sfc.128_039_swvl1.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "9f6ec5cb2eb909d3c6e5b728df6681a9034ac70cc342a494091847972625d150",
+   "bytes": 16374530,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2001/e5.moda.an.sfc.128_134_sp.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "8dcabaf51f05015e52289fcf7368846403e1237da00348cc92a6b52f035051a7",
+   "bytes": 16368623,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2002/e5.moda.an.sfc.128_134_sp.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "3f37fe5b0109596b8382dccf76e51ce5ea34f07e13c750f4b7a7a0f256d415ba",
+   "bytes": 16351810,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2003/e5.moda.an.sfc.128_134_sp.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "0b3466609df4bf09c82b0fdc895107e4e424ade1d416d527a4ff3ff17229b062",
+   "bytes": 16358355,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2004/e5.moda.an.sfc.128_134_sp.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "b5254dc2426fb368090b394fd85f7a02bb0ef6fd1f0bbd7d9442e3ab6cce6759",
+   "bytes": 16361976,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2005/e5.moda.an.sfc.128_134_sp.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "fd1ebc98f9b333966acbcbae478734db037bda9f3e15461f271b1aa1754b485c",
+   "bytes": 16351818,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2006/e5.moda.an.sfc.128_134_sp.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "31dfef86a9216e4ca7571842d7cf02638df519df42536165be776f2c58fd7c29",
+   "bytes": 16384800,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2007/e5.moda.an.sfc.128_134_sp.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "54b2bcab4c5c2d9b1d547417f6162e24ff29d5cc9dd3506fc01825c4f6c15df7",
+   "bytes": 16334738,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2008/e5.moda.an.sfc.128_134_sp.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "0bad60a148a13318d52de24c43a2120179fe3071ae873d8d330944ca55f2c5cd",
+   "bytes": 16384994,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2009/e5.moda.an.sfc.128_134_sp.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "515e5483d2240ae7dff29900b439dbd69105d30dd163082fadf10dbc80ca0e64",
+   "bytes": 16342328,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2010/e5.moda.an.sfc.128_134_sp.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "ec3b4b38d42012baad307f48d66f7cb63e863da81477d5c899543763ee92ca41",
+   "bytes": 16363209,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2011/e5.moda.an.sfc.128_134_sp.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "8f564f9dad15f006ca7cb81784c3fc9b434a3413b6b60163bf119be9a466724f",
+   "bytes": 16356747,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2012/e5.moda.an.sfc.128_134_sp.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "9c7de542f36011cbc298c6199a5c974a533c48d0eb84c025111db7d2d77ed6f4",
+   "bytes": 16356201,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2013/e5.moda.an.sfc.128_134_sp.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "6173c895dbc9ec9b375b25009f2b7fe29a74eff6f55dbb442eecbe8ec3700f62",
+   "bytes": 16359534,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2014/e5.moda.an.sfc.128_134_sp.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "2b1952a4f5382ad3603dcac2c7862cfc59a74ddc296350f454aff10e0a78a85e",
+   "bytes": 16314992,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2015/e5.moda.an.sfc.128_134_sp.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "42087626512a7ffbe9de989a4e58c49e33a479795842bcf7335ac3c1798b0dae",
+   "bytes": 16357679,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2016/e5.moda.an.sfc.128_134_sp.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "3e496f261a5704ab177ce035aaa28fd1bb7f3068823dd5a06c2e6ec5c4507f89",
+   "bytes": 16355229,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2017/e5.moda.an.sfc.128_134_sp.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "e7395e70425b86829f1eff27c43ccc30bc2f18c60dfb20d1b8907acf41fb9927",
+   "bytes": 16362600,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2018/e5.moda.an.sfc.128_134_sp.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "ce346f7fcbd0e9470eac6511b90041079cfd4e7127c5de8d3d0c2c7b5fa83b74",
+   "bytes": 16335116,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2019/e5.moda.an.sfc.128_134_sp.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_134_sp.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "0a0cc22705a74b7536c5b8ccd5c7795cd39b823d1373c2383b31a0faab0dda46",
+   "bytes": 16333846,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2020/e5.moda.an.sfc.128_134_sp.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "68f68e5b666046fe3da343df8dff2d9b27ebb096824082b62912fc997926ded1",
+   "bytes": 3683023,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2001/e5.moda.an.sfc.128_141_sd.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "013240c63ad41a870657d2e477cbcb3503270599666c8c56b196c01702cb67ad",
+   "bytes": 3677293,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2002/e5.moda.an.sfc.128_141_sd.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "2f61f6721a1abcfc6155d5d539c2a48934511143c138cf91d474ad748fcddbbe",
+   "bytes": 3686587,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2003/e5.moda.an.sfc.128_141_sd.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "09afb3c4a058e96171595700a398f2638e78a37a6dc39cfa144d3db534001900",
+   "bytes": 3655364,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2004/e5.moda.an.sfc.128_141_sd.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "89bf94a335560fe4932bf81e90a9078113bb27f33696f744782886a32d00b75a",
+   "bytes": 3588196,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2005/e5.moda.an.sfc.128_141_sd.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "7f726b76b4187d59d5ed8e3bb110412a2590ce3f6f509afc308ce51f0fbd1851",
+   "bytes": 3577860,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2006/e5.moda.an.sfc.128_141_sd.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "fe9f6f5ca1793522ef67a680336b0e8b24bed188186dfa487ab17862e5029ecf",
+   "bytes": 3579528,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2007/e5.moda.an.sfc.128_141_sd.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "c8e5128280e74e88125549a8f2d6ded2bec25fa01415d358ca45ce47c4af63f7",
+   "bytes": 3589859,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2008/e5.moda.an.sfc.128_141_sd.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "7c03769adf35287a6e2ca8117540164ec33e84510f40f1374f781648a280969d",
+   "bytes": 3591382,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2009/e5.moda.an.sfc.128_141_sd.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "5c2b40d3ad26dcea360797783e41da5f40a81d23f7aa1755501d16da399fe2ae",
+   "bytes": 3561036,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2010/e5.moda.an.sfc.128_141_sd.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "23eb4fb23cf2f1ef2972103044452c55d5c6d2da3ca0d93bac9194cd87e3f458",
+   "bytes": 3588176,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2011/e5.moda.an.sfc.128_141_sd.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "f36b767308b21191129be4cb1426a1988e1883cb284ac8be3949c013d6ec97ad",
+   "bytes": 3546887,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2012/e5.moda.an.sfc.128_141_sd.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "1f7be8ed4881f5b9f07798339192de346fbef4b129a6da57a06900722082d9be",
+   "bytes": 3635000,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2013/e5.moda.an.sfc.128_141_sd.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "c8ba6c78f0bf25671e7e0da0636fd64b1302eb2e3b78d43ba8a0b61d0ab5270c",
+   "bytes": 3570217,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2014/e5.moda.an.sfc.128_141_sd.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "ec135c1628e8b989cf102799b5aaff2d6be97317b4930621444f63fc30f88e04",
+   "bytes": 3575905,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2015/e5.moda.an.sfc.128_141_sd.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "9bc56377c749b3b337cc06e14f3dbfc21376ea450f5665706ce29f5f79c18564",
+   "bytes": 3520567,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2016/e5.moda.an.sfc.128_141_sd.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "f3bfec439ab9123e57310fe6157034634ac6b14acc8bfa75b8f1129e8f3f6343",
+   "bytes": 3590469,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2017/e5.moda.an.sfc.128_141_sd.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "5fa307b6f1d01dd60f2583af557ed04bbac155f65313370dc5026c4527b45a79",
+   "bytes": 3578771,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2018/e5.moda.an.sfc.128_141_sd.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "7943169050c9eed90e66f25f59d08a172dcd5445f91c1567be370d9a9addea9a",
+   "bytes": 3537756,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2019/e5.moda.an.sfc.128_141_sd.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_141_sd.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "b1f68f7af43c86b3fc8e708c26e8f36397b2652fe445188189a9d6bf76b1db50",
+   "bytes": 3494502,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2020/e5.moda.an.sfc.128_141_sd.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "01818f015f1df7a94c05bcc7e1485e0aa39f94220c4c742fdbf5fc9d99390fd8",
+   "bytes": 20233941,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2001/e5.moda.an.sfc.128_207_10si.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "334d004f654e38386efe484a1686103f975212541b8c3230aa9842c97427fb80",
+   "bytes": 20264422,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2002/e5.moda.an.sfc.128_207_10si.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "ed938510e2e9ab977280bff2bb924f71596a3aa1b8c7c3b5b8e90541c9e2efdb",
+   "bytes": 20248124,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2003/e5.moda.an.sfc.128_207_10si.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "6ce5661f2371c45cf01dcecccfe7353daf2895482e81b7d22d69f1e37e050531",
+   "bytes": 20400212,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2004/e5.moda.an.sfc.128_207_10si.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "a90aadaeaeafb731980c701e7dd31a78aa30e761551dfa31de390a8b186c894e",
+   "bytes": 20421091,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2005/e5.moda.an.sfc.128_207_10si.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "92f284d4383f9864604a3bc65d6ac181a94fb2fc572f06b9dd8415224bceb297",
+   "bytes": 20241814,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2006/e5.moda.an.sfc.128_207_10si.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "595d6ed1e2ccff6efc1978e9b4d0c5e32fa8e1059e644cf09aa85e646c50e169",
+   "bytes": 20254793,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2007/e5.moda.an.sfc.128_207_10si.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "90c09318fcd16fd15bf53ac0c4319ff850b618487f1a9c35b26d1985d22eed8b",
+   "bytes": 20399802,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2008/e5.moda.an.sfc.128_207_10si.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "e3f2b0b733dd9faa69cac6f009c6d12b8c7548052e66d954483c2357b8a0628d",
+   "bytes": 20285179,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2009/e5.moda.an.sfc.128_207_10si.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "5a8bdc830ac099301d1a86eebd3ff8556dfb30763a919a7f4016a71a91e0df62",
+   "bytes": 20352267,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2010/e5.moda.an.sfc.128_207_10si.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "1316711d9f04ca050d3425796c0a9d56bd2b740e88446cbab265ff8cafb15f6d",
+   "bytes": 20473001,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2011/e5.moda.an.sfc.128_207_10si.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "2ee1562e685bef3c680cbeceb6085049679fbca688a85d2db3e7effeb28885ec",
+   "bytes": 20222838,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2012/e5.moda.an.sfc.128_207_10si.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "65adbf5719d19d47dbf1a087e452ba06a42c705a95077eacd5c4fb1f01f3b17e",
+   "bytes": 20229093,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2013/e5.moda.an.sfc.128_207_10si.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "b03f59d790f491e7968bf729b7f61c6fdb77be07844c336d9c83a9b49af539e4",
+   "bytes": 20088820,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2014/e5.moda.an.sfc.128_207_10si.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "b78c84ba6f147252015f5331bacd64b3e5696639880a0419dfe3514d3416bb67",
+   "bytes": 20363960,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2015/e5.moda.an.sfc.128_207_10si.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "177829a41691d2ca6477c710e7c5bd8fb86f9adb39e963e814c8867c8e962bc2",
+   "bytes": 20319614,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2016/e5.moda.an.sfc.128_207_10si.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "4645034cfd1becb53ea29a13e1bcd1ce9f9450bb8ff51f94130bc25755a17959",
+   "bytes": 20366990,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2017/e5.moda.an.sfc.128_207_10si.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "fabb27c5c2d5661464330a279766e47824e158d50edd1de7636d75c1419c30ed",
+   "bytes": 20360569,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2018/e5.moda.an.sfc.128_207_10si.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "94066b6557388eeba586ecd7399a33ef2f3b725ec992c182882f6cb109f4cc66",
+   "bytes": 20418206,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2019/e5.moda.an.sfc.128_207_10si.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_207_10si.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "61f48722892d227bb6c7af6d696330fce0a7842b05bb2f3541cb3c53335bb1fa",
+   "bytes": 20276425,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2020/e5.moda.an.sfc.128_207_10si.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "78d688a1da0d10c7391ebfc3bc4ae7a3c5fb9236389ce4292e062262c1e30eb1",
+   "bytes": 9594632,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2001/e5.moda.an.sfc.128_243_fal.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "00e14bcb1c9a47efec3f7db7fac232e993388ccb1d766e4caba9bcea3a20da0d",
+   "bytes": 9606677,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2002/e5.moda.an.sfc.128_243_fal.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "641cdfe8af5222ba23668848b34beee648cca1513adb5d512cac9a2eefe6649b",
+   "bytes": 9580470,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2003/e5.moda.an.sfc.128_243_fal.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "763e2a7849fd13d5bdbe2b7cd5f9ad4f171cb2cd2e745bab1367e2f09ca4850e",
+   "bytes": 9589546,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2004/e5.moda.an.sfc.128_243_fal.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "9158793a716cafa3aaf13be4b72a6272902d8b9418801e3248385cd7630d7102",
+   "bytes": 9568190,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2005/e5.moda.an.sfc.128_243_fal.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "3c4011027eaa73b1197f8aefae699b57700d059498265a407c878170a04f4e8f",
+   "bytes": 9502187,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2006/e5.moda.an.sfc.128_243_fal.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "1cb402047609b56a8d5ee03a46df6c83f6fa1aa0dceaa258768799c574a7c20f",
+   "bytes": 9496912,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2007/e5.moda.an.sfc.128_243_fal.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "a2d5bd92a76749a20b050f20ad15b6e7b77123e1af5a68555b6443eec67ee250",
+   "bytes": 9620919,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2008/e5.moda.an.sfc.128_243_fal.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "b7d2a18e17f8bb25b88c71760ca1e117d707510bd28c554979874bc83b3522cb",
+   "bytes": 9563542,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2009/e5.moda.an.sfc.128_243_fal.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "fa1e0668350012034176d68733118d45f8204ab5f4c083f80824606be40bb156",
+   "bytes": 9465273,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2010/e5.moda.an.sfc.128_243_fal.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "ee81e36912fee5ee0758c2374fa473d6a42fde0344bfb1f353ab34de90df4b8c",
+   "bytes": 9471635,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2011/e5.moda.an.sfc.128_243_fal.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "a770abcbe0ddf4ba408295ef0240e4fc1a7c45865dfd1e6825450ada94278b27",
+   "bytes": 9525368,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2012/e5.moda.an.sfc.128_243_fal.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "3742a51ef8443ace37f3aa6312316a07d8553f579cd5f8bdedfac44f53ab1193",
+   "bytes": 9472991,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2013/e5.moda.an.sfc.128_243_fal.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "b8f3a16a64a985a55823dcee0c42bd8aa608dd19f14b440d5dc303197d1c4e66",
+   "bytes": 9495662,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2014/e5.moda.an.sfc.128_243_fal.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "20ee5ce70fa33f5b345118c8f200b346d97550e4d541a1c490a3816d1508f2fe",
+   "bytes": 9399328,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2015/e5.moda.an.sfc.128_243_fal.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "06a2519f3256311efee49bf0d421a59da15d0cd36bb194fdfe0ac3c315c2aa2e",
+   "bytes": 9455394,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2016/e5.moda.an.sfc.128_243_fal.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "30d12be49704b26f863a7b57e540a926691fde05a8d6562c71bddf4c5ef3c065",
+   "bytes": 9442684,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2017/e5.moda.an.sfc.128_243_fal.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "96cfb28ba0c8fefacb1eb77887a10c212fa9446acd4d3b4504227837ff940651",
+   "bytes": 9466606,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2018/e5.moda.an.sfc.128_243_fal.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "2238d528b6bad62906306083b3e1fa4b164791e55e545603f4069ac6086592d6",
+   "bytes": 9409887,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2019/e5.moda.an.sfc.128_243_fal.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.an.sfc.128_243_fal.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "19200938a4adad39959b5d30e2f0744fa2b967df8b1168f573b8fe67e6f311fe",
+   "bytes": 9465270,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.an.sfc/2020/e5.moda.an.sfc.128_243_fal.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "64d8969946d59ea2c1e9503b7917f27c8e0a11265f5df91907038d9bfddfde1c",
+   "bytes": 15886310,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2001/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "ba93ec420d529afdb3f4c134d6075b3dcd8fcb89decc2bfd8971dbd15a18d0e4",
+   "bytes": 15895688,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2002/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "089d9ad22ecee53e70bb3ddfe71a3dadeda6c366c42312aaa22de89e3c70a04b",
+   "bytes": 15900034,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2003/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "299a278e9e809241e8a999f79e502c8551d53f6e826583abe6386cf5c20cb0f9",
+   "bytes": 15887954,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2004/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "715bdeb78deea2d3a6ea277ceafd2372467f2fd0e16f18829b16c7e92493e0cd",
+   "bytes": 15885681,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2005/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "d5119045ee240eee6929eff906778accf8294a6b20040142deb115db99e76002",
+   "bytes": 15870713,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2006/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "16e1d0c35f004f352e0f71bae0eaef4ca90812c7235e27e0a7c06c7eca3a21e2",
+   "bytes": 15866719,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2007/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "59d33cb3700394a79d2abb4ad6b4c9b1970d8e20c6b5acd53c3842862091fcca",
+   "bytes": 15889632,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2008/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "b41e0941551428ae0f01d624be7ab390b57ec151e1149674c9a0107593305c35",
+   "bytes": 15899716,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2009/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "c767d65330f590ec3622c8551db0fb5bc1ae569a6836c963e04d1e2aaf86029a",
+   "bytes": 15896368,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2010/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "385c590c4e7df57f61291f80ff08ff1fcae57c575dff3cc6db8f3d92f0158418",
+   "bytes": 15908859,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2011/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "f2d1b3f3755e2ed5d495dcfcfa7d6d264ad5d5bf87468a71b8ce476533d0c12e",
+   "bytes": 15865414,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2012/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "f3dfde20297eed24eb612174348b27824ceff34bca144e98dae53d17eb0ab314",
+   "bytes": 15922960,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2013/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "5a0e20f6d1f2f252979cdaa34af4a0a5558ede382bdef24736560f973ddefb3d",
+   "bytes": 15881679,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2014/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "0e52ab04482d0290617a2428757fedd93794a9514bd7eb7bdee2f714af7db068",
+   "bytes": 15887311,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2015/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "ee379dd9303340676cddb11be9b1a4ec5ff6f9883aa135db47a66a6ff5e3d054",
+   "bytes": 15910555,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2016/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "ea70e5b8bde3b7274ca8079125b605a726e39c4a1440d6305d4e412587f88d4c",
+   "bytes": 15896207,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2017/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "456a37a5a31ee2bdf062fdce77afd7deda713d27aedd01591e5158f282e5ae41",
+   "bytes": 15895492,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2018/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "1afc04f03f9fca1dac7c35eaf6f4affaed87c03db677c9ef65a0adb7874c1a58",
+   "bytes": 15922883,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2019/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "7272ef65a0ccd9977099863484d64f72c29e4d64e497b3074fcf22130c6dbc27",
+   "bytes": 15849864,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2020/e5.moda.fc.sfc.meanflux.235_035_msdwswrf.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "a8767767412b2570b6017b7545cd17b524d7e0c1ebfc6f63abb8698706fd3aac",
+   "bytes": 17928855,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2001/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "0926cfd0354818ecc9f3d7fc6b60f7607544dec235db1222b2a768a0f1bba152",
+   "bytes": 17817802,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2002/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "0df22a599ee913b8bc944bc8ffd60ddd99d9b17f01d283918efd168938be749b",
+   "bytes": 17775418,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2003/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "0d4fd9ab7ffb0b7c39569f38da407f8af1ee4d087f7305e7210a1963fe6799e9",
+   "bytes": 17859205,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2004/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "ad8412f52b579402a7e80898514b1c8c40f50c791820f37dbd5019830dd86c43",
+   "bytes": 18087744,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2005/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "75e8badb80e4a1e58fc49b46b941b3d0365c636d783cec7eff2a31aadcc69de6",
+   "bytes": 17870211,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2006/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "654bf0a9bbbe88c0fe131f6b1d9c23c7d49fdeab791a2588e1943f2e84434a0f",
+   "bytes": 17813144,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2007/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "ddbea22d0dd24f8692788d3375e7474215f04d59b51800e64356aa15eb37c8d9",
+   "bytes": 17756043,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2008/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "17ff80f4af7a4f7de89690e2e08d56438e9013076de44dd5c26b74bac6d5262a",
+   "bytes": 17749533,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2009/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "cac565834c162110d15e8cea0f281ac96e81fd8a8f9eab1be0dd2d0b4c5ad38f",
+   "bytes": 17805059,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2010/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "42770c1181c6db0648236bf57b8c4dd830ca9cbbc966491291573db41b0e1f0f",
+   "bytes": 17724474,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2011/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "3b13472d44ac8bb5bc8633e347a5d3817a43175b4ab20191b313c9f0b939b3ca",
+   "bytes": 17865765,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2012/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "fe4a8c5b1ab227ba583d07bd522a998190843d9fed5a9736a1a84037e4f4f9bd",
+   "bytes": 18119465,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2013/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "02f9ff543b2a883126a1614140b14d98ec943c81483ffe9ef5036ef79f16ec43",
+   "bytes": 17848015,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2014/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "696afd38de4fbc2963de5d38a12123aca3bc3768bd5ac90117e317c825b0f1eb",
+   "bytes": 17977801,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2015/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "fadc751fa978f94132183c7c0899bfda70059ee46dd92cfbe24d3a1dba3b806d",
+   "bytes": 17999662,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2016/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "8cbc6dc6bba5518d9e37e9a9ace355a5301c18e0734444aa8753aba5510328a2",
+   "bytes": 18049390,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2017/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "5d1034f5113cb9b2b90710b1d42a411825aef85bcd84cac1c8adb72a7c1d6407",
+   "bytes": 17986543,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2018/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "b4fb8e665d03123705daec45c01de93289ff25359f51a86a110e6aafb99e1031",
+   "bytes": 17712518,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2019/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "1bfcb542ce676c85c7af813127c93ae53b55d64ebf7766321a73141f9fc1d620",
+   "bytes": 17965655,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2020/e5.moda.fc.sfc.meanflux.235_041_metss.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2001010100_2001120100.nc": {
+   "sha256": "11a7ed247e03cf6070a6af2b28765218611216c86ebce7f660b294a18f65991f",
+   "bytes": 18005760,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2001/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2001010100_2001120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2002010100_2002120100.nc": {
+   "sha256": "6d44d3263e9986ea59af53686038f0afc58f2b08eaebae7719d098638d863cd9",
+   "bytes": 18366255,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2002/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2002010100_2002120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2003010100_2003120100.nc": {
+   "sha256": "fa9d142c1a4b92d9e4bff5c07b70e46af64a503e2cd304622152cf819036344d",
+   "bytes": 18594206,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2003/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2003010100_2003120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2004010100_2004120100.nc": {
+   "sha256": "db57f2f54c679ffe8c663ddee7d1816ea3eaa11414fbd0fabc7a1cec5a521c60",
+   "bytes": 18708952,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2004/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2004010100_2004120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2005010100_2005120100.nc": {
+   "sha256": "4a56e814a7c168adf19bbb70fa854642feeb21501da57a0718e5e0cf7a4f497d",
+   "bytes": 18303479,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2005/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2005010100_2005120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2006010100_2006120100.nc": {
+   "sha256": "21fbe74b79dcbaae2e742e5f3fe8a6767673617d394672bfca908ae25cf0366b",
+   "bytes": 18302314,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2006/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2006010100_2006120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2007010100_2007120100.nc": {
+   "sha256": "6e87b8eef7f37fd7767b33677c1fc5650b658a3bf26bdd11c0a79cff7aecc19a",
+   "bytes": 18139073,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2007/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2007010100_2007120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2008010100_2008120100.nc": {
+   "sha256": "fdf30c76e505221ef1ea2b1a6ebd82ad833535ff925f3f280b6e55cfd47ca69d",
+   "bytes": 18374573,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2008/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2008010100_2008120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2009010100_2009120100.nc": {
+   "sha256": "65aa3b6a910018fb59d6841b607fa83abcb31c116e9166f3aabfbbae996549d0",
+   "bytes": 18435815,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2009/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2009010100_2009120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2010010100_2010120100.nc": {
+   "sha256": "da6812496e7553af8a84c192564eb861fd1f887626fd172d523159211e237fbe",
+   "bytes": 18401144,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2010/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2010010100_2010120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2011010100_2011120100.nc": {
+   "sha256": "1e87e2ab37d95c091003547778cff80bb2352f761ec7991130e3ab9a96d5b949",
+   "bytes": 18285473,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2011/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2011010100_2011120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2012010100_2012120100.nc": {
+   "sha256": "7023f0272d87328d35ee60c2c2bb5478876c74ea724994545c7dc634a29d63c1",
+   "bytes": 18364649,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2012/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2012010100_2012120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2013010100_2013120100.nc": {
+   "sha256": "f34023c70e43e76e882732c15dbc3175d84be8ce2b54b894d45ea1a2bd8a8188",
+   "bytes": 18255658,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2013/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2013010100_2013120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2014010100_2014120100.nc": {
+   "sha256": "f6a01acef5b75dcef24a97ad62f92af8822244df11465df5838a305576319bee",
+   "bytes": 18269984,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2014/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2014010100_2014120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2015010100_2015120100.nc": {
+   "sha256": "40586f8e74a1a222d683361d0e49f35284299024e0936a8cc1a607fcb2eb7423",
+   "bytes": 18638271,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2015/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2015010100_2015120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2016010100_2016120100.nc": {
+   "sha256": "14924c8bfd354afb545f30132afe281116f3b2075bf4d03e52c7bfb7306a863a",
+   "bytes": 18607842,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2016/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2016010100_2016120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2017010100_2017120100.nc": {
+   "sha256": "21e68e43d93818e29fd6105ab2f8d57c5aecddac7d8bdcb4dcefea42489e9f14",
+   "bytes": 18418974,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2017/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2017010100_2017120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2018010100_2018120100.nc": {
+   "sha256": "bb853467882fa0b02c8ca098434ef7421497a5d33b496b64939613a586e894e4",
+   "bytes": 18241381,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2018/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2018010100_2018120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2019010100_2019120100.nc": {
+   "sha256": "a6455bd10ff07f5d9e655e61c167a2092e6c569232322640936d3e2d01b5b62a",
+   "bytes": 18803712,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2019/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2019010100_2019120100.nc"
+  },
+  "earth_era5_climate/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2020010100_2020120100.nc": {
+   "sha256": "f580b446f0466abc19e2c5222f1764e7d0408c851f664063e02c75ba058effda",
+   "bytes": 18457720,
+   "url": "https://osdf-director.osg-htc.org/ncar/gdex/d633001/e5.moda.fc.sfc.meanflux/2020/e5.moda.fc.sfc.meanflux.235_042_mntss.ll025sc.2020010100_2020120100.nc"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E000_surface.tif": {
+   "sha256": "6ecc6e7d1b2fab4812fe508b23f525f413413a07f6c7380a8c7d9c5b41df981d",
+   "bytes": 16434942,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E015_surface.tif": {
+   "sha256": "b047561b615a25790e5d6dc817d4b62492c6fa5b16bb1aac55afd851fe7efe1a",
+   "bytes": 34120034,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E030_surface.tif": {
+   "sha256": "975c87680ad0dffb759cfa6c85385323b5dc94ab23e9dffc95483a5f1d944bb7",
+   "bytes": 25179967,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E045_surface.tif": {
+   "sha256": "47ca91dfa63e41ee758046e49aa3e445c9cd7da646d1b555875abc4ee3afc18a",
+   "bytes": 10866855,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E060_surface.tif": {
+   "sha256": "3e8a6c9f9ddd22ec9945081d665698159cda4dd0d751d878cac7e8650dba3546",
+   "bytes": 10880346,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E075_surface.tif": {
+   "sha256": "ef60dc538bfba222e0b6248a86decbc62b909214d76e571579648ba186bc2e2f",
+   "bytes": 10037546,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E090_surface.tif": {
+   "sha256": "6dd0256279008afba0e420555640b4b7319515db2e350a4e5dc0704d5acc162d",
+   "bytes": 14046665,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E105_surface.tif": {
+   "sha256": "8b01f462384e4792205affd3415edce8c615dc2b071fd80df0295f91cb3822b8",
+   "bytes": 16367660,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E120_surface.tif": {
+   "sha256": "e3a867f603e09fc491b90e9172b79d58393bf6f6a0fe9c30bf2cda7266b8f2fd",
+   "bytes": 16925001,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E135_surface.tif": {
+   "sha256": "7af01101d440685200d3f348e4e525769d05d0655232d4b00831104f769956d9",
+   "bytes": 22946720,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E150_surface.tif": {
+   "sha256": "31fc17b86104efffaea161810d2ec8beb8c49d179a643ff473572c568cc8a885",
+   "bytes": 20946423,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00E165_surface.tif": {
+   "sha256": "228580011ba4995553da6c72e2d17af3f55df4ac730dd64a27bfcb26648bf516",
+   "bytes": 11640090,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W015_surface.tif": {
+   "sha256": "6340c8e224412eb6623452449a629602e17a824e27f2a3d1f4c038ff14d926e4",
+   "bytes": 11909172,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W030_surface.tif": {
+   "sha256": "f9114e05a3dd579ffb7555d2afd66ee23212393a0a9646efdf14fdffb9102084",
+   "bytes": 12529163,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W045_surface.tif": {
+   "sha256": "33b5429de9488b009c3655c2da6199f49f572aa3fedf83840587a559a50930f1",
+   "bytes": 21968800,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W060_surface.tif": {
+   "sha256": "acb2244cd180905766fa011241d3797198cdc5db2a205a66a9515eceba5f4c7a",
+   "bytes": 37139712,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W075_surface.tif": {
+   "sha256": "7999b66f36018b630a0b55db7b6d9edc2230e9833c1ae3223e541a4ad21269ec",
+   "bytes": 37227671,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W090_surface.tif": {
+   "sha256": "2ccc323904068cf42d36be32d19cd68f8d47579dc4d502b8ed7955af8ffb5fd4",
+   "bytes": 23350037,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W105_surface.tif": {
+   "sha256": "d41f5a570ae8d397a3cbcb04c23d1231cec5333e0ba499aee2d85f3a317705f8",
+   "bytes": 13792439,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W120_surface.tif": {
+   "sha256": "70a9b7bf5ae6e4759d5023c8df221b203cc3fcef956b86ba3b4e3e6e9523e054",
+   "bytes": 14395867,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W135_surface.tif": {
+   "sha256": "7cc7cb3790e95604b7cf6ffe137b453a95af04b4dcea9cad9a91c4d70ea20344",
+   "bytes": 11981258,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W150_surface.tif": {
+   "sha256": "a8f4841d450d379a0593145502b92e2db1852960c73c3abd90717bbe5a3255f6",
+   "bytes": 14227616,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W165_surface.tif": {
+   "sha256": "e19ffe965044ea97a922d2c70541940b4472f42c1d868ec1f9e154a38eba033e",
+   "bytes": 13618596,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N00W180_surface.tif": {
+   "sha256": "62ac5ab585cff2a6cffd862d63123f187bf03aff81fee0ffc08cadaf2d601fdc",
+   "bytes": 16843500,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N00W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E000_surface.tif": {
+   "sha256": "40fcab39a0722b878fdd5b37561a8c9417e2963eff8ee288b8c8e795dcfc8a25",
+   "bytes": 29576514,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E015_surface.tif": {
+   "sha256": "6857ee40f94d33fd91cdf4f195046a154053db663ffe62a3e7bc1bf619003351",
+   "bytes": 33410391,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E030_surface.tif": {
+   "sha256": "100faf017c91e699173519dbbda30fccb1f82941eace98ddaca3f085e2697455",
+   "bytes": 32648107,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E045_surface.tif": {
+   "sha256": "c3f1b91b3d5691a52ebad444acff7993c29706150c8b487221bc117c1ced6f05",
+   "bytes": 16152174,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E060_surface.tif": {
+   "sha256": "e017c961673fdcaeb361eaed185e7a644971ce3dac340ea6f08653fcaf9fb50a",
+   "bytes": 9894373,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E075_surface.tif": {
+   "sha256": "784b8e820e77574a2efebd219bf9d6b4945511678cbe48cc41cbbe44d23de142",
+   "bytes": 13445194,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E090_surface.tif": {
+   "sha256": "75795dd4a787b996698fe8efa717cd0d06b869dde4cf3c99e9ff3abb58457125",
+   "bytes": 18015674,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E105_surface.tif": {
+   "sha256": "d2cb7e439d3d85805ea9f55f5c873286e73c63dcb8de6e2b3e16fb6e8882cbd0",
+   "bytes": 18086798,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E120_surface.tif": {
+   "sha256": "219d5232373f911caac573fa82c1f39f7277041ad89cc547ab5cba193aa5b495",
+   "bytes": 18168177,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E135_surface.tif": {
+   "sha256": "5b0a7c77c5333ebb65148a0b746bacc149f362a15964cafbbfcde62f79a1aee4",
+   "bytes": 15387672,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E150_surface.tif": {
+   "sha256": "f2dda8c04df8826faf81e5c7abb8932c6dd25e2c97a3856e9da50d2ee2bb8c71",
+   "bytes": 11004914,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15E165_surface.tif": {
+   "sha256": "94408523d8ab30bba37b06d297ea5d49758a1738817df76658c00914b4a91290",
+   "bytes": 10964868,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W015_surface.tif": {
+   "sha256": "e0944c0bccb08cadac8bf5f53d20f4b871cc28ef14306a00797ac0058d7010a5",
+   "bytes": 25493602,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W030_surface.tif": {
+   "sha256": "da7a39c1b2736cf88ea2f9bbb3f87c65bddd75ec80bd948a92639cf818d475a8",
+   "bytes": 11780860,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W045_surface.tif": {
+   "sha256": "c484a509b6842f2aef9464c3e604f7d5b13868ac994ffedbd3d719288110abc9",
+   "bytes": 13600557,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W060_surface.tif": {
+   "sha256": "ee27758ed885ed62aa5486f7023aed577e6127f129abb149ea1fa000c566766e",
+   "bytes": 20491373,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W075_surface.tif": {
+   "sha256": "852cef327a959a812b522b3c92ac1869a2df196009209fe0c699c428f70453b5",
+   "bytes": 31420388,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W090_surface.tif": {
+   "sha256": "2e0f33efebcbe6cc50f3a6dc7c13c78f46e04f648b5f6f3a5ca180c8a5c2f35c",
+   "bytes": 23311599,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W105_surface.tif": {
+   "sha256": "cf28314cd9f8a16d8f00d56db18af8b73ef0757c23eb83e791b52db383a0e6c3",
+   "bytes": 20248357,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W120_surface.tif": {
+   "sha256": "8feca9dfdf7923f6cb3265f104a6806b6887ddf50083f79b730dc87bd7caac8e",
+   "bytes": 12906369,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W135_surface.tif": {
+   "sha256": "4433f61eee3980425b4db87c0a418e09c62ced18a37bf02905ae3566e9afaa3e",
+   "bytes": 10708743,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W150_surface.tif": {
+   "sha256": "a170893e4bf1e8d519eca6b1647c58ee18e5aa9d7835b0ad0b6a6c7fba1f87e6",
+   "bytes": 12437134,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W165_surface.tif": {
+   "sha256": "97c7fcdb50034a939676f40d4556b47ba0f6bac9e3e408f820e1686e46d3a99e",
+   "bytes": 14995645,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N15W180_surface.tif": {
+   "sha256": "b50130798f3d422a8b7155cf98e7485692a9fa8d6d68fd65621210be9b5ba939",
+   "bytes": 12272354,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N15W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E000_surface.tif": {
+   "sha256": "2e661b1af6e235a6fba11c65897fc935ac0528f54975c7c6415ce97d95e7f8a1",
+   "bytes": 33088066,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E015_surface.tif": {
+   "sha256": "1ee225cb379eb7c95d446337004f413a2eb270a4682383afb6930270ec04515c",
+   "bytes": 33429495,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E030_surface.tif": {
+   "sha256": "deaa83101bcc301484382fbc350a444df5757674b9fd814635c10beaa5167a6b",
+   "bytes": 31256790,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E045_surface.tif": {
+   "sha256": "fb6d1f74de28511f1d255930e06c50c87aa6056a2969c68cdfeccfe972a1acaf",
+   "bytes": 28762869,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E060_surface.tif": {
+   "sha256": "1ef4242fb2369ed6e20db6b4d3e02eba7a76cb3f1c2573f0b9b7daf27fad9182",
+   "bytes": 21732714,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E075_surface.tif": {
+   "sha256": "cbb763175d331ed0222da35f357d3837aa8218aeda72e586974ef2a53f9027d4",
+   "bytes": 30871200,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E090_surface.tif": {
+   "sha256": "1137f43b1420917ed5771aa8cd9acbf9060efa73393d4bc422b7aaca84499df5",
+   "bytes": 34175453,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E105_surface.tif": {
+   "sha256": "00c261fe202e85fa20946c40f113024101784d3c555a2112774d54b404d5f0ea",
+   "bytes": 27123297,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E120_surface.tif": {
+   "sha256": "5b46d290694fb0b5019b800334c6eb42157fe4fea0bc0b253c54424db924bb70",
+   "bytes": 15629033,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E135_surface.tif": {
+   "sha256": "8df93492a06905657dc8041e73aa8c26422b0fbc957ea99e36168056cabbbd0d",
+   "bytes": 13867975,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E150_surface.tif": {
+   "sha256": "34e31ed04278151c681ea34fc51975c6ab25ea7e6172a05ca3b031073aca5389",
+   "bytes": 10649983,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30E165_surface.tif": {
+   "sha256": "b4a4463dfaba098c2852aa6e0a08ebc4bf3a230c88d42f99e06582e789b49643",
+   "bytes": 12133214,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W015_surface.tif": {
+   "sha256": "7d364296c8bf1f212b31fe443080d24bd5f8a36e765a54679352e183678ec43d",
+   "bytes": 32749250,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W030_surface.tif": {
+   "sha256": "f9058bc291fd5267e7849d11ae19e15743589ae6c29a7317c87347e96ba1efa5",
+   "bytes": 12391187,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W045_surface.tif": {
+   "sha256": "da813d3039ccc359cc14fc0bfd42943ac22463aebacfc6beb482e45d9cab5760",
+   "bytes": 15064746,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W060_surface.tif": {
+   "sha256": "f5b8f88320b6cf447a601819dda26faed70b6936e404f8e960a2098ab960306b",
+   "bytes": 19733120,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W075_surface.tif": {
+   "sha256": "c259b483cbb01be468395046784da8f7968320175c53006d9661b2bd4d79e7f5",
+   "bytes": 17415216,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W090_surface.tif": {
+   "sha256": "7dec8b97564d9cb940c864843f87b7ec364987a6bf9b0315cf575ad8f55c5925",
+   "bytes": 19408859,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W105_surface.tif": {
+   "sha256": "0f56a422be03cfb55b3629c72f373a6d2da858f1e3a4954afe7d17cfa298fff7",
+   "bytes": 29191981,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W120_surface.tif": {
+   "sha256": "a721d683f987ea7c210138a33523983c38c526a9abbfbe34ad332a5e15222a58",
+   "bytes": 22432479,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W135_surface.tif": {
+   "sha256": "0c8426a7ad059649277b4aadfbb4dc8b6897044152fec9682bbf7e31f7d39234",
+   "bytes": 13204533,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W150_surface.tif": {
+   "sha256": "13f3c13d94e86c8e33031d875e26f34f038563ff82c2d2727e559ff50c43e633",
+   "bytes": 13981059,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W165_surface.tif": {
+   "sha256": "8265ec91d7db7644d227374afe91d23662203a4eb3fd580626b3f7d3d27dc85c",
+   "bytes": 22411557,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N30W180_surface.tif": {
+   "sha256": "e174cd5a9f9c116a8fcea61384357578e143b06bd59ece5ac5ff653afc506629",
+   "bytes": 15407172,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E000_surface.tif": {
+   "sha256": "86f7ba59e904807fee7e035ada1ad8e761fd89d658574e91efa9e0e727f8d5d0",
+   "bytes": 25195718,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E015_surface.tif": {
+   "sha256": "b4983c653eeb75a5a88d0dd5887192f3416aefa211e147e17a0298404cf2d5ea",
+   "bytes": 24525720,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E030_surface.tif": {
+   "sha256": "f4d1005d3c43defc9e33260e119e4d36ad5fc18f7d452febf13f3d6223fb4c73",
+   "bytes": 30731224,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E045_surface.tif": {
+   "sha256": "08a1ce34d2544cc3c4d583a6fce6c853cc9080917fbd4b9a20348124edb98fc4",
+   "bytes": 28758018,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E060_surface.tif": {
+   "sha256": "ee60a106e40b40f744159519b4bac90df53d718cfda0e731d936842833695586",
+   "bytes": 34827535,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E075_surface.tif": {
+   "sha256": "27cdc5ae5b0851f25de45902a86145c7f22ab49435a79cf1f6ae5f8fdb62be1c",
+   "bytes": 32568315,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E090_surface.tif": {
+   "sha256": "4dd4fd30cd8ee5e7a1608f75e76a8a545c595c45812db5329934e4e1018b97ad",
+   "bytes": 32567988,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E105_surface.tif": {
+   "sha256": "0054f4d258a9678ba55988b408a936d05de95e6e6d430c2a7ea123efc2cec7e0",
+   "bytes": 35044259,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E120_surface.tif": {
+   "sha256": "6468864758e6eab87a6d5349280d5eab1764a1e239d8e944159b6eeb2396bf9a",
+   "bytes": 20965352,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E135_surface.tif": {
+   "sha256": "3bc9f9dd2d6403b20e8d2b9e0142ef41c6d0c8ed2c79bdbac4531bb09862308e",
+   "bytes": 17959004,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E150_surface.tif": {
+   "sha256": "f23f0ee8d075752dcc5e5c18bd42f3999bcfcf071ed9ab3517310b769852e4eb",
+   "bytes": 13203188,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45E165_surface.tif": {
+   "sha256": "0f752ef82dd7164521279a8455b10374b646e59b9abfb4c7029168e010f8dd53",
+   "bytes": 11223095,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W015_surface.tif": {
+   "sha256": "4accf0190b62f20c2adc1bf29bd4ee98ddd1be885745276f2476b0d941e0d195",
+   "bytes": 29841889,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W030_surface.tif": {
+   "sha256": "8f686f16b7440843c4c78e0d9cac7c341e14e1f568a148a22de9d1de40141eeb",
+   "bytes": 15600513,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W045_surface.tif": {
+   "sha256": "ccdfd4b6fdfd89688811f0e68b982bb81185bc0f9b676503ecadf03d7cac0bb4",
+   "bytes": 15172050,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W060_surface.tif": {
+   "sha256": "9bf7979b3d000b3b58bf447330599b780c7b038b79086967ff269a44c4beb513",
+   "bytes": 15389008,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W075_surface.tif": {
+   "sha256": "34b0423dea21ae03073459c9012378b597093c0ce83ddcf242840e45dba86384",
+   "bytes": 24345421,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W090_surface.tif": {
+   "sha256": "7132212ec84a2c0382802940622ea383fece86f5808e56a9d641100bac9319fb",
+   "bytes": 34322120,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W105_surface.tif": {
+   "sha256": "dd4f28c910c29c296f6078bd514c630efff2f469a9812e741d439b9552d39364",
+   "bytes": 34499339,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W120_surface.tif": {
+   "sha256": "806d5dbc40838e1b89c6afb7836fd62c92c47485bfc9a3aa453c3efa05b01a43",
+   "bytes": 33963841,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W135_surface.tif": {
+   "sha256": "4ff26df2ad67546a8c6d94e54c31f7080c80f87f1bf16f2f07e64624ec373432",
+   "bytes": 23387920,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W150_surface.tif": {
+   "sha256": "9fd2414ce23fcce2cf854840b9d54c1f824c8cb93e9b783f731ae3ecef64704a",
+   "bytes": 14716596,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W165_surface.tif": {
+   "sha256": "9f51f2c0c638e1f3b17ba7d13bf17b932f5c3a59e7fa1f008b1c5ba4e17e0e13",
+   "bytes": 13340432,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N45W180_surface.tif": {
+   "sha256": "d7f40e978fa1d280658f12cdd3ff30b99737bd34da040ee0c22111ca78cf0570",
+   "bytes": 10817799,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N45W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E000_surface.tif": {
+   "sha256": "d69dbf93dcf2f11fb008a57223da41092921ea2f81ef6eeb1807d50609586557",
+   "bytes": 33233231,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E015_surface.tif": {
+   "sha256": "70f4cc2bb28724db6616182f449ac33b649cc137539d6913a78b8128b4c4eb9c",
+   "bytes": 36324897,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E030_surface.tif": {
+   "sha256": "9580d9245cd34cedf531ac1176e9b455a891800ebc460919161dd2f56411917a",
+   "bytes": 35075707,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E045_surface.tif": {
+   "sha256": "0bd927ddfb3da8814247427c4adfb5de0479bf0d608c29ea9712807e7231dcd7",
+   "bytes": 35234649,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E060_surface.tif": {
+   "sha256": "600cb8b867b522e33240b63cdbb10d3537ae9f9f0e36c87f454cb2e9b7464605",
+   "bytes": 33096802,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E075_surface.tif": {
+   "sha256": "7ee573dbcb1fbdd1a57df85ac833e0a27c451da844fc77c3cddb1e991094dfa8",
+   "bytes": 34015759,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E090_surface.tif": {
+   "sha256": "1e8cbd05b3ca00164f78c9ca1032e82318e2253acca04f68a0997fcf0637a540",
+   "bytes": 35135654,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E105_surface.tif": {
+   "sha256": "fb76fee09f9b921c1423eb7f74a50824890fd09ed923f35c9b2938bb2fc6a87f",
+   "bytes": 34700391,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E120_surface.tif": {
+   "sha256": "065ee90ba10d2f1809e7f3de65acea561ba826c9dff06e7976d81aa5e776aea2",
+   "bytes": 36521910,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E135_surface.tif": {
+   "sha256": "53730a0d400bad3b09f5210874a1364f82086a6324db597de4d094fe9ab9e6b6",
+   "bytes": 18468297,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E150_surface.tif": {
+   "sha256": "da6e324db52da97bb5dc15ac44bc3299bcdfa16c9cccd3dc8693937f2a3dd0e1",
+   "bytes": 15562998,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60E165_surface.tif": {
+   "sha256": "cb613d5a74a93ac11754ec3c7650096eac4e504610cd13a719b93d64bda28c6d",
+   "bytes": 11666122,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W015_surface.tif": {
+   "sha256": "195d7c9235fe4ffe3eb6271a0b3d25ad4ebc2be17b33ee8e76ce8d67fa8f41dc",
+   "bytes": 29134265,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W030_surface.tif": {
+   "sha256": "77bd9a4e2c0509a9cfaf157af4ed3e3f8e3940ddb395dcc157c5349e397241bc",
+   "bytes": 15552014,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W045_surface.tif": {
+   "sha256": "994b1aef4f245e275bbf4707bdf7e160054fb55bdc95164a4b62763a73a3e4a3",
+   "bytes": 14121001,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W060_surface.tif": {
+   "sha256": "f9a955b9983f26843133c2d901b6bb0d8b0e78c044dffcaac364af789e478964",
+   "bytes": 13733621,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W075_surface.tif": {
+   "sha256": "7d9e06e9d53d4421cad2074a50882d56630bf1c6d568246ea8d37d6e5e31d333",
+   "bytes": 31622208,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W090_surface.tif": {
+   "sha256": "b2f8916e109f311616725fa00c44cb47eb70111705618382bfb31c03ddbc659a",
+   "bytes": 24204551,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W105_surface.tif": {
+   "sha256": "91fef4481560ba09c6f83989aac53e4e50deedcb79066230f80cfb61b1b5bf3b",
+   "bytes": 30578670,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W120_surface.tif": {
+   "sha256": "69dd0125ca26daa71b4a067cfb65d2042606b940f25fe715309cf02daf71e3ae",
+   "bytes": 33510730,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W135_surface.tif": {
+   "sha256": "e0eec4056fac1c612cd35fb729f91f535b6e8f50f017d7b9337b976086a8ccb9",
+   "bytes": 31358547,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W150_surface.tif": {
+   "sha256": "5aab8a985ed43cd4c0cdc626dc095afc25a6595dfd86be719bc997ce99bed220",
+   "bytes": 17818263,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W165_surface.tif": {
+   "sha256": "2dd12c7c67a5889889f0b23acc7cc7a7aa9f8b7df1021d664e85a314bbf087c0",
+   "bytes": 16742452,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N60W180_surface.tif": {
+   "sha256": "02ad4dfd337dde054d8f3610a9e309c6a9383c1b829d6c3fe30070ed7c1d36cd",
+   "bytes": 10798063,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E000_surface.tif": {
+   "sha256": "c1bfb120e78d83f06d68cb6464fac4e23af02a7113d6e9f94dfe2a32db133e22",
+   "bytes": 22439831,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E015_surface.tif": {
+   "sha256": "7edeb128b4f56a317d80e6918aa07e0fff3b9b29b0a1b6c8389061a854ae979d",
+   "bytes": 28285227,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E030_surface.tif": {
+   "sha256": "ba1f7d1d3cceb44be543c547cb53c014d49704117ad988350bb81b482f59d460",
+   "bytes": 19888298,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E045_surface.tif": {
+   "sha256": "a58d4587a6140eb1c52f6ff5a299bbcca122b43aa8d25c87589a184d9be00c16",
+   "bytes": 23865136,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E060_surface.tif": {
+   "sha256": "fc3eff263b3de984d241f2049b6709695ec37137d5e6f1201efd3fdeffc40581",
+   "bytes": 26085896,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E075_surface.tif": {
+   "sha256": "f65a4db2095339ecccee2ad3e8c9dd5d9d5536efc2dcc46cbb5395fdef950e41",
+   "bytes": 32666659,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E090_surface.tif": {
+   "sha256": "946ab6974857ff126df1f5e6aa5d1bd85d1bd234c1eb9fa40668ea799c3e339d",
+   "bytes": 35697728,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E105_surface.tif": {
+   "sha256": "e92f52476bd5e29f3ee77f3480f9477e2a6340e1b7bc3cbb302fbae9275811b1",
+   "bytes": 32888793,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E120_surface.tif": {
+   "sha256": "b7e5fe25d865c66ccb8e1d27fa33d05a6144a83298bb451e5f0f1aee161eb4a7",
+   "bytes": 30526439,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E135_surface.tif": {
+   "sha256": "44d6fdee93fe1bc2186b3a4fd970fd1e36d24bd30b0d72ebe0fcb57efc09f07d",
+   "bytes": 30641066,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E150_surface.tif": {
+   "sha256": "30fc10b093d20bb09ec338afe92d62e7e115372b5a129012aad5c0d71c66da6e",
+   "bytes": 24778300,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75E165_surface.tif": {
+   "sha256": "4f594109f5715018ac9375ab471b91e29ecfed562ae366b2553980da51937ee9",
+   "bytes": 21704742,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W015_surface.tif": {
+   "sha256": "0dc9885aaea2bb63a50ec26bbb9f14f8fb7081b5ef8d9a831450f818f667cfce",
+   "bytes": 13453953,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W030_surface.tif": {
+   "sha256": "67073530d6b27e136e89e5d66ba885cd90a839e1d9c63144ae35699ed3d2e87d",
+   "bytes": 16892750,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W045_surface.tif": {
+   "sha256": "7f05de68bf9643e9ff9e9569ee3f499f03381f9f4058cdab8fd1bc92a02badf8",
+   "bytes": 19724914,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W060_surface.tif": {
+   "sha256": "5c56936a11acab000b546329b031f5daded2c60e9fbb70cf1f01bc21a903c8bb",
+   "bytes": 19449842,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W075_surface.tif": {
+   "sha256": "ede73ef9d42e2516f6d340b6a164476594f14cafdcb4a400714cd8544df008d1",
+   "bytes": 17348953,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W090_surface.tif": {
+   "sha256": "cf36c467b692c006cd8265c6c9184677ee54daa23899afa8682a93b8e5481b9b",
+   "bytes": 19185088,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W105_surface.tif": {
+   "sha256": "4329d478443bbf50285c24a17b665e68f39413c885464cece099ba3150518c79",
+   "bytes": 25436771,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W120_surface.tif": {
+   "sha256": "eef6d1ac4b86e1c0e6a0c71f280f437bf90ed84e58cafac7edae67277d712197",
+   "bytes": 28091390,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W135_surface.tif": {
+   "sha256": "b0aa15dfc14e094f63aed36eba9e44cf99d358a4df3766932a06ebff82405c33",
+   "bytes": 25969149,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W150_surface.tif": {
+   "sha256": "71c138fc20b23b560781ffd6c88a673923b81e24c9a5525353c05bee6650c343",
+   "bytes": 26889839,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W165_surface.tif": {
+   "sha256": "29fd0e4909f17bc7eecffc8be823f7d2429988a7cd82149f0d2dc3527cd635c8",
+   "bytes": 28458301,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N75W180_surface.tif": {
+   "sha256": "35ac9a94ad05dd037f32958a25dbbdbc3c1410a85c064b2e195d1324c202654c",
+   "bytes": 7317772,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N75W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E000_surface.tif": {
+   "sha256": "1e6637454b277e5d8e26408c350314aae0ef1325d7a6edb57c4d97310d70ed82",
+   "bytes": 6491053,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E015_surface.tif": {
+   "sha256": "294d1f4b6948728fbb9a7ad944a4e601d5b7442a953a5a490d433c26751e2cff",
+   "bytes": 6741409,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E030_surface.tif": {
+   "sha256": "2e89945ce1cafd3b0d46c8951cd7fdbf6fefcc5d788531b514041b1f0f5d6ab6",
+   "bytes": 2992641,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E045_surface.tif": {
+   "sha256": "f86c4542e8006e7d551fcd728b6e735afbd945ad1e5d06a4056953228ea51cb2",
+   "bytes": 3788435,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E060_surface.tif": {
+   "sha256": "89af6c35b134ed5a03d3394f4a7304dbd62505a35eebe5ac618ef810af2af277",
+   "bytes": 3675375,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E075_surface.tif": {
+   "sha256": "1a77d65c9a57d62f4b941d384703c89b79a082e074a84b11f772c9e9ed87c6e9",
+   "bytes": 2308576,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E090_surface.tif": {
+   "sha256": "8a04df2e20ae9a9ad342c8d7462c18b4290ded64aa852936b44ccc5f6577ee1c",
+   "bytes": 7875373,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E105_surface.tif": {
+   "sha256": "6629c886db06e6a5452e7c9191229c889412c3895f718157244b491198fcd757",
+   "bytes": 4532742,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E120_surface.tif": {
+   "sha256": "064bdc436db61d6f29a68db0cd405a058ab0da1b512018338d06df2252838178",
+   "bytes": 2164292,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E135_surface.tif": {
+   "sha256": "b7bc5747aece36aa4394a8242ab5a86202961ede64858b8e499d29dab8251f28",
+   "bytes": 4249370,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E150_surface.tif": {
+   "sha256": "74f171d2730df20f5153c348e8960da1460384a3cda984d295da774f7520f393",
+   "bytes": 2867444,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90E165_surface.tif": {
+   "sha256": "76ff1fee83ffc98aff669568f36ee79710a585b4154f1ebe492b3f99135cf26d",
+   "bytes": 2736895,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W015_surface.tif": {
+   "sha256": "e20299f98b60f90e063c2b4ed66059de4e24679a4112c46f1cb137abbafba041",
+   "bytes": 4741255,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W030_surface.tif": {
+   "sha256": "6246733a4b16393745be795073ddb1c41c9e9d7433801e0f757b75f0996055d3",
+   "bytes": 13641739,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W045_surface.tif": {
+   "sha256": "d0999cc6b029eae2eb266c607778ac109052d9beb9588d53117e33d637bf92fe",
+   "bytes": 14851825,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W060_surface.tif": {
+   "sha256": "f97505f65c021258bc502ac7d76ee4bcaf7632d01baac5f5ef792bde2142e469",
+   "bytes": 13690151,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W075_surface.tif": {
+   "sha256": "ca99abca0b0bc3e36c67e1009d8438141e1e39d01e7697b613f466688a3887fc",
+   "bytes": 12575465,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W090_surface.tif": {
+   "sha256": "f8213803ec5d87adf4535dd0d453e7df6e2b15efa3ee6e110bc104345beab54d",
+   "bytes": 14569170,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W105_surface.tif": {
+   "sha256": "a51a3ca5db82b038b081621db0a5dd831263840385da41035cca3500b704f7c5",
+   "bytes": 8828401,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W120_surface.tif": {
+   "sha256": "142b4bfac6d5bb03dd25fc581fdf636aa714f66abfaf258f62bf9c77f5668221",
+   "bytes": 6023886,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W135_surface.tif": {
+   "sha256": "0f8f546fc513c343d1ec12836a3706b55a9fea3003e98624b7fc322e7a9938cb",
+   "bytes": 3211200,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W150_surface.tif": {
+   "sha256": "5581a5bf88976c373c9ed23fd5e3e2fae24ffb88da700ad4fd7bfa23638cbf3c",
+   "bytes": 2895145,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W165_surface.tif": {
+   "sha256": "3088d2b9a401caf98ba70dea5ac754ba96010220856f86451bacdefc797734fe",
+   "bytes": 4754796,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_N90W180_surface.tif": {
+   "sha256": "7ae3c91d1d2807b618d88ff50cdcc8be19f6f0d5fed15e08d815de738dedcfe5",
+   "bytes": 4093982,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N90W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E000_surface.tif": {
+   "sha256": "0771e8481fc9a98f5e8d6a53257e0e864a69171cf9a05bad2805f95f3acd7e19",
+   "bytes": 12080500,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E015_surface.tif": {
+   "sha256": "9ae2068fec11f02e010a99b11875ca1e9951bed0d771ba340490ab93f46d3427",
+   "bytes": 30052231,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E030_surface.tif": {
+   "sha256": "df70ed2e3ae926d3ba90c0332324bad64c04c5c849853baaff2acb38a905548e",
+   "bytes": 20830972,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E045_surface.tif": {
+   "sha256": "9b681cf49db188024dac0b0a302b90940813ddaa166393010d8120170ddb38ad",
+   "bytes": 15290778,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E060_surface.tif": {
+   "sha256": "724b187ba5f78f4f1a40f877698ee77a0a5e6043480a254de8530c27f6285c7b",
+   "bytes": 13804861,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E075_surface.tif": {
+   "sha256": "cfa9bc0c51867590c8c8db65561a64cfbc50224b0b5fdb4a1da92ca6bfca3986",
+   "bytes": 10559480,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E090_surface.tif": {
+   "sha256": "63fc336777aa9bd24b824835a09c32d8d81e4ca13699f46242e72e8cf3a6ea02",
+   "bytes": 10541323,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E105_surface.tif": {
+   "sha256": "73c68ed33d08fbac252e17ba41149a70eccd9c18381754e040e32441fbd893e7",
+   "bytes": 16430325,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E120_surface.tif": {
+   "sha256": "6b2c4a501d72c35252981a4c150a3325a94ce407166ac71193b25aac5ee244a2",
+   "bytes": 31841928,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E135_surface.tif": {
+   "sha256": "91c3aaffcd2291ceef88c028d0590fc90317ade1168def67f54a5b67802d5f10",
+   "bytes": 33680780,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E150_surface.tif": {
+   "sha256": "9716cbb80d33c9a317bcad55939a5890c3d379ca2bfca94c0dc6ba14dc72f1d5",
+   "bytes": 24332068,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15E165_surface.tif": {
+   "sha256": "afadeae68e9b962a789f22e7b77a2e49acf23b9a95413294f525d05073bbd5d4",
+   "bytes": 13405369,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W015_surface.tif": {
+   "sha256": "4cf4d482972b0bdea80c250e536f1e7e4757855c5cc99a895a3aff0aed7dc07d",
+   "bytes": 11914367,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W030_surface.tif": {
+   "sha256": "d661069da401bffca1a02b44405141aec6ea395f0638674a4d15fcb8487f00ee",
+   "bytes": 12363074,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W045_surface.tif": {
+   "sha256": "e42505808eef4f652601229f1a21dbef87636e1199b8113bf68a556df86700b2",
+   "bytes": 14500330,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W060_surface.tif": {
+   "sha256": "ad7d594f052530053ded76c67ecfc1bb2b59702ed4e48434af5f032e84a69e30",
+   "bytes": 33733942,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W075_surface.tif": {
+   "sha256": "1872b57145c8d18ebd44cf6d08de601bd34c067dc5a780038b0754398444eaf9",
+   "bytes": 30004071,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W090_surface.tif": {
+   "sha256": "7f90bb9b4f9d22fe9378a605db0be9a932469037dc4fe6219e7f542f7ab7d8cd",
+   "bytes": 13784238,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W105_surface.tif": {
+   "sha256": "05ff90d97b7d6f57516ab56f4e913063ea0f66d5dbb36b10d7857937e42eee88",
+   "bytes": 11644701,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W120_surface.tif": {
+   "sha256": "86f1f904492366ea783e6b77dd08cb657670b10783ba5156933d520d3eafcf66",
+   "bytes": 16845063,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W135_surface.tif": {
+   "sha256": "f4d1b982d302c70e98c1716e7ae0ce0412ef8936b7ef3319d1424b873f519f6d",
+   "bytes": 12133391,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W150_surface.tif": {
+   "sha256": "9598f28835df8963d41781bd4d7136e6a590fa042472a5468cf13ca056c7fed0",
+   "bytes": 13833293,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W165_surface.tif": {
+   "sha256": "394a3c7d4846f2c2125de17d420d887a39497cac5042e9b900023791885c1e5c",
+   "bytes": 13895986,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S15W180_surface.tif": {
+   "sha256": "62318d8370f287442d5f48073938c5875cd9a44acac8a125a7633cd3f131accb",
+   "bytes": 20303320,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S15W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E000_surface.tif": {
+   "sha256": "51c6a411b30ccb6eb8d42dde811d7e8d7910fef2a3f069beca6da7c1bbb4b57a",
+   "bytes": 11951149,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E015_surface.tif": {
+   "sha256": "c94ed6b8e05de0fd33f3bce7f4d9a97b19d0f7ab00754fbca1fc1d82c4591f7b",
+   "bytes": 16380596,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E030_surface.tif": {
+   "sha256": "7e31d58d737ef0e1ed3606eefb0da01762980255b7797cb3945edcf64c53ce23",
+   "bytes": 11627959,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E045_surface.tif": {
+   "sha256": "8154be2eae804f8f21e98923cb1683c2a446dda73f0f1ca6e7ee6aa952ef8418",
+   "bytes": 11073518,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E060_surface.tif": {
+   "sha256": "0814dca9e70e27fd986173e82d65b77e262ea0e222dec09a302e28ed250c930d",
+   "bytes": 9194190,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E075_surface.tif": {
+   "sha256": "f70deb505b07210d0a71863ed5325e83df848830923597ca1755764d97013c7c",
+   "bytes": 11783175,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E090_surface.tif": {
+   "sha256": "a2cd0e57af94229d6f6735dca16c8afdd982b8e1d590a5291b4e8ecf30b51f27",
+   "bytes": 13392419,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E105_surface.tif": {
+   "sha256": "8257884b7d2e1ee1d0a328c1187d1a330eb9f9b16c0e218eb8dcbd99602b3034",
+   "bytes": 14185316,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E120_surface.tif": {
+   "sha256": "03239c6976e22428f320b1395de357f5a84c1f9a7a360467356e618ffa2d295f",
+   "bytes": 13904076,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E135_surface.tif": {
+   "sha256": "736071a76b7432830a5c3eaa2120407dca82214de9190922e4fa5a4b02ec4263",
+   "bytes": 23659477,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E150_surface.tif": {
+   "sha256": "e44270fd5d075fd1e3da632c393823063b66bc0d0bc2bc665384789a015e0cbd",
+   "bytes": 11047937,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30E165_surface.tif": {
+   "sha256": "0fe78242ffa136c7d181e9ebe8dfc44617f589631c57388b155ee8137ca37ddb",
+   "bytes": 14256158,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W015_surface.tif": {
+   "sha256": "77ca5c1c532db31a723efe03b3f09dbd567d69a3c61f6923d052a3027438e872",
+   "bytes": 12107996,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W030_surface.tif": {
+   "sha256": "00bff05e1ed331fd92da2112805d98583029a026f417357c4a8608478c92ee46",
+   "bytes": 10326140,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W045_surface.tif": {
+   "sha256": "cbb5afdd02f92cfa66786e75249d6cf84f2b91be91ca9b4052cfd6535baf9911",
+   "bytes": 8681835,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W060_surface.tif": {
+   "sha256": "d60a015f6f25be03fe95c8d69a3b6550fe7554d6f7c17a7ac267e6cac4c53ca9",
+   "bytes": 14161973,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W075_surface.tif": {
+   "sha256": "cef95374a80807c534b8e1f284b460c9268c48cdfac5c0c9f5feff0ed32f9eec",
+   "bytes": 29894364,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W090_surface.tif": {
+   "sha256": "9d05ef619976a40cbbbbd1a32f55d8d6b56287144caec172e8925c2bf22e2b63",
+   "bytes": 12330015,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W105_surface.tif": {
+   "sha256": "34bc1c3f46c5d16ff4419a1b454f7c98aed2078bcb3f94ecc99fc3d2d240418e",
+   "bytes": 11032781,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W120_surface.tif": {
+   "sha256": "9ee3a289453d84ac33e9bceb7316c768fbcc7f46b8cbd60c18b97a623dee43bb",
+   "bytes": 11171075,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W135_surface.tif": {
+   "sha256": "60a9b0b6f79caf1eaace27f3ac4244e570c92ff5abb07a63fde31c0c167497df",
+   "bytes": 10264955,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W150_surface.tif": {
+   "sha256": "5a3474607f60ecefde365ac22871aa5acb522192739c24ec91a6a534f32cadd8",
+   "bytes": 11412143,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W165_surface.tif": {
+   "sha256": "093f1df1f7602c370fb4b9111a6d4aa7aacedfd2915182b6bff85bd48331dc29",
+   "bytes": 13731107,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S30W180_surface.tif": {
+   "sha256": "e88594dbcdc3ec0e7f42337412a5fe35f64f0a889fcd65164309ecb10094fc5d",
+   "bytes": 11833242,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S30W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E000_surface.tif": {
+   "sha256": "32e55f9acdc70cb3ec231a14469449a69bff8535d2923a15ea96983dafe81503",
+   "bytes": 10678985,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E015_surface.tif": {
+   "sha256": "79e243dac5f43ff83d0ede9c11aec6b0482d1b563336f92604d870a2d66ffca3",
+   "bytes": 10663629,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E030_surface.tif": {
+   "sha256": "659657290fb284e4e6d032edd4cd7ba56029955de6b3a76e991be02abc4e8da8",
+   "bytes": 8165745,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E045_surface.tif": {
+   "sha256": "782a6a4202cdd55d50858a64f0df9fd754d1aa5fea5338025169da0991e7cbe4",
+   "bytes": 6541440,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E060_surface.tif": {
+   "sha256": "55c1616a8f0ac192486ff3f24e26253f4b2b1cde0a2b274353f4d092bbd4ca21",
+   "bytes": 13371594,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E075_surface.tif": {
+   "sha256": "d7bcec49fcd49817a78e7c9cb5cb4100ac7ec0bca2270e6ce65456afe82dcfd1",
+   "bytes": 11371192,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E090_surface.tif": {
+   "sha256": "e3e8f02ed7987c77637eb8869786eae5e83b1fdd5c03d3264d2efe180688973b",
+   "bytes": 8562699,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E105_surface.tif": {
+   "sha256": "2f865707911dd8a4740d8d4cb8b91a798d181cb66596c03c47a301c11744521b",
+   "bytes": 8720563,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E120_surface.tif": {
+   "sha256": "43c7be31365bebe032cba196ccbf754bde2f40442e2d554c9896494c4e8c89e8",
+   "bytes": 8861456,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E135_surface.tif": {
+   "sha256": "e0fc51fa779ad62617fcf73808fea2c1dd22bcec8f4a274d915e80f22d48d3bf",
+   "bytes": 11270513,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E150_surface.tif": {
+   "sha256": "1e1aaff6217edf89b36506016f30bb190b1ad8828931dfa32d76b4a60548d4f4",
+   "bytes": 11855975,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45E165_surface.tif": {
+   "sha256": "aa9d09df024b1e65c525babda71adfa40f4afd328b022b26305d83a3b356b76e",
+   "bytes": 9646381,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W015_surface.tif": {
+   "sha256": "92466cf1916616cefe52c90bf76dcb6ef76714d8dfa6102ad93983743a10b620",
+   "bytes": 10212775,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W030_surface.tif": {
+   "sha256": "61b4a49e07a0d314f80780c5136e0c141d28c5a500eb8966658b0a608bb389d2",
+   "bytes": 9708044,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W045_surface.tif": {
+   "sha256": "24a00869748c4c297a1b511d07449734f5f69ebd461dfe83251c854fb6329d14",
+   "bytes": 12927111,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W060_surface.tif": {
+   "sha256": "3a590bf70145487b685dbf2c7cea059d8c6d0a7d38ce08abe24e5e2d76475bd9",
+   "bytes": 11139294,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W075_surface.tif": {
+   "sha256": "96672a1a86814947aa19b87c9babfbab681cc90157bdfb3603393be0688c35fd",
+   "bytes": 18054730,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W090_surface.tif": {
+   "sha256": "8de7a57ccfa5c5bc08634c9f35c9ed3742805230997e9ae383449a3d5cd67c87",
+   "bytes": 11789966,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W105_surface.tif": {
+   "sha256": "95a9f224cf3ce0acac0274fc66b4c41502eac38dfbe318ea6897f2388f6b6ec4",
+   "bytes": 10456641,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W120_surface.tif": {
+   "sha256": "16446489c3987c1c111959aea241a705476ab4995aa945ecbc72ec74df2d4446",
+   "bytes": 9413699,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W135_surface.tif": {
+   "sha256": "169b94be50fa887eb3d06b303e7d55ba21200c8ce74046bf36c94ea6885cb98e",
+   "bytes": 9251663,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W150_surface.tif": {
+   "sha256": "02e8af57505a4fef03b3de0dedce4246c31eba906d8999fc00c225cdd265baf3",
+   "bytes": 9549029,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W165_surface.tif": {
+   "sha256": "83c4d75efb0646171c1f8856721f48455863bebe90a71a9aa65dd0d11350c26a",
+   "bytes": 9021113,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S45W180_surface.tif": {
+   "sha256": "2e6d2a98fce394d3391993f53ae5ec2ff37e78435def1c35594801b86b55757f",
+   "bytes": 10125484,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S45W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E000_surface.tif": {
+   "sha256": "1809ad52ada07f948e8dbd603dd5e52700b6a6667b75def66c58e89cec4790b4",
+   "bytes": 13415483,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E015_surface.tif": {
+   "sha256": "cee19ba138f2bd7638d895684f239003f6c7999656004a651a069b713fb35631",
+   "bytes": 13009136,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E030_surface.tif": {
+   "sha256": "fa2014f96c6a9daff7178222c8d5a7b4ce1eeed96c0c14879cb8e1e3a8eda9b5",
+   "bytes": 14266585,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E045_surface.tif": {
+   "sha256": "119ba9ff530bca1f4a96e3fed50e30bfa12fa23f0287c8d75dd9d73aa37fa8a5",
+   "bytes": 16728488,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E060_surface.tif": {
+   "sha256": "450c50ec5d14bc6e3383aa9bfa81fcfce6e6a0b08a1d56fc4ccfbbdc953b4b21",
+   "bytes": 16295458,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E075_surface.tif": {
+   "sha256": "5f6ea0c38d6c1f69f84c06b74b19804ad87c50f14bdc61c3dd7d8c5d1cd10e01",
+   "bytes": 16215975,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E090_surface.tif": {
+   "sha256": "cb5c985961f6029c72fb54d3c564b2519c6284e7eccae0999c344d3d6117a3a9",
+   "bytes": 17549039,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E105_surface.tif": {
+   "sha256": "8484feb9864629bc0d55e7ba413c17337a8e25445ba8e11c7668723be8398327",
+   "bytes": 16700384,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E120_surface.tif": {
+   "sha256": "52b7d3a5195da483752244a4bcafb6eb9b39a09ec7d40ea14869ec7d44a1d511",
+   "bytes": 16554144,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E135_surface.tif": {
+   "sha256": "de1945205c57eb91aa984fcaf775974bfef0a0b23522325439dfa81b1bfd5184",
+   "bytes": 20428467,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E150_surface.tif": {
+   "sha256": "fcd9cc823025d664dadb0844ae29f57ccac4b06706d5fc8561b101e095fb4da5",
+   "bytes": 15016060,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60E165_surface.tif": {
+   "sha256": "0e89a531bf0943c70dfddcdbdd54f249996851f9a4ae647f0d84811d5397de29",
+   "bytes": 13081434,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W015_surface.tif": {
+   "sha256": "a505ca89939dd3acc459e882633c34a6a9f47892246351c1377f060336e3983d",
+   "bytes": 12613757,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W030_surface.tif": {
+   "sha256": "6f94ec1c73ab17a682e7683bc3d92852091f9ab5077ab1df0f96ab14961c01bd",
+   "bytes": 8104693,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W045_surface.tif": {
+   "sha256": "9cc5d91a2c92ab41cb6c21314b706c2ebaf98bd925a2f51a053995a390a7e6a2",
+   "bytes": 5661013,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W060_surface.tif": {
+   "sha256": "b8c5fc601889c2e7dde5b5b3a6eda4821e3662897847195b1f057ab5c255e552",
+   "bytes": 6517058,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W075_surface.tif": {
+   "sha256": "4fcec9712c9e08fa1371b247ec877eec00ebdb600fabf28d924889cad9a4900e",
+   "bytes": 22079283,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W090_surface.tif": {
+   "sha256": "bb761646478add8b2299fe4540fdb5c815f5857190b83d80572ed691ef21cec0",
+   "bytes": 10645691,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W105_surface.tif": {
+   "sha256": "c5dc6c2a0a88bb0b403b4adba7597a6bd0043c2c8013a0768a162b74ef684b77",
+   "bytes": 12315779,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W120_surface.tif": {
+   "sha256": "49a688861c295434941331d315fb4a44d27f5ca287d246922770ada58b7a52e2",
+   "bytes": 9215144,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W135_surface.tif": {
+   "sha256": "bfa9b9f7e951f09c8a28e6174e73b329a47f174450e4ba8dfff4b733dbc15444",
+   "bytes": 9897019,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W150_surface.tif": {
+   "sha256": "de7fc4feeee0004dd2022701083945125fe9fb27940f4973ed1097e3f8321a68",
+   "bytes": 7303498,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W165_surface.tif": {
+   "sha256": "1a60e26b920a0d6aecb066379cda32094a4fe783abd2b27ac313e4089f337853",
+   "bytes": 8589974,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S60W180_surface.tif": {
+   "sha256": "ef2b6c7a4e56e11e2406d5a3562ecc8dddd7d9a137b2dec9befcf9c349f03b84",
+   "bytes": 10338818,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S60W180_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E000_surface.tif": {
+   "sha256": "946c142b64712f789931a3e9c863328343a517a2987f84cadd4c7ddfb75b5f4f",
+   "bytes": 22866882,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E000_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E015_surface.tif": {
+   "sha256": "9bef7b5adb3c66bf00e343a7439f3bebee1c18344cd28282a94c9529d3a9b6d8",
+   "bytes": 22732253,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E030_surface.tif": {
+   "sha256": "f20ee003acca318dc2832bd596c873f33526f2d568ed7fe46a7cafa31cb50f29",
+   "bytes": 22783032,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E045_surface.tif": {
+   "sha256": "aac9cc7142a0f17da4d11248d943a2035c25230cfdb4383b71b965d57c3d2cdb",
+   "bytes": 22617692,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E060_surface.tif": {
+   "sha256": "d2a2a0c874ac4e1d4cccdbef91b7aed069a72f24412d02e2d284d204830972f2",
+   "bytes": 22947166,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E075_surface.tif": {
+   "sha256": "38efefb6a2a918675027526c91c66d35257e0f7f60f28c77b7da35ad2e58f927",
+   "bytes": 22823565,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E090_surface.tif": {
+   "sha256": "d227bb8e16b8ccfc83e62e1e4f57eca24b60c25a099b28a8a97b80375eb075a1",
+   "bytes": 22809918,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E105_surface.tif": {
+   "sha256": "e35294e2af4d8d1bdfd9657ec9a08d0c2f736385f8f0f05769d9a060ba33f85d",
+   "bytes": 22866835,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E120_surface.tif": {
+   "sha256": "4452715c10d1f6bc73d3ed3946cb018f3464e659df670d3912ba8d6c7f732ee6",
+   "bytes": 22727762,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E135_surface.tif": {
+   "sha256": "2275942a7712ddc46db9c06b4681a612f7750af68f1c0954871fc4f7b7900e47",
+   "bytes": 22942833,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E150_surface.tif": {
+   "sha256": "3128e182d3e0d8f851a56f2cc8f8b670c6532d4176981a81293778e18d20851c",
+   "bytes": 25702600,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75E165_surface.tif": {
+   "sha256": "45bc2c199f1deda3570b77cc6eedaf6be8a512078d097c1d8bca9a6330793be5",
+   "bytes": 24811350,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75E165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W015_surface.tif": {
+   "sha256": "f3329a47b67dff29382cf1679302bb0db3940b091dba110331615f12b9d736b0",
+   "bytes": 23694802,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W015_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W030_surface.tif": {
+   "sha256": "10415532764d9343d85c349db0068d5b838186a83e29f38a99762bf7b2c31a37",
+   "bytes": 24802514,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W030_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W045_surface.tif": {
+   "sha256": "09ec90012b342365faa45bb83e2603cae0da282173a220ba717a7941f2ff9493",
+   "bytes": 21810292,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W045_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W060_surface.tif": {
+   "sha256": "481714bbcea00ef9713b90c96baf855626b06574969c5a756f9278524f133134",
+   "bytes": 23883586,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W060_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W075_surface.tif": {
+   "sha256": "8ac85dad62608039348ddc9fca59f782629d8042e8f95104b4b67d11c3e1485b",
+   "bytes": 26734816,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W075_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W090_surface.tif": {
+   "sha256": "43b12464ffcb55978876fb12af06187d72b45aa4e2fcc86188bec9da5c19a57c",
+   "bytes": 26119485,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W090_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W105_surface.tif": {
+   "sha256": "3f89f427f056449a123ae98a46ee36074d21e1f69aeefb07747e4da512eff8de",
+   "bytes": 24663156,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W105_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W120_surface.tif": {
+   "sha256": "0b23b93c5e35a3d462f7d1d3ae6dbd28c51cdf373eced21cc9988dae3b58128c",
+   "bytes": 24914056,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W120_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W135_surface.tif": {
+   "sha256": "e0deb20e0d7bc7bd604dd32c7374dcaf843fb22bc4f946e60c3df4caf8496e64",
+   "bytes": 25453155,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W135_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W150_surface.tif": {
+   "sha256": "8594da5891e07e3b4cbe4587f4e36b06aea82c4eb59c58fd623c9ef97a9cb74c",
+   "bytes": 26284581,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W150_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W165_surface.tif": {
+   "sha256": "17a2e14b51928341752473301b2c9104a8ffda6c6a301cd08340649568abb599",
+   "bytes": 24248171,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W165_surface.tif"
+  },
+  "earth_etopo2022/ETOPO_2022_v1_15s_S75W180_surface.tif": {
+   "sha256": "7bfc6d028ef90ac5065968066eae60f82edc4306f68ddb68aa7e77e4ce945f95",
+   "bytes": 23250977,
+   "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_S75W180_surface.tif"
+  },
+  "earth_etopo2022/ne_10m_lakes.zip": {
+   "sha256": "0803a06f9c3cb4671d89b68c48b142aad9366ba40f665245e12a913fbc61722a",
+   "bytes": 2349685,
+   "url": "https://naciscdn.org/naturalearth/10m/physical/ne_10m_lakes.zip"
+  },
+  "earth_etopo2022/ne_10m_land.zip": {
+   "sha256": "e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc",
+   "bytes": 3269070,
+   "url": "https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip"
+  },
+  "earth_impact_craters/api.php": {
+   "sha256": "0c0ad06e83f293bfe9335e39ea5f5617935351f56ca02bbec121f68bc66f1104",
+   "bytes": 298151,
+   "url": "https://en.wikipedia.org/w/api.php?action=parse&oldid=1381890264&prop=text&format=json&formatversion=2"
+  },
+  "earth_impact_craters/sparql": {
+   "sha256": "f1d2a45de5a061dc374a7312a73ed61a1da17d81455d18de90f938bf1e3ae6a9",
+   "bytes": 99859,
+   "url": "https://query.wikidata.org/sparql?query=SELECT+%3Fc+%3Farticle+%3Fcoord+%3Fd+%3Fu+WHERE+%7B+%3Fc+wdt%3AP625+%3Fcoord+.+%3Fc+p%3AP625%2Fpsv%3AP625+%3Fcv+.+%3Fcv+wikibase%3AgeoGlobe+wd%3AQ2+.+%3Farticle+schema%3Aabout+%3Fc+%3B+schema%3AisPartOf+%3Chttps%3A%2F%2Fen.wikipedia.org%2F%3E+.+%7B+%3Fc+wdt%3AP31%2Fwdt%3AP279%2A+wd%3AQ55818+%7D+UNION+%7B+%3Fc+wdt%3AP31%2Fwdt%3AP279%2A+wd%3AQ1758870+%7D+OPTIONAL+%7B+%3Fc+p%3AP2386%2Fpsv%3AP2386+%5B+wikibase%3AquantityAmount+%3Fd+%3B+wikibase%3AquantityUnit+%3Fu+%5D+%7D+%7D&format=json"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.apr.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "e9dabc98af62de6e3f13991da2431bc01a418afd31572937e7bc7111c635015d",
+   "bytes": 340945922,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.apr.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.apr.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "cf19906bd17b896385fd4c3381734a46d37dbf2935ad717de317ed3387f48eaf",
+   "bytes": 324142649,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.apr.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.aug.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "8d496613f97d8abedcc28d53a376909546a1a2fecf86563dd05a1ae7555c52cd",
+   "bytes": 341312940,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.aug.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.aug.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "83e5a64eae17cb4a862d565f8e568a0070afae190df640d7abc40b0c72606198",
+   "bytes": 322255013,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.aug.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.dec.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "4ef16375b7905358813c024132992d9e0c3135df930dbbee0a1ef06553e95dd1",
+   "bytes": 341087747,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.dec.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.dec.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "b742acbbde0f60103efede37462df640cc3dbb6662abb74180b99802d9ed4348",
+   "bytes": 332364541,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.dec.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.feb.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "9552e783a714870df21be995d99bb474fa8d5b6c68a418424c44a2a4ebbe9e8a",
+   "bytes": 340370990,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.feb.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.feb.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "e769594e0f4c4b279f0b04f17f3fa04781ccd9489f84c2e018f8386010b6f7d4",
+   "bytes": 331339512,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.feb.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.jan.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "2148661f5a0d6a57b567d043388de4fc2f2a8b3dd862a5074b7b03e808b771a6",
+   "bytes": 341066648,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.jan.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.jan.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "05bbde471c42dd32bd3e35a90dcd400cd8a447bfc31009ecdfa6e45e0d9f52c1",
+   "bytes": 332755939,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.jan.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.jul.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "06ed1fee2779e71fbe0afbc3c24d29cbee4ac83695c3ba1363d8ce9e71985595",
+   "bytes": 342368573,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.jul.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.jul.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "ce1c4435f9368131b9d307fce936089fac284b1a4a01ec1535e8e3afc0f255bf",
+   "bytes": 322364583,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.jul.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.jun.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "bd8507be317f875a6a5a0cce616d16d6c53daf11dcee885e00eaecc3cd3ffd5a",
+   "bytes": 344461755,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.jun.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.jun.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "dfbabcdc70f61ced18f04fe87cee069b859d2a04f1b1201585bc7d11a988d254",
+   "bytes": 322664657,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.jun.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.mar.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "ac78480110ba7e700a65308f11ed9b40bd28a2d113503eca55b105354a2f9b16",
+   "bytes": 339222996,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.mar.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.mar.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "c053591fed99b273b781b064fb48536033c7001dd4392fb41255eb19732070a5",
+   "bytes": 327176176,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.mar.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.may.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "b26ae6327bbdc50569f409be28a7c87f994c53b24560f674b1ef8af3a74c12b3",
+   "bytes": 344846078,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.may.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.may.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "45a1b0444540bdbde6330ccd57279ea0fea33b998a9abc87860b5a20d07ce722",
+   "bytes": 321678494,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.may.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.nov.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "f39c75e34cf728db5209cd8447fd0c65341a69af4a136a19d3737c90f48c8d0a",
+   "bytes": 339759659,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.nov.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.nov.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "2bf0cd23a9533b3ab18d1a1455603e8b0034cc02c321f03fb499c1be183fc794",
+   "bytes": 329041095,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.nov.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.oct.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "f57bd4adef5eeac8a3b6829304c67d083ba83a516817b5c93a5f4f8de1ca36d2",
+   "bytes": 340249216,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.oct.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.oct.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "28c92247d78988a0b032c89f2f0e534b0b8a6c6d9e4535593b1cb6e19f22f7c7",
+   "bytes": 325632657,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.oct.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.sep.day_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "aa685c1abf48cce4f1b48b25ced14fd0d0a8be6528a5966f5e79c09c7d612eed",
+   "bytes": 339947377,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.sep.day_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_modis_lst/clm_lst_mod11a2.sep.night_m_1km_s0..0cm_2000..2017_v1.0.tif": {
+   "sha256": "4e39e2885d210d7bc84e853edbf6d58580a5f8831b9ebc105d0601fe306c026d",
+   "bytes": 321514860,
+   "url": "https://zenodo.org/records/1420115/files/clm_lst_mod11a2.sep.night_m_1km_s0..0cm_2000..2017_v1.0.tif"
+  },
+  "earth_usgs_lithology/dtm_lithology_usgs.ecotapestry_c_250m_s0..0cm_2014_v1.0.tif": {
+   "sha256": "9e2e11ba68ca51c4c0d6e656e5bfbefdcdf98f97e9354595eaff3883a38f692d",
+   "bytes": 232432131,
+   "url": "https://zenodo.org/records/1464846/files/dtm_lithology_usgs.ecotapestry_c_250m_s0..0cm_2014_v1.0.tif"
+  },
+  "earth_usgs_lithology/dtm_lithology_usgs.ecotapestry_c_250m_s0..0cm_2014_v1.0.tif.csv": {
+   "sha256": "4a2b1611afbc6abad1300840c8b3b61038fd174b0a850373b92bab518171577d",
+   "bytes": 1733,
+   "url": "https://zenodo.org/records/1464846/files/dtm_lithology_usgs.ecotapestry_c_250m_s0..0cm_2014_v1.0.tif.csv"
+  },
+  "earth_wikidata_caves/sparql": {
+   "sha256": "fea97b9259410181b92b34618fd2824a79137b8916dfcdf652c4276907abaa77",
+   "bytes": 8898245,
+   "url": "https://query.wikidata.org/sparql?query=SELECT+%3Fc+%3FcLabel+%3Fcoord+%3Flavatube+WHERE+%7B+%3Fc+wdt%3AP31%2Fwdt%3AP279%2A+wd%3AQ35509+.+%3Fc+p%3AP625%2Fpsv%3AP625+%3Fcv+.+%3Fcv+wikibase%3AgeoGlobe+wd%3AQ2+.+%3Fc+wdt%3AP625+%3Fcoord+.+BIND%28EXISTS+%7B+%3Fc+wdt%3AP31%2Fwdt%3AP279%2A+wd%3AQ27919+%7D+AS+%3Flavatube%29+SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22en%22.+%7D+%7D&format=json"
+  }
+ },
+ "limitations": [
+  "Land cells only (any land pixel in the 0.125 deg cell); oceans are excluded because Earth analogs are land surfaces.",
+  "No Earth equivalent of orbital gamma-ray/neutron geochemistry (FeO, SiO2, K, Th, neutron counts) exists globally; those Moon/Mars features are absent, not zero.",
+  "MODIS LST and the lithology map do not cover Antarctica (south of 62 S): temperature and geology are NaN there.",
+  "MODIS samples ~10:30 and ~22:30 local time only, so tsurf_max_k / tsurf_min_k understate the true diurnal extremes.",
+  "Pressure, wind, stress, surface insolation, snow, albedo and soil water are ERA5 reanalysis (model), 0.25 deg.",
+  "Craters: ~190 confirmed structures; densities are near zero almost everywhere and say little about surface age on Earth.",
+  "Caves are a crowd-sourced Wikidata catalog (mostly karst, ~50 lava tubes), heavily biased to well-documented countries.",
+  "No global rock-abundance, thermal-inertia, dust-opacity or gravity grid was available without registration; those features are absent for Earth.",
+  "Earth hosts life everywhere; Moon/Mars habitability proxies (biosignature preservation) are not computed for Earth."
+ ],
+ "processing_config": {
+  "grids": {
+   "moon": {
+    "res_deg": 0.5
+   },
+   "mars": {
+    "res_deg": 0.25
+   },
+   "earth": {
+    "res_deg": 0.125
+   }
+  },
+  "terrain": {
+   "slope_landing_deg": 15,
+   "slope_mobility_deg": 25,
+   "max_abs_lat": {
+    "moon": 89.5,
+    "mars": 88,
+    "earth": 90
+   },
+   "crater_window_cells": 5,
+   "crater_bins_km": [
+    1,
+    5,
+    20
+   ],
+   "sfd_range_km": [
+    2,
+    10
+   ]
+  },
+  "environment": {
+   "cold_trap_tmax_k": 110,
+   "liquid_water_tmin_k": 273.15,
+   "triple_point_pa": 611.657,
+   "earth_soil_saturation_m3m3": 0.5,
+   "earth_snow_ref_kgm2": 100
+  },
+  "surface_processes": {
+   "dust_lifting_stress_npm2": 0.0225
+  },
+  "exploration": {
+   "landing_hazard_weights": {
+    "slope_frac_gt_landing": 0.67,
+    "roughness": 0.33
+   },
+   "roughness_ref_m": 50,
+   "rock_ref_fraction": 0.2,
+   "traversability_weights": {
+    "slope_frac_gt_mobility": 0.6,
+    "roughness": 0.4
+   }
+  },
+  "analog": {
+   "features": {
+    "terrain": {
+     "slope_median_deg": 1.0,
+     "slope_p90_deg": 1.0,
+     "roughness_rms_m": 1.0,
+     "relief_m": 1.0,
+     "tri_mean_m": 0.5,
+     "crater_density_d1": 0.75,
+     "crater_density_d5": 0.75,
+     "crater_sfd_slope": 0.5
+    },
+    "geology": {
+     "feo_wt": 1.0,
+     "sio2_wt": 1.0,
+     "k_ppm": 0.75,
+     "th_ppm": 0.75
+    },
+    "environment": {
+     "tsurf_max_k": 1.0,
+     "tsurf_min_k": 1.0,
+     "tsurf_mean_k": 1.0,
+     "tsurf_diurnal_range_k": 1.0,
+     "insolation_toa_wm2": 0.5
+    },
+    "surface_processes": {
+     "rock_abundance": 1.0
+    },
+    "subsurface": {
+     "cave_candidate_distance_km": 1.0
+    },
+    "exploration": {
+     "landing_hazard_index": 1.0
+    }
+   },
+   "dimension_weights": {
+    "terrain": 0.25,
+    "geology": 0.2,
+    "environment": 0.2,
+    "surface_processes": 0.15,
+    "subsurface": 0.1,
+    "exploration": 0.1
+   },
+   "scale": 1.0,
+   "min_dimensions": 4,
+   "knn_k": 8,
+   "region_merge_km": 60,
+   "top_regions": 40,
+   "kmeans_k": [
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "random_state": 42
+  }
+ }
+}

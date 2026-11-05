@@ -1,0 +1,892 @@
+[
+ {
+  "name": "elev_mean_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean elevation (Moon: rel. 1737.4 km sphere; Mars: rel. areoid; Earth: rel. EGM2008 geoid)",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": -4936.22216796875,
+  "max": 6306.8876953125,
+  "mean": 1108.9337158203125
+ },
+ {
+  "name": "elev_min_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Minimum elevation in cell",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": -4936.22216796875,
+  "max": 5809.00830078125,
+  "mean": 1005.3329467773438
+ },
+ {
+  "name": "elev_max_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Maximum elevation in cell",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": -4936.22216796875,
+  "max": 8585.7158203125,
+  "mean": 1254.9527587890625
+ },
+ {
+  "name": "relief_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Local relief (max - min) within the ~15 km cell",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 5690.4375,
+  "mean": 249.6197967529297
+ },
+ {
+  "name": "slope_mean_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean slope at ~470 m baseline",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 57.116695404052734,
+  "mean": 2.2818830013275146
+ },
+ {
+  "name": "slope_median_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Median slope at ~470 m baseline",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 61.073143005371094,
+  "mean": 2.0249156951904297
+ },
+ {
+  "name": "slope_p90_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "90th-percentile slope at ~470 m baseline",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 72.94489288330078,
+  "mean": 4.1992011070251465
+ },
+ {
+  "name": "slope_frac_gt_landing",
+  "units": "fraction",
+  "dimensions": [
+   "exploration",
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of pixels steeper than 15 deg (landing tilt limit)",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.03191188722848892
+ },
+ {
+  "name": "slope_frac_gt_mobility",
+  "units": "fraction",
+  "dimensions": [
+   "exploration",
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of pixels steeper than 25 deg (rover limit)",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.0067779081873595715
+ },
+ {
+  "name": "tri_mean_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Terrain Ruggedness Index (mean |dz| to 8 neighbours, ~470 m spacing)",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 0.9960252642631531,
+  "min": 0.0,
+  "max": 1115.75048828125,
+  "mean": 15.987955093383789
+ },
+ {
+  "name": "roughness_rms_m",
+  "units": "m",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "RMS of elevation residual after plane fit over the cell (surface roughness)",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 0.9198518991470337,
+  "min": 3.968121929540059e-15,
+  "max": 925.7913208007812,
+  "mean": 37.072383880615234
+ },
+ {
+  "name": "dem_valid_frac",
+  "units": "fraction",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of valid DEM pixels in cell (QC)",
+  "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+  "categories": null,
+  "source": "earth_etopo2022",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.3282635807991028
+ },
+ {
+  "name": "crater_density_d1",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "earth_impact_craters",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 10.912333488464355,
+  "mean": 0.0029403020162135363
+ },
+ {
+  "name": "crater_density_d5",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "earth_impact_craters",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 10.912333488464355,
+  "mean": 0.0023344699293375015
+ },
+ {
+  "name": "crater_density_d20",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "earth_impact_craters",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 10.912333488464355,
+  "mean": 0.0010814779670909047
+ },
+ {
+  "name": "crater_largest_d_km",
+  "units": "km",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Largest crater centred in cell",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "earth_impact_craters",
+  "body": "earth",
+  "coverage_area_frac": 0.0001512847375124693,
+  "min": 0.024000000208616257,
+  "max": 160.0,
+  "mean": 17.934186935424805
+ },
+ {
+  "name": "geo_unit",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Dominant surface lithology class (USGS EcoTapestry / GLiM-derived, 15 classes)",
+  "native_resolution": "250 m class raster, counted per cell",
+  "categories": [
+   "acid.plutonics",
+   "acid.volcanic",
+   "basic.plutonics",
+   "basic.volcanics",
+   "carbonate.sedimentary.rock",
+   "evaporite",
+   "ice.and.glaciers",
+   "intermediate.plutonics",
+   "intermediate.volcanics",
+   "metamorphics",
+   "mixed.sedimentary.rock",
+   "pyroclastics",
+   "siliciclastic.sedimentary",
+   "unconsolidated.sediment",
+   "undefined"
+  ],
+  "source": "earth_usgs_lithology",
+  "body": "earth",
+  "coverage_area_frac": 0.9046097993850708,
+  "min": 0.0,
+  "max": 14.0,
+  "mean": 9.239381790161133
+ },
+ {
+  "name": "geo_unit_frac",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Areal fraction of the dominant unit in cell",
+  "native_resolution": "250 m class raster, counted per cell",
+  "categories": null,
+  "source": "earth_usgs_lithology",
+  "body": "earth",
+  "coverage_area_frac": 0.9046097993850708,
+  "min": 0.00027777778450399637,
+  "max": 1.0,
+  "mean": 0.7744045257568359
+ },
+ {
+  "name": "geo_class",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Shared process class (volcanic / impact_crater / impact_basin / plains / highland / lowland / polar / ...); Earth: volcanic+pyroclastic = volcanic, ice = polar, unconsolidated sediment = plains, rest = other",
+  "native_resolution": "250 m class raster, counted per cell",
+  "categories": [
+   "volcanic",
+   "impact_crater",
+   "impact_basin",
+   "plains",
+   "highland",
+   "lowland",
+   "polar",
+   "transition",
+   "apron",
+   "other"
+  ],
+  "source": "earth_usgs_lithology",
+  "body": "earth",
+  "coverage_area_frac": 0.9046097993850708,
+  "min": 0.0,
+  "max": 9.0,
+  "mean": 6.913757801055908
+ },
+ {
+  "name": "geo_unit_diversity_3x3",
+  "units": "count",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Number of distinct units within a 3x3-cell neighbourhood",
+  "native_resolution": "250 m class raster, counted per cell",
+  "categories": null,
+  "source": "earth_usgs_lithology",
+  "body": "earth",
+  "coverage_area_frac": 0.9046097993850708,
+  "min": 1.0,
+  "max": 13.0,
+  "mean": 3.511993885040283
+ },
+ {
+  "name": "tsurf_max_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Warmest monthly-median daytime LST (~10:30 local; below the true afternoon peak)",
+  "native_resolution": "1 km, cell mean",
+  "categories": null,
+  "source": "earth_modis_lst",
+  "body": "earth",
+  "coverage_area_frac": 0.9140207171440125,
+  "min": 252.94000244140625,
+  "max": 337.131103515625,
+  "mean": 302.8327941894531
+ },
+ {
+  "name": "tsurf_min_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Coldest monthly-median night-time LST (~22:30 local; above the true pre-dawn minimum)",
+  "native_resolution": "1 km, cell mean",
+  "categories": null,
+  "source": "earth_modis_lst",
+  "body": "earth",
+  "coverage_area_frac": 0.9140244126319885,
+  "min": 222.4475555419922,
+  "max": 302.0458679199219,
+  "mean": 265.10498046875
+ },
+ {
+  "name": "tsurf_mean_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Annual mean of monthly (day+night)/2 LST; only cells with all 12 months",
+  "native_resolution": "1 km, cell mean",
+  "categories": null,
+  "source": "earth_modis_lst",
+  "body": "earth",
+  "coverage_area_frac": 0.9139601588249207,
+  "min": 237.87351989746094,
+  "max": 314.1708068847656,
+  "mean": 282.1299133300781
+ },
+ {
+  "name": "tsurf_diurnal_range_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Mean day-minus-night LST over months with both overpasses (~10:30 vs ~22:30: a lower bound; slightly negative in ~0.1% of cells where day and night medians come from different clear-sky samples)",
+  "native_resolution": "1 km, cell mean",
+  "categories": null,
+  "source": "earth_modis_lst",
+  "body": "earth",
+  "coverage_area_frac": 0.9139665365219116,
+  "min": -7.980010986328125,
+  "max": 42.199424743652344,
+  "mean": 10.946028709411621
+ },
+ {
+  "name": "tsurf_seasonal_range_k",
+  "units": "K",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Range of monthly (day+night)/2 LST across the year",
+  "native_resolution": "1 km, cell mean",
+  "categories": null,
+  "source": "earth_modis_lst",
+  "body": "earth",
+  "coverage_area_frac": 0.9139601588249207,
+  "min": 0.384521484375,
+  "max": 66.43338012695312,
+  "mean": 26.879497528076172
+ },
+ {
+  "name": "liquid_water_window_frac",
+  "units": "fraction",
+  "dimensions": [
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Fraction of the 24 monthly day/night LST samples above 273.15 K (surface pressure is always above the H2O triple point on Earth)",
+  "native_resolution": "1 km, cell mean",
+  "categories": null,
+  "source": "earth_modis_lst",
+  "body": "earth",
+  "coverage_area_frac": 0.9140703082084656,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.6916227340698242
+ },
+ {
+  "name": "lst_sample_coverage",
+  "units": "fraction",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Fraction of the 24 monthly day/night LST samples observed (QC)",
+  "native_resolution": "1 km, cell mean",
+  "categories": null,
+  "source": "earth_modis_lst",
+  "body": "earth",
+  "coverage_area_frac": 0.9140703082084656,
+  "min": 0.0416666679084301,
+  "max": 1.0,
+  "mean": 0.999774694442749
+ },
+ {
+  "name": "ps_mean_pa",
+  "units": "Pa",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean surface pressure",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 49316.9296875,
+  "max": 103073.125,
+  "mean": 96672.703125
+ },
+ {
+  "name": "ps_min_pa",
+  "units": "Pa",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Minimum monthly-mean surface pressure",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 48528.0078125,
+  "max": 102340.9140625,
+  "mean": 96295.46875
+ },
+ {
+  "name": "wind_mean_ms",
+  "units": "m/s",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean 10 m wind speed",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.4830783009529114,
+  "max": 15.432315826416016,
+  "mean": 6.375184059143066
+ },
+ {
+  "name": "wind_max_seasonal_ms",
+  "units": "m/s",
+  "dimensions": [
+   "surface_processes",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Highest monthly-mean 10 m wind speed",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.5219061970710754,
+  "max": 17.81355857849121,
+  "mean": 7.37567138671875
+ },
+ {
+  "name": "surface_stress_mean_npm2",
+  "units": "N/m2",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean surface wind stress (magnitude of monthly-mean components: underestimates gusty stress)",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.001018119277432561,
+  "max": 2.8426618576049805,
+  "mean": 0.08897478133440018
+ },
+ {
+  "name": "insolation_surface_wm2",
+  "units": "W/m2",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean downward solar flux at the surface (includes cloud and aerosol attenuation)",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 61.23817443847656,
+  "max": 310.0650329589844,
+  "mean": 164.14210510253906
+ },
+ {
+  "name": "h2o_frost_max_kgm2",
+  "units": "kg/m2",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Peak monthly-mean snow water equivalent (Earth's seasonal surface H2O ice; capped at 1e4 over glaciers)",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 10000.0,
+  "mean": 1156.349609375
+ },
+ {
+  "name": "albedo_lambert",
+  "units": "dimensionless",
+  "dimensions": [
+   "environment",
+   "surface_processes"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean broadband surface albedo (ERA5 forecast albedo)",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.03984443098306656,
+  "max": 0.8500012159347534,
+  "mean": 0.2685115337371826
+ },
+ {
+  "name": "soil_water_vol_frac",
+  "units": "m3/m3",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean volumetric soil water, 0-7 cm (Earth only; NaN on ERA5 glacier points)",
+  "native_resolution": "0.25 deg reanalysis (containing node)",
+  "categories": null,
+  "source": "earth_era5_climate",
+  "body": "earth",
+  "coverage_area_frac": 0.906023383140564,
+  "min": 6.07600895818905e-07,
+  "max": 0.7425115704536438,
+  "mean": 0.06739804893732071
+ },
+ {
+  "name": "dune_cover_frac",
+  "units": "fraction",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Fraction of 0.1 deg dune-presence pixels centred in the cell that contain dunes",
+  "native_resolution": "0.1 deg presence mask",
+  "categories": null,
+  "source": "earth_dunes",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.016443926841020584
+ },
+ {
+  "name": "dune_field_distance_km",
+  "units": "km",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Distance to the nearest dune-presence pixel (aeolian activity context)",
+  "native_resolution": "0.1 deg presence mask",
+  "categories": null,
+  "source": "earth_dunes",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 1.4704190492630005,
+  "max": 5535.04833984375,
+  "mean": 1456.9134521484375
+ },
+ {
+  "name": "cave_candidate_count",
+  "units": "count",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Number of Wikidata cave candidates in cell",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "earth_wikidata_caves",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 250.0,
+  "mean": 0.0036590953823179007
+ },
+ {
+  "name": "cave_candidate_distance_km",
+  "units": "km",
+  "dimensions": [
+   "subsurface",
+   "exploration"
+  ],
+  "measurement_type": "catalog",
+  "description": "Great-circle distance to nearest cave candidate",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "earth_wikidata_caves",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.018490372225642204,
+  "max": 3595.65625,
+  "mean": 1089.498046875
+ },
+ {
+  "name": "nearest_cave_setting",
+  "units": "category",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Host setting/type of nearest cave",
+  "native_resolution": "point catalog",
+  "categories": [
+   "cave",
+   "lava_tube"
+  ],
+  "source": "earth_wikidata_caves",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.11383511871099472
+ },
+ {
+  "name": "insolation_toa_wm2",
+  "units": "W/m2",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Annual-mean daily top-of-atmosphere insolation on a horizontal surface (orbit & obliquity only)",
+  "native_resolution": "analytic, per latitude",
+  "categories": null,
+  "source": "earth_model_geometry",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 172.35398864746094,
+  "max": 415.5945739746094,
+  "mean": 298.3726806640625
+ },
+ {
+  "name": "landing_hazard_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Weighted mean of steep-slope fraction and roughness/50 m (weights {'slope_frac_gt_landing': 0.67, 'roughness': 0.33}); terrain-only so it is consistent at all latitudes - see boulder_hazard_index for rocks",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.13925428688526154
+ },
+ {
+  "name": "traversability_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 - weighted terrain hazard (weights {'slope_frac_gt_mobility': 0.6, 'roughness': 0.4}); 1 = easiest rover traverse",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.8544111251831055
+ },
+ {
+  "name": "terrain_class",
+  "units": "category",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Slope-based terrain class from 90th-percentile slope (<5 smooth, 5-15 moderate, 15-25 rugged, >=25 steep)",
+  "native_resolution": "analysis grid",
+  "categories": [
+   "smooth",
+   "moderate",
+   "rugged",
+   "steep"
+  ],
+  "source": "derived",
+  "body": "earth",
+  "coverage_area_frac": 0.997140645980835,
+  "min": 0.0,
+  "max": 3.0,
+  "mean": 0.34823524951934814
+ },
+ {
+  "name": "cold_trap_flag",
+  "units": "0/1",
+  "dimensions": [
+   "environment",
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 if any temperature product shows annual max T < 110 K in the cell",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "earth",
+  "coverage_area_frac": 0.9140207171440125,
+  "min": 0.0,
+  "max": 0.0,
+  "mean": 0.0
+ },
+ {
+  "name": "water_indicator_score",
+  "units": "0-1",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "PROXY: mean of available [soil water / 0.5 m3/m3, peak snow water equivalent / 100 kg/m2]",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 6.07600895818905e-07,
+  "max": 1.0,
+  "mean": 0.5922327637672424
+ },
+ {
+  "name": "lava_tube_context_flag",
+  "units": "0/1",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 if a cave candidate (Mars MGC3 / Earth Wikidata) lies within 50 km AND the dominant unit is volcanic - context only",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.0064448220655322075
+ },
+ {
+  "name": "solar_power_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Annual-mean surface insolation (Mars MCD dust-attenuated / Earth ERA5 cloud-attenuated) / 250 W/m2",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "earth",
+  "coverage_area_frac": 1.0,
+  "min": 0.2598084807395935,
+  "max": 1.0,
+  "mean": 0.6558849215507507
+ }
+]
