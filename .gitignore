@@ -5,3 +5,4 @@
 !*_integrated_dataset/*_integrated.parquet
 !*_integrated_dataset/*_feature_dictionary.json
 !*_integrated_dataset/*_metadata.json
+!README.md
