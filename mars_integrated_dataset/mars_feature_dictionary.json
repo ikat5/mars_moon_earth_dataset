@@ -1,0 +1,1691 @@
+[
+ {
+  "name": "elev_mean_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean elevation (Moon: rel. 1737.4 km sphere; Mars: rel. areoid)",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": -8039.73828125,
+  "max": 21122.966796875,
+  "mean": -755.7673950195312
+ },
+ {
+  "name": "elev_min_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Minimum elevation in cell",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": -8208.0,
+  "max": 21063.0,
+  "mean": -919.6138305664062
+ },
+ {
+  "name": "elev_max_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Maximum elevation in cell",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": -7607.0,
+  "max": 21249.0,
+  "mean": -575.8532104492188
+ },
+ {
+  "name": "relief_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Local relief (max - min) within the ~15 km cell",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 2.0,
+  "max": 9565.0,
+  "mean": 343.7605285644531
+ },
+ {
+  "name": "slope_mean_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean slope at ~470 m baseline",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 0.015683703124523163,
+  "max": 26.91478157043457,
+  "mean": 1.687549352645874
+ },
+ {
+  "name": "slope_median_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Median slope at ~470 m baseline",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 0.0,
+  "max": 29.624731063842773,
+  "mean": 1.3088891506195068
+ },
+ {
+  "name": "slope_p90_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "90th-percentile slope at ~470 m baseline",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 0.06187685579061508,
+  "max": 41.48680114746094,
+  "mean": 3.4581098556518555
+ },
+ {
+  "name": "slope_frac_gt_landing",
+  "units": "fraction",
+  "dimensions": [
+   "exploration",
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of pixels steeper than 15 deg (landing tilt limit)",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 0.0,
+  "max": 0.9755859375,
+  "mean": 0.010563978925347328
+ },
+ {
+  "name": "slope_frac_gt_mobility",
+  "units": "fraction",
+  "dimensions": [
+   "exploration",
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of pixels steeper than 25 deg (rover limit)",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 0.0,
+  "max": 0.7158203125,
+  "mean": 0.001515159267000854
+ },
+ {
+  "name": "tri_mean_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Terrain Ruggedness Index (mean |dz| to 8 neighbours, ~470 m spacing)",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 0.098388671875,
+  "max": 187.5655517578125,
+  "mean": 10.864551544189453
+ },
+ {
+  "name": "roughness_rms_m",
+  "units": "m",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "RMS of elevation residual after plane fit over the cell (surface roughness)",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 0.075589619576931,
+  "max": 1217.119384765625,
+  "mean": 42.2779426574707
+ },
+ {
+  "name": "dem_valid_frac",
+  "units": "fraction",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of valid DEM pixels in cell (QC)",
+  "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+  "categories": null,
+  "source": "mars_mola_megdr128",
+  "body": "mars",
+  "coverage_area_frac": 0.999390827019096,
+  "min": 1.0,
+  "max": 1.0,
+  "mean": 1.0
+ },
+ {
+  "name": "crater_density_d1",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "mars_robbins_craters",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": -3.592047145839494e-11,
+  "max": 437.72705078125,
+  "mean": 22.318021774291992
+ },
+ {
+  "name": "crater_density_d5",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "mars_robbins_craters",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": -2.4461971077222033e-12,
+  "max": 45.18169403076172,
+  "mean": 2.838862419128418
+ },
+ {
+  "name": "crater_density_d20",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "mars_robbins_craters",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": -3.8624163004215284e-13,
+  "max": 45.18169403076172,
+  "mean": 0.6585519313812256
+ },
+ {
+  "name": "crater_sfd_slope",
+  "units": "dimensionless",
+  "dimensions": [
+   "terrain",
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Cumulative size-frequency power-law slope [2, 10] km (5x5 cell window); shallower = degraded/resurfaced or saturated",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "mars_robbins_craters",
+  "body": "mars",
+  "coverage_area_frac": 0.07623091343012833,
+  "min": -18.26192855834961,
+  "max": -0.09974697232246399,
+  "mean": -3.12123703956604
+ },
+ {
+  "name": "crater_largest_d_km",
+  "units": "km",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Largest crater centred in cell",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "mars_robbins_craters",
+  "body": "mars",
+  "coverage_area_frac": 0.33508640408255713,
+  "min": 1.0000009536743164,
+  "max": 1088.0242919921875,
+  "mean": 4.372002601623535
+ },
+ {
+  "name": "crater_rim_freshness_mean",
+  "units": "class 1-4",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Mean rim degradation state of D>=3 km craters (1 = heavily degraded .. 4 = fresh): surface-modification indicator (5x5 cells, >=3 craters)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "mars_robbins_craters",
+  "body": "mars",
+  "coverage_area_frac": 0.33683757456585334,
+  "min": 1.0,
+  "max": 4.0,
+  "mean": 2.2070844173431396
+ },
+ {
+  "name": "layered_ejecta_frac",
+  "units": "fraction",
+  "dimensions": [
+   "resources",
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Fraction of D>=3 km craters with layered (fluidized) ejecta: indicator of ground ice at impact time",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "mars_robbins_craters",
+  "body": "mars",
+  "coverage_area_frac": 0.3600152422301551,
+  "min": -4.625929092806288e-16,
+  "max": 1.0,
+  "mean": 0.21632379293441772
+ },
+ {
+  "name": "geo_unit",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Dominant mapped unit (USGS SIM 3292)",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": [
+   "AHi",
+   "AHtu",
+   "AHv",
+   "ANa",
+   "Aa",
+   "Ap",
+   "Apu",
+   "Av",
+   "Ave",
+   "HNb",
+   "HNhu",
+   "HNt",
+   "Hp",
+   "Hpe",
+   "Hpu",
+   "Ht",
+   "Hto",
+   "Htu",
+   "Hve",
+   "Nhe",
+   "Nhu",
+   "Nve",
+   "eAb",
+   "eHb",
+   "eHh",
+   "eHt",
+   "eHv",
+   "eNh",
+   "eNhm",
+   "lAa",
+   "lApc",
+   "lApd",
+   "lAv",
+   "lAvf",
+   "lHb",
+   "lHl",
+   "lHt",
+   "lHv",
+   "lHvf",
+   "lNh",
+   "lNv",
+   "mAl",
+   "mNh",
+   "mNhm"
+  ],
+  "source": "mars_sim3292_geology",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 43.0,
+  "mean": 26.38611602783203
+ },
+ {
+  "name": "geo_unit_frac",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Areal fraction of the dominant unit in cell",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": null,
+  "source": "mars_sim3292_geology",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.375,
+  "max": 1.0,
+  "mean": 0.9782694578170776
+ },
+ {
+  "name": "geo_class",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Shared process class (volcanic / impact_crater / impact_basin / plains / highland / lowland / polar / ...)",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": [
+   "volcanic",
+   "impact_crater",
+   "impact_basin",
+   "plains",
+   "highland",
+   "lowland",
+   "polar",
+   "transition",
+   "apron",
+   "other"
+  ],
+  "source": "mars_sim3292_geology",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 8.0,
+  "mean": 3.882861614227295
+ },
+ {
+  "name": "geo_age",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Mapped chronostratigraphic period of the dominant unit",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": [
+   "Amazonian",
+   "Amazonian-Hesperian",
+   "Amazonian-Noachian",
+   "Hesperian",
+   "Hesperian-Noachian",
+   "Noachian",
+   "other"
+  ],
+  "source": "mars_sim3292_geology",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 5.0,
+  "mean": 2.905264377593994
+ },
+ {
+  "name": "geo_unit_diversity_3x3",
+  "units": "count",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Number of distinct units within a 3x3-cell neighbourhood",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": null,
+  "source": "mars_sim3292_geology",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 1.0,
+  "max": 5.0,
+  "mean": 1.3051137924194336
+ },
+ {
+  "name": "tes_olivine",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES olivine areal abundance",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.17419886589050293,
+  "mean": 0.0038048038259148598
+ },
+ {
+  "name": "tes_hematite",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES hematite abundance",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.22377972304821014,
+  "mean": 0.00824350118637085
+ },
+ {
+  "name": "tes_feldspar",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES feldspar abundance",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.147202268242836,
+  "mean": 0.02049870602786541
+ },
+ {
+  "name": "tes_plagioclase",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES plagioclase abundance",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.7829244136810303,
+  "mean": 0.06262191385030746
+ },
+ {
+  "name": "tes_orthopyroxene",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES orthopyroxene abundance",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.31968119740486145,
+  "mean": 0.007042399607598782
+ },
+ {
+  "name": "tes_highsilica_glass_clay",
+  "units": "fraction",
+  "dimensions": [
+   "geology",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES high-silica phases (glass / clay / zeolite group)",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.7328559160232544,
+  "mean": 0.05794713273644447
+ },
+ {
+  "name": "tes_sulfate",
+  "units": "fraction",
+  "dimensions": [
+   "geology",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES sulfate abundance",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.2662256360054016,
+  "mean": 0.023676911368966103
+ },
+ {
+  "name": "tes_quartz",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES quartz abundance",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.0,
+  "max": 0.06385307759046555,
+  "mean": 0.0011804510140791535
+ },
+ {
+  "name": "tes_mineral_rms_error",
+  "units": "emissivity",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "RMS error of TES spectral unmixing (uncertainty)",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_minerals",
+  "body": "mars",
+  "coverage_area_frac": 0.8385167469235079,
+  "min": 0.000725827703718096,
+  "max": 0.00997779332101345,
+  "mean": 0.002501432318240404
+ },
+ {
+  "name": "thermal_inertia_tiu",
+  "units": "J m-2 K-1 s-1/2",
+  "dimensions": [
+   "environment",
+   "surface_processes",
+   "exploration"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES thermal inertia (surface particle size / consolidation)",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_thermophysical",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 25.0,
+  "max": 602.0,
+  "mean": 159.13861083984375
+ },
+ {
+  "name": "albedo_lambert",
+  "units": "dimensionless",
+  "dimensions": [
+   "environment",
+   "surface_processes"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES Lambert albedo",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_thermophysical",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.07999999821186066,
+  "max": 0.3209448754787445,
+  "mean": 0.19363591074943542
+ },
+ {
+  "name": "rock_abundance",
+  "units": "fraction",
+  "dimensions": [
+   "surface_processes",
+   "exploration"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES rock abundance (Nowicki & Christensen 2007)",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_thermophysical",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 0.5724999904632568,
+  "mean": 0.036154866218566895
+ },
+ {
+  "name": "fine_component_ti",
+  "units": "J m-2 K-1 s-1/2",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TES fine-component thermal inertia (rocks removed)",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_tes_thermophysical",
+  "body": "mars",
+  "coverage_area_frac": 0.49237281853664877,
+  "min": 23.0,
+  "max": 797.0,
+  "mean": 249.28494262695312
+ },
+ {
+  "name": "omega_ferric_bd530",
+  "units": "band depth",
+  "dimensions": [
+   "geology",
+   "surface_processes"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "OMEGA BD530 ferric oxide (nanophase/dust) band depth",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_omega_maps",
+  "body": "mars",
+  "coverage_area_frac": 0.9174422388219617,
+  "min": 0.000132828950881958,
+  "max": 0.254046231508255,
+  "mean": 0.1495690941810608
+ },
+ {
+  "name": "omega_pyroxene_bd2000",
+  "units": "band depth",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "OMEGA BD2000 pyroxene band depth",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_omega_maps",
+  "body": "mars",
+  "coverage_area_frac": 0.49886485134704367,
+  "min": 0.010016828775405884,
+  "max": 0.0946735069155693,
+  "mean": 0.02514166384935379
+ },
+ {
+  "name": "omega_olivine_osp1",
+  "units": "spectral parameter",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "OMEGA OSP1 olivine spectral parameter",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_omega_maps",
+  "body": "mars",
+  "coverage_area_frac": 0.02209588615720645,
+  "min": 1.0400490760803223,
+  "max": 1.1933705806732178,
+  "mean": 1.048471450805664
+ },
+ {
+  "name": "omega_albedo_r1080",
+  "units": "reflectance",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "OMEGA 1.08 um reflectance",
+  "native_resolution": "8 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_omega_maps",
+  "body": "mars",
+  "coverage_area_frac": 0.9803939254139659,
+  "min": 0.09015687555074692,
+  "max": 0.8574504256248474,
+  "mean": 0.2912805378437042
+ },
+ {
+  "name": "h2o_wt",
+  "units": "wt%",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Water-equivalent hydrogen (WEH) as H2O in the upper few tens of cm",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 1.6449999809265137,
+  "max": 7.3979997634887695,
+  "mean": 3.9815869331359863
+ },
+ {
+  "name": "h2o_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of h2o_wt",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 0.23000000417232513,
+  "max": 0.6669999957084656,
+  "mean": 0.35242706537246704
+ },
+ {
+  "name": "feo_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Iron expressed as FeO (Fe x 1.2865), comparable with lunar GRS FeO",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 13.677955627441406,
+  "max": 24.83053207397461,
+  "mean": 18.611370086669922
+ },
+ {
+  "name": "feo_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of feo_wt",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 0.5596228837966919,
+  "max": 1.3083597421646118,
+  "mean": 0.7714372277259827
+ },
+ {
+  "name": "sio2_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Silicon expressed as SiO2 (Si x 2.1393)",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 38.736061096191406,
+  "max": 47.3060417175293,
+  "mean": 43.337852478027344
+ },
+ {
+  "name": "sio2_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of sio2_wt",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 0.5626323223114014,
+  "max": 2.0793864727020264,
+  "mean": 0.934505045413971
+ },
+ {
+  "name": "k_ppm",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Potassium (wt% x 1e4 -> ppm)",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 710.0,
+  "max": 5610.0,
+  "mean": 2984.4443359375
+ },
+ {
+  "name": "k_ppm_sigma",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of k_ppm",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 110.0,
+  "max": 430.0,
+  "mean": 202.24151611328125
+ },
+ {
+  "name": "th_ppm",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Thorium",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.16300000250339508,
+  "max": 0.9459999799728394,
+  "mean": 0.5398696064949036
+ },
+ {
+  "name": "th_ppm_sigma",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of th_ppm",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.03500000014901161,
+  "max": 0.09200000017881393,
+  "mean": 0.05693711340427399
+ },
+ {
+  "name": "cl_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Chlorine (aqueous-alteration / salt indicator)",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 0.2160000056028366,
+  "max": 0.796999990940094,
+  "mean": 0.48203250765800476
+ },
+ {
+  "name": "cl_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology",
+   "habitability"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of cl_wt",
+  "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_grs",
+  "body": "mars",
+  "coverage_area_frac": 0.789114855513709,
+  "min": 0.023000000044703484,
+  "max": 0.05900000035762787,
+  "mean": 0.03357427194714546
+ },
+ {
+  "name": "ns_epithermal_cps",
+  "units": "counts/s",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "measurement",
+  "description": "Odyssey NS epithermal neutron flux (lower = more hydrogen); 0 treated as no data",
+  "native_resolution": "0.5 deg bins (~600 km footprint)",
+  "categories": null,
+  "source": "mars_odyssey_ns",
+  "body": "mars",
+  "coverage_area_frac": 0.9998476951563915,
+  "min": 1.319000005722046,
+  "max": 12.414999961853027,
+  "mean": 5.723125457763672
+ },
+ {
+  "name": "swim_ice_consistency",
+  "units": "index -1..1",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "SWIM combined ice consistency (+1 = all data consistent with ice)",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_swim_ice",
+  "body": "mars",
+  "coverage_area_frac": 0.7952142871365215,
+  "min": -0.4368000030517578,
+  "max": 0.9683459997177124,
+  "mean": 0.03358246386051178
+ },
+ {
+  "name": "swim_ice_consistency_0_1m",
+  "units": "index -1..1",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "model",
+  "description": "SWIM ice consistency 0-1 m",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_swim_ice",
+  "body": "mars",
+  "coverage_area_frac": 0.7813941815672945,
+  "min": -0.5445454120635986,
+  "max": 1.0,
+  "mean": -0.014484522864222527
+ },
+ {
+  "name": "swim_ice_consistency_1_5m",
+  "units": "index -1..1",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "model",
+  "description": "SWIM ice consistency 1-5 m",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_swim_ice",
+  "body": "mars",
+  "coverage_area_frac": 0.3625645230848158,
+  "min": -0.5,
+  "max": 1.0,
+  "mean": 0.36623653769493103
+ },
+ {
+  "name": "swim_ice_consistency_gt5m",
+  "units": "index -1..1",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "model",
+  "description": "SWIM ice consistency >5 m",
+  "native_resolution": "4 px/deg as served by JMARS WMS",
+  "categories": null,
+  "source": "mars_swim_ice",
+  "body": "mars",
+  "coverage_area_frac": 0.2602166842003395,
+  "min": -0.5,
+  "max": 1.0,
+  "mean": 0.47114306688308716
+ },
+ {
+  "name": "cave_candidate_count",
+  "units": "count",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Number of MGC3 cave candidates in cell",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "mars_mgc3_caves",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 23.0,
+  "mean": 0.0010243055876344442
+ },
+ {
+  "name": "cave_candidate_distance_km",
+  "units": "km",
+  "dimensions": [
+   "subsurface",
+   "exploration"
+  ],
+  "measurement_type": "catalog",
+  "description": "Great-circle distance to nearest cave candidate",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "mars_mgc3_caves",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.15859104692935944,
+  "max": 3243.8134765625,
+  "mean": 1152.7069091796875
+ },
+ {
+  "name": "nearest_cave_depth_diam_ratio",
+  "units": "ratio",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Depth/diameter of the nearest cave (where measured)",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "mars_mgc3_caves",
+  "body": "mars",
+  "coverage_area_frac": 0.08616912329474334,
+  "min": 0.1538461595773697,
+  "max": 2.090909004211426,
+  "mean": 0.3646782338619232
+ },
+ {
+  "name": "nearest_cave_setting",
+  "units": "category",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Host setting/type of nearest cave",
+  "native_resolution": "point catalog",
+  "categories": [
+   "APC",
+   "con",
+   "crk",
+   "end",
+   "flr",
+   "irr",
+   "kst",
+   "lat",
+   "pin",
+   "pit",
+   "pol",
+   "rim",
+   "sky",
+   "smrp",
+   "srp"
+  ],
+  "source": "mars_mgc3_caves",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 14.0,
+  "mean": 8.093097686767578
+ },
+ {
+  "name": "dune_cover_frac",
+  "units": "fraction",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Fraction of cell inside a mapped dune field (MGD3 65N-65S)",
+  "native_resolution": "polygons rasterized at grid/4",
+  "categories": null,
+  "source": "mars_mgd3_dunes",
+  "body": "mars",
+  "coverage_area_frac": 0.90630778703665,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.000674328941386193
+ },
+ {
+  "name": "dune_field_distance_km",
+  "units": "km",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Distance to nearest mapped dune field (aeolian activity context)",
+  "native_resolution": "polygon centroids",
+  "categories": null,
+  "source": "mars_mgd3_dunes",
+  "body": "mars",
+  "coverage_area_frac": 0.90630778703665,
+  "min": 0.20098493993282318,
+  "max": 3217.318359375,
+  "mean": 939.6314697265625
+ },
+ {
+  "name": "tsurf_max_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Annual maximum surface temperature (12 Ls x 8 local times)",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 145.92799377441406,
+  "max": 311.22900390625,
+  "mean": 275.9034423828125
+ },
+ {
+  "name": "tsurf_min_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Annual minimum surface temperature",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 141.35400390625,
+  "max": 194.45700073242188,
+  "mean": 156.8388671875
+ },
+ {
+  "name": "tsurf_mean_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Time-weighted annual mean surface temperature",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 143.95547485351562,
+  "max": 228.0993194580078,
+  "mean": 195.73753356933594
+ },
+ {
+  "name": "tsurf_diurnal_range_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Time-weighted mean diurnal temperature range",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0458555594086647,
+  "max": 130.70394897460938,
+  "mean": 60.62062454223633
+ },
+ {
+  "name": "tsurf_seasonal_range_k",
+  "units": "K",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "model",
+  "description": "Range of diurnal-mean temperature across the year",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 3.9971249103546143,
+  "max": 104.0479965209961,
+  "mean": 57.797245025634766
+ },
+ {
+  "name": "ps_mean_pa",
+  "units": "Pa",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean surface pressure",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 92.21907043457031,
+  "max": 1176.172607421875,
+  "mean": 628.5316162109375
+ },
+ {
+  "name": "ps_min_pa",
+  "units": "Pa",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Minimum seasonal (diurnal-mean) surface pressure",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 75.98310089111328,
+  "max": 1026.239990234375,
+  "mean": 544.2671508789062
+ },
+ {
+  "name": "liquid_water_window_frac",
+  "units": "fraction",
+  "dimensions": [
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Fraction of sampled times with T>273.15 K and P>611.7 Pa (metastable liquid-water window proxy)",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 0.22517035901546478,
+  "mean": 0.017001114785671234
+ },
+ {
+  "name": "wind_mean_ms",
+  "units": "m/s",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean 10 m horizontal wind speed",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 1.4240591526031494,
+  "max": 32.06129455566406,
+  "mean": 5.724955081939697
+ },
+ {
+  "name": "wind_max_seasonal_ms",
+  "units": "m/s",
+  "dimensions": [
+   "surface_processes",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Highest seasonal diurnal-mean 10 m wind",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 2.3845200538635254,
+  "max": 40.06639862060547,
+  "mean": 8.375741958618164
+ },
+ {
+  "name": "dust_tau_mean",
+  "units": "optical depth",
+  "dimensions": [
+   "surface_processes",
+   "exploration",
+   "environment"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean dust column optical depth",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.06757321953773499,
+  "max": 0.8504409193992615,
+  "mean": 0.3406336307525635
+ },
+ {
+  "name": "dust_tau_max",
+  "units": "optical depth",
+  "dimensions": [
+   "surface_processes",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Maximum seasonal dust optical depth",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.16258199512958527,
+  "max": 1.571120023727417,
+  "mean": 0.7638362050056458
+ },
+ {
+  "name": "surface_stress_mean_npm2",
+  "units": "N/m2",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean surface wind stress",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0001091569138225168,
+  "max": 0.010726464912295341,
+  "mean": 0.002154817571863532
+ },
+ {
+  "name": "dust_lifting_season_frac",
+  "units": "fraction",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "model",
+  "description": "Fraction of the year diurnal-mean stress exceeds 0.0225 N/m2 (dust-lifting potential proxy)",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 0.14246127009391785,
+  "mean": 0.00013927737018093467
+ },
+ {
+  "name": "insolation_surface_wm2",
+  "units": "W/m2",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Annual mean incident solar flux at the surface (includes dust attenuation)",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 50.28838348388672,
+  "max": 163.2122802734375,
+  "mean": 106.4195556640625
+ },
+ {
+  "name": "co2_frost_max_kgm2",
+  "units": "kg/m2",
+  "dimensions": [
+   "environment",
+   "surface_processes",
+   "resources"
+  ],
+  "measurement_type": "model",
+  "description": "Peak seasonal CO2 surface ice",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 3642.75,
+  "mean": 232.06605529785156
+ },
+ {
+  "name": "h2o_frost_max_kgm2",
+  "units": "kg/m2",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Peak seasonal surface H2O ice",
+  "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+  "categories": null,
+  "source": "mars_mcd_climate",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 2.2334500044962624e-06,
+  "max": 12.924699783325195,
+  "mean": 0.40357494354248047
+ },
+ {
+  "name": "insolation_toa_wm2",
+  "units": "W/m2",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Annual-mean daily top-of-atmosphere insolation on a horizontal surface (orbit & obliquity only)",
+  "native_resolution": "analytic, per latitude",
+  "categories": null,
+  "source": "mars_model_geometry",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 79.7717514038086,
+  "max": 178.62220764160156,
+  "mean": 130.14756774902344
+ },
+ {
+  "name": "boulder_hazard_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Rock abundance / 0.2 clipped to 0-1 (1 = boulder-saturated)",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.1659252643585205
+ },
+ {
+  "name": "landing_hazard_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Weighted mean of steep-slope fraction and roughness/50 m (weights {'slope_frac_gt_landing': 0.67, 'roughness': 0.33}); terrain-only so it is consistent at all latitudes - see boulder_hazard_index for rocks",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 0.9993909001350403,
+  "min": 0.0004988915170542896,
+  "max": 0.983642578125,
+  "mean": 0.17124950885772705
+ },
+ {
+  "name": "traversability_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 - weighted terrain hazard (weights {'slope_frac_gt_mobility': 0.6, 'roughness': 0.4}); 1 = easiest rover traverse",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 0.9993909001350403,
+  "min": 0.17050781846046448,
+  "max": 0.9993953108787537,
+  "mean": 0.8000949621200562
+ },
+ {
+  "name": "terrain_class",
+  "units": "category",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Slope-based terrain class from 90th-percentile slope (<5 smooth, 5-15 moderate, 15-25 rugged, >=25 steep)",
+  "native_resolution": "analysis grid",
+  "categories": [
+   "smooth",
+   "moderate",
+   "rugged",
+   "steep"
+  ],
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 0.9993909001350403,
+  "min": 0.0,
+  "max": 3.0,
+  "mean": 0.23826546967029572
+ },
+ {
+  "name": "cold_trap_flag",
+  "units": "0/1",
+  "dimensions": [
+   "environment",
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 if any temperature product shows annual max T < 110 K in the cell",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 0.0,
+  "mean": 0.0
+ },
+ {
+  "name": "hydrogen_enrichment_pct",
+  "units": "%",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Odyssey NS epithermal suppression relative to the Martian median (positive = more hydrogen); relative proxy",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 0.9998476505279541,
+  "min": -102.19869995117188,
+  "max": 78.51791381835938,
+  "mean": 6.789488792419434
+ },
+ {
+  "name": "water_indicator_score",
+  "units": "0-1",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "PROXY: mean of available [(GRS WEH-2%)/8%, (SWIM consistency+1)/2, layered-ejecta fraction]",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 0.8759904503822327,
+  "min": -3.70074332718459e-16,
+  "max": 1.0,
+  "mean": 0.3690449893474579
+ },
+ {
+  "name": "biosignature_preservation_context_proxy",
+  "units": "0-1",
+  "dimensions": [
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "LOW-CONFIDENCE PROXY: mean of [Hesperian/Noachian unit, TES sulfate or high-Si phases/15%, GRS Cl/1 wt%]; NOT evidence of life",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.5215607285499573
+ },
+ {
+  "name": "lava_tube_context_flag",
+  "units": "0/1",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 if an MGC3 cave candidate lies within 50 km AND the dominant unit is volcanic - context only",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.00810860376805067
+ },
+ {
+  "name": "solar_power_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Annual-mean surface insolation (MCD, dust-attenuated) / 250 W/m2",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "mars",
+  "coverage_area_frac": 1.0,
+  "min": 0.20115353167057037,
+  "max": 0.6528491377830505,
+  "mean": 0.42567822337150574
+ }
+]

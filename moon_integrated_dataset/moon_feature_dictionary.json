@@ -1,0 +1,1587 @@
+[
+ {
+  "name": "elev_mean_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean elevation (Moon: rel. 1737.4 km sphere; Mars: rel. areoid)",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": -8272.982421875,
+  "max": 9704.9794921875,
+  "mean": -521.5069580078125
+ },
+ {
+  "name": "elev_min_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Minimum elevation in cell",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": -9114.5,
+  "max": 8544.5,
+  "mean": -1160.4794921875
+ },
+ {
+  "name": "elev_max_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Maximum elevation in cell",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": -7773.0,
+  "max": 10757.0,
+  "mean": 123.01576232910156
+ },
+ {
+  "name": "relief_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Local relief (max - min) within the ~15 km cell",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 9.0,
+  "max": 7010.5,
+  "mean": 1283.4952392578125
+ },
+ {
+  "name": "slope_mean_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean slope at ~470 m baseline",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 0.08817445486783981,
+  "max": 28.511613845825195,
+  "mean": 6.724796772003174
+ },
+ {
+  "name": "slope_median_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Median slope at ~470 m baseline",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 0.06818851083517075,
+  "max": 31.0915584564209,
+  "mean": 5.9490251541137695
+ },
+ {
+  "name": "slope_p90_deg",
+  "units": "deg",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "90th-percentile slope at ~470 m baseline",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 0.15539193153381348,
+  "max": 36.28063201904297,
+  "mean": 12.611228942871094
+ },
+ {
+  "name": "slope_frac_gt_landing",
+  "units": "fraction",
+  "dimensions": [
+   "exploration",
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of pixels steeper than 15 deg (landing tilt limit)",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.10989238321781158
+ },
+ {
+  "name": "slope_frac_gt_mobility",
+  "units": "fraction",
+  "dimensions": [
+   "exploration",
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of pixels steeper than 25 deg (rover limit)",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 0.0,
+  "max": 0.9228515625,
+  "mean": 0.01571621187031269
+ },
+ {
+  "name": "tri_mean_m",
+  "units": "m",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Terrain Ruggedness Index (mean |dz| to 8 neighbours, ~470 m spacing)",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 0.59716796875,
+  "max": 209.0047607421875,
+  "mean": 44.233154296875
+ },
+ {
+  "name": "roughness_rms_m",
+  "units": "m",
+  "dimensions": [
+   "terrain",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "RMS of elevation residual after plane fit over the cell (surface roughness)",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 1.0164291858673096,
+  "max": 1087.9747314453125,
+  "mean": 166.94021606445312
+ },
+ {
+  "name": "dem_valid_frac",
+  "units": "fraction",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of valid DEM pixels in cell (QC)",
+  "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+  "categories": null,
+  "source": "moon_lola_ldem64",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619230641713,
+  "min": 1.0,
+  "max": 1.0,
+  "mean": 1.0
+ },
+ {
+  "name": "tsurf_max_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Maximum binned bolometric temperature over the lunar day",
+  "native_resolution": "0.5 deg x 15 min local time",
+  "categories": null,
+  "source": "moon_diviner_gcp",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 51.31230163574219,
+  "max": 438.9996032714844,
+  "mean": 335.3384704589844
+ },
+ {
+  "name": "tsurf_min_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "measurement",
+  "description": "Minimum binned bolometric temperature (night)",
+  "native_resolution": "0.5 deg x 15 min local time",
+  "categories": null,
+  "source": "moon_diviner_gcp",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 19.392499923706055,
+  "max": 131.9824981689453,
+  "mean": 82.8902587890625
+ },
+ {
+  "name": "tsurf_mean_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "measurement",
+  "description": "Diurnal mean Tbol: each cell's own local-time curve, circularly linearly interpolated across gaps <=1.5 h (no spatial interpolation); NaN if any gap is longer",
+  "native_resolution": "0.5 deg x 15 min local time",
+  "categories": null,
+  "source": "moon_diviner_gcp",
+  "body": "moon",
+  "coverage_area_frac": 0.9833046312430612,
+  "min": 40.176475524902344,
+  "max": 230.84019470214844,
+  "mean": 185.43869018554688
+ },
+ {
+  "name": "tsurf_diurnal_range_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "habitability"
+  ],
+  "measurement_type": "measurement",
+  "description": "Diurnal temperature range (max - min)",
+  "native_resolution": "0.5 deg x 15 min local time",
+  "categories": null,
+  "source": "moon_diviner_gcp",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 22.112699508666992,
+  "max": 345.8182067871094,
+  "mean": 252.44818115234375
+ },
+ {
+  "name": "tsurf_noon_k",
+  "units": "K",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean Tbol at local noon (11:30-12:30)",
+  "native_resolution": "0.5 deg x 15 min local time",
+  "categories": null,
+  "source": "moon_diviner_gcp",
+  "body": "moon",
+  "coverage_area_frac": 0.9864201818929702,
+  "min": 34.71012496948242,
+  "max": 400.08160400390625,
+  "mean": 327.2158508300781
+ },
+ {
+  "name": "tsurf_midnight_k",
+  "units": "K",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "measurement",
+  "description": "Mean Tbol at local midnight (23:30-00:30)",
+  "native_resolution": "0.5 deg x 15 min local time",
+  "categories": null,
+  "source": "moon_diviner_gcp",
+  "body": "moon",
+  "coverage_area_frac": 0.9924412039568965,
+  "min": 34.16812515258789,
+  "max": 200.644287109375,
+  "mean": 90.57821655273438
+ },
+ {
+  "name": "diviner_lt_coverage",
+  "units": "fraction",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "measurement",
+  "description": "Fraction of 96 local-time bins observed (QC)",
+  "native_resolution": "0.5 deg x 15 min local time",
+  "categories": null,
+  "source": "moon_diviner_gcp",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.4166666567325592,
+  "max": 1.0,
+  "mean": 0.6821752786636353
+ },
+ {
+  "name": "prp_tmax_min_k",
+  "units": "K",
+  "dimensions": [
+   "environment",
+   "resources"
+  ],
+  "measurement_type": "model",
+  "description": "Coldest annual-maximum surface temperature among facets in cell (cold-trap strength)",
+  "native_resolution": "~240 m facets binned per cell",
+  "categories": null,
+  "source": "moon_diviner_prp",
+  "body": "moon",
+  "coverage_area_frac": 0.02029707641318836,
+  "min": 24.125999450683594,
+  "max": 322.5320129394531,
+  "mean": 152.89723205566406
+ },
+ {
+  "name": "prp_tmax_mean_k",
+  "units": "K",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "model",
+  "description": "Mean annual maximum surface temperature",
+  "native_resolution": "~240 m facets binned per cell",
+  "categories": null,
+  "source": "moon_diviner_prp",
+  "body": "moon",
+  "coverage_area_frac": 0.02029707641318836,
+  "min": 50.40584182739258,
+  "max": 325.4844970703125,
+  "mean": 230.59701538085938
+ },
+ {
+  "name": "prp_tavg_mean_k",
+  "units": "K",
+  "dimensions": [
+   "environment"
+  ],
+  "measurement_type": "model",
+  "description": "Mean annual-average temperature at 2 cm depth",
+  "native_resolution": "~240 m facets binned per cell",
+  "categories": null,
+  "source": "moon_diviner_prp",
+  "body": "moon",
+  "coverage_area_frac": 0.02029707641318836,
+  "min": 34.613407135009766,
+  "max": 193.47267150878906,
+  "mean": 112.80746459960938
+ },
+ {
+  "name": "cold_trap_area_frac",
+  "units": "fraction",
+  "dimensions": [
+   "resources",
+   "habitability",
+   "environment"
+  ],
+  "measurement_type": "model",
+  "description": "Fraction of facets with annual max T < 110 K (H2O ice sublimation-stable at surface)",
+  "native_resolution": "~240 m facets binned per cell",
+  "categories": null,
+  "source": "moon_diviner_prp",
+  "body": "moon",
+  "coverage_area_frac": 0.02029707641318836,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.05726324021816254
+ },
+ {
+  "name": "ice_stable_surface_frac",
+  "units": "fraction",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Fraction of facets where ice is stable at the surface (PRP depth 0 or T_max < 110 K; model)",
+  "native_resolution": "~240 m facets binned per cell",
+  "categories": null,
+  "source": "moon_diviner_prp",
+  "body": "moon",
+  "coverage_area_frac": 0.02029707641318836,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.059277620166540146
+ },
+ {
+  "name": "ice_stable_1m_frac",
+  "units": "fraction",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Fraction of facets where ice is stable within 1 m depth (model)",
+  "native_resolution": "~240 m facets binned per cell",
+  "categories": null,
+  "source": "moon_diviner_prp",
+  "body": "moon",
+  "coverage_area_frac": 0.02029707641318836,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.5011681318283081
+ },
+ {
+  "name": "ice_depth_min_m",
+  "units": "m",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "model",
+  "description": "Shallowest modelled ice-stability depth in cell (NaN = deeper than 2.87 m everywhere or no data)",
+  "native_resolution": "~240 m facets binned per cell",
+  "categories": null,
+  "source": "moon_diviner_prp",
+  "body": "moon",
+  "coverage_area_frac": 0.01684515149445586,
+  "min": 0.0,
+  "max": 1.2879199981689453,
+  "mean": 0.05280708149075508
+ },
+ {
+  "name": "rock_abundance",
+  "units": "fraction",
+  "dimensions": [
+   "surface_processes",
+   "exploration"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Areal fraction of surface covered by rocks >~1 m (Diviner) (cell mean)",
+  "native_resolution": "32 ppd (~950 m)",
+  "categories": null,
+  "source": "moon_diviner_rockabundance",
+  "body": "moon",
+  "coverage_area_frac": 0.8660254037844387,
+  "min": 0.0008299595792777836,
+  "max": 0.13125896453857422,
+  "mean": 0.0037581620272248983
+ },
+ {
+  "name": "rock_abundance_p90",
+  "units": "fraction",
+  "dimensions": [
+   "surface_processes",
+   "exploration"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "90th percentile rock abundance in cell (boulder-field hotspots)",
+  "native_resolution": "32 ppd (~950 m)",
+  "categories": null,
+  "source": "moon_diviner_rockabundance",
+  "body": "moon",
+  "coverage_area_frac": 0.8660254037844387,
+  "min": 0.0020000000949949026,
+  "max": 0.2590000033378601,
+  "mean": 0.005975786130875349
+ },
+ {
+  "name": "regolith_temp_anomaly_k",
+  "units": "K (anomaly)",
+  "dimensions": [
+   "surface_processes"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Average regolith temperature variation (Bandfield 2011): regolith thermophysical/maturity proxy (cell mean)",
+  "native_resolution": "32 ppd (~950 m)",
+  "categories": null,
+  "source": "moon_diviner_rockabundance",
+  "body": "moon",
+  "coverage_area_frac": 0.8660254037844387,
+  "min": -15.64921760559082,
+  "max": 32.14838790893555,
+  "mean": 0.49088406562805176
+ },
+ {
+  "name": "mgo_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "MgO abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 23.702999114990234,
+  "mean": 6.515716552734375
+ },
+ {
+  "name": "mgo_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of MgO (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.46049973368644714,
+  "max": 5.224366188049316,
+  "mean": 3.100437879562378
+ },
+ {
+  "name": "al2o3_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Al2O3 abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 48.36399841308594,
+  "mean": 22.918819427490234
+ },
+ {
+  "name": "al2o3_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of Al2O3 (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.7170565128326416,
+  "max": 8.226178169250488,
+  "mean": 4.83713960647583
+ },
+ {
+  "name": "sio2_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "SiO2 abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 20.566999435424805,
+  "max": 66.44000244140625,
+  "mean": 43.33855056762695
+ },
+ {
+  "name": "sio2_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of SiO2 (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.6231131553649902,
+  "max": 7.114773273468018,
+  "mean": 4.169703483581543
+ },
+ {
+  "name": "cao_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "CaO abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 31.908000946044922,
+  "mean": 15.773137092590332
+ },
+ {
+  "name": "cao_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of CaO (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.42559370398521423,
+  "max": 4.898571014404297,
+  "mean": 2.886181116104126
+ },
+ {
+  "name": "tio2_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "TiO2 abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 11.993000030517578,
+  "mean": 0.8383920192718506
+ },
+ {
+  "name": "tio2_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of TiO2 (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.06570235639810562,
+  "max": 1.917576551437378,
+  "mean": 0.5433948636054993
+ },
+ {
+  "name": "feo_wt",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "FeO abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 30.749000549316406,
+  "mean": 6.778196811676025
+ },
+ {
+  "name": "feo_wt_sigma",
+  "units": "wt%",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of FeO (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.12670832872390747,
+  "max": 2.9984161853790283,
+  "mean": 0.9849007725715637
+ },
+ {
+  "name": "k_ppm",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "K abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 4356.39990234375,
+  "mean": 724.23828125
+ },
+ {
+  "name": "k_ppm_sigma",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of K (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 28.34872055053711,
+  "max": 335.79754638671875,
+  "mean": 193.89779663085938
+ },
+ {
+  "name": "th_ppm",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Th abundance",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.003662999952211976,
+  "max": 11.644000053405762,
+  "mean": 1.5890440940856934
+ },
+ {
+  "name": "th_ppm_sigma",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of Th (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.03291504085063934,
+  "max": 0.39756760001182556,
+  "mean": 0.2241888791322708
+ },
+ {
+  "name": "u_ppm",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "U abundance (U is tied to Th, U=0.27Th, not independent)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 3.1777000427246094,
+  "mean": 0.43280887603759766
+ },
+ {
+  "name": "u_ppm_sigma",
+  "units": "ppm",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma uncertainty of U (sqrt of error-matrix diagonal)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.024847937747836113,
+  "max": 0.2909364104270935,
+  "mean": 0.16929316520690918
+ },
+ {
+  "name": "mg_number",
+  "units": "molar %",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Mg# = 100 Mg/(Mg+Fe) molar, from GRS MgO and FeO (mafic-mineral chemistry indicator)",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_grs",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 100.0,
+  "mean": 59.78974533081055
+ },
+ {
+  "name": "lp_epithermal_counts",
+  "units": "counts/32s",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "measurement",
+  "description": "LP epithermal neutron counting rate per 32 s",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_neutrons",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 531.52001953125,
+  "max": 615.8300170898438,
+  "mean": 575.574951171875
+ },
+ {
+  "name": "lp_epithermal_sigma",
+  "units": "counts/32s",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "measurement",
+  "description": "1-sigma of epithermal counts",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_neutrons",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 13.359999656677246,
+  "max": 42.13999938964844,
+  "mean": 25.7929630279541
+ },
+ {
+  "name": "lp_thermal_counts",
+  "units": "counts/32s",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "measurement",
+  "description": "LP thermal neutron counting rate per 32 s",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_neutrons",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 285.5299987792969,
+  "max": 822.52001953125,
+  "mean": 635.0927124023438
+ },
+ {
+  "name": "lp_thermal_sigma",
+  "units": "counts/32s",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "measurement",
+  "description": "1-sigma of thermal counts",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_neutrons",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 12.420000076293945,
+  "max": 76.23999786376953,
+  "mean": 45.89701461791992
+ },
+ {
+  "name": "lp_fast_counts",
+  "units": "counts/32s",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "measurement",
+  "description": "LP fast neutron counting rate per 32 s",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_neutrons",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 375.79998779296875,
+  "max": 499.7900085449219,
+  "mean": 407.8952941894531
+ },
+ {
+  "name": "lp_fast_sigma",
+  "units": "counts/32s",
+  "dimensions": [
+   "resources"
+  ],
+  "measurement_type": "measurement",
+  "description": "1-sigma of fast counts",
+  "native_resolution": "2 deg equal-area (~60 km)",
+  "categories": null,
+  "source": "moon_lp_neutrons",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 9.767000198364258,
+  "max": 54.650001525878906,
+  "mean": 24.725008010864258
+ },
+ {
+  "name": "grail_bouguer_mgal",
+  "units": "mGal",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "GRAIL GRGM900C Bouguer gravity anomaly (l<=600)",
+  "native_resolution": "SH degree 600 (~9 km half-wavelength), 0.125 deg grid",
+  "categories": null,
+  "source": "moon_grail_gravity",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": -699.9158935546875,
+  "max": 737.728759765625,
+  "mean": 14.223097801208496
+ },
+ {
+  "name": "grail_freeair_error_mgal",
+  "units": "mGal",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "1-sigma error of the free-air anomaly (uncertainty)",
+  "native_resolution": "SH degree 600 (~9 km half-wavelength), 0.125 deg grid",
+  "categories": null,
+  "source": "moon_grail_gravity",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.23291164636611938,
+  "max": 7.423984050750732,
+  "mean": 1.6538790464401245
+ },
+ {
+  "name": "grail_bouguer_residual_mgal",
+  "units": "mGal",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "derived_measurement",
+  "description": "Bouguer anomaly minus 7x7-cell (~105 km) median: local density-anomaly INDICATOR, not cave evidence",
+  "native_resolution": "derived at 0.5 deg",
+  "categories": null,
+  "source": "moon_grail_gravity",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": -99.29977416992188,
+  "max": 182.47509765625,
+  "mean": 0.5621199607849121
+ },
+ {
+  "name": "crater_density_d1",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "moon_robbins_craters",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": -9.212183793572137e-11,
+  "max": 2215.646728515625,
+  "mean": 401.0636291503906
+ },
+ {
+  "name": "crater_density_d5",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "moon_robbins_craters",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": -7.318089710606213e-12,
+  "max": 664.6940307617188,
+  "mean": 23.436307907104492
+ },
+ {
+  "name": "crater_density_d20",
+  "units": "N per 1e4 km2",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Crater density (5x5 cell window)",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "moon_robbins_craters",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": -3.07482771882972e-13,
+  "max": 221.56468200683594,
+  "mean": 2.000433921813965
+ },
+ {
+  "name": "crater_sfd_slope",
+  "units": "dimensionless",
+  "dimensions": [
+   "terrain",
+   "surface_processes"
+  ],
+  "measurement_type": "catalog",
+  "description": "Cumulative size-frequency power-law slope [2, 10] km (5x5 cell window); shallower = degraded/resurfaced or saturated",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "moon_robbins_craters",
+  "body": "moon",
+  "coverage_area_frac": 0.8621009428325088,
+  "min": -19.001585006713867,
+  "max": -0.30129069089889526,
+  "mean": -4.145514965057373
+ },
+ {
+  "name": "crater_largest_d_km",
+  "units": "km",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "catalog",
+  "description": "Largest crater centred in cell",
+  "native_resolution": "5x5 cell window",
+  "categories": null,
+  "source": "moon_robbins_craters",
+  "body": "moon",
+  "coverage_area_frac": 0.9074080639031116,
+  "min": 1.0,
+  "max": 2491.8701171875,
+  "mean": 5.422969818115234
+ },
+ {
+  "name": "geo_unit",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Dominant mapped unit (Unified Geologic Map of the Moon 1:5M)",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": [
+   "Cc",
+   "Ccc",
+   "Csc",
+   "EIp",
+   "Ec",
+   "Ecc",
+   "Em",
+   "Esc",
+   "INp",
+   "INt",
+   "Ib",
+   "Ibm",
+   "Ic",
+   "Ic1",
+   "Ic2",
+   "Icc",
+   "Icf",
+   "Id",
+   "Ig",
+   "Iia",
+   "Iiap",
+   "Iic",
+   "Iif",
+   "Im1",
+   "Im2",
+   "Imd",
+   "Iohi",
+   "Ioho",
+   "Iohs",
+   "Iom",
+   "Iork",
+   "Iorm",
+   "Ip",
+   "Isc",
+   "It",
+   "Itd",
+   "Nb",
+   "Nbl",
+   "Nbm",
+   "Nbsc",
+   "Nc",
+   "Nnj",
+   "Np",
+   "Nt",
+   "Ntp",
+   "pNb",
+   "pNbm",
+   "pNc",
+   "pNt"
+  ],
+  "source": "moon_unified_geology",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 48.0,
+  "mean": 30.60337257385254
+ },
+ {
+  "name": "geo_unit_frac",
+  "units": "fraction",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Areal fraction of the dominant unit in cell",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": null,
+  "source": "moon_unified_geology",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.25,
+  "max": 1.0,
+  "mean": 0.8851523995399475
+ },
+ {
+  "name": "geo_class",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Shared process class (volcanic / impact_crater / impact_basin / plains / highland / lowland / polar / ...)",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": [
+   "volcanic",
+   "impact_crater",
+   "impact_basin",
+   "plains",
+   "highland",
+   "lowland",
+   "polar",
+   "transition",
+   "apron",
+   "other"
+  ],
+  "source": "moon_unified_geology",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 4.0,
+  "mean": 1.9123495817184448
+ },
+ {
+  "name": "geo_age",
+  "units": "category",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Mapped chronostratigraphic period of the dominant unit",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": [
+   "Copernican",
+   "Eratosthenian",
+   "Eratosthenian-Imbrian",
+   "Imbrian",
+   "Imbrian-Nectarian",
+   "Nectarian",
+   "Pre-Nectarian"
+  ],
+  "source": "moon_unified_geology",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 6.0,
+  "mean": 3.9721181392669678
+ },
+ {
+  "name": "geo_unit_diversity_3x3",
+  "units": "count",
+  "dimensions": [
+   "geology"
+  ],
+  "measurement_type": "map_interpretation",
+  "description": "Number of distinct units within a 3x3-cell neighbourhood",
+  "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+  "categories": null,
+  "source": "moon_unified_geology",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 1.0,
+  "max": 9.0,
+  "mean": 2.5617244243621826
+ },
+ {
+  "name": "cave_candidate_count",
+  "units": "count",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Number of LROC Lunar Pit Atlas pit candidates in cell",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "moon_lroc_pits",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 41.0,
+  "mean": 0.0010725308675318956
+ },
+ {
+  "name": "cave_candidate_distance_km",
+  "units": "km",
+  "dimensions": [
+   "subsurface",
+   "exploration"
+  ],
+  "measurement_type": "catalog",
+  "description": "Great-circle distance to nearest pit candidate",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "moon_lroc_pits",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.043371234089136124,
+  "max": 1153.561767578125,
+  "mean": 457.5562438964844
+ },
+ {
+  "name": "nearest_cave_depth_diam_ratio",
+  "units": "ratio",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Depth/diameter of the nearest pit (where measured)",
+  "native_resolution": "point catalog",
+  "categories": null,
+  "source": "moon_lroc_pits",
+  "body": "moon",
+  "coverage_area_frac": 0.8969937733972531,
+  "min": 0.0,
+  "max": 2.6842105388641357,
+  "mean": 0.5423083305358887
+ },
+ {
+  "name": "nearest_cave_setting",
+  "units": "category",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "catalog",
+  "description": "Host setting/type of nearest pit",
+  "native_resolution": "point catalog",
+  "categories": [
+   "Highland",
+   "Impact Melt",
+   "Mare"
+  ],
+  "source": "moon_lroc_pits",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 2.0,
+  "mean": 1.116608738899231
+ },
+ {
+  "name": "illum_mean_frac",
+  "units": "fraction",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Average fraction of solar disk visible (18.6-yr cycle, LOLA horizon model)",
+  "native_resolution": "240 m polar stereographic, binned per cell",
+  "categories": null,
+  "source": "moon_pgda_illumination",
+  "body": "moon",
+  "coverage_area_frac": 0.1200336142227328,
+  "min": 0.0,
+  "max": 0.4999200105667114,
+  "mean": 0.3539571762084961
+ },
+ {
+  "name": "illum_max_frac",
+  "units": "fraction",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Best-illuminated spot in cell (candidate solar-power site)",
+  "native_resolution": "240 m polar stereographic, binned per cell",
+  "categories": null,
+  "source": "moon_pgda_illumination",
+  "body": "moon",
+  "coverage_area_frac": 0.1200336142227328,
+  "min": 0.0,
+  "max": 0.9347599744796753,
+  "mean": 0.45985928177833557
+ },
+ {
+  "name": "psr_area_frac",
+  "units": "fraction",
+  "dimensions": [
+   "environment",
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Fraction of cell never illuminated (permanently shadowed)",
+  "native_resolution": "240 m polar stereographic, binned per cell",
+  "categories": null,
+  "source": "moon_pgda_illumination",
+  "body": "moon",
+  "coverage_area_frac": 0.1200336142227328,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.0340748131275177
+ },
+ {
+  "name": "insolation_toa_wm2",
+  "units": "W/m2",
+  "dimensions": [
+   "environment",
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Annual-mean daily top-of-atmosphere insolation on a horizontal surface (orbit & obliquity only)",
+  "native_resolution": "analytic, per latitude",
+  "categories": null,
+  "source": "moon_model_geometry",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 11.743616104125977,
+  "max": 433.197509765625,
+  "mean": 276.06951904296875
+ },
+ {
+  "name": "earth_visibility_frac",
+  "units": "fraction",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "model",
+  "description": "Fraction of libration cycle with Earth above horizon (bare sphere; direct-to-Earth comms proxy)",
+  "native_resolution": "analytic",
+  "categories": null,
+  "source": "moon_model_geometry",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.5
+ },
+ {
+  "name": "liquid_water_window_frac",
+  "units": "fraction",
+  "dimensions": [
+   "habitability"
+  ],
+  "measurement_type": "model",
+  "description": "Always 0: lunar surface pressure (~1e-10 Pa exosphere) is far below the H2O triple point",
+  "native_resolution": "constant",
+  "categories": null,
+  "source": "moon_model_geometry",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 0.0,
+  "mean": 0.0
+ },
+ {
+  "name": "boulder_hazard_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Rock abundance / 0.2 clipped to 0-1 (1 = boulder-saturated)",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 0.866025447845459,
+  "min": 0.004149797838181257,
+  "max": 0.6562948226928711,
+  "mean": 0.01879081130027771
+ },
+ {
+  "name": "landing_hazard_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Weighted mean of steep-slope fraction and roughness/50 m (weights {'slope_frac_gt_landing': 0.67, 'roughness': 0.33}); terrain-only so it is consistent at all latitudes - see boulder_hazard_index for rocks",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619126319885,
+  "min": 0.006708432454615831,
+  "max": 1.0,
+  "mean": 0.3742840886116028
+ },
+ {
+  "name": "traversability_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 - weighted terrain hazard (weights {'slope_frac_gt_mobility': 0.6, 'roughness': 0.4}); 1 = easiest rover traverse",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619126319885,
+  "min": 0.04628906399011612,
+  "max": 0.9918685555458069,
+  "mean": 0.62613844871521
+ },
+ {
+  "name": "terrain_class",
+  "units": "category",
+  "dimensions": [
+   "terrain"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Slope-based terrain class from 90th-percentile slope (<5 smooth, 5-15 moderate, 15-25 rugged, >=25 steep)",
+  "native_resolution": "analysis grid",
+  "categories": [
+   "smooth",
+   "moderate",
+   "rugged",
+   "steep"
+  ],
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 0.9999619126319885,
+  "min": 0.0,
+  "max": 3.0,
+  "mean": 1.2482154369354248
+ },
+ {
+  "name": "cold_trap_flag",
+  "units": "0/1",
+  "dimensions": [
+   "environment",
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 if any temperature product shows annual max T < 110 K in the cell",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.03746141865849495
+ },
+ {
+  "name": "hydrogen_enrichment_pct",
+  "units": "%",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Epithermal-neutron suppression after an empirical composition correction (OLS on FeO, TiO2, Th fitted at |lat|<60 deg; Fe/Ti/KREEP absorbers otherwise mimic hydrogen in the maria). Positive = more H; relative proxy",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": -5.639002799987793,
+  "max": 5.649463176727295,
+  "mean": 0.4038986563682556
+ },
+ {
+  "name": "water_indicator_score",
+  "units": "0-1",
+  "dimensions": [
+   "resources",
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "PROXY: mean of available [cold-trap area fraction, ice-stable-within-1 m fraction, H enrichment/5%]",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.14741599559783936
+ },
+ {
+  "name": "volatile_preservation_proxy",
+  "units": "0-1",
+  "dimensions": [
+   "habitability"
+  ],
+  "measurement_type": "derived_index",
+  "description": "PROXY: mean of cold-trap and permanently-shadowed area fractions (volatile/organic preservation)",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 0.12003381550312042,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.030350932851433754
+ },
+ {
+  "name": "lava_tube_context_flag",
+  "units": "0/1",
+  "dimensions": [
+   "subsurface"
+  ],
+  "measurement_type": "derived_index",
+  "description": "1 if a pit candidate lies within 50 km AND the dominant unit is volcanic (mare) - context only, not a detection",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 1.0,
+  "mean": 0.0022183642722666264
+ },
+ {
+  "name": "solar_power_index",
+  "units": "0-1",
+  "dimensions": [
+   "exploration"
+  ],
+  "measurement_type": "derived_index",
+  "description": "Sunlit-time fraction for a sun-tracking panel: PGDA mean solar visibility where mapped (>=65 deg), else 0.5 (bare-sphere day/night). Not comparable 1:1 with the Mars index (horizontal, dust-attenuated)",
+  "native_resolution": "analysis grid",
+  "categories": null,
+  "source": "derived",
+  "body": "moon",
+  "coverage_area_frac": 1.0,
+  "min": 0.0,
+  "max": 0.5,
+  "mean": 0.45419031381607056
+ }
+]

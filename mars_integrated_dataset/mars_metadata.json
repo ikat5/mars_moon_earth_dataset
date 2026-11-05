@@ -1,0 +1,1719 @@
+{
+ "title": "TerraTwin mars integrated dataset",
+ "body": "mars",
+ "created": "2026-11-01T09:21:44+00:00",
+ "crs": "IAU_2015:49900",
+ "grid": {
+  "type": "equirectangular lat/lon cells",
+  "res_deg": 0.25,
+  "shape": [
+   720,
+   1440
+  ],
+  "cell_size_km_at_equator": 14.82,
+  "radius_km": 3396.19,
+  "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+ },
+ "files": [
+  "mars_feature_dictionary.json",
+  "mars_integrated.parquet",
+  "mars_integrated.zarr",
+  "mars_metadata.json",
+  "mars_vectors.gpkg",
+  "robbins_mars_craters.parquet"
+ ],
+ "dimensions": {
+  "geology": {
+   "n_features": 27,
+   "features": [
+    "geo_unit",
+    "geo_unit_frac",
+    "geo_class",
+    "geo_age",
+    "geo_unit_diversity_3x3",
+    "tes_olivine",
+    "tes_hematite",
+    "tes_feldspar",
+    "tes_plagioclase",
+    "tes_orthopyroxene",
+    "tes_highsilica_glass_clay",
+    "tes_sulfate",
+    "tes_quartz",
+    "tes_mineral_rms_error",
+    "omega_ferric_bd530",
+    "omega_pyroxene_bd2000",
+    "omega_olivine_osp1",
+    "feo_wt",
+    "feo_wt_sigma",
+    "sio2_wt",
+    "sio2_wt_sigma",
+    "k_ppm",
+    "k_ppm_sigma",
+    "th_ppm",
+    "th_ppm_sigma",
+    "cl_wt",
+    "cl_wt_sigma"
+   ]
+  },
+  "terrain": {
+   "n_features": 18,
+   "features": [
+    "elev_mean_m",
+    "elev_min_m",
+    "elev_max_m",
+    "relief_m",
+    "slope_mean_deg",
+    "slope_median_deg",
+    "slope_p90_deg",
+    "slope_frac_gt_landing",
+    "slope_frac_gt_mobility",
+    "tri_mean_m",
+    "roughness_rms_m",
+    "dem_valid_frac",
+    "crater_density_d1",
+    "crater_density_d5",
+    "crater_density_d20",
+    "crater_sfd_slope",
+    "crater_largest_d_km",
+    "terrain_class"
+   ]
+  },
+  "environment": {
+   "n_features": 14,
+   "features": [
+    "thermal_inertia_tiu",
+    "albedo_lambert",
+    "tsurf_max_k",
+    "tsurf_min_k",
+    "tsurf_mean_k",
+    "tsurf_diurnal_range_k",
+    "tsurf_seasonal_range_k",
+    "ps_mean_pa",
+    "ps_min_pa",
+    "dust_tau_mean",
+    "insolation_surface_wm2",
+    "co2_frost_max_kgm2",
+    "insolation_toa_wm2",
+    "cold_trap_flag"
+   ]
+  },
+  "resources": {
+   "n_features": 13,
+   "features": [
+    "layered_ejecta_frac",
+    "h2o_wt",
+    "h2o_wt_sigma",
+    "ns_epithermal_cps",
+    "swim_ice_consistency",
+    "swim_ice_consistency_0_1m",
+    "swim_ice_consistency_1_5m",
+    "swim_ice_consistency_gt5m",
+    "co2_frost_max_kgm2",
+    "h2o_frost_max_kgm2",
+    "cold_trap_flag",
+    "hydrogen_enrichment_pct",
+    "water_indicator_score"
+   ]
+  },
+  "surface_processes": {
+   "n_features": 18,
+   "features": [
+    "crater_sfd_slope",
+    "crater_rim_freshness_mean",
+    "layered_ejecta_frac",
+    "thermal_inertia_tiu",
+    "albedo_lambert",
+    "rock_abundance",
+    "fine_component_ti",
+    "omega_ferric_bd530",
+    "omega_albedo_r1080",
+    "dune_cover_frac",
+    "dune_field_distance_km",
+    "wind_mean_ms",
+    "wind_max_seasonal_ms",
+    "dust_tau_mean",
+    "dust_tau_max",
+    "surface_stress_mean_npm2",
+    "dust_lifting_season_frac",
+    "co2_frost_max_kgm2"
+   ]
+  },
+  "habitability": {
+   "n_features": 17,
+   "features": [
+    "tes_highsilica_glass_clay",
+    "tes_sulfate",
+    "h2o_wt",
+    "h2o_wt_sigma",
+    "cl_wt",
+    "cl_wt_sigma",
+    "swim_ice_consistency",
+    "tsurf_mean_k",
+    "tsurf_diurnal_range_k",
+    "ps_mean_pa",
+    "ps_min_pa",
+    "liquid_water_window_frac",
+    "h2o_frost_max_kgm2",
+    "cold_trap_flag",
+    "hydrogen_enrichment_pct",
+    "water_indicator_score",
+    "biosignature_preservation_context_proxy"
+   ]
+  },
+  "subsurface": {
+   "n_features": 5,
+   "features": [
+    "cave_candidate_count",
+    "cave_candidate_distance_km",
+    "nearest_cave_depth_diam_ratio",
+    "nearest_cave_setting",
+    "lava_tube_context_flag"
+   ]
+  },
+  "exploration": {
+   "n_features": 20,
+   "features": [
+    "slope_mean_deg",
+    "slope_median_deg",
+    "slope_p90_deg",
+    "slope_frac_gt_landing",
+    "slope_frac_gt_mobility",
+    "roughness_rms_m",
+    "thermal_inertia_tiu",
+    "rock_abundance",
+    "cave_candidate_distance_km",
+    "tsurf_max_k",
+    "tsurf_min_k",
+    "wind_max_seasonal_ms",
+    "dust_tau_mean",
+    "dust_tau_max",
+    "insolation_surface_wm2",
+    "insolation_toa_wm2",
+    "boulder_hazard_index",
+    "landing_hazard_index",
+    "traversability_index",
+    "solar_power_index"
+   ]
+  }
+ },
+ "measurement_types": {
+  "derived_measurement": 29,
+  "model": 22,
+  "measurement": 13,
+  "catalog": 13,
+  "derived_index": 10,
+  "map_interpretation": 5
+ },
+ "sources": [
+  {
+   "id": "mars_mola_megdr128",
+   "name": "MGS MOLA Mission Experiment Gridded Data Record, 128 px/deg topography",
+   "provider": "NASA PDS Geosciences Node (MOLA team)",
+   "measurement_type": "measurement",
+   "native_resolution": "128 px/deg (463.1 m/px at equator)",
+   "citation": "Smith D.E. et al. (2001) JGR 106, 23689; Smith D.E. et al. (2003) MGS-M-MOLA-5-MEGDR-L3-V1.0, NASA PDS.",
+   "limitations": "Interpolated between MOLA tracks at low latitudes; 88-90 deg excluded at this resolution."
+  },
+  {
+   "id": "mars_robbins_craters",
+   "name": "Robbins & Hynek Mars crater database (2020 release, D>=1 km, full morphology)",
+   "provider": "Author distribution (S.J. Robbins) of the peer-reviewed database",
+   "measurement_type": "catalog",
+   "native_resolution": "craters D >= 1 km",
+   "citation": "Robbins S.J. & Hynek B.M. (2012) JGR 117, E05004.",
+   "limitations": "The USGS pygeoapi mirror carries only id/lat/lon/diameter, so the author's full release is used; not an official NASA archive."
+  },
+  {
+   "id": "mars_sim3292_geology",
+   "name": "Geologic Map of Mars, USGS SIM 3292 (global geology shapefile)",
+   "provider": "USGS Publications Warehouse (SIM 3292 database). The USGS pygeoapi mirror returned HTTP 502 for every page on 2026-11-01, so only the geology shapefile members are read from the official database zip via HTTP Range.",
+   "measurement_type": "map_interpretation",
+   "native_resolution": "1:20,000,000",
+   "citation": "Tanaka K.L. et al. (2014) USGS SIM 3292.",
+   "limitations": "Global-scale generalization; unit age is encoded in the unit code prefix (e/m/l + N/H/A)."
+  },
+  {
+   "id": "mars_tes_minerals",
+   "name": "TES global mineral abundance maps (Bandfield 2002)",
+   "provider": "ASU Mars Space Flight Facility (TES instrument team) - JMARS WMS numeric layers",
+   "measurement_type": "derived_measurement",
+   "native_resolution": "4 px/deg (~16 km)",
+   "citation": "Bandfield J.L. (2002) JGR 107, 5042.",
+   "limitations": "Linear-deconvolution abundances; detection limit ~10-15%; high-albedo dusty regions not retrieved."
+  },
+  {
+   "id": "mars_tes_thermophysical",
+   "name": "TES thermal inertia, Lambert albedo, rock abundance and fine-component thermal inertia",
+   "provider": "ASU Mars Space Flight Facility (TES team) - JMARS WMS numeric layers",
+   "measurement_type": "derived_measurement",
+   "native_resolution": "8 px/deg (~7.4 km)",
+   "citation": "Christensen P.R. et al. (2001) JGR 106, 23823; Nowicki S.A. & Christensen P.R. (2007) JGR 112, E05007.",
+   "limitations": "Thermal inertia from single-layer homogeneous model; rock abundance from multi-wavelength fit (Nowicki & Christensen 2007)."
+  },
+  {
+   "id": "mars_omega_maps",
+   "name": "OMEGA global spectral parameter maps (ferric, pyroxene, olivine, albedo)",
+   "provider": "IAS / ESA Mars Express OMEGA team products served by ASU JMARS WMS",
+   "measurement_type": "derived_measurement",
+   "native_resolution": "32 px/deg product, retrieved at 8 px/deg through WMS",
+   "citation": "Ody A. et al. (2012) JGR 117, E00J14.",
+   "limitations": "Spectral parameters are relative indicators, not abundances; WMS resampling method undocumented."
+  },
+  {
+   "id": "mars_odyssey_grs",
+   "name": "Mars Odyssey GRS elemental and water-equivalent hydrogen maps (5x5 deg smoothed)",
+   "provider": "NASA PDS Geosciences Node (Odyssey GRS team)",
+   "measurement_type": "derived_measurement",
+   "native_resolution": "5 deg bins (smoothed, ~300 km)",
+   "citation": "Boynton W.V. et al. (2007) JGR 112, E12S99.",
+   "limitations": "Footprint ~450 km; abundances normalised per GRS team conventions."
+  },
+  {
+   "id": "mars_odyssey_ns",
+   "name": "Mars Odyssey Neutron Spectrometer epithermal neutron map",
+   "provider": "NASA PDS Geosciences Node (Odyssey GRS special products)",
+   "measurement_type": "measurement",
+   "native_resolution": "lat/lon bins (footprint ~600 km FWHM)",
+   "citation": "Feldman W.C. et al. (2004) JGR 109, E09006.",
+   "limitations": "Indirect hydrogen proxy; seasonal CO2 frost affects polar rates."
+  },
+  {
+   "id": "mars_swim_ice",
+   "name": "SWIM ice-consistency maps (Subsurface Water Ice Mapping) via JMARS WMS",
+   "provider": "SWIM project (PSI / JPL / NASA) served by ASU JMARS WMS (swim.psi.edu returned HTTP 522 on 2026-11-01)",
+   "measurement_type": "model",
+   "native_resolution": "product-dependent (~1-4 km mosaics); retrieved at 0.25 deg",
+   "citation": "Morgan G.A. et al. (2021) Nature Astronomy 5, 230.",
+   "limitations": "Consistency score combining neutron, thermal, radar and geomorphic evidence; not an ice detection."
+  },
+  {
+   "id": "mars_mgc3_caves",
+   "name": "Mars Global Cave Candidate Catalog (MGC3)",
+   "provider": "USGS Astrogeology",
+   "measurement_type": "catalog",
+   "native_resolution": "point catalog (THEMIS/CTX/HiRISE)",
+   "citation": "Cushing G.E. (2017) Mars Global Cave Candidate Catalog, NASA PDS.",
+   "limitations": "Candidates only; cave extent not confirmed."
+  },
+  {
+   "id": "mars_mgd3_dunes",
+   "name": "Mars Global Digital Dune Database (MGD3)",
+   "provider": "USGS Open-File Reports 2007-1158 (equatorial polygons) and 2018-1164 (dune composition/TI tables)",
+   "measurement_type": "catalog",
+   "native_resolution": "dune-field polygons (THEMIS/CTX)",
+   "citation": "Hayward R.K. et al. (2007, 2014); Fenton L.K. et al. (2018) USGS OFR 2018-1164.",
+   "limitations": "Dune fields >1 km2; small bedforms excluded; polar dune fields (>65 deg) not included in this pipeline."
+  },
+  {
+   "id": "mars_mcd_climate",
+   "name": "Mars Climate Database v6.2 climatology (web-interface extraction)",
+   "provider": "LMD / CNES / ESA Mars Climate Database v6.2 public web interface",
+   "measurement_type": "model",
+   "native_resolution": "5.625 x 3.83 deg GCM grid",
+   "citation": "Millour E. et al. (2018) MCD v6, EPSC; Forget F. et al. (1999) JGR 104, 24155.",
+   "limitations": "General-circulation-model climatology, NOT observations; coarse GCM grid; local topographic effects absent."
+  },
+  {
+   "id": "mars_model_geometry",
+   "name": "Analytic orbital-geometry model (top-of-atmosphere insolation)",
+   "provider": "TerraTwin derivation from standard celestial mechanics",
+   "measurement_type": "model",
+   "native_resolution": "analytic (per latitude)",
+   "citation": "Allison M. & McEwen M. (2000) PSS 48, 215 (Mars orbital elements).",
+   "limitations": "Top-of-atmosphere only; MCD insolation_surface_wm2 includes dust attenuation."
+  }
+ ],
+ "raw_inputs": {
+  "mars_mcd_climate/co2ice_ls000_diurnalmean.txt": {
+   "sha256": "1189f72b1e2fb909562f960ad0955807675cd32d8a67c8ccebe7fe4648894564",
+   "bytes": 48082,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls030_diurnalmean.txt": {
+   "sha256": "8e22be3006f2a29ca7f6570be2ff6c229d3fbce68bcc54ae2a32ad58b9de239d",
+   "bytes": 48083,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls060_diurnalmean.txt": {
+   "sha256": "f4653d6ffe0598f18b56c1c03becfadbef6cffaec635c19e089c1799820dddd0",
+   "bytes": 48083,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls090_diurnalmean.txt": {
+   "sha256": "93ec14e13bcc0835ee1814b860768c6ee07d063fc3d92a0ae45ee6cb7bf6728f",
+   "bytes": 48083,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls120_diurnalmean.txt": {
+   "sha256": "19435cbb7f04e95ca846d1bde2ad1a152e83285d982d02c23d8ea1ac95e9088f",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls150_diurnalmean.txt": {
+   "sha256": "d0b4f57b1008bc597227a4b31699284886b966951ec8205777e7322c3db0c089",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls180_diurnalmean.txt": {
+   "sha256": "3c12ff28518a55b4b284aabb954cc8fec916491e67ce9b46587c89581ffcbb40",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls210_diurnalmean.txt": {
+   "sha256": "6f8cff5e1a348a4e29771e43043cb6e1e4a82d6277475a3720b0bb5690508537",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls240_diurnalmean.txt": {
+   "sha256": "5918b40b6e52c5694fff48b4af8271bd27331ffd831e0ec0599b4750c7af6e88",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls270_diurnalmean.txt": {
+   "sha256": "39196dd625873ae921e39f928bfb2dee059e2b4683afb7585db2c95358cfd63d",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls300_diurnalmean.txt": {
+   "sha256": "8c4ef4bb205faa75039b5f7d664c1c78c66b4ecee5f69027b0f3a7347b584180",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/co2ice_ls330_diurnalmean.txt": {
+   "sha256": "e4ecb249f6364a201767782056543f5c1d0044ac177e7f5d1c7004ec7fc37e6a",
+   "bytes": 48084,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=co2ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls000_diurnalmean.txt": {
+   "sha256": "8505624b4719cbb11910e570a3ebe315b9c60cad25ce24c463bf481196c85a29",
+   "bytes": 48088,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls030_diurnalmean.txt": {
+   "sha256": "a926fa9a3596580754b3c9da255f06dc9534104107f0974cb61b24ff03fb7fd0",
+   "bytes": 48089,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls060_diurnalmean.txt": {
+   "sha256": "6baf006563ce86914f6ed51f6c96ac84e73475b15e6e92a05c8c561e8392851e",
+   "bytes": 48089,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls090_diurnalmean.txt": {
+   "sha256": "7030253527954b6e7c12142c681a5d6647c0a59e7b4fae6ae091dd75177f8075",
+   "bytes": 48089,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls120_diurnalmean.txt": {
+   "sha256": "a84ee15646189e09d7086c5c84fcaf554d4edd0599892a4c18e422016d7dba98",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls150_diurnalmean.txt": {
+   "sha256": "223a3de1a247e9e9ff2f7102f9d9dd7ebebc1728f5c6f3f2fd7dbec6ff64bd37",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls180_diurnalmean.txt": {
+   "sha256": "e2456b674f4940e857c57ee599d6854a2f1aadb1c0252823ea5dfdd3e7181ebd",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls210_diurnalmean.txt": {
+   "sha256": "0e6b477b0d4977f87314d1844abf1dc851f218803fa6f69806d6894b3184dca4",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls240_diurnalmean.txt": {
+   "sha256": "655acd93238349a92506ad898043ccbc42ecff8005a646c71c4d65bbee06a12a",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls270_diurnalmean.txt": {
+   "sha256": "9574230d267bfcfe95df7fc00f23e87693079b8c7dae5a4bd6a94b6c0d71ac58",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls300_diurnalmean.txt": {
+   "sha256": "1e07236dc9329c6fdcbdc1d08b912bf6dfc0bf8b4c5a62b73678f944227ecb7d",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/fluxsurf_dn_sw_ls330_diurnalmean.txt": {
+   "sha256": "6f62443e5157abad14e8c331e022d5f02ab28a9425868a5edefa31595200ae11",
+   "bytes": 48090,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=fluxsurf_dn_sw&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls000_diurnalmean.txt": {
+   "sha256": "e8b0b471dc031396a583501e7b7daed118c53e99c60505db66c9d5ebd8aa6db2",
+   "bytes": 48061,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls030_diurnalmean.txt": {
+   "sha256": "7fce80939aa294260d78f7616bb45e5b106be6bf852946a1108ca603c3e2ce27",
+   "bytes": 48062,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls060_diurnalmean.txt": {
+   "sha256": "e538c273bf42ab0146886b886eaf363f8b7e10bb289266874dd7ba7c69010124",
+   "bytes": 48062,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls090_diurnalmean.txt": {
+   "sha256": "3685f056c647b43a4527e4370c77675ead48a2968a6d6a682975f6190c86bc47",
+   "bytes": 48062,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls120_diurnalmean.txt": {
+   "sha256": "23d826243c8d2ba9edf0143f3071b757537b101410776516bc075d41da07a986",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls150_diurnalmean.txt": {
+   "sha256": "911a30695a10b2fcc8c274ddc59bea25bb02dc9e0d07ad78d2494ab8938a3bf1",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls180_diurnalmean.txt": {
+   "sha256": "3048ec957256916105e14ce869f05c355652a1f7e26de7a960b7c705cab1d65c",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls210_diurnalmean.txt": {
+   "sha256": "504382e6bdef5ce60d083f0d6500a9fbe9c14fea7cd41e36645939af2391c635",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls240_diurnalmean.txt": {
+   "sha256": "6c4a7f56c1aa31409d0f04c34adc69d64e1b711212e555ca5c53c21217ab5fa1",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls270_diurnalmean.txt": {
+   "sha256": "5bf9e505c7c41b1090a507c57e866ab3a5dc55884472c25f7fd6dd48a3e343d7",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls300_diurnalmean.txt": {
+   "sha256": "c670fbd5d9af2b50fd6ed71e0da2908247b349456ac7365d14417999a67872f7",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/ps_ls330_diurnalmean.txt": {
+   "sha256": "f8f8b3423fa7563fdeee566f14e82ca1f53e7ecda66e5939c0e672a5d3223c82",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=ps&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls000_diurnalmean.txt": {
+   "sha256": "830a99e2463eecae846a26bd9640ae34f673e4edfc8760cf1e22260e4d9eb41e",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls030_diurnalmean.txt": {
+   "sha256": "f3c6fdbaa1ffa6cce2da1ebfdcf9dbfe4f3238c40fc8286dbba7438aba613f42",
+   "bytes": 48101,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls060_diurnalmean.txt": {
+   "sha256": "a1f1447bb19e46eb9b52f5a8867dae3271cf7003b92c0d32e55055466f447bbf",
+   "bytes": 48101,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls090_diurnalmean.txt": {
+   "sha256": "560ca48d414b54c93eaf9cefd0587c68980c66d60af7433e5f6124bf389afd40",
+   "bytes": 48101,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls120_diurnalmean.txt": {
+   "sha256": "d804b89e29c2e6a3475ef7caa488e6b774b279c40ebf936f9e94b60cb2aee107",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls150_diurnalmean.txt": {
+   "sha256": "9352cb2cbd1c46b876be1eba38a565629b966d1acf999adb9e02057d6fbccd7e",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls180_diurnalmean.txt": {
+   "sha256": "b56d7f6ff83043bbb8228f468334361777799c5a56294f80c52ff57ec5e32811",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls210_diurnalmean.txt": {
+   "sha256": "f1e538b00ebc141ca0be214106593c88f22602b3fd6d203474aa367e50711613",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls240_diurnalmean.txt": {
+   "sha256": "15de07ff19a628a53adf22d1d711f0fd2f37f281ee6fd93f6fdc5ad18d821796",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls270_diurnalmean.txt": {
+   "sha256": "ede6c3ee3d5232ab1068e033a8e95902f5480ff05144065d535b3c200f9aef06",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls300_diurnalmean.txt": {
+   "sha256": "c5dedcac25763939cd4837e6809e3ffbf1d3575d3edf9f2d123972c67e74a856",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surf_h2o_ice_ls330_diurnalmean.txt": {
+   "sha256": "c88cd1e476b17344fa38d49c346d8cc4fbfda86cc39d6516d5cf445149b85af7",
+   "bytes": 48102,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surf_h2o_ice&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls000_diurnalmean.txt": {
+   "sha256": "630adc05d14083d89ba920b40738bed7880c148c36e422e33dbe427ce98b6dc3",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls030_diurnalmean.txt": {
+   "sha256": "1c8e6c6003399acb7b359226ac139724d8632b0c8d58005a67c5f4ee7d6d3936",
+   "bytes": 48070,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls060_diurnalmean.txt": {
+   "sha256": "ab0ede794e2c8d11c160cdc621e46eb4db0c425548a9842b371dd7e66b983112",
+   "bytes": 48070,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls090_diurnalmean.txt": {
+   "sha256": "67d2c2ae71e23f93cc4013d9102d0d3c49b903e3d7babe49f614abbe1906926e",
+   "bytes": 48070,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls120_diurnalmean.txt": {
+   "sha256": "ef9a064f21b6e76ec714eafc976e192b2ea1515af3ba6d7e76dbc7db4b6e595d",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls150_diurnalmean.txt": {
+   "sha256": "ae237188db443207444b8154be57e2e92ea4824fe11b07554d17829fd01356f0",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls180_diurnalmean.txt": {
+   "sha256": "e3efb755900de0e9dacd1b2385549eb1eb3f70587e96999e00f6e9028978749b",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls210_diurnalmean.txt": {
+   "sha256": "5cb319ab9804c70c3c7e229638f1bef76f661eea6e8fd30fe6010c3a7e9f53b9",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls240_diurnalmean.txt": {
+   "sha256": "80e4f0c448f197cf1121cf9b4e2636c8203e4e0adf31cacfd7ced7c741d6b7c4",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls270_diurnalmean.txt": {
+   "sha256": "da49aeb1c53fcb38c9ffaf450634d2bee4b904cb2ec59c0d398942989f1136e8",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls300_diurnalmean.txt": {
+   "sha256": "b96364212acddabb810a9fef343d16bd04252d245c980e1e4f96fd8747ae00f7",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/surfstress_ls330_diurnalmean.txt": {
+   "sha256": "ad7ec49aae3ed2b773fa4aa54f27d74cdbadd613c046ea6c92b80575d2b09ed2",
+   "bytes": 48071,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=surfstress&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls000_diurnalmean.txt": {
+   "sha256": "87789ba36ff2a5b318a71dbccbfd493e939e48dea0a655d89b20f7f6f09a6e04",
+   "bytes": 48098,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls030_diurnalmean.txt": {
+   "sha256": "40581600edce79565b3a13a9d563f6f1868844ff8d1889db3940ff5952e4fbcf",
+   "bytes": 48099,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls060_diurnalmean.txt": {
+   "sha256": "7c9e3a48f363047c7cab5f2908e5fac03ad9e909eb4230ddacee76d79f78b772",
+   "bytes": 48099,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls090_diurnalmean.txt": {
+   "sha256": "1ae040bc0d0274a06141531df2bd2df089db322be226535ab1298f91117595fe",
+   "bytes": 48099,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls120_diurnalmean.txt": {
+   "sha256": "891e6b2117b18911ce1e43af4e898398aedba94756fd933a70d055d8520e7d3c",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls150_diurnalmean.txt": {
+   "sha256": "55ad3ec322058a2df544a1230ab4c460905a9a23491360a0bd232dcc4322e6e2",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls180_diurnalmean.txt": {
+   "sha256": "4a126efacd0b37a630c7beb0a27fda10ce7d87781323f6bf2c0a886817cf07b0",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls210_diurnalmean.txt": {
+   "sha256": "f5b4fbfee09b40c2f936a071ef999ff934dc9198c55164b6b09d464ff715a93a",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls240_diurnalmean.txt": {
+   "sha256": "21622226aeffb3fb3af5607f2e6b75ebd985845e4d3f2c435dbf771e4718d831",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls270_diurnalmean.txt": {
+   "sha256": "ed64e68453c9ad5a65a6dc8f2100904a880be3ac64183628db21515ec85ad13e",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls300_diurnalmean.txt": {
+   "sha256": "bf66885ccb9a75cfcdbff0023ffd8ad555191f996cc3a4ff6f201b525f31a037",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tauref_ls330_diurnalmean.txt": {
+   "sha256": "e5e2793daa805f36cc0fb5de159b7fe0b440ffa1dd56a3fd4077d7c0098e52f4",
+   "bytes": 48100,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tauref&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt00.txt": {
+   "sha256": "aad260faa07941cbe978953c1a14a89a2f952576cfc94548e4124515eae63164",
+   "bytes": 48062,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt03.txt": {
+   "sha256": "e4c6d6128c19ef463ad277366d42c020e46954adf3b8e61fa27ffc192075ee1d",
+   "bytes": 48062,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt06.txt": {
+   "sha256": "c9dcd8856388089e832887ef8fe222533a7b0ffa152f126c51ecd26cf45699a7",
+   "bytes": 48062,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt09.txt": {
+   "sha256": "4340b789ca4520d470db734dbe7287a7a75b253de96cb5ebcf358e3dc6b9f658",
+   "bytes": 48062,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt12.txt": {
+   "sha256": "83a755decdc29ca667fc56cdf96ad4a48bc2cd03770de8d2ed1d402c6f47469c",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt15.txt": {
+   "sha256": "c81de3e8d4e2ab440bfd4fd4494feb3688eab928508eb8fea0d65a0551960db8",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt18.txt": {
+   "sha256": "34aff5fe631c6012afd05d6411900cdd9e0fbf9feaae6cb4744f6f64948bc83b",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls000_lt21.txt": {
+   "sha256": "e5aad97ca20972b5e940d03b08a24c05adba8f0addf4329193d67cfedefc94e1",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt00.txt": {
+   "sha256": "d66a9c1fd027ea3cfe35ccfa02b99f03a35a7d7f8cc3c663a33bdf63137d6e3c",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt03.txt": {
+   "sha256": "1a3f315f858c21f372b895e2a9a09cae18dfdbac090ae8f9f4f5c3f859713489",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt06.txt": {
+   "sha256": "0492fcb6e7d72e16f8d7187301c17790a0567db1ed6e36dc21df30796dfd11bf",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt09.txt": {
+   "sha256": "461aa6245264c7cec8923dcf6498f94a975a6cb40a015ce3a306ec352e757c6a",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt12.txt": {
+   "sha256": "08c439366565f80ce32395f205d4e5b4676756135b6ca9f4d0b5b3d76c2b6406",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt15.txt": {
+   "sha256": "968823758220be10a1f15e4850dfd4418f674b0bdef6ae6ac308e92f27d6c324",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt18.txt": {
+   "sha256": "314668b8d503f618e2cbbfd5331e1e4b0d9ba96d00a8601656f0f47f065a094e",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls030_lt21.txt": {
+   "sha256": "110a507d2b157b3513e92f729e31c5de066bb76149087c602e8d14338fbb2828",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt00.txt": {
+   "sha256": "35890507f10b4b84f6e18fc1ff65babe87c060b4102b6e472e50d48b8ada364c",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt03.txt": {
+   "sha256": "68f216003aa11b0e6816d30e13d7a4f89cd25cd9e4265b0e54464b7c7ccdd91e",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt06.txt": {
+   "sha256": "30c8059a7884b53b9ea55645a53a9d078a73d1ede15a84f424f1d3160f600f3b",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt09.txt": {
+   "sha256": "0c447b4e60faeca2238c8011b8672486bf5d7faabd153cfd2879b6abf16a14bd",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt12.txt": {
+   "sha256": "b4e305131be36c928d36dd0338b2dceeb0dd059d59515b02efcc4e7e62075ec3",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt15.txt": {
+   "sha256": "60d2702a03b4ef71e493492760ce2b111c7b30b3452067d6ac78c102efb54c1d",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt18.txt": {
+   "sha256": "8a2ee0a74f38ed68b441921875ab0c7e91dedce1899da195c24d3dc9b5748188",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls060_lt21.txt": {
+   "sha256": "6fbf76e9d08ec6ea709de751167fa44c8d1c217cfbbc9c2f9e68030abeaf4b5b",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt00.txt": {
+   "sha256": "d6408943ff1256c05dd4271e4b466c984be4c10da0c368407285a17300b7f947",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt03.txt": {
+   "sha256": "806f4f9d781ebdfb0cdfe468dbf4c5695a55a583ab191a458cea3ce6abc8932e",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt06.txt": {
+   "sha256": "81fedb0ec0d106d8aeb29ea5becf541d608cc43e085bff01a29b2c109890661f",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt09.txt": {
+   "sha256": "32d4029cf691900f117ece1c792fb956ae65a03857fb10e4a9ea65a88a42d5be",
+   "bytes": 48063,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt12.txt": {
+   "sha256": "eab5b49ea71f49d4a61669638ad45fa04ca9627cf290c62da52a8fb82913ac90",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt15.txt": {
+   "sha256": "2aa7f828e79ec9d709a4ae568341445706f955809bbc5e4a96c8e8b789f80665",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt18.txt": {
+   "sha256": "7c82f33ade5194516b0413793c33f70c9d994e900d5b1e0804d8b95d319d416d",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls090_lt21.txt": {
+   "sha256": "8195dd82f4f281ee001f42328c3feb3baaec6dd3e8af88bf305577a0eb9a0da1",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt00.txt": {
+   "sha256": "4801e1ffed358ff77ccd86fd6c7c889cf3da51f4fa96fd40dce3ad08df6f8324",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt03.txt": {
+   "sha256": "d2056806e368ecfc658f655ae4c2d98569ea8a55dc034c2a1af2e5ab3cb5da2e",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt06.txt": {
+   "sha256": "f168b82e4a5c61796ca84130c470faab839186c8b13fce584e3333f2b84cd133",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt09.txt": {
+   "sha256": "58d984304352b1cdf8993665c28e0a36ca73125f8e7063eafc025ac9e98b5977",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt12.txt": {
+   "sha256": "ccd4b37255e9f9891de6fc788577a3420872947d91e7ef638daaa9ca5e28794f",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt15.txt": {
+   "sha256": "093e15bc570d3c2a111b8b5a2d80f1e8c7847a07ac3aa75a0121e23960adc469",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt18.txt": {
+   "sha256": "06ff5121aadd8988db1152297346dd6aa68d1f031c37192a83e039fa794cb83d",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls120_lt21.txt": {
+   "sha256": "9216d18b199d7a3cb4a89d4fb79dadd5321491e69c9800d505fb4cc518325da8",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt00.txt": {
+   "sha256": "bba82c557d6745a4691540f4ca4b5393777eb258c448ba999d31eb2cd0ad87fd",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt03.txt": {
+   "sha256": "e4bfcee7f3b4d520f1662d4fb999384594d3b80bd07c4544e4d548232b0abfc7",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt06.txt": {
+   "sha256": "36a5f200d8fd1daf244bb0a9cd82973bb210bb8818bdad6bd29564a2ba698bd5",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt09.txt": {
+   "sha256": "1cd602c852d448e943d70686d4c39150438ada1ccf74f25df7bf9f613b0c598f",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt12.txt": {
+   "sha256": "08665e9d6401ae8e8ea08abcd0be9f3c912c348ad56c7a4036af3ce8c27223c9",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt15.txt": {
+   "sha256": "7118216f1dc8c11e5d9cf27d23534838d2aa1a66b6c85769e863f78f63171fa2",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt18.txt": {
+   "sha256": "5407cef894f39aa7e0a5dbaa405b96abaa76c65faf656ad0a3765a830f058a6d",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls150_lt21.txt": {
+   "sha256": "b70194db554174ee529f796a712f31328e5fefa5a091f2bf738d396153fb8a8a",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt00.txt": {
+   "sha256": "fbc6d210047878610cc3c66f1ad24b32fa1630521068680cc9e0c3b892f90e3b",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt03.txt": {
+   "sha256": "6461a945f1333046272ec6252c6e8679e39ee7ad31c0a22ddf0e63e1144a71a5",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt06.txt": {
+   "sha256": "f3aed84d3b3443f541d717869cc3fb7df5f06d88b7254b35924134392b28cafd",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt09.txt": {
+   "sha256": "8d3624efafbca33f01483b2d4b33b61f0b172ac371c64231e1694a7bcfea6ba5",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt12.txt": {
+   "sha256": "982d2e4445b0e14b2426e10b6c7cf813432d025471abb8868a0fa6606855cc23",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt15.txt": {
+   "sha256": "e15205d0a5f9a162345d3324a51f9d482d6341ab59b9c573c734b41a33533fe3",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt18.txt": {
+   "sha256": "94994e7269e9a07b32eae3ecfc511c3f421f4a32d92f1b2a973f7b5362f0b5c7",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls180_lt21.txt": {
+   "sha256": "e0d556a8c1450fa35a392141aac1e293bbf427b4c2323f58bb6ed81be1a10037",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt00.txt": {
+   "sha256": "43a91c946dcc77c2ca31017f663a5d2dc85a371777b047085f3fdb03d96e41fd",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt03.txt": {
+   "sha256": "90ed5e2be0e4f3cb8be0013d92e781ee16e73c1e0e781300b6a2809e4664f476",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt06.txt": {
+   "sha256": "033cb100b6ef8fff4f67c324c937b37397c335ece9a7aa948b3cdf87d56aa496",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt09.txt": {
+   "sha256": "622eed73208f6301bcbc6f16bd82ab746dcab82248fe96779c9e6d2a82c7e0b4",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt12.txt": {
+   "sha256": "7ab4ad529b51e02e9e47888713253fe6d4e2e8fa9e58ecbfd7e1ea0fe8c8c850",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt15.txt": {
+   "sha256": "19d4cb046bc5fb11df599ba020621d3cbaab0560a353820a34aa7171a032bbc2",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt18.txt": {
+   "sha256": "e35b4060e3feed5f34d12c72a5bddcc4a5c2dbb9a60f8d0823fbcaaa56ebdc02",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls210_lt21.txt": {
+   "sha256": "5aebfe8c986e81577757593528603ec97e08f22cfcf67f999383e744a9de9c99",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt00.txt": {
+   "sha256": "881c401335f262a9ba1559590feb0b1a7bf54e5986a03c89455d3ccbd45b1821",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt03.txt": {
+   "sha256": "12460fdc312c0dde4d5bb946ee6f6e2acd760e364c9aa457008e3cfa9a718288",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt06.txt": {
+   "sha256": "c1babed25bd68c445a19811439dd4fcc465de039abb154fa8a2bad2be63c9786",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt09.txt": {
+   "sha256": "9c162b875b5a6129e696059a74083faa98a3e4bd03c70d3eb0624776a0ef2043",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt12.txt": {
+   "sha256": "cf4954036eccefdb9f6bb7a6fe2c327e3518b6a5c85945d145b1c0aa5c914a05",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt15.txt": {
+   "sha256": "2e8e833e242aa5261b1caaaf648eea688c880557d55f21f1e84a726784f3a55a",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt18.txt": {
+   "sha256": "e03e8818db79e8b759ed56fd62cb37f78ca4b74b8f70db95f33aaea5540f71ab",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls240_lt21.txt": {
+   "sha256": "b93fb192974c08b406786d4bb41b3d1daa73885e1338d1b18fa2b0f111ccff82",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt00.txt": {
+   "sha256": "d4bf6988acd498802ae5f71dd71c8578e58871268241c9592b530b08bdc8d5d1",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt03.txt": {
+   "sha256": "28f8d32f49e0019b702902b9511f1e891c4fe1699ab51adaca812e0e4abf3169",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt06.txt": {
+   "sha256": "b1e5e18aeeab2ef57d4326e31bc1f85862e405396c635812295297003ea4a7e3",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt09.txt": {
+   "sha256": "a5f6aaf4c8cf2d46a322a1c01af3aea494dae1c544da2637642362b32b235902",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt12.txt": {
+   "sha256": "c77cfa30bed92628c2314d2841c7d61ee0f6b551a8bb9fc80c1de589f9959123",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt15.txt": {
+   "sha256": "d13aa0b4da0902d8c015ff66de84e7878790ccfaf34fa13c43088ddc998d2e9c",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt18.txt": {
+   "sha256": "f2b6162b53c5f9ea75b5d62fc3b2bf498caa331a5cb67d3b733fdacffe3c4edf",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls270_lt21.txt": {
+   "sha256": "a2669a2e6f9e88ce11ceb29b1e6ac5a342b90385baf65be6897713abf4c77a90",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt00.txt": {
+   "sha256": "d1c54ee19ab7a7c04934894a0a37b69b84b9f2f2745aa774fab252a5171b6765",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt03.txt": {
+   "sha256": "5fd033e048f737d143ecc0f7019fe2166c190085ccb287275487ff8e1e1efc78",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt06.txt": {
+   "sha256": "ed0566ebf026493e910e830e5ad95e76365082d1fdeebc1a00b2349d8043b204",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt09.txt": {
+   "sha256": "41039484bde22b3b9fa5e1ffece6422218078e2ef865fad81532bbcf26493491",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt12.txt": {
+   "sha256": "1ac2bfdef64083a5c8893cfb772b38a5c90999e82f72b2ab1e4ac4e3ef6d8c68",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt15.txt": {
+   "sha256": "c1c07da3ed861170bba75767c64fa21e7bfde8a2902249431d504d63d5c53173",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt18.txt": {
+   "sha256": "ca0f560a6725b07e2a8e5634d39235f826205810819390750c8d7d548100994f",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls300_lt21.txt": {
+   "sha256": "b8006ae6dc7b11231ec4847e4a86fdc51cefaa966e0d99a42455dae92ef89c74",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt00.txt": {
+   "sha256": "3b5e070cb457bdf93163eaa0a5e7d2194102a8e264d047d767dba23e55b0033b",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt03.txt": {
+   "sha256": "2edfa7e1d44cfb07e3171784a27747ba2f5c4a45c8941e20f40160e884aaaa05",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=3.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt06.txt": {
+   "sha256": "c29c3a6176c8409bbbea8ff44413dd5da4c25f330abe38f2018e3d06dc702d1f",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=6.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt09.txt": {
+   "sha256": "df5f7cffe8d3a6fa351bc558fc447a02ae615358d4525c93955b6eb5dce5d08a",
+   "bytes": 48064,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=9.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt12.txt": {
+   "sha256": "a1cc5700b378b27788be9f0651d5ce52be9a0edf4508dfc162b20c5e734179e4",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=12.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt15.txt": {
+   "sha256": "77f28af4d8bd570e702092f0c1e198432285544564c439dac28e42c67d4ac74a",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=15.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt18.txt": {
+   "sha256": "b00d151ecdee06607f181cdfd468100d0b84dd45e28216f7e96bc906757c3872",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=18.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/tsurf_ls330_lt21.txt": {
+   "sha256": "04fad2fb86ffc2e241065ee002211bf1346ba1549182b25fbb0771ec86d60ec7",
+   "bytes": 48065,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=tsurf&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=21.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&averaging=off&zonmean=off&diumean=off&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls000_diurnalmean.txt": {
+   "sha256": "961fce5ca12d5e0a2c81b3c7f4a1ee283f3fedfd66a55ef91c9c283111210e21",
+   "bytes": 48067,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=0.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls030_diurnalmean.txt": {
+   "sha256": "18a60f272efeb1050beb4fa2ee348bd1a2a075247406b1ef86d0bdd6123fd43a",
+   "bytes": 48068,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=30.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls060_diurnalmean.txt": {
+   "sha256": "d4f5c3ab7d91f14b316e766c7b541eddc0297b5e8ac622493f89be6781520cf9",
+   "bytes": 48068,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=60.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls090_diurnalmean.txt": {
+   "sha256": "32baf743b3dfa5e655eed105a40b31e45fbcea0a1485e3cf0e00f08197f152ea",
+   "bytes": 48068,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=90.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls120_diurnalmean.txt": {
+   "sha256": "48ac3dfa52b3378e76f194c11cc19c9a1222aa8f04fdee5dbe8e0a63da5cac66",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=120.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls150_diurnalmean.txt": {
+   "sha256": "4d0241422c2ae77672bc5152bc729228d3aa3f956186b46bad749dd5d4d5934c",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=150.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls180_diurnalmean.txt": {
+   "sha256": "6a72d68dda987bd8ec2437f6a3d5ddf5cb6e59febdfcaebf7d86692fc106630d",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=180.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls210_diurnalmean.txt": {
+   "sha256": "00237b0b8bda6e7d6ea475fb02c1b08773a06ab2bbf9056dab0a6aa3a35be01a",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=210.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls240_diurnalmean.txt": {
+   "sha256": "23856f142f0ed96820a3a6581a537ad1d908fe80ea3cd24ccd3981ddbf5237b9",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=240.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls270_diurnalmean.txt": {
+   "sha256": "d7ea99fc9e0ee06d2de149c084aaba99fa27ba69565391cc3d70cf032a62c7f2",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=270.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls300_diurnalmean.txt": {
+   "sha256": "cf7d3b41d9d1a7e30dc87ef676193db5ec75312dd10cb1dc8a18c6f92604c9f2",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=300.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mcd_climate/wind_ls330_diurnalmean.txt": {
+   "sha256": "783cc3cea5d1083be6bd0edfb28bb4a1cf6770a7d7d060be5b23f17f4c3b60e2",
+   "bytes": 48069,
+   "url": "https://www-mars.lmd.jussieu.fr/mcd_python/cgi-bin/mcdcgi.py?var1=wind&var2=none&var3=none&var4=none&datekeyhtml=1&ls=330.0&localtime=0.0&latitude=all&longitude=all&altitude=10.0&zkey=3&spacecraft=none&isfixedlt=off&dust=1&hrkey=1&zonmean=off&diumean=off&averaging=loct&animation=off&dpi=80&islog=off&colorm=jet&proj=cyl&iswind=off"
+  },
+  "mars_mgc3_caves/mars_cave_catalog.zip": {
+   "sha256": "d2703c128b29f47d44bd482344887156bae82831a636844d1418d75661726097",
+   "bytes": 1770313,
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/c2960f77-ee20-4cc6-ac85-abbecc0fc7f6/resource/ccd54fb2-9a50-46bf-8971-80c241bb2f40/download/mars_cave_catalog.zip"
+  },
+  "mars_mgd3_dunes/Shapefiles.zip": {
+   "sha256": "a43e8f842aa0e9b1edb920a2624a430ebf7fb6a059fc9c6f1ae37cc179635f34",
+   "bytes": 60597152,
+   "url": "https://pubs.usgs.gov/of/2007/1158/Shapefiles.zip"
+  },
+  "mars_mgd3_dunes/ofr20181164_dunedatabase.zip": {
+   "sha256": "92771c23cfa4a64dfcc38f5ad29de00adfa41b9f321d3665beb2112eefe3485e",
+   "bytes": 2982330,
+   "url": "https://pubs.usgs.gov/of/2018/1164/ofr20181164_dunedatabase.zip"
+  },
+  "mars_mola_megdr128/megt00n000hb.img": {
+   "sha256": "f57274b5e459ab35a1975ca5f186f98bdb929475a4557098a7c632b9aa175c75",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n000hb.img"
+  },
+  "mars_mola_megdr128/megt00n000hb.lbl": {
+   "sha256": "d27d0b5635a5024dd5d95845fd83477dc5f723976444d1e5882a675027b0da13",
+   "bytes": 4818,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n000hb.lbl"
+  },
+  "mars_mola_megdr128/megt00n090hb.img": {
+   "sha256": "764946162d4c650abfb22aa284595a15374a7185f302a639c19e6602c67a1d6e",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n090hb.img"
+  },
+  "mars_mola_megdr128/megt00n090hb.lbl": {
+   "sha256": "c85891df3c11e724c5c5d980630e56ee4f13c40d234b68e22401b9a404df3d36",
+   "bytes": 4820,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n090hb.lbl"
+  },
+  "mars_mola_megdr128/megt00n180hb.img": {
+   "sha256": "11a7b73f40775e78df32e8ad1e61ac2e3c521ea8f26be9039a004c3b10ea3a50",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n180hb.img"
+  },
+  "mars_mola_megdr128/megt00n180hb.lbl": {
+   "sha256": "7e1633f4f55fdf4ef438408afb631015756e67d4f81cd4711f25de172543bee6",
+   "bytes": 4817,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n180hb.lbl"
+  },
+  "mars_mola_megdr128/megt00n270hb.img": {
+   "sha256": "074356eea72882c0560f2c15f4466d01fd6b18b57decb419fb96878154dd7b29",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n270hb.img"
+  },
+  "mars_mola_megdr128/megt00n270hb.lbl": {
+   "sha256": "a6a198c4062f40efe3dc84bf5fb7d5aa98efd73cb35e81df8cb5ce2e859ea270",
+   "bytes": 4822,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n270hb.lbl"
+  },
+  "mars_mola_megdr128/megt44n000hb.img": {
+   "sha256": "14022166079edafc99650f354e5a634e6eb2c2ea544b444c01cd8ee55437df36",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n000hb.img"
+  },
+  "mars_mola_megdr128/megt44n000hb.lbl": {
+   "sha256": "bc624a238ba6d71a770a09f959ead96f1c144970fae435b8ca5e26208b42eec5",
+   "bytes": 4820,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n000hb.lbl"
+  },
+  "mars_mola_megdr128/megt44n090hb.img": {
+   "sha256": "a65eb54042e579dbb6274aad8256e30fbb752dd70b93b6a3ad748909f1a9f687",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.img"
+  },
+  "mars_mola_megdr128/megt44n090hb.lbl": {
+   "sha256": "21318b5ccd01f979ffc7052812a86803c12e172bbe4c2b18cf8c3e2a10d888ec",
+   "bytes": 4822,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.lbl"
+  },
+  "mars_mola_megdr128/megt44n180hb.img": {
+   "sha256": "951de9b021808027f4b96e4fa82e1f4f9e621b2ddf978bc2ef235cd3d7dbf3c5",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n180hb.img"
+  },
+  "mars_mola_megdr128/megt44n180hb.lbl": {
+   "sha256": "7baf5c98a89bd903b81f654c4f7b79274b32d24d64e3eb98694cd44865afdbdf",
+   "bytes": 4819,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n180hb.lbl"
+  },
+  "mars_mola_megdr128/megt44n270hb.img": {
+   "sha256": "d8172f3de496958ab1e2197037d8a12decc0512cc8a8c0f84eccaa51595edccc",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n270hb.img"
+  },
+  "mars_mola_megdr128/megt44n270hb.lbl": {
+   "sha256": "8b07e27293aae7249763441469123dbac3142ba856481f0c3501f2cba0f1d999",
+   "bytes": 4824,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n270hb.lbl"
+  },
+  "mars_mola_megdr128/megt44s000hb.img": {
+   "sha256": "5e7f698a2b732164731949b31ed5d1226010318ea69b89a73b614debb40302d6",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s000hb.img"
+  },
+  "mars_mola_megdr128/megt44s000hb.lbl": {
+   "sha256": "2e24168ff794d66cccb6c74ef8dabc400546b3d66e4c78eade8b7769b5c789ab",
+   "bytes": 4824,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s000hb.lbl"
+  },
+  "mars_mola_megdr128/megt44s090hb.img": {
+   "sha256": "68fc0fe968859997689a25022b1fb4a75021abf1536c2e9da8789674e11cc201",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s090hb.img"
+  },
+  "mars_mola_megdr128/megt44s090hb.lbl": {
+   "sha256": "0b4eb38b837fb1b08889c52b5a434dc9adf74132f4ced3e5d1a5e115d4bf8ce9",
+   "bytes": 4826,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s090hb.lbl"
+  },
+  "mars_mola_megdr128/megt44s180hb.img": {
+   "sha256": "665d395456e9aaad74cdd4f45b6fe33e4898f083532219a2420b3e6c10604fbf",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s180hb.img"
+  },
+  "mars_mola_megdr128/megt44s180hb.lbl": {
+   "sha256": "860ccab1464bc41845653524ec4b2e7bc9e6c08c2214609b39ad10c6dd680cf3",
+   "bytes": 4823,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s180hb.lbl"
+  },
+  "mars_mola_megdr128/megt44s270hb.img": {
+   "sha256": "5f9fe49948997d2b16f0576b039ba179c6adae69ce988ac28d60181540a4a27d",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s270hb.img"
+  },
+  "mars_mola_megdr128/megt44s270hb.lbl": {
+   "sha256": "91d25f08d3d70bef9adfa81d7b00bbfbc97e30c762bbd7d0ec4d48942cc5c455",
+   "bytes": 4828,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44s270hb.lbl"
+  },
+  "mars_mola_megdr128/megt88n000hb.img": {
+   "sha256": "33e48c5e6bed072bae4ca49edee53134336aee517ebc1ce5ecf0a470d82cfd10",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n000hb.img"
+  },
+  "mars_mola_megdr128/megt88n000hb.lbl": {
+   "sha256": "65fb723e40fabc2ef35b3dca75002671f0e957ee44aae70832630ad6f0f9bbef",
+   "bytes": 4822,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n000hb.lbl"
+  },
+  "mars_mola_megdr128/megt88n090hb.img": {
+   "sha256": "7df40fa1655939a5088e5dd2b4ccd1d24f4e69ccd75fc9c34c4ea7f2ccd3910b",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n090hb.img"
+  },
+  "mars_mola_megdr128/megt88n090hb.lbl": {
+   "sha256": "a854fce7a1cd64638e8b177d62366fb6aeadc770e27ee580d1c194c37319ed5b",
+   "bytes": 4824,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n090hb.lbl"
+  },
+  "mars_mola_megdr128/megt88n180hb.img": {
+   "sha256": "0d1db101aa48eddcfa6ac7e2ff9124aa758f4157eb92df79b8483948991bfc24",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n180hb.img"
+  },
+  "mars_mola_megdr128/megt88n180hb.lbl": {
+   "sha256": "8be9ec20f29bca7a98e2b1497bcc437b5e3beb78b5bfa2b66a9b1ee07ef2f44c",
+   "bytes": 4821,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n180hb.lbl"
+  },
+  "mars_mola_megdr128/megt88n270hb.img": {
+   "sha256": "15a21106e752c7c6cf091d40def5ab6e0c36eec25a0fe57afe058580a2ba32d5",
+   "bytes": 129761280,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n270hb.img"
+  },
+  "mars_mola_megdr128/megt88n270hb.lbl": {
+   "sha256": "924b958851ec994efdac4a6e4593af8039ab837d734fafbf9f0bfd78497c8a1c",
+   "bytes": 4826,
+   "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt88n270hb.lbl"
+  },
+  "mars_odyssey_grs/cl_sr_5x5.lbl": {
+   "sha256": "73c4b314440ba58de5b6a6571132bd9dc698178e1f6efef5931d560832cab00b",
+   "bytes": 4649,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/cl_sr_5x5.lbl"
+  },
+  "mars_odyssey_grs/cl_sr_5x5.tab": {
+   "sha256": "f3e50ff4f90533b4d5bc1bd3801660366349ae030cc192f2a8dba627671f17a6",
+   "bytes": 186624,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/cl_sr_5x5.tab"
+  },
+  "mars_odyssey_grs/fe_sr_5x5.lbl": {
+   "sha256": "208d36cee2bc73158c20c7cd2b20e08251b8fd516380f678308f476a530c6862",
+   "bytes": 4647,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/fe_sr_5x5.lbl"
+  },
+  "mars_odyssey_grs/fe_sr_5x5.tab": {
+   "sha256": "c6cba107597434f696e51713a00ee6a444262f47f68681d7366ced7ffc1c87ac",
+   "bytes": 186624,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/fe_sr_5x5.tab"
+  },
+  "mars_odyssey_grs/h2o_sr_5x5.lbl": {
+   "sha256": "1333eef6d604f45af7e9e9f2899e5586b7747b13ad746a389d83ab1adbcf7000",
+   "bytes": 4653,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/h2o_sr_5x5.lbl"
+  },
+  "mars_odyssey_grs/h2o_sr_5x5.tab": {
+   "sha256": "5cec0d637755ddb7a451f58d7b24b6fb34f081e3391b40cdfca5410200da0236",
+   "bytes": 186624,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/h2o_sr_5x5.tab"
+  },
+  "mars_odyssey_grs/k_sr_5x5.lbl": {
+   "sha256": "210a986fa38a02a97b1d911c37d5792f8cfb59a0f6f077da2598b46ee2eabfb2",
+   "bytes": 4642,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/k_sr_5x5.lbl"
+  },
+  "mars_odyssey_grs/k_sr_5x5.tab": {
+   "sha256": "66eb41ab27c29aac6af75a1512630e894c211158d5bee476beaf801e1be4826d",
+   "bytes": 171072,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/k_sr_5x5.tab"
+  },
+  "mars_odyssey_grs/si_sr_5x5.lbl": {
+   "sha256": "364e2caf3a66e7c89549932ac81edcb7588ca54e3b2a14247a022bf001764486",
+   "bytes": 4665,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/si_sr_5x5.lbl"
+  },
+  "mars_odyssey_grs/si_sr_5x5.tab": {
+   "sha256": "dfc98582b8faa328ab62f921113adee34ea04b0c66334e1957394617763281ae",
+   "bytes": 186624,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/si_sr_5x5.tab"
+  },
+  "mars_odyssey_grs/th_sr_5x5.lbl": {
+   "sha256": "57ea5618e023046980a986bde184d179ec249bc04c27c94def353277fff4676e",
+   "bytes": 4645,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/th_sr_5x5.lbl"
+  },
+  "mars_odyssey_grs/th_sr_5x5.tab": {
+   "sha256": "6c6ce0c50aee39353e99723eab19fc3c9e4ad65bad88c3fbe4bc48b08cd18919",
+   "bytes": 171072,
+   "url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed/th_sr_5x5.tab"
+  },
+  "mars_odyssey_ns/ns_epithermal_020917.lbl": {
+   "sha256": "eafa9ca9a51629a5801db65372b7e603c1f6bc6a8a41814e8857eb132783b360",
+   "bytes": 2860,
+   "url": "https://pds-geosciences.wustl.edu/ody/urn-nasa-pds-odyssey_grs_special/data/ns_epithermal_020917.lbl"
+  },
+  "mars_odyssey_ns/ns_epithermal_020917.tab": {
+   "sha256": "2ac2dbdc964a4ff7a0c79e535a8ed91b9835a44e7c697f6f3c8d199c78cfdde0",
+   "bytes": 6739200,
+   "url": "https://pds-geosciences.wustl.edu/ody/urn-nasa-pds-odyssey_grs_special/data/ns_epithermal_020917.tab"
+  },
+  "mars_omega_maps/omega_albedo_r1080.vic": {
+   "sha256": "33184fc0f47c811f73e509a93fec26fb442724939a3030ff73a2436427e7cded",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=omega_albedo_r1080"
+  },
+  "mars_omega_maps/omega_ferric_bd530.vic": {
+   "sha256": "dc7c441be84e86385cbdeff9d9a72b23f43287569463ec7c059691f4411f6c10",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=omega_ferric_bd530"
+  },
+  "mars_omega_maps/omega_olivine_osp1.vic": {
+   "sha256": "7bb046eaa1718efefd0f21489dcbce795d3bd5788813de54dcf92b22235bab4f",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=omega_olivine_osp1"
+  },
+  "mars_omega_maps/omega_pyroxene_bd2000.vic": {
+   "sha256": "9ae48deb388edc22394f3147c11b6626856ca32775a69020f4269d566927f5a4",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=omega_pyroxene_bd2000"
+  },
+  "mars_robbins_craters/Catalog_Mars_Release_2020_1kmPlus_FullMorphData.csv.zip": {
+   "sha256": "a642daf677a936834424ec2ba16a70857e4a587b060168334ed2977cce496354",
+   "bytes": 39370143,
+   "url": "https://craters.sjrdesign.net/Catalog_Mars_Release_2020_1kmPlus_FullMorphData.csv.zip"
+  },
+  "mars_sim3292_geology/SIM3292_Global_Geology.dbf": {
+   "sha256": "06a7b40338f8f62e1d8192e07068fcb343ca7c2f02ffb353bead832ffa1d2bab",
+   "bytes": 156235,
+   "url": "https://pubs.usgs.gov/sim/3292/downloads/sim3292_database.zip#SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.dbf"
+  },
+  "mars_sim3292_geology/SIM3292_Global_Geology.prj": {
+   "sha256": "2fb085b6ac6c8594c2e411b1c99b35093b1ff01ba125b06e1b57328a2dc8f8bc",
+   "bytes": 176,
+   "url": "https://pubs.usgs.gov/sim/3292/downloads/sim3292_database.zip#SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.prj"
+  },
+  "mars_sim3292_geology/SIM3292_Global_Geology.shp": {
+   "sha256": "9c0fbc204c1c7f108a854036d85f44c77531e85e0c03959eaea2b6cd33197f3a",
+   "bytes": 63803656,
+   "url": "https://pubs.usgs.gov/sim/3292/downloads/sim3292_database.zip#SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.shp"
+  },
+  "mars_sim3292_geology/SIM3292_Global_Geology.shx": {
+   "sha256": "c6e40da9148010bf93ac1cf57b4976635574e9b1977e5eef75c3930212011935",
+   "bytes": 10588,
+   "url": "https://pubs.usgs.gov/sim/3292/downloads/sim3292_database.zip#SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.shx"
+  },
+  "mars_swim_ice/swim_ice_consistency_0-1m.vic": {
+   "sha256": "ca65dcfb71d92a4e0e0ff71a5814d80a72c2d1e08ad737b112a0830c4af9af8c",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=swim_ice_consistency_0-1m"
+  },
+  "mars_swim_ice/swim_ice_consistency_1-5m.vic": {
+   "sha256": "8e4ecfa926548faaedd465b2062ded168f517e6cb918e331581ebd98323e0bcd",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=swim_ice_consistency_1-5m"
+  },
+  "mars_swim_ice/swim_ice_consistency_combined.vic": {
+   "sha256": "ead7bbf7857c632fd9ae7566e1ef3bf502c982b9d7344c76612d50c75993eddf",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=swim_ice_consistency_combined"
+  },
+  "mars_swim_ice/swim_ice_consistency_grtr_5m.vic": {
+   "sha256": "d7502f43cf77c8594220f56cc59238943868eaa60c11626557099d17e4fa0f38",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=swim_ice_consistency_grtr_5m"
+  },
+  "mars_tes_minerals/TES_Feldspar_numeric.vic": {
+   "sha256": "ccb61150758d0d958a40405419552449add8f5d93fdc368357a0e78fc9768eec",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Feldspar_numeric"
+  },
+  "mars_tes_minerals/TES_Glass_Clay_numeric.vic": {
+   "sha256": "a5eae7868a41a6ece00cb1baee0619336c6aa6f327a78e6157bf52e7de608137",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Glass_Clay_numeric"
+  },
+  "mars_tes_minerals/TES_Hematite_numeric.vic": {
+   "sha256": "d315f7bf04386c380e8e840bbe5622aac6c35fac3a1896b45e02bd57fcf7c974",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Hematite_numeric"
+  },
+  "mars_tes_minerals/TES_Olivine_numeric.vic": {
+   "sha256": "6ac22726317d23186a5456ec3fe2df93075da67cc6c3322fa05459433427daf4",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Olivine_numeric"
+  },
+  "mars_tes_minerals/TES_Orthopyroxene_numeric.vic": {
+   "sha256": "500eb66c3389f77b586db9f9839570cbaf895b1e754e3ce4d866f58d069d1ecc",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Orthopyroxene_numeric"
+  },
+  "mars_tes_minerals/TES_Plagioclase_numeric.vic": {
+   "sha256": "d3e3968f0638b27e91161f357f5d740b518f146cba816b8fb55e7287f917141f",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Plagioclase_numeric"
+  },
+  "mars_tes_minerals/TES_Quartz_numeric.vic": {
+   "sha256": "68867b265946a11923aacff897669aaa611a7765f10c00b28f083dcc315ebbdf",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Quartz_numeric"
+  },
+  "mars_tes_minerals/TES_RMS_Error_numeric.vic": {
+   "sha256": "129c0189e1aad1567c1186c018c17cc041f182105d5bf7a0c881fccd853d2482",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_RMS_Error_numeric"
+  },
+  "mars_tes_minerals/TES_Sulfate_numeric.vic": {
+   "sha256": "2bafde27ce1dc1834d102f142899098dbd14c031af9e25256a869281dea32551",
+   "bytes": 4152960,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=1440&HEIGHT=720&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Sulfate_numeric"
+  },
+  "mars_tes_thermophysical/TES_Lambert_Albedo_numeric.vic": {
+   "sha256": "db76d72b6102ef743933ae67b51bd49aafdd7933e315ca67fcda92a74f6d2d26",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Lambert_Albedo_numeric"
+  },
+  "mars_tes_thermophysical/TES_Thermal_Inertia_numeric.vic": {
+   "sha256": "9e89bcfc1fe2187239fea208ee2e5c6d5cce0a4c806a6b069e32213791c9cbf9",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=TES_Thermal_Inertia_numeric"
+  },
+  "mars_tes_thermophysical/tes_fine_component_thermal_inertia_numeric.vic": {
+   "sha256": "f726b58be6d508ac330a3e7f54f4e00d466fbd76156481228e1535b982b95581",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=tes_fine_component_thermal_inertia_numeric"
+  },
+  "mars_tes_thermophysical/tes_rock_abundance_numeric.vic": {
+   "sha256": "0d6ffb8a5c6401a6c9a4dab87e105c95b98c073cf7d1f8adf9dfd833ae02e887",
+   "bytes": 16600320,
+   "url": "http://ms-mars.mars.asu.edu/?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/vicar&WIDTH=2880&HEIGHT=1440&SRS=JMARS:4&BBOX=0,-90,360,90&STYLES=&VERSION=1.1.1&LAYERS=tes_rock_abundance_numeric"
+  }
+ },
+ "limitations": [
+  "Surface temperature, pressure, wind, dust and insolation are Mars Climate Database MODEL climatology, not observations.",
+  "No global biosignature dataset exists; biosignature-preservation features are context proxies only.",
+  "MOCAAS hydrated-mineral rasters were unavailable (HTTP 410 at the official URL); aqueous-mineral context relies on TES/GRS proxies.",
+  "SWIM ice consistency is a model-based consistency score and covers only the SWIM study region.",
+  "Odyssey GRS maps have ~450-600 km footprints (5 deg bins); finer cells inherit the containing bin value.",
+  "Cave candidates (MGC3) are surface openings; cave interiors are unmapped.",
+  "MOLA 128 ppd topography stops at +-88 deg latitude; dune polygons cover 65S-65N only.",
+  "Mars gravity / subsurface radar products were not integrated in this release.",
+  "No global high-resolution geotechnical (bearing strength) map exists."
+ ],
+ "processing_config": {
+  "grids": {
+   "moon": {
+    "res_deg": 0.5
+   },
+   "mars": {
+    "res_deg": 0.25
+   }
+  },
+  "terrain": {
+   "slope_landing_deg": 15,
+   "slope_mobility_deg": 25,
+   "max_abs_lat": {
+    "moon": 89.5,
+    "mars": 88
+   },
+   "crater_window_cells": 5,
+   "crater_bins_km": [
+    1,
+    5,
+    20
+   ],
+   "sfd_range_km": [
+    2,
+    10
+   ]
+  },
+  "environment": {
+   "cold_trap_tmax_k": 110,
+   "liquid_water_tmin_k": 273.15,
+   "triple_point_pa": 611.657
+  },
+  "surface_processes": {
+   "dust_lifting_stress_npm2": 0.0225
+  },
+  "exploration": {
+   "landing_hazard_weights": {
+    "slope_frac_gt_landing": 0.67,
+    "roughness": 0.33
+   },
+   "roughness_ref_m": 50,
+   "rock_ref_fraction": 0.2,
+   "traversability_weights": {
+    "slope_frac_gt_mobility": 0.6,
+    "roughness": 0.4
+   }
+  },
+  "analog": {
+   "features": {
+    "terrain": {
+     "slope_median_deg": 1.0,
+     "slope_p90_deg": 1.0,
+     "roughness_rms_m": 1.0,
+     "relief_m": 1.0,
+     "tri_mean_m": 0.5,
+     "crater_density_d1": 0.75,
+     "crater_density_d5": 0.75,
+     "crater_sfd_slope": 0.5
+    },
+    "geology": {
+     "feo_wt": 1.0,
+     "sio2_wt": 1.0,
+     "k_ppm": 0.75,
+     "th_ppm": 0.75
+    },
+    "environment": {
+     "tsurf_max_k": 1.0,
+     "tsurf_min_k": 1.0,
+     "tsurf_mean_k": 1.0,
+     "tsurf_diurnal_range_k": 1.0,
+     "insolation_toa_wm2": 0.5
+    },
+    "surface_processes": {
+     "rock_abundance": 1.0
+    },
+    "subsurface": {
+     "cave_candidate_distance_km": 1.0
+    },
+    "exploration": {
+     "landing_hazard_index": 1.0
+    }
+   },
+   "dimension_weights": {
+    "terrain": 0.25,
+    "geology": 0.2,
+    "environment": 0.2,
+    "surface_processes": 0.15,
+    "subsurface": 0.1,
+    "exploration": 0.1
+   },
+   "scale": 1.0,
+   "min_dimensions": 4,
+   "knn_k": 8,
+   "region_merge_km": 60,
+   "top_regions": 40,
+   "kmeans_k": [
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "random_state": 42
+  }
+ }
+}
