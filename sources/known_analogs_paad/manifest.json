@@ -1,0 +1,24 @@
+{
+  "retrieved_utc": "2026-11-06T04:45:26.316104+00:00",
+  "source_url": "https://dservices.arcgis.com/v01gqwM5QqNysAAi/arcgis/services/Planetary_Aeolian_Analog_Database/WFSServer?service=wfs&request=GetFeature&typeNames=Planetary_Aeolian_Analog_Database_core_attributes&outputFormat=geojson",
+  "endpoint_discovered_in": "https://tadp.astrogeology.usgs.gov/assets/index-CRhX0gaw.js",
+  "official_portal": "https://tadp.astrogeology.usgs.gov/",
+  "related_data_release": "https://doi.org/10.5066/P9IFVZEX",
+  "source_description": "USGS Planetary Aeolian Analog Database; dune-field analogs, not a comprehensive all-environment inventory.",
+  "rights_context": "Related USGS release is marked CC0 1.0 Universal. Retain individual site references.",
+  "records": 45,
+  "source_crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "acquisition_method": "Imported bytes from successful curl GET of this exact WFS URL in the current session.",
+  "checksum_scope": "Local snapshot SHA-256; no publisher checksum was supplied.",
+  "files": {
+    "sites.geojson": {
+      "bytes": 44883,
+      "sha256": "fa819b61ccf1cad8e1f53268585b662eda812cdefbda798f95e61ba6c18ba228"
+    }
+  }
+}

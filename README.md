@@ -1,103 +1,42 @@
-# TerraTwin — Moon, Mars & Earth integrated datasets
+# TerraTwin: planetary-to-Earth analog screening
 
-The final merged datasets for the TerraTwin project. Each body has **one main file** (`*_integrated.parquet`).
-It is a table where each row is one map cell, and its columns are all the features from 8 scientific dimensions
-merged together.
+Select a Moon or Mars region and retrieve Earth regions with explainable terrain resemblance. An optional historical dry/barren screen narrows the Earth candidate population. This workspace contains the analysis, reproducible data preparation, search callable and integration assets for the team's existing 3D globe.
 
-## Download
+The recommended first product is **regional terrain and navigation investigation**, with visible source footprints, environmental evidence and mismatches. Scores are experimental resemblance indices, not analog accuracy, base safety or predicted hardware performance.
 
-`mars_integrated.parquet` (109 MB) and `earth_integrated.parquet` (160 MB) are over GitHub's 100 MB limit, so they
-are stored with **Git LFS**. Install Git LFS once before cloning:
+## Start here
+
+- [Master project blueprint](TERRATWIN_MASTER_BLUEPRINT.md): product decisions, innovations, scientific rules, architecture, priorities, validation and demonstration.
+- [Measured preparation results](analysis/PREPARATION_RESULTS.md): what the current data actually supports.
+- [App data handoff](analysis/APP_DATA_HANDOFF.md): callable, JSON/GeoJSON contract and globe integration requirements.
+- [Data catalog](analysis/DATA_CATALOG.md): sources, epochs, resolution, integrity and attribution.
+- [Reproduction instructions](processing/README.md): acquisition, processing and checks.
+
+## Current data and examples
+
+Use `prepared/0.2.0` for the current serving data and `prepared/app_0.2.0/cases.json` for the four integration fixtures. The original terrain-only release and intermediate investigations remain separately versioned. The full 2001–2017 vegetation series is processed and independently checked; it remains provisional, unscored context.
 
 ```bash
-sudo apt install git-lfs      # macOS: brew install git-lfs   Windows: included with Git for Windows
+python -m processing.search --data-dir prepared/0.2.0 --profile dry_barren_terrain --body mars --lat 18.41 --lon 77.69 --output analysis/my_search.json
+```
+
+Install `processing/requirements.txt` first. This is a backend data query; the frontend code and a deployed API are not included in this workspace.
+
+## Clone and download
+
+The original Earth/Mars tables and prepared Parquet tables use Git LFS. Install Git LFS, then clone and retrieve its objects:
+
+```bash
 git lfs install
 git clone https://github.com/ikat5/mars_moon_earth_dataset.git
+cd mars_moon_earth_dataset
+git lfs pull
 ```
 
-If a `.parquet` file is only a few hundred bytes, the file is still a Git LFS pointer, so the data is
-missing. Run `git lfs pull` inside the repo.
+The original teammate guide is preserved in [ORIGINAL_DATASET_GUIDE.md](analysis/ORIGINAL_DATASET_GUIDE.md), including raw-table loading examples and grid definitions. The current preparation adds stricter comparison policies; shared names do not imply that every quantity can be compared across bodies.
 
-> "Download ZIP" on GitHub may not include the LFS file. Use `git clone`.
+Large source rasters are reacquired with the commands in `processing/README.md`; source catalogs, manifests and the prepared outputs are included. Failed builds and the superseded aridity output remain local only. Use `prepared/current_release.json` to identify the serving version.
 
-## Files
+The [Gobi candidate](analysis/GOBI_CANDIDATE_BRIEF.md) demonstrates global screening followed by finer inspection. The [Jaflong investigation](analysis/JAFLONG_LOCAL_PILOT.md) demonstrates why local exposed patches can be missed by regional cells. Neither is declared a newly discovered or field-verified analog. [Known-site review scope](analysis/KNOWN_ANALOG_REVIEW.md) is recorded separately.
 
-| File | What it is |
-|---|---|
-| `moon_integrated_dataset/moon_integrated.parquet` | **Main Moon dataset**: 259,200 cells × 91 columns |
-| `mars_integrated_dataset/mars_integrated.parquet` | **Main Mars dataset**: 1,036,800 cells × 96 columns |
-| `earth_integrated_dataset/earth_integrated.parquet` | **Main Earth dataset**: 1,413,693 land cells × 53 columns |
-| `*_feature_dictionary.json` | Information about every column: units, description, source, measurement type, coverage, min/max/mean |
-| `*_metadata.json` | Grid definition, data sources with citations, limitations, processing config |
-
-For analysis, you only need the `.parquet` file. Use the feature dictionary when you need to know what a column means.
-
-## Load the data
-
-```python
-import json
-import pandas as pd
-
-moon = pd.read_parquet("moon_integrated_dataset/moon_integrated.parquet")
-mars = pd.read_parquet("mars_integrated_dataset/mars_integrated.parquet")
-earth = pd.read_parquet("earth_integrated_dataset/earth_integrated.parquet")
-
-# what a column means
-info = {f["name"]: f for f in json.load(open("mars_integrated_dataset/mars_feature_dictionary.json"))}
-print(info["elev_mean_m"]["units"], "-", info["elev_mean_m"]["description"])
-
-# example: flat, low-elevation cells on Mars
-flat = mars[(mars.slope_mean_deg < 2) & (mars.elev_mean_m < -3000)]
-```
-
-Requires `pandas` and `pyarrow` (`pip install pandas pyarrow`).
-
-## Grid
-
-| | Moon | Mars | Earth |
-|---|---|---|---|
-| Cell size | 0.5° (~15.2 km at equator) | 0.25° (~14.8 km at equator) | 0.125° (~13.9 km at equator) |
-| Grid shape (lat × lon) | 360 × 720 | 720 × 1440 | 1440 × 2880 |
-| CRS | IAU_2015:30100 | IAU_2015:49900 | EPSG:4326 |
-| Radius | 1737.4 km | 3396.19 km | 6371.0 km |
-| Rows | every cell | every cell | **land cells only** (oceans and large lakes excluded) |
-
-Every table starts with `cell_id`, `lat`, `lon` (cell centre, longitude −180…180 °E) and `area_km2`.
-`cell_id = row * n_lon + col`, where row 0 is the northernmost row and col 0 starts at −180 °E.
-
-## The 8 dimensions
-
-Every feature belongs to one or more dimensions. The `dimensions` field in the feature dictionary lists them.
-
-| Dimension | Moon | Mars | Earth | Examples |
-|---|---|---|---|---|
-| geology | 24 | 27 | 4 | oxide abundances, geologic unit / lithology, TES minerals |
-| terrain | 18 | 18 | 17 | elevation, relief, slope, roughness, craters |
-| environment | 16 | 14 | 12 | surface temperature, pressure, albedo, insolation |
-| resources | 15 | 13 | 4 | cold traps, ice stability, water-equivalent hydrogen, snow, soil water |
-| surface_processes | 4 | 18 | 6 | rock abundance, wind, dunes |
-| habitability | 11 | 17 | 9 | temperature range, liquid-water window, ice |
-| subsurface | 8 | 5 | 4 | GRAIL gravity (Moon), cave candidates |
-| exploration | 19 | 20 | 15 | landing/mobility slope fractions, illumination, hazard indices |
-
-Earth uses the **same column names** as the Moon and Mars wherever the quantity exists on Earth (36 features are
-shared by all three bodies). Orbital geochemistry (FeO, SiO2, K, Th), neutron data, rock abundance, thermal inertia,
-dust opacity and geologic age have no global open Earth equivalent, so those columns are absent for Earth.
-
-## Rules for using the data
-
-* **Missing values are NaN, never 0.** Coverage differs by source. Check `coverage_area_frac` in the feature
-  dictionary.
-* The Moon has **no wind or atmosphere columns**. They are absent by physics, not missing.
-* Each column has a `measurement_type`: `measurement`, `derived_measurement`, `model`, `catalog`,
-  `map_interpretation` or `derived_index`. Proxies and indices are not direct observations.
-* Cave and ice columns are **candidates/proxies**, not confirmed detections.
-* Earth temperature (MODIS) and lithology have **no data south of 62° S** (Antarctica).
-
-## Sources & citation
-
-The data comes from NASA PDS, USGS, PGDA, instrument teams and the Mars Climate Database: LRO LOLA, Diviner,
-Lunar Prospector, GRAIL, MGS MOLA, TES, OMEGA, Mars Odyssey GRS/NS, SWIM, the Robbins crater databases, USGS
-geologic maps, and others. Earth: NOAA ETOPO 2022, MODIS land surface temperature (OpenLandMap), ERA5 reanalysis
-(NCAR), USGS EcoTapestry lithology, a global dune map, Wikipedia/Wikidata craters and Wikidata caves. The full citation and the known limitations for every source are in
-`*_metadata.json` → `sources`. Please cite the original sources when you use the data.
+Every successful match needs an explicit testing purpose. Missing terrain at Shackleton produces an insufficient-evidence response; the constrained Jezero search within 500 km of Sylhet produces no qualifying regional result. These are valid outcomes that the UI must preserve.

@@ -1,0 +1,4206 @@
+{
+  "audit": {
+    "duckdb_version": "2.0.0",
+    "scope": "Local integrated Parquet tables and accompanying JSON metadata; not a raw-source validation"
+  },
+  "earth": {
+    "rows": 1413693,
+    "columns": 53,
+    "features": 49,
+    "unique_cell_ids": 1413693,
+    "represented_cell_area_km2": 151396303.1685915,
+    "grid": {
+      "type": "equirectangular lat/lon cells",
+      "res_deg": 0.125,
+      "shape": [
+        1440,
+        2880
+      ],
+      "cell_size_km_at_equator": 13.9,
+      "radius_km": 6371.0,
+      "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+    },
+    "coverage": {
+      "elev_mean_m": {
+        "body": "earth",
+        "feature": "elev_mean_m",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "elev_min_m": {
+        "body": "earth",
+        "feature": "elev_min_m",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "elev_max_m": {
+        "body": "earth",
+        "feature": "elev_max_m",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "relief_m": {
+        "body": "earth",
+        "feature": "relief_m",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "slope_mean_deg": {
+        "body": "earth",
+        "feature": "slope_mean_deg",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "slope_median_deg": {
+        "body": "earth",
+        "feature": "slope_median_deg",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "slope_p90_deg": {
+        "body": "earth",
+        "feature": "slope_p90_deg",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "slope_frac_gt_landing": {
+        "body": "earth",
+        "feature": "slope_frac_gt_landing",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "slope_frac_gt_mobility": {
+        "body": "earth",
+        "feature": "slope_frac_gt_mobility",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "tri_mean_m": {
+        "body": "earth",
+        "feature": "tri_mean_m",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1408375,
+        "cell_fraction": 0.9962382214526068,
+        "area_fraction": 0.9960253211104836,
+        "dictionary_coverage_area_frac": 0.9960252642631531
+      },
+      "roughness_rms_m": {
+        "body": "earth",
+        "feature": "roughness_rms_m",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1304255,
+        "cell_fraction": 0.922587152939146,
+        "area_fraction": 0.9198519114319645,
+        "dictionary_coverage_area_frac": 0.9198518991470337
+      },
+      "dem_valid_frac": {
+        "body": "earth",
+        "feature": "dem_valid_frac",
+        "measurement_type": "measurement",
+        "source": "earth_etopo2022",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d1": {
+        "body": "earth",
+        "feature": "crater_density_d1",
+        "measurement_type": "catalog",
+        "source": "earth_impact_craters",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d5": {
+        "body": "earth",
+        "feature": "crater_density_d5",
+        "measurement_type": "catalog",
+        "source": "earth_impact_craters",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d20": {
+        "body": "earth",
+        "feature": "crater_density_d20",
+        "measurement_type": "catalog",
+        "source": "earth_impact_craters",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_largest_d_km": {
+        "body": "earth",
+        "feature": "crater_largest_d_km",
+        "measurement_type": "catalog",
+        "source": "earth_impact_craters",
+        "valid_cells": 162,
+        "cell_fraction": 0.000114593479631009,
+        "area_fraction": 0.00015128475026391923,
+        "dictionary_coverage_area_frac": 0.0001512847375124693
+      },
+      "geo_unit": {
+        "body": "earth",
+        "feature": "geo_unit",
+        "measurement_type": "map_interpretation",
+        "source": "earth_usgs_lithology",
+        "valid_cells": 986396,
+        "cell_fraction": 0.697744135395733,
+        "area_fraction": 0.9046098421149206,
+        "dictionary_coverage_area_frac": 0.9046097993850708
+      },
+      "geo_unit_frac": {
+        "body": "earth",
+        "feature": "geo_unit_frac",
+        "measurement_type": "map_interpretation",
+        "source": "earth_usgs_lithology",
+        "valid_cells": 986396,
+        "cell_fraction": 0.697744135395733,
+        "area_fraction": 0.9046098421149206,
+        "dictionary_coverage_area_frac": 0.9046097993850708
+      },
+      "geo_class": {
+        "body": "earth",
+        "feature": "geo_class",
+        "measurement_type": "map_interpretation",
+        "source": "earth_usgs_lithology",
+        "valid_cells": 986396,
+        "cell_fraction": 0.697744135395733,
+        "area_fraction": 0.9046098421149206,
+        "dictionary_coverage_area_frac": 0.9046097993850708
+      },
+      "geo_unit_diversity_3x3": {
+        "body": "earth",
+        "feature": "geo_unit_diversity_3x3",
+        "measurement_type": "map_interpretation",
+        "source": "earth_usgs_lithology",
+        "valid_cells": 986396,
+        "cell_fraction": 0.697744135395733,
+        "area_fraction": 0.9046098421149206,
+        "dictionary_coverage_area_frac": 0.9046097993850708
+      },
+      "tsurf_max_k": {
+        "body": "earth",
+        "feature": "tsurf_max_k",
+        "measurement_type": "derived_measurement",
+        "source": "earth_modis_lst",
+        "valid_cells": 1016426,
+        "cell_fraction": 0.7189863711569626,
+        "area_fraction": 0.9140208754390663,
+        "dictionary_coverage_area_frac": 0.9140207171440125
+      },
+      "tsurf_min_k": {
+        "body": "earth",
+        "feature": "tsurf_min_k",
+        "measurement_type": "derived_measurement",
+        "source": "earth_modis_lst",
+        "valid_cells": 1016422,
+        "cell_fraction": 0.7189835416883298,
+        "area_fraction": 0.9140244918716668,
+        "dictionary_coverage_area_frac": 0.9140244126319885
+      },
+      "tsurf_mean_k": {
+        "body": "earth",
+        "feature": "tsurf_mean_k",
+        "measurement_type": "derived_measurement",
+        "source": "earth_modis_lst",
+        "valid_cells": 1016360,
+        "cell_fraction": 0.7189396849245204,
+        "area_fraction": 0.9139602678897213,
+        "dictionary_coverage_area_frac": 0.9139601588249207
+      },
+      "tsurf_diurnal_range_k": {
+        "body": "earth",
+        "feature": "tsurf_diurnal_range_k",
+        "measurement_type": "derived_measurement",
+        "source": "earth_modis_lst",
+        "valid_cells": 1016373,
+        "cell_fraction": 0.7189488806975772,
+        "area_fraction": 0.9139666068934402,
+        "dictionary_coverage_area_frac": 0.9139665365219116
+      },
+      "tsurf_seasonal_range_k": {
+        "body": "earth",
+        "feature": "tsurf_seasonal_range_k",
+        "measurement_type": "derived_measurement",
+        "source": "earth_modis_lst",
+        "valid_cells": 1016360,
+        "cell_fraction": 0.7189396849245204,
+        "area_fraction": 0.9139602678897213,
+        "dictionary_coverage_area_frac": 0.9139601588249207
+      },
+      "liquid_water_window_frac": {
+        "body": "earth",
+        "feature": "liquid_water_window_frac",
+        "measurement_type": "derived_measurement",
+        "source": "earth_modis_lst",
+        "valid_cells": 1016467,
+        "cell_fraction": 0.7190153732104495,
+        "area_fraction": 0.914070422597973,
+        "dictionary_coverage_area_frac": 0.9140703082084656
+      },
+      "lst_sample_coverage": {
+        "body": "earth",
+        "feature": "lst_sample_coverage",
+        "measurement_type": "derived_measurement",
+        "source": "earth_modis_lst",
+        "valid_cells": 1016467,
+        "cell_fraction": 0.7190153732104495,
+        "area_fraction": 0.914070422597973,
+        "dictionary_coverage_area_frac": 0.9140703082084656
+      },
+      "ps_mean_pa": {
+        "body": "earth",
+        "feature": "ps_mean_pa",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "ps_min_pa": {
+        "body": "earth",
+        "feature": "ps_min_pa",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "wind_mean_ms": {
+        "body": "earth",
+        "feature": "wind_mean_ms",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "wind_max_seasonal_ms": {
+        "body": "earth",
+        "feature": "wind_max_seasonal_ms",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "surface_stress_mean_npm2": {
+        "body": "earth",
+        "feature": "surface_stress_mean_npm2",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "insolation_surface_wm2": {
+        "body": "earth",
+        "feature": "insolation_surface_wm2",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "h2o_frost_max_kgm2": {
+        "body": "earth",
+        "feature": "h2o_frost_max_kgm2",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "albedo_lambert": {
+        "body": "earth",
+        "feature": "albedo_lambert",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "soil_water_vol_frac": {
+        "body": "earth",
+        "feature": "soil_water_vol_frac",
+        "measurement_type": "model",
+        "source": "earth_era5_climate",
+        "valid_cells": 985608,
+        "cell_fraction": 0.6971867300750587,
+        "area_fraction": 0.9060235109112281,
+        "dictionary_coverage_area_frac": 0.906023383140564
+      },
+      "dune_cover_frac": {
+        "body": "earth",
+        "feature": "dune_cover_frac",
+        "measurement_type": "catalog",
+        "source": "earth_dunes",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "dune_field_distance_km": {
+        "body": "earth",
+        "feature": "dune_field_distance_km",
+        "measurement_type": "catalog",
+        "source": "earth_dunes",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cave_candidate_count": {
+        "body": "earth",
+        "feature": "cave_candidate_count",
+        "measurement_type": "catalog",
+        "source": "earth_wikidata_caves",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cave_candidate_distance_km": {
+        "body": "earth",
+        "feature": "cave_candidate_distance_km",
+        "measurement_type": "catalog",
+        "source": "earth_wikidata_caves",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "nearest_cave_setting": {
+        "body": "earth",
+        "feature": "nearest_cave_setting",
+        "measurement_type": "catalog",
+        "source": "earth_wikidata_caves",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "insolation_toa_wm2": {
+        "body": "earth",
+        "feature": "insolation_toa_wm2",
+        "measurement_type": "model",
+        "source": "earth_model_geometry",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "landing_hazard_index": {
+        "body": "earth",
+        "feature": "landing_hazard_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "traversability_index": {
+        "body": "earth",
+        "feature": "traversability_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "terrain_class": {
+        "body": "earth",
+        "feature": "terrain_class",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1409886,
+        "cell_fraction": 0.9973070532286713,
+        "area_fraction": 0.9971407392430574,
+        "dictionary_coverage_area_frac": 0.997140645980835
+      },
+      "cold_trap_flag": {
+        "body": "earth",
+        "feature": "cold_trap_flag",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1016426,
+        "cell_fraction": 0.7189863711569626,
+        "area_fraction": 0.9140208754390663,
+        "dictionary_coverage_area_frac": 0.9140207171440125
+      },
+      "water_indicator_score": {
+        "body": "earth",
+        "feature": "water_indicator_score",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lava_tube_context_flag": {
+        "body": "earth",
+        "feature": "lava_tube_context_flag",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "solar_power_index": {
+        "body": "earth",
+        "feature": "solar_power_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1413693,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      }
+    },
+    "numeric_ranges": {
+      "elev_mean_m": {
+        "min": -4936.22216796875,
+        "max": 6306.8876953125,
+        "zero_cells": 52,
+        "one_cells": 20
+      },
+      "elev_min_m": {
+        "min": -4936.22216796875,
+        "max": 5809.00830078125,
+        "zero_cells": 3970,
+        "one_cells": 1734
+      },
+      "elev_max_m": {
+        "min": -4936.22216796875,
+        "max": 8585.7158203125,
+        "zero_cells": 196,
+        "one_cells": 156
+      },
+      "relief_m": {
+        "min": 0.0,
+        "max": 5690.4375,
+        "zero_cells": 1086,
+        "one_cells": 225
+      },
+      "slope_mean_deg": {
+        "min": 0.0,
+        "max": 57.116695404052734,
+        "zero_cells": 113,
+        "one_cells": 0
+      },
+      "slope_median_deg": {
+        "min": 0.0,
+        "max": 61.073143005371094,
+        "zero_cells": 641,
+        "one_cells": 0
+      },
+      "slope_p90_deg": {
+        "min": 0.0,
+        "max": 72.94489288330078,
+        "zero_cells": 201,
+        "one_cells": 0
+      },
+      "slope_frac_gt_landing": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 1140196,
+        "one_cells": 134
+      },
+      "slope_frac_gt_mobility": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 1284990,
+        "one_cells": 28
+      },
+      "tri_mean_m": {
+        "min": 0.0,
+        "max": 1115.75048828125,
+        "zero_cells": 92,
+        "one_cells": 1
+      },
+      "roughness_rms_m": {
+        "min": 3.968121929540059e-15,
+        "max": 925.7913208007812,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dem_valid_frac": {
+        "min": 0.0011111111380159855,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 1304255
+      },
+      "crater_density_d1": {
+        "min": 0.0,
+        "max": 10.912333488464355,
+        "zero_cells": 1410063,
+        "one_cells": 0
+      },
+      "crater_density_d5": {
+        "min": 0.0,
+        "max": 10.912333488464355,
+        "zero_cells": 1410918,
+        "one_cells": 0
+      },
+      "crater_density_d20": {
+        "min": 0.0,
+        "max": 10.912333488464355,
+        "zero_cells": 1412554,
+        "one_cells": 0
+      },
+      "crater_largest_d_km": {
+        "min": 0.024000000208616257,
+        "max": 160.0,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "geo_unit_frac": {
+        "min": 0.00027777778450399637,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 230695
+      },
+      "geo_unit_diversity_3x3": {
+        "min": 1.0,
+        "max": 13.0,
+        "zero_cells": 0,
+        "one_cells": 92509
+      },
+      "tsurf_max_k": {
+        "min": 261.11138916015625,
+        "max": 337.131103515625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_min_k": {
+        "min": 222.4475555419922,
+        "max": 302.0458679199219,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_mean_k": {
+        "min": 237.87351989746094,
+        "max": 314.1708068847656,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_diurnal_range_k": {
+        "min": -5.3000030517578125,
+        "max": 42.199424743652344,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_seasonal_range_k": {
+        "min": 0.42236328125,
+        "max": 66.43338012695312,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "liquid_water_window_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 35323,
+        "one_cells": 432986
+      },
+      "lst_sample_coverage": {
+        "min": 0.0416666679084301,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 1016226
+      },
+      "ps_mean_pa": {
+        "min": 49316.9296875,
+        "max": 102513.6640625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "ps_min_pa": {
+        "min": 48528.0078125,
+        "max": 102144.4921875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "wind_mean_ms": {
+        "min": 0.4830783009529114,
+        "max": 15.432315826416016,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "wind_max_seasonal_ms": {
+        "min": 0.5219061970710754,
+        "max": 17.81355857849121,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "surface_stress_mean_npm2": {
+        "min": 0.0012828208273276687,
+        "max": 2.8426618576049805,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "insolation_surface_wm2": {
+        "min": 64.95211791992188,
+        "max": 310.0650329589844,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "h2o_frost_max_kgm2": {
+        "min": 0.0,
+        "max": 10000.0,
+        "zero_cells": 350729,
+        "one_cells": 0
+      },
+      "albedo_lambert": {
+        "min": 0.03984443098306656,
+        "max": 0.8500012159347534,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "soil_water_vol_frac": {
+        "min": 6.07600895818905e-07,
+        "max": 0.7425115704536438,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dune_cover_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 1341017,
+        "one_cells": 63742
+      },
+      "dune_field_distance_km": {
+        "min": 1.4704190492630005,
+        "max": 5449.029296875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "cave_candidate_count": {
+        "min": 0.0,
+        "max": 250.0,
+        "zero_cells": 1407906,
+        "one_cells": 3912
+      },
+      "cave_candidate_distance_km": {
+        "min": 0.018490372225642204,
+        "max": 3139.61328125,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "insolation_toa_wm2": {
+        "min": 172.35398864746094,
+        "max": 415.5945739746094,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "landing_hazard_index": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 75146,
+        "one_cells": 134
+      },
+      "traversability_index": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 28,
+        "one_cells": 90232
+      },
+      "cold_trap_flag": {
+        "min": 0.0,
+        "max": 0.0,
+        "zero_cells": 1016426,
+        "one_cells": 0
+      },
+      "water_indicator_score": {
+        "min": 6.07600895818905e-07,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 438349
+      },
+      "lava_tube_context_flag": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 1404582,
+        "one_cells": 9111
+      },
+      "solar_power_index": {
+        "min": 0.2598084807395935,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 128741
+      }
+    },
+    "categories": {
+      "geo_unit": {
+        "null": 427297,
+        "unconsolidated.sediment": 232435,
+        "mixed.sedimentary.rock": 184212,
+        "siliciclastic.sedimentary": 180350,
+        "metamorphics": 130860,
+        "carbonate.sedimentary.rock": 81207,
+        "acid.plutonics": 73099,
+        "basic.volcanics": 38483,
+        "intermediate.volcanics": 18862,
+        "undefined": 13765,
+        "acid.volcanic": 10402,
+        "basic.plutonics": 6409,
+        "pyroclastics": 6224,
+        "ice.and.glaciers": 4114,
+        "intermediate.plutonics": 3940,
+        "evaporite": 2034
+      },
+      "geo_class": {
+        "other": 675876,
+        "null": 427297,
+        "plains": 232435,
+        "volcanic": 73971,
+        "polar": 4114
+      },
+      "nearest_cave_setting": {
+        "cave": 1100032,
+        "lava_tube": 313661
+      },
+      "terrain_class": {
+        "smooth": 1067893,
+        "moderate": 222325,
+        "rugged": 90357,
+        "steep": 29311,
+        "null": 3807
+      }
+    },
+    "complete_terrain_cells": 1304255,
+    "dem_valid_below_10pct_cells": 17347,
+    "dem_valid_below_50pct_cells": 50694,
+    "regional_coverage": {
+      "all": {
+        "cells": 1413693,
+        "temperature_cells": 1016360,
+        "geology_cells": 986396,
+        "roughness_cells": 1304255
+      },
+      "south_of_62S": {
+        "cells": 393244,
+        "temperature_cells": 0,
+        "geology_cells": 0,
+        "roughness_cells": 381206
+      },
+      "north_of_62S": {
+        "cells": 1020449,
+        "temperature_cells": 1016360,
+        "geology_cells": 986396,
+        "roughness_cells": 923049
+      }
+    },
+    "complete_terrain_temperature_geology_cells": 891305,
+    "deep_negative_elevation_cells": 137,
+    "deep_negative_elevation_examples": [
+      [
+        2075040,
+        -0.0625,
+        0.0625,
+        -4936.22216796875,
+        0.0011111111380159855
+      ],
+      [
+        2072159,
+        0.0625,
+        -0.0625,
+        -4935.767578125,
+        0.0011111111380159855
+      ],
+      [
+        2072160,
+        0.0625,
+        0.0625,
+        -4935.73193359375,
+        0.0011111111380159855
+      ],
+      [
+        2075039,
+        -0.0625,
+        -0.0625,
+        -4935.07763671875,
+        0.0011111111380159855
+      ],
+      [
+        1986998,
+        3.8125,
+        154.8125,
+        -2867.157958984375,
+        0.021111110225319862
+      ]
+    ],
+    "cave_points_counted": [
+      15155.0,
+      5787
+    ],
+    "crater_centred_cells": 162,
+    "configured_analog_features": {
+      "terrain": {
+        "slope_median_deg": 1.0,
+        "slope_p90_deg": 1.0,
+        "roughness_rms_m": 1.0,
+        "relief_m": 1.0,
+        "tri_mean_m": 0.5,
+        "crater_density_d1": 0.75,
+        "crater_density_d5": 0.75,
+        "crater_sfd_slope": 0.5
+      },
+      "geology": {
+        "feo_wt": 1.0,
+        "sio2_wt": 1.0,
+        "k_ppm": 0.75,
+        "th_ppm": 0.75
+      },
+      "environment": {
+        "tsurf_max_k": 1.0,
+        "tsurf_min_k": 1.0,
+        "tsurf_mean_k": 1.0,
+        "tsurf_diurnal_range_k": 1.0,
+        "insolation_toa_wm2": 0.5
+      },
+      "surface_processes": {
+        "rock_abundance": 1.0
+      },
+      "subsurface": {
+        "cave_candidate_distance_km": 1.0
+      },
+      "exploration": {
+        "landing_hazard_index": 1.0
+      }
+    },
+    "declared_but_missing_files": [
+      "earth_impact_craters.parquet",
+      "earth_vectors.gpkg"
+    ]
+  },
+  "moon": {
+    "rows": 259200,
+    "columns": 91,
+    "features": 87,
+    "unique_cell_ids": 259200,
+    "represented_cell_area_km2": 37932328.04740906,
+    "grid": {
+      "type": "equirectangular lat/lon cells",
+      "res_deg": 0.5,
+      "shape": [
+        360,
+        720
+      ],
+      "cell_size_km_at_equator": 15.16,
+      "radius_km": 1737.4,
+      "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+    },
+    "coverage": {
+      "elev_mean_m": {
+        "body": "moon",
+        "feature": "elev_mean_m",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "elev_min_m": {
+        "body": "moon",
+        "feature": "elev_min_m",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "elev_max_m": {
+        "body": "moon",
+        "feature": "elev_max_m",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "relief_m": {
+        "body": "moon",
+        "feature": "relief_m",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "slope_mean_deg": {
+        "body": "moon",
+        "feature": "slope_mean_deg",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "slope_median_deg": {
+        "body": "moon",
+        "feature": "slope_median_deg",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "slope_p90_deg": {
+        "body": "moon",
+        "feature": "slope_p90_deg",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "slope_frac_gt_landing": {
+        "body": "moon",
+        "feature": "slope_frac_gt_landing",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "slope_frac_gt_mobility": {
+        "body": "moon",
+        "feature": "slope_frac_gt_mobility",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "tri_mean_m": {
+        "body": "moon",
+        "feature": "tri_mean_m",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "roughness_rms_m": {
+        "body": "moon",
+        "feature": "roughness_rms_m",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "dem_valid_frac": {
+        "body": "moon",
+        "feature": "dem_valid_frac",
+        "measurement_type": "measurement",
+        "source": "moon_lola_ldem64",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619230641713
+      },
+      "tsurf_max_k": {
+        "body": "moon",
+        "feature": "tsurf_max_k",
+        "measurement_type": "measurement",
+        "source": "moon_diviner_gcp",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tsurf_min_k": {
+        "body": "moon",
+        "feature": "tsurf_min_k",
+        "measurement_type": "measurement",
+        "source": "moon_diviner_gcp",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tsurf_mean_k": {
+        "body": "moon",
+        "feature": "tsurf_mean_k",
+        "measurement_type": "measurement",
+        "source": "moon_diviner_gcp",
+        "valid_cells": 256223,
+        "cell_fraction": 0.9885146604938272,
+        "area_fraction": 0.9833046312873455,
+        "dictionary_coverage_area_frac": 0.9833046312430612
+      },
+      "tsurf_diurnal_range_k": {
+        "body": "moon",
+        "feature": "tsurf_diurnal_range_k",
+        "measurement_type": "measurement",
+        "source": "moon_diviner_gcp",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tsurf_noon_k": {
+        "body": "moon",
+        "feature": "tsurf_noon_k",
+        "measurement_type": "measurement",
+        "source": "moon_diviner_gcp",
+        "valid_cells": 256303,
+        "cell_fraction": 0.9888233024691359,
+        "area_fraction": 0.9864201818948525,
+        "dictionary_coverage_area_frac": 0.9864201818929702
+      },
+      "tsurf_midnight_k": {
+        "body": "moon",
+        "feature": "tsurf_midnight_k",
+        "measurement_type": "measurement",
+        "source": "moon_diviner_gcp",
+        "valid_cells": 257589,
+        "cell_fraction": 0.9937847222222222,
+        "area_fraction": 0.9924412039525426,
+        "dictionary_coverage_area_frac": 0.9924412039568965
+      },
+      "diviner_lt_coverage": {
+        "body": "moon",
+        "feature": "diviner_lt_coverage",
+        "measurement_type": "measurement",
+        "source": "moon_diviner_gcp",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "prp_tmax_min_k": {
+        "body": "moon",
+        "feature": "prp_tmax_min_k",
+        "measurement_type": "model",
+        "source": "moon_diviner_prp",
+        "valid_cells": 33104,
+        "cell_fraction": 0.12771604938271605,
+        "area_fraction": 0.020297076448590672,
+        "dictionary_coverage_area_frac": 0.02029707641318836
+      },
+      "prp_tmax_mean_k": {
+        "body": "moon",
+        "feature": "prp_tmax_mean_k",
+        "measurement_type": "model",
+        "source": "moon_diviner_prp",
+        "valid_cells": 33104,
+        "cell_fraction": 0.12771604938271605,
+        "area_fraction": 0.020297076448590672,
+        "dictionary_coverage_area_frac": 0.02029707641318836
+      },
+      "prp_tavg_mean_k": {
+        "body": "moon",
+        "feature": "prp_tavg_mean_k",
+        "measurement_type": "model",
+        "source": "moon_diviner_prp",
+        "valid_cells": 33104,
+        "cell_fraction": 0.12771604938271605,
+        "area_fraction": 0.020297076448590672,
+        "dictionary_coverage_area_frac": 0.02029707641318836
+      },
+      "cold_trap_area_frac": {
+        "body": "moon",
+        "feature": "cold_trap_area_frac",
+        "measurement_type": "model",
+        "source": "moon_diviner_prp",
+        "valid_cells": 33104,
+        "cell_fraction": 0.12771604938271605,
+        "area_fraction": 0.020297076448590672,
+        "dictionary_coverage_area_frac": 0.02029707641318836
+      },
+      "ice_stable_surface_frac": {
+        "body": "moon",
+        "feature": "ice_stable_surface_frac",
+        "measurement_type": "model",
+        "source": "moon_diviner_prp",
+        "valid_cells": 33104,
+        "cell_fraction": 0.12771604938271605,
+        "area_fraction": 0.020297076448590672,
+        "dictionary_coverage_area_frac": 0.02029707641318836
+      },
+      "ice_stable_1m_frac": {
+        "body": "moon",
+        "feature": "ice_stable_1m_frac",
+        "measurement_type": "model",
+        "source": "moon_diviner_prp",
+        "valid_cells": 33104,
+        "cell_fraction": 0.12771604938271605,
+        "area_fraction": 0.020297076448590672,
+        "dictionary_coverage_area_frac": 0.02029707641318836
+      },
+      "ice_depth_min_m": {
+        "body": "moon",
+        "feature": "ice_depth_min_m",
+        "measurement_type": "model",
+        "source": "moon_diviner_prp",
+        "valid_cells": 29727,
+        "cell_fraction": 0.1146875,
+        "area_fraction": 0.01684515149670455,
+        "dictionary_coverage_area_frac": 0.01684515149445586
+      },
+      "rock_abundance": {
+        "body": "moon",
+        "feature": "rock_abundance",
+        "measurement_type": "derived_measurement",
+        "source": "moon_diviner_rockabundance",
+        "valid_cells": 172800,
+        "cell_fraction": 0.6666666666666666,
+        "area_fraction": 0.8660254032213727,
+        "dictionary_coverage_area_frac": 0.8660254037844387
+      },
+      "rock_abundance_p90": {
+        "body": "moon",
+        "feature": "rock_abundance_p90",
+        "measurement_type": "derived_measurement",
+        "source": "moon_diviner_rockabundance",
+        "valid_cells": 172800,
+        "cell_fraction": 0.6666666666666666,
+        "area_fraction": 0.8660254032213727,
+        "dictionary_coverage_area_frac": 0.8660254037844387
+      },
+      "regolith_temp_anomaly_k": {
+        "body": "moon",
+        "feature": "regolith_temp_anomaly_k",
+        "measurement_type": "derived_measurement",
+        "source": "moon_diviner_rockabundance",
+        "valid_cells": 172800,
+        "cell_fraction": 0.6666666666666666,
+        "area_fraction": 0.8660254032213727,
+        "dictionary_coverage_area_frac": 0.8660254037844387
+      },
+      "mgo_wt": {
+        "body": "moon",
+        "feature": "mgo_wt",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "mgo_wt_sigma": {
+        "body": "moon",
+        "feature": "mgo_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "al2o3_wt": {
+        "body": "moon",
+        "feature": "al2o3_wt",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "al2o3_wt_sigma": {
+        "body": "moon",
+        "feature": "al2o3_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "sio2_wt": {
+        "body": "moon",
+        "feature": "sio2_wt",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "sio2_wt_sigma": {
+        "body": "moon",
+        "feature": "sio2_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cao_wt": {
+        "body": "moon",
+        "feature": "cao_wt",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cao_wt_sigma": {
+        "body": "moon",
+        "feature": "cao_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tio2_wt": {
+        "body": "moon",
+        "feature": "tio2_wt",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tio2_wt_sigma": {
+        "body": "moon",
+        "feature": "tio2_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "feo_wt": {
+        "body": "moon",
+        "feature": "feo_wt",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "feo_wt_sigma": {
+        "body": "moon",
+        "feature": "feo_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "k_ppm": {
+        "body": "moon",
+        "feature": "k_ppm",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "k_ppm_sigma": {
+        "body": "moon",
+        "feature": "k_ppm_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "th_ppm": {
+        "body": "moon",
+        "feature": "th_ppm",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "th_ppm_sigma": {
+        "body": "moon",
+        "feature": "th_ppm_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "u_ppm": {
+        "body": "moon",
+        "feature": "u_ppm",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "u_ppm_sigma": {
+        "body": "moon",
+        "feature": "u_ppm_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "mg_number": {
+        "body": "moon",
+        "feature": "mg_number",
+        "measurement_type": "derived_measurement",
+        "source": "moon_lp_grs",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lp_epithermal_counts": {
+        "body": "moon",
+        "feature": "lp_epithermal_counts",
+        "measurement_type": "measurement",
+        "source": "moon_lp_neutrons",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lp_epithermal_sigma": {
+        "body": "moon",
+        "feature": "lp_epithermal_sigma",
+        "measurement_type": "measurement",
+        "source": "moon_lp_neutrons",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lp_thermal_counts": {
+        "body": "moon",
+        "feature": "lp_thermal_counts",
+        "measurement_type": "measurement",
+        "source": "moon_lp_neutrons",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lp_thermal_sigma": {
+        "body": "moon",
+        "feature": "lp_thermal_sigma",
+        "measurement_type": "measurement",
+        "source": "moon_lp_neutrons",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lp_fast_counts": {
+        "body": "moon",
+        "feature": "lp_fast_counts",
+        "measurement_type": "measurement",
+        "source": "moon_lp_neutrons",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lp_fast_sigma": {
+        "body": "moon",
+        "feature": "lp_fast_sigma",
+        "measurement_type": "measurement",
+        "source": "moon_lp_neutrons",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "grail_bouguer_mgal": {
+        "body": "moon",
+        "feature": "grail_bouguer_mgal",
+        "measurement_type": "derived_measurement",
+        "source": "moon_grail_gravity",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "grail_freeair_error_mgal": {
+        "body": "moon",
+        "feature": "grail_freeair_error_mgal",
+        "measurement_type": "derived_measurement",
+        "source": "moon_grail_gravity",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "grail_bouguer_residual_mgal": {
+        "body": "moon",
+        "feature": "grail_bouguer_residual_mgal",
+        "measurement_type": "derived_measurement",
+        "source": "moon_grail_gravity",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d1": {
+        "body": "moon",
+        "feature": "crater_density_d1",
+        "measurement_type": "catalog",
+        "source": "moon_robbins_craters",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d5": {
+        "body": "moon",
+        "feature": "crater_density_d5",
+        "measurement_type": "catalog",
+        "source": "moon_robbins_craters",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d20": {
+        "body": "moon",
+        "feature": "crater_density_d20",
+        "measurement_type": "catalog",
+        "source": "moon_robbins_craters",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_sfd_slope": {
+        "body": "moon",
+        "feature": "crater_sfd_slope",
+        "measurement_type": "catalog",
+        "source": "moon_robbins_craters",
+        "valid_cells": 214616,
+        "cell_fraction": 0.8279938271604939,
+        "area_fraction": 0.8621009429499932,
+        "dictionary_coverage_area_frac": 0.8621009428325088
+      },
+      "crater_largest_d_km": {
+        "body": "moon",
+        "feature": "crater_largest_d_km",
+        "measurement_type": "catalog",
+        "source": "moon_robbins_craters",
+        "valid_cells": 226931,
+        "cell_fraction": 0.8755054012345679,
+        "area_fraction": 0.9074080639226323,
+        "dictionary_coverage_area_frac": 0.9074080639031116
+      },
+      "geo_unit": {
+        "body": "moon",
+        "feature": "geo_unit",
+        "measurement_type": "map_interpretation",
+        "source": "moon_unified_geology",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_unit_frac": {
+        "body": "moon",
+        "feature": "geo_unit_frac",
+        "measurement_type": "map_interpretation",
+        "source": "moon_unified_geology",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_class": {
+        "body": "moon",
+        "feature": "geo_class",
+        "measurement_type": "map_interpretation",
+        "source": "moon_unified_geology",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_age": {
+        "body": "moon",
+        "feature": "geo_age",
+        "measurement_type": "map_interpretation",
+        "source": "moon_unified_geology",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_unit_diversity_3x3": {
+        "body": "moon",
+        "feature": "geo_unit_diversity_3x3",
+        "measurement_type": "map_interpretation",
+        "source": "moon_unified_geology",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cave_candidate_count": {
+        "body": "moon",
+        "feature": "cave_candidate_count",
+        "measurement_type": "catalog",
+        "source": "moon_lroc_pits",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cave_candidate_distance_km": {
+        "body": "moon",
+        "feature": "cave_candidate_distance_km",
+        "measurement_type": "catalog",
+        "source": "moon_lroc_pits",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "nearest_cave_depth_diam_ratio": {
+        "body": "moon",
+        "feature": "nearest_cave_depth_diam_ratio",
+        "measurement_type": "catalog",
+        "source": "moon_lroc_pits",
+        "valid_cells": 211327,
+        "cell_fraction": 0.8153047839506172,
+        "area_fraction": 0.8969937732129394,
+        "dictionary_coverage_area_frac": 0.8969937733972531
+      },
+      "nearest_cave_setting": {
+        "body": "moon",
+        "feature": "nearest_cave_setting",
+        "measurement_type": "catalog",
+        "source": "moon_lroc_pits",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "illum_mean_frac": {
+        "body": "moon",
+        "feature": "illum_mean_frac",
+        "measurement_type": "model",
+        "source": "moon_pgda_illumination",
+        "valid_cells": 81304,
+        "cell_fraction": 0.31367283950617286,
+        "area_fraction": 0.12003361460701617,
+        "dictionary_coverage_area_frac": 0.1200336142227328
+      },
+      "illum_max_frac": {
+        "body": "moon",
+        "feature": "illum_max_frac",
+        "measurement_type": "model",
+        "source": "moon_pgda_illumination",
+        "valid_cells": 81304,
+        "cell_fraction": 0.31367283950617286,
+        "area_fraction": 0.12003361460701617,
+        "dictionary_coverage_area_frac": 0.1200336142227328
+      },
+      "psr_area_frac": {
+        "body": "moon",
+        "feature": "psr_area_frac",
+        "measurement_type": "model",
+        "source": "moon_pgda_illumination",
+        "valid_cells": 81304,
+        "cell_fraction": 0.31367283950617286,
+        "area_fraction": 0.12003361460701617,
+        "dictionary_coverage_area_frac": 0.1200336142227328
+      },
+      "insolation_toa_wm2": {
+        "body": "moon",
+        "feature": "insolation_toa_wm2",
+        "measurement_type": "model",
+        "source": "moon_model_geometry",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "earth_visibility_frac": {
+        "body": "moon",
+        "feature": "earth_visibility_frac",
+        "measurement_type": "model",
+        "source": "moon_model_geometry",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "liquid_water_window_frac": {
+        "body": "moon",
+        "feature": "liquid_water_window_frac",
+        "measurement_type": "model",
+        "source": "moon_model_geometry",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "boulder_hazard_index": {
+        "body": "moon",
+        "feature": "boulder_hazard_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 172800,
+        "cell_fraction": 0.6666666666666666,
+        "area_fraction": 0.8660254032213727,
+        "dictionary_coverage_area_frac": 0.866025447845459
+      },
+      "landing_hazard_index": {
+        "body": "moon",
+        "feature": "landing_hazard_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619126319885
+      },
+      "traversability_index": {
+        "body": "moon",
+        "feature": "traversability_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619126319885
+      },
+      "terrain_class": {
+        "body": "moon",
+        "feature": "terrain_class",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 257760,
+        "cell_fraction": 0.9944444444444445,
+        "area_fraction": 0.9999619230644746,
+        "dictionary_coverage_area_frac": 0.9999619126319885
+      },
+      "cold_trap_flag": {
+        "body": "moon",
+        "feature": "cold_trap_flag",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "hydrogen_enrichment_pct": {
+        "body": "moon",
+        "feature": "hydrogen_enrichment_pct",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "water_indicator_score": {
+        "body": "moon",
+        "feature": "water_indicator_score",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "volatile_preservation_proxy": {
+        "body": "moon",
+        "feature": "volatile_preservation_proxy",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 81312,
+        "cell_fraction": 0.3137037037037037,
+        "area_fraction": 0.12003382614554686,
+        "dictionary_coverage_area_frac": 0.12003381550312042
+      },
+      "lava_tube_context_flag": {
+        "body": "moon",
+        "feature": "lava_tube_context_flag",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "solar_power_index": {
+        "body": "moon",
+        "feature": "solar_power_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 259200,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      }
+    },
+    "numeric_ranges": {
+      "elev_mean_m": {
+        "min": -8272.982421875,
+        "max": 9704.9794921875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "elev_min_m": {
+        "min": -9114.5,
+        "max": 8544.5,
+        "zero_cells": 36,
+        "one_cells": 16
+      },
+      "elev_max_m": {
+        "min": -7773.0,
+        "max": 10757.0,
+        "zero_cells": 43,
+        "one_cells": 33
+      },
+      "relief_m": {
+        "min": 9.0,
+        "max": 7010.5,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "slope_mean_deg": {
+        "min": 0.08817445486783981,
+        "max": 28.511613845825195,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "slope_median_deg": {
+        "min": 0.06818851083517075,
+        "max": 31.0915584564209,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "slope_p90_deg": {
+        "min": 0.15539193153381348,
+        "max": 36.28063201904297,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "slope_frac_gt_landing": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 65957,
+        "one_cells": 16
+      },
+      "slope_frac_gt_mobility": {
+        "min": 0.0,
+        "max": 0.9228515625,
+        "zero_cells": 178638,
+        "one_cells": 0
+      },
+      "tri_mean_m": {
+        "min": 0.59716796875,
+        "max": 209.0047607421875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "roughness_rms_m": {
+        "min": 1.0164291858673096,
+        "max": 1087.9747314453125,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dem_valid_frac": {
+        "min": 1.0,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 257760
+      },
+      "tsurf_max_k": {
+        "min": 51.31230163574219,
+        "max": 438.9996032714844,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_min_k": {
+        "min": 19.392499923706055,
+        "max": 131.9824981689453,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_mean_k": {
+        "min": 40.176475524902344,
+        "max": 230.84019470214844,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_diurnal_range_k": {
+        "min": 22.112699508666992,
+        "max": 345.8182067871094,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_noon_k": {
+        "min": 34.71012496948242,
+        "max": 400.08160400390625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_midnight_k": {
+        "min": 34.16812515258789,
+        "max": 200.644287109375,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "diviner_lt_coverage": {
+        "min": 0.4166666567325592,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 14012
+      },
+      "prp_tmax_min_k": {
+        "min": 24.125999450683594,
+        "max": 322.5320129394531,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "prp_tmax_mean_k": {
+        "min": 50.40584182739258,
+        "max": 325.4844970703125,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "prp_tavg_mean_k": {
+        "min": 34.613407135009766,
+        "max": 193.47267150878906,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "cold_trap_area_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 23439,
+        "one_cells": 346
+      },
+      "ice_stable_surface_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 23061,
+        "one_cells": 353
+      },
+      "ice_stable_1m_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 3392,
+        "one_cells": 5772
+      },
+      "ice_depth_min_m": {
+        "min": 0.0,
+        "max": 1.2879199981689453,
+        "zero_cells": 10043,
+        "one_cells": 0
+      },
+      "rock_abundance": {
+        "min": 0.0008299595792777836,
+        "max": 0.13125896453857422,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "rock_abundance_p90": {
+        "min": 0.0020000000949949026,
+        "max": 0.2590000033378601,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "regolith_temp_anomaly_k": {
+        "min": -15.64921760559082,
+        "max": 32.14838790893555,
+        "zero_cells": 0,
+        "one_cells": 1
+      },
+      "mgo_wt": {
+        "min": 0.0,
+        "max": 23.702999114990234,
+        "zero_cells": 11676,
+        "one_cells": 0
+      },
+      "mgo_wt_sigma": {
+        "min": 0.46049973368644714,
+        "max": 5.224366188049316,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "al2o3_wt": {
+        "min": 0.0,
+        "max": 48.36399841308594,
+        "zero_cells": 1688,
+        "one_cells": 0
+      },
+      "al2o3_wt_sigma": {
+        "min": 0.7170565128326416,
+        "max": 8.226178169250488,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "sio2_wt": {
+        "min": 20.566999435424805,
+        "max": 66.44000244140625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "sio2_wt_sigma": {
+        "min": 0.6231131553649902,
+        "max": 7.114773273468018,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "cao_wt": {
+        "min": 0.0,
+        "max": 31.908000946044922,
+        "zero_cells": 16,
+        "one_cells": 0
+      },
+      "cao_wt_sigma": {
+        "min": 0.42559370398521423,
+        "max": 4.898571014404297,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tio2_wt": {
+        "min": 0.0,
+        "max": 11.993000030517578,
+        "zero_cells": 47040,
+        "one_cells": 0
+      },
+      "tio2_wt_sigma": {
+        "min": 0.06570235639810562,
+        "max": 1.917576551437378,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "feo_wt": {
+        "min": 0.0,
+        "max": 30.749000549316406,
+        "zero_cells": 12,
+        "one_cells": 0
+      },
+      "feo_wt_sigma": {
+        "min": 0.12670832872390747,
+        "max": 2.9984161853790283,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "k_ppm": {
+        "min": 0.0,
+        "max": 4356.39990234375,
+        "zero_cells": 8164,
+        "one_cells": 0
+      },
+      "k_ppm_sigma": {
+        "min": 28.34872055053711,
+        "max": 335.79754638671875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "th_ppm": {
+        "min": 0.003662999952211976,
+        "max": 11.644000053405762,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "th_ppm_sigma": {
+        "min": 0.03291504085063934,
+        "max": 0.39756760001182556,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "u_ppm": {
+        "min": 0.0,
+        "max": 3.1777000427246094,
+        "zero_cells": 2348,
+        "one_cells": 0
+      },
+      "u_ppm_sigma": {
+        "min": 0.024847937747836113,
+        "max": 0.2909364104270935,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "mg_number": {
+        "min": 0.0,
+        "max": 100.0,
+        "zero_cells": 11676,
+        "one_cells": 0
+      },
+      "lp_epithermal_counts": {
+        "min": 531.52001953125,
+        "max": 615.8300170898438,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "lp_epithermal_sigma": {
+        "min": 13.359999656677246,
+        "max": 42.13999938964844,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "lp_thermal_counts": {
+        "min": 285.5299987792969,
+        "max": 822.52001953125,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "lp_thermal_sigma": {
+        "min": 12.420000076293945,
+        "max": 76.23999786376953,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "lp_fast_counts": {
+        "min": 375.79998779296875,
+        "max": 499.7900085449219,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "lp_fast_sigma": {
+        "min": 9.767000198364258,
+        "max": 54.650001525878906,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "grail_bouguer_mgal": {
+        "min": -699.9158935546875,
+        "max": 737.728759765625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "grail_freeair_error_mgal": {
+        "min": 0.23291164636611938,
+        "max": 7.423984050750732,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "grail_bouguer_residual_mgal": {
+        "min": -99.29977416992188,
+        "max": 182.47509765625,
+        "zero_cells": 21891,
+        "one_cells": 0
+      },
+      "crater_density_d1": {
+        "min": -9.212183793572137e-11,
+        "max": 2215.646728515625,
+        "zero_cells": 50,
+        "one_cells": 0
+      },
+      "crater_density_d5": {
+        "min": -7.318089710606213e-12,
+        "max": 664.6940307617188,
+        "zero_cells": 6800,
+        "one_cells": 0
+      },
+      "crater_density_d20": {
+        "min": -3.07482771882972e-13,
+        "max": 221.56468200683594,
+        "zero_cells": 73154,
+        "one_cells": 0
+      },
+      "crater_sfd_slope": {
+        "min": -19.001585006713867,
+        "max": -0.30129069089889526,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "crater_largest_d_km": {
+        "min": 1.0,
+        "max": 2491.8701171875,
+        "zero_cells": 0,
+        "one_cells": 1
+      },
+      "geo_unit_frac": {
+        "min": 0.25,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 153914
+      },
+      "geo_unit_diversity_3x3": {
+        "min": 1.0,
+        "max": 9.0,
+        "zero_cells": 0,
+        "one_cells": 50037
+      },
+      "cave_candidate_count": {
+        "min": 0.0,
+        "max": 41.0,
+        "zero_cells": 259117,
+        "one_cells": 43
+      },
+      "cave_candidate_distance_km": {
+        "min": 0.043371234089136124,
+        "max": 1153.561767578125,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "nearest_cave_depth_diam_ratio": {
+        "min": 0.0,
+        "max": 2.6842105388641357,
+        "zero_cells": 1288,
+        "one_cells": 2024
+      },
+      "illum_mean_frac": {
+        "min": 0.0,
+        "max": 0.4999200105667114,
+        "zero_cells": 322,
+        "one_cells": 0
+      },
+      "illum_max_frac": {
+        "min": 0.0,
+        "max": 0.9347599744796753,
+        "zero_cells": 322,
+        "one_cells": 0
+      },
+      "psr_area_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 50167,
+        "one_cells": 322
+      },
+      "insolation_toa_wm2": {
+        "min": 11.743616104125977,
+        "max": 433.197509765625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "earth_visibility_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 95436,
+        "one_cells": 95436
+      },
+      "liquid_water_window_frac": {
+        "min": 0.0,
+        "max": 0.0,
+        "zero_cells": 259200,
+        "one_cells": 0
+      },
+      "boulder_hazard_index": {
+        "min": 0.004149797838181257,
+        "max": 0.6562948226928711,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "landing_hazard_index": {
+        "min": 0.006708432454615831,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 14
+      },
+      "traversability_index": {
+        "min": 0.04628906399011612,
+        "max": 0.9918685555458069,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "cold_trap_flag": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 249490,
+        "one_cells": 9710
+      },
+      "hydrogen_enrichment_pct": {
+        "min": -5.639002799987793,
+        "max": 5.649463176727295,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "water_indicator_score": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 107531,
+        "one_cells": 71
+      },
+      "volatile_preservation_proxy": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 49011,
+        "one_cells": 293
+      },
+      "lava_tube_context_flag": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 258625,
+        "one_cells": 575
+      },
+      "solar_power_index": {
+        "min": 0.0,
+        "max": 0.5,
+        "zero_cells": 322,
+        "one_cells": 0
+      }
+    },
+    "categories": {
+      "geo_unit": {
+        "Nt": 30309,
+        "Im2": 24257,
+        "Nc": 22960,
+        "pNc": 21714,
+        "Ip": 16160,
+        "Ic2": 11915,
+        "pNb": 11202,
+        "pNt": 10975,
+        "Ec": 9103,
+        "Iohi": 9084,
+        "Nbl": 8742,
+        "Ioho": 8543,
+        "Ic1": 7064,
+        "Ib": 7011,
+        "INt": 5768,
+        "Em": 4866,
+        "Ntp": 4600,
+        "Iif": 4341,
+        "Cc": 4317,
+        "Nbsc": 3600,
+        "It": 3348,
+        "Isc": 3247,
+        "pNbm": 3125,
+        "Esc": 2249,
+        "Iohs": 2171,
+        "Im1": 1952,
+        "Icc": 1922,
+        "Nb": 1759,
+        "INp": 1529,
+        "Ig": 1515,
+        "Iork": 1302,
+        "Nnj": 1235,
+        "Iia": 1195,
+        "Nbm": 1153,
+        "Iorm": 870,
+        "Np": 716,
+        "Ic": 687,
+        "Iom": 656,
+        "EIp": 374,
+        "Id": 355,
+        "Iiap": 341,
+        "Ibm": 296,
+        "Csc": 218,
+        "Icf": 175,
+        "Iic": 140,
+        "Itd": 81,
+        "Ecc": 24,
+        "Ccc": 19,
+        "Imd": 15
+      },
+      "geo_class": {
+        "impact_crater": 85754,
+        "impact_basin": 66626,
+        "highland": 51915,
+        "volcanic": 31900,
+        "plains": 23005
+      },
+      "geo_age": {
+        "Imbrian": 108643,
+        "Nectarian": 75074,
+        "Pre-Nectarian": 47016,
+        "Eratosthenian": 16242,
+        "Imbrian-Nectarian": 7297,
+        "Copernican": 4554,
+        "Eratosthenian-Imbrian": 374
+      },
+      "nearest_cave_setting": {
+        "Impact Melt": 205281,
+        "Mare": 42072,
+        "Highland": 11847
+      },
+      "terrain_class": {
+        "moderate": 124699,
+        "rugged": 79097,
+        "smooth": 41015,
+        "steep": 12949,
+        "null": 1440
+      }
+    },
+    "complete_terrain_cells": 257760,
+    "dem_valid_below_10pct_cells": 0,
+    "dem_valid_below_50pct_cells": 0,
+    "configured_analog_features": {
+      "terrain": {
+        "slope_median_deg": 1.0,
+        "slope_p90_deg": 1.0,
+        "roughness_rms_m": 1.0,
+        "relief_m": 1.0,
+        "tri_mean_m": 0.5,
+        "crater_density_d1": 0.75,
+        "crater_density_d5": 0.75,
+        "crater_sfd_slope": 0.5
+      },
+      "geology": {
+        "feo_wt": 1.0,
+        "sio2_wt": 1.0,
+        "k_ppm": 0.75,
+        "th_ppm": 0.75
+      },
+      "environment": {
+        "tsurf_max_k": 1.0,
+        "tsurf_min_k": 1.0,
+        "tsurf_mean_k": 1.0,
+        "tsurf_diurnal_range_k": 1.0,
+        "insolation_toa_wm2": 0.5
+      },
+      "surface_processes": {
+        "rock_abundance": 1.0
+      },
+      "subsurface": {
+        "cave_candidate_distance_km": 1.0
+      },
+      "exploration": {
+        "landing_hazard_index": 1.0
+      }
+    },
+    "declared_but_missing_files": []
+  },
+  "mars": {
+    "rows": 1036800,
+    "columns": 96,
+    "features": 92,
+    "unique_cell_ids": 1036800,
+    "represented_cell_area_km2": 144941857.55687714,
+    "grid": {
+      "type": "equirectangular lat/lon cells",
+      "res_deg": 0.25,
+      "shape": [
+        720,
+        1440
+      ],
+      "cell_size_km_at_equator": 14.82,
+      "radius_km": 3396.19,
+      "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+    },
+    "coverage": {
+      "elev_mean_m": {
+        "body": "mars",
+        "feature": "elev_mean_m",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "elev_min_m": {
+        "body": "mars",
+        "feature": "elev_min_m",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "elev_max_m": {
+        "body": "mars",
+        "feature": "elev_max_m",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "relief_m": {
+        "body": "mars",
+        "feature": "relief_m",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "slope_mean_deg": {
+        "body": "mars",
+        "feature": "slope_mean_deg",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "slope_median_deg": {
+        "body": "mars",
+        "feature": "slope_median_deg",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "slope_p90_deg": {
+        "body": "mars",
+        "feature": "slope_p90_deg",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "slope_frac_gt_landing": {
+        "body": "mars",
+        "feature": "slope_frac_gt_landing",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "slope_frac_gt_mobility": {
+        "body": "mars",
+        "feature": "slope_frac_gt_mobility",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "tri_mean_m": {
+        "body": "mars",
+        "feature": "tri_mean_m",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "roughness_rms_m": {
+        "body": "mars",
+        "feature": "roughness_rms_m",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "dem_valid_frac": {
+        "body": "mars",
+        "feature": "dem_valid_frac",
+        "measurement_type": "measurement",
+        "source": "mars_mola_megdr128",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.999390827019096
+      },
+      "crater_density_d1": {
+        "body": "mars",
+        "feature": "crater_density_d1",
+        "measurement_type": "catalog",
+        "source": "mars_robbins_craters",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d5": {
+        "body": "mars",
+        "feature": "crater_density_d5",
+        "measurement_type": "catalog",
+        "source": "mars_robbins_craters",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_density_d20": {
+        "body": "mars",
+        "feature": "crater_density_d20",
+        "measurement_type": "catalog",
+        "source": "mars_robbins_craters",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "crater_sfd_slope": {
+        "body": "mars",
+        "feature": "crater_sfd_slope",
+        "measurement_type": "catalog",
+        "source": "mars_robbins_craters",
+        "valid_cells": 54660,
+        "cell_fraction": 0.05271990740740741,
+        "area_fraction": 0.07623091345361485,
+        "dictionary_coverage_area_frac": 0.07623091343012833
+      },
+      "crater_largest_d_km": {
+        "body": "mars",
+        "feature": "crater_largest_d_km",
+        "measurement_type": "catalog",
+        "source": "mars_robbins_craters",
+        "valid_cells": 273184,
+        "cell_fraction": 0.26348765432098764,
+        "area_fraction": 0.3350864041086977,
+        "dictionary_coverage_area_frac": 0.33508640408255713
+      },
+      "crater_rim_freshness_mean": {
+        "body": "mars",
+        "feature": "crater_rim_freshness_mean",
+        "measurement_type": "catalog",
+        "source": "mars_robbins_craters",
+        "valid_cells": 263384,
+        "cell_fraction": 0.2540354938271605,
+        "area_fraction": 0.33683757464217334,
+        "dictionary_coverage_area_frac": 0.33683757456585334
+      },
+      "layered_ejecta_frac": {
+        "body": "mars",
+        "feature": "layered_ejecta_frac",
+        "measurement_type": "catalog",
+        "source": "mars_robbins_craters",
+        "valid_cells": 282824,
+        "cell_fraction": 0.2727854938271605,
+        "area_fraction": 0.36001524231222054,
+        "dictionary_coverage_area_frac": 0.3600152422301551
+      },
+      "geo_unit": {
+        "body": "mars",
+        "feature": "geo_unit",
+        "measurement_type": "map_interpretation",
+        "source": "mars_sim3292_geology",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_unit_frac": {
+        "body": "mars",
+        "feature": "geo_unit_frac",
+        "measurement_type": "map_interpretation",
+        "source": "mars_sim3292_geology",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_class": {
+        "body": "mars",
+        "feature": "geo_class",
+        "measurement_type": "map_interpretation",
+        "source": "mars_sim3292_geology",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_age": {
+        "body": "mars",
+        "feature": "geo_age",
+        "measurement_type": "map_interpretation",
+        "source": "mars_sim3292_geology",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "geo_unit_diversity_3x3": {
+        "body": "mars",
+        "feature": "geo_unit_diversity_3x3",
+        "measurement_type": "map_interpretation",
+        "source": "mars_sim3292_geology",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tes_olivine": {
+        "body": "mars",
+        "feature": "tes_olivine",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_hematite": {
+        "body": "mars",
+        "feature": "tes_hematite",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_feldspar": {
+        "body": "mars",
+        "feature": "tes_feldspar",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_plagioclase": {
+        "body": "mars",
+        "feature": "tes_plagioclase",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_orthopyroxene": {
+        "body": "mars",
+        "feature": "tes_orthopyroxene",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_highsilica_glass_clay": {
+        "body": "mars",
+        "feature": "tes_highsilica_glass_clay",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_sulfate": {
+        "body": "mars",
+        "feature": "tes_sulfate",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_quartz": {
+        "body": "mars",
+        "feature": "tes_quartz",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "tes_mineral_rms_error": {
+        "body": "mars",
+        "feature": "tes_mineral_rms_error",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_minerals",
+        "valid_cells": 749267,
+        "cell_fraction": 0.7226726466049382,
+        "area_fraction": 0.8385167470082905,
+        "dictionary_coverage_area_frac": 0.8385167469235079
+      },
+      "thermal_inertia_tiu": {
+        "body": "mars",
+        "feature": "thermal_inertia_tiu",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_thermophysical",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "albedo_lambert": {
+        "body": "mars",
+        "feature": "albedo_lambert",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_thermophysical",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "rock_abundance": {
+        "body": "mars",
+        "feature": "rock_abundance",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_thermophysical",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "fine_component_ti": {
+        "body": "mars",
+        "feature": "fine_component_ti",
+        "measurement_type": "derived_measurement",
+        "source": "mars_tes_thermophysical",
+        "valid_cells": 403754,
+        "cell_fraction": 0.389423225308642,
+        "area_fraction": 0.492372818882618,
+        "dictionary_coverage_area_frac": 0.49237281853664877
+      },
+      "omega_ferric_bd530": {
+        "body": "mars",
+        "feature": "omega_ferric_bd530",
+        "measurement_type": "derived_measurement",
+        "source": "mars_omega_maps",
+        "valid_cells": 912525,
+        "cell_fraction": 0.8801359953703703,
+        "area_fraction": 0.9174422387566418,
+        "dictionary_coverage_area_frac": 0.9174422388219617
+      },
+      "omega_pyroxene_bd2000": {
+        "body": "mars",
+        "feature": "omega_pyroxene_bd2000",
+        "measurement_type": "derived_measurement",
+        "source": "mars_omega_maps",
+        "valid_cells": 501585,
+        "cell_fraction": 0.48378182870370373,
+        "area_fraction": 0.49886485127648555,
+        "dictionary_coverage_area_frac": 0.49886485134704367
+      },
+      "omega_olivine_osp1": {
+        "body": "mars",
+        "feature": "omega_olivine_osp1",
+        "measurement_type": "derived_measurement",
+        "source": "mars_omega_maps",
+        "valid_cells": 31577,
+        "cell_fraction": 0.030456211419753087,
+        "area_fraction": 0.022095886151061485,
+        "dictionary_coverage_area_frac": 0.02209588615720645
+      },
+      "omega_albedo_r1080": {
+        "body": "mars",
+        "feature": "omega_albedo_r1080",
+        "measurement_type": "derived_measurement",
+        "source": "mars_omega_maps",
+        "valid_cells": 1020026,
+        "cell_fraction": 0.9838213734567901,
+        "area_fraction": 0.980393925417038,
+        "dictionary_coverage_area_frac": 0.9803939254139659
+      },
+      "h2o_wt": {
+        "body": "mars",
+        "feature": "h2o_wt",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "h2o_wt_sigma": {
+        "body": "mars",
+        "feature": "h2o_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "feo_wt": {
+        "body": "mars",
+        "feature": "feo_wt",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "feo_wt_sigma": {
+        "body": "mars",
+        "feature": "feo_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "sio2_wt": {
+        "body": "mars",
+        "feature": "sio2_wt",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "sio2_wt_sigma": {
+        "body": "mars",
+        "feature": "sio2_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "k_ppm": {
+        "body": "mars",
+        "feature": "k_ppm",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "k_ppm_sigma": {
+        "body": "mars",
+        "feature": "k_ppm_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "th_ppm": {
+        "body": "mars",
+        "feature": "th_ppm",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "th_ppm_sigma": {
+        "body": "mars",
+        "feature": "th_ppm_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cl_wt": {
+        "body": "mars",
+        "feature": "cl_wt",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "cl_wt_sigma": {
+        "body": "mars",
+        "feature": "cl_wt_sigma",
+        "measurement_type": "derived_measurement",
+        "source": "mars_odyssey_grs",
+        "valid_cells": 603200,
+        "cell_fraction": 0.5817901234567902,
+        "area_fraction": 0.7891148557567051,
+        "dictionary_coverage_area_frac": 0.789114855513709
+      },
+      "ns_epithermal_cps": {
+        "body": "mars",
+        "feature": "ns_epithermal_cps",
+        "measurement_type": "measurement",
+        "source": "mars_odyssey_ns",
+        "valid_cells": 1025280,
+        "cell_fraction": 0.9888888888888889,
+        "area_fraction": 0.9998476951595553,
+        "dictionary_coverage_area_frac": 0.9998476951563915
+      },
+      "swim_ice_consistency": {
+        "body": "mars",
+        "feature": "swim_ice_consistency",
+        "measurement_type": "model",
+        "source": "mars_swim_ice",
+        "valid_cells": 639490,
+        "cell_fraction": 0.6167920524691358,
+        "area_fraction": 0.7952142875670908,
+        "dictionary_coverage_area_frac": 0.7952142871365215
+      },
+      "swim_ice_consistency_0_1m": {
+        "body": "mars",
+        "feature": "swim_ice_consistency_0_1m",
+        "measurement_type": "model",
+        "source": "mars_swim_ice",
+        "valid_cells": 627823,
+        "cell_fraction": 0.6055391589506173,
+        "area_fraction": 0.7813941819943447,
+        "dictionary_coverage_area_frac": 0.7813941815672945
+      },
+      "swim_ice_consistency_1_5m": {
+        "body": "mars",
+        "feature": "swim_ice_consistency_1_5m",
+        "measurement_type": "model",
+        "source": "mars_swim_ice",
+        "valid_cells": 318807,
+        "cell_fraction": 0.30749131944444447,
+        "area_fraction": 0.3625645233381077,
+        "dictionary_coverage_area_frac": 0.3625645230848158
+      },
+      "swim_ice_consistency_gt5m": {
+        "body": "mars",
+        "feature": "swim_ice_consistency_gt5m",
+        "measurement_type": "model",
+        "source": "mars_swim_ice",
+        "valid_cells": 243216,
+        "cell_fraction": 0.23458333333333334,
+        "area_fraction": 0.26021668441582674,
+        "dictionary_coverage_area_frac": 0.2602166842003395
+      },
+      "cave_candidate_count": {
+        "body": "mars",
+        "feature": "cave_candidate_count",
+        "measurement_type": "catalog",
+        "source": "mars_mgc3_caves",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "cave_candidate_distance_km": {
+        "body": "mars",
+        "feature": "cave_candidate_distance_km",
+        "measurement_type": "catalog",
+        "source": "mars_mgc3_caves",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "nearest_cave_depth_diam_ratio": {
+        "body": "mars",
+        "feature": "nearest_cave_depth_diam_ratio",
+        "measurement_type": "catalog",
+        "source": "mars_mgc3_caves",
+        "valid_cells": 65037,
+        "cell_fraction": 0.06272858796296296,
+        "area_fraction": 0.08616912329258619,
+        "dictionary_coverage_area_frac": 0.08616912329474334
+      },
+      "nearest_cave_setting": {
+        "body": "mars",
+        "feature": "nearest_cave_setting",
+        "measurement_type": "catalog",
+        "source": "mars_mgc3_caves",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "dune_cover_frac": {
+        "body": "mars",
+        "feature": "dune_cover_frac",
+        "measurement_type": "catalog",
+        "source": "mars_mgd3_dunes",
+        "valid_cells": 748800,
+        "cell_fraction": 0.7222222222222222,
+        "area_fraction": 0.9063077872120492,
+        "dictionary_coverage_area_frac": 0.90630778703665
+      },
+      "dune_field_distance_km": {
+        "body": "mars",
+        "feature": "dune_field_distance_km",
+        "measurement_type": "catalog",
+        "source": "mars_mgd3_dunes",
+        "valid_cells": 748800,
+        "cell_fraction": 0.7222222222222222,
+        "area_fraction": 0.9063077872120492,
+        "dictionary_coverage_area_frac": 0.90630778703665
+      },
+      "tsurf_max_k": {
+        "body": "mars",
+        "feature": "tsurf_max_k",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tsurf_min_k": {
+        "body": "mars",
+        "feature": "tsurf_min_k",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tsurf_mean_k": {
+        "body": "mars",
+        "feature": "tsurf_mean_k",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tsurf_diurnal_range_k": {
+        "body": "mars",
+        "feature": "tsurf_diurnal_range_k",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "tsurf_seasonal_range_k": {
+        "body": "mars",
+        "feature": "tsurf_seasonal_range_k",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "ps_mean_pa": {
+        "body": "mars",
+        "feature": "ps_mean_pa",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "ps_min_pa": {
+        "body": "mars",
+        "feature": "ps_min_pa",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "liquid_water_window_frac": {
+        "body": "mars",
+        "feature": "liquid_water_window_frac",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "wind_mean_ms": {
+        "body": "mars",
+        "feature": "wind_mean_ms",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "wind_max_seasonal_ms": {
+        "body": "mars",
+        "feature": "wind_max_seasonal_ms",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "dust_tau_mean": {
+        "body": "mars",
+        "feature": "dust_tau_mean",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "dust_tau_max": {
+        "body": "mars",
+        "feature": "dust_tau_max",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "surface_stress_mean_npm2": {
+        "body": "mars",
+        "feature": "surface_stress_mean_npm2",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "dust_lifting_season_frac": {
+        "body": "mars",
+        "feature": "dust_lifting_season_frac",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "insolation_surface_wm2": {
+        "body": "mars",
+        "feature": "insolation_surface_wm2",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "co2_frost_max_kgm2": {
+        "body": "mars",
+        "feature": "co2_frost_max_kgm2",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "h2o_frost_max_kgm2": {
+        "body": "mars",
+        "feature": "h2o_frost_max_kgm2",
+        "measurement_type": "model",
+        "source": "mars_mcd_climate",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "insolation_toa_wm2": {
+        "body": "mars",
+        "feature": "insolation_toa_wm2",
+        "measurement_type": "model",
+        "source": "mars_model_geometry",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "boulder_hazard_index": {
+        "body": "mars",
+        "feature": "boulder_hazard_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "landing_hazard_index": {
+        "body": "mars",
+        "feature": "landing_hazard_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.9993909001350403
+      },
+      "traversability_index": {
+        "body": "mars",
+        "feature": "traversability_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.9993909001350403
+      },
+      "terrain_class": {
+        "body": "mars",
+        "feature": "terrain_class",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1013760,
+        "cell_fraction": 0.9777777777777777,
+        "area_fraction": 0.9993908270290724,
+        "dictionary_coverage_area_frac": 0.9993909001350403
+      },
+      "cold_trap_flag": {
+        "body": "mars",
+        "feature": "cold_trap_flag",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "hydrogen_enrichment_pct": {
+        "body": "mars",
+        "feature": "hydrogen_enrichment_pct",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1025280,
+        "cell_fraction": 0.9888888888888889,
+        "area_fraction": 0.9998476951595553,
+        "dictionary_coverage_area_frac": 0.9998476505279541
+      },
+      "water_indicator_score": {
+        "body": "mars",
+        "feature": "water_indicator_score",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 707292,
+        "cell_fraction": 0.6821875,
+        "area_fraction": 0.8759904256458019,
+        "dictionary_coverage_area_frac": 0.8759904503822327
+      },
+      "biosignature_preservation_context_proxy": {
+        "body": "mars",
+        "feature": "biosignature_preservation_context_proxy",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "lava_tube_context_flag": {
+        "body": "mars",
+        "feature": "lava_tube_context_flag",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      },
+      "solar_power_index": {
+        "body": "mars",
+        "feature": "solar_power_index",
+        "measurement_type": "derived_index",
+        "source": "derived",
+        "valid_cells": 1036800,
+        "cell_fraction": 1.0,
+        "area_fraction": 1.0,
+        "dictionary_coverage_area_frac": 1.0
+      }
+    },
+    "numeric_ranges": {
+      "elev_mean_m": {
+        "min": -8039.73828125,
+        "max": 21122.966796875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "elev_min_m": {
+        "min": -8208.0,
+        "max": 21063.0,
+        "zero_cells": 141,
+        "one_cells": 81
+      },
+      "elev_max_m": {
+        "min": -7607.0,
+        "max": 21249.0,
+        "zero_cells": 119,
+        "one_cells": 61
+      },
+      "relief_m": {
+        "min": 2.0,
+        "max": 9565.0,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "slope_mean_deg": {
+        "min": 0.015683703124523163,
+        "max": 26.91478157043457,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "slope_median_deg": {
+        "min": 0.0,
+        "max": 29.624731063842773,
+        "zero_cells": 397,
+        "one_cells": 0
+      },
+      "slope_p90_deg": {
+        "min": 0.06187685579061508,
+        "max": 41.48680114746094,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "slope_frac_gt_landing": {
+        "min": 0.0,
+        "max": 0.9755859375,
+        "zero_cells": 819347,
+        "one_cells": 0
+      },
+      "slope_frac_gt_mobility": {
+        "min": 0.0,
+        "max": 0.7158203125,
+        "zero_cells": 946429,
+        "one_cells": 0
+      },
+      "tri_mean_m": {
+        "min": 0.098388671875,
+        "max": 187.5655517578125,
+        "zero_cells": 0,
+        "one_cells": 7
+      },
+      "roughness_rms_m": {
+        "min": 0.075589619576931,
+        "max": 1217.119384765625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dem_valid_frac": {
+        "min": 1.0,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 1013760
+      },
+      "crater_density_d1": {
+        "min": -3.592047145839494e-11,
+        "max": 437.72705078125,
+        "zero_cells": 77385,
+        "one_cells": 0
+      },
+      "crater_density_d5": {
+        "min": -2.4461971077222033e-12,
+        "max": 45.18169403076172,
+        "zero_cells": 274415,
+        "one_cells": 0
+      },
+      "crater_density_d20": {
+        "min": -3.8624163004215284e-13,
+        "max": 45.18169403076172,
+        "zero_cells": 574809,
+        "one_cells": 0
+      },
+      "crater_sfd_slope": {
+        "min": -18.26192855834961,
+        "max": -0.09974697232246399,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "crater_largest_d_km": {
+        "min": 1.0000009536743164,
+        "max": 1088.0242919921875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "crater_rim_freshness_mean": {
+        "min": 1.0,
+        "max": 4.0,
+        "zero_cells": 0,
+        "one_cells": 5958
+      },
+      "layered_ejecta_frac": {
+        "min": -4.625929092806288e-16,
+        "max": 1.0,
+        "zero_cells": 21457,
+        "one_cells": 4330
+      },
+      "geo_unit_frac": {
+        "min": 0.375,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 949531
+      },
+      "geo_unit_diversity_3x3": {
+        "min": 1.0,
+        "max": 5.0,
+        "zero_cells": 0,
+        "one_cells": 743412
+      },
+      "tes_olivine": {
+        "min": 0.0,
+        "max": 0.17419886589050293,
+        "zero_cells": 532822,
+        "one_cells": 0
+      },
+      "tes_hematite": {
+        "min": 0.0,
+        "max": 0.22377972304821014,
+        "zero_cells": 521455,
+        "one_cells": 0
+      },
+      "tes_feldspar": {
+        "min": 0.0,
+        "max": 0.147202268242836,
+        "zero_cells": 172605,
+        "one_cells": 0
+      },
+      "tes_plagioclase": {
+        "min": 0.0,
+        "max": 0.7829244136810303,
+        "zero_cells": 175539,
+        "one_cells": 0
+      },
+      "tes_orthopyroxene": {
+        "min": 0.0,
+        "max": 0.31968119740486145,
+        "zero_cells": 480255,
+        "one_cells": 0
+      },
+      "tes_highsilica_glass_clay": {
+        "min": 0.0,
+        "max": 0.7328559160232544,
+        "zero_cells": 26809,
+        "one_cells": 0
+      },
+      "tes_sulfate": {
+        "min": 0.0,
+        "max": 0.2662256360054016,
+        "zero_cells": 220699,
+        "one_cells": 0
+      },
+      "tes_quartz": {
+        "min": 0.0,
+        "max": 0.06385307759046555,
+        "zero_cells": 626285,
+        "one_cells": 0
+      },
+      "tes_mineral_rms_error": {
+        "min": 0.000725827703718096,
+        "max": 0.00997779332101345,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "thermal_inertia_tiu": {
+        "min": 25.0,
+        "max": 602.0,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "albedo_lambert": {
+        "min": 0.07999999821186066,
+        "max": 0.3209448754787445,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "rock_abundance": {
+        "min": 0.0,
+        "max": 0.5724999904632568,
+        "zero_cells": 617673,
+        "one_cells": 0
+      },
+      "fine_component_ti": {
+        "min": 23.0,
+        "max": 797.0,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "omega_ferric_bd530": {
+        "min": 0.000132828950881958,
+        "max": 0.254046231508255,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "omega_pyroxene_bd2000": {
+        "min": 0.010016828775405884,
+        "max": 0.0946735069155693,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "omega_olivine_osp1": {
+        "min": 1.0400490760803223,
+        "max": 1.1933705806732178,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "omega_albedo_r1080": {
+        "min": 0.09015687555074692,
+        "max": 0.8574504256248474,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "h2o_wt": {
+        "min": 1.6449999809265137,
+        "max": 7.3979997634887695,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "h2o_wt_sigma": {
+        "min": 0.23000000417232513,
+        "max": 0.6669999957084656,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "feo_wt": {
+        "min": 13.677955627441406,
+        "max": 24.83053207397461,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "feo_wt_sigma": {
+        "min": 0.5596228837966919,
+        "max": 1.3083597421646118,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "sio2_wt": {
+        "min": 38.736061096191406,
+        "max": 47.3060417175293,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "sio2_wt_sigma": {
+        "min": 0.5626323223114014,
+        "max": 2.0793864727020264,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "k_ppm": {
+        "min": 710.0,
+        "max": 5610.0,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "k_ppm_sigma": {
+        "min": 110.0,
+        "max": 430.0,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "th_ppm": {
+        "min": 0.16300000250339508,
+        "max": 0.9459999799728394,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "th_ppm_sigma": {
+        "min": 0.03500000014901161,
+        "max": 0.09200000017881393,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "cl_wt": {
+        "min": 0.2160000056028366,
+        "max": 0.796999990940094,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "cl_wt_sigma": {
+        "min": 0.023000000044703484,
+        "max": 0.05900000035762787,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "ns_epithermal_cps": {
+        "min": 1.319000005722046,
+        "max": 12.414999961853027,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "swim_ice_consistency": {
+        "min": -0.4368000030517578,
+        "max": 0.9683459997177124,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "swim_ice_consistency_0_1m": {
+        "min": -0.5445454120635986,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 213
+      },
+      "swim_ice_consistency_1_5m": {
+        "min": -0.5,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 12712
+      },
+      "swim_ice_consistency_gt5m": {
+        "min": -0.5,
+        "max": 1.0,
+        "zero_cells": 0,
+        "one_cells": 3750
+      },
+      "cave_candidate_count": {
+        "min": 0.0,
+        "max": 23.0,
+        "zero_cells": 1036193,
+        "one_cells": 430
+      },
+      "cave_candidate_distance_km": {
+        "min": 0.15859104692935944,
+        "max": 3243.8134765625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "nearest_cave_depth_diam_ratio": {
+        "min": 0.1538461595773697,
+        "max": 2.090909004211426,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dune_cover_frac": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 747107,
+        "one_cells": 74
+      },
+      "dune_field_distance_km": {
+        "min": 0.20098493993282318,
+        "max": 3217.318359375,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_max_k": {
+        "min": 145.92799377441406,
+        "max": 311.22900390625,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_min_k": {
+        "min": 141.35400390625,
+        "max": 194.45700073242188,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_mean_k": {
+        "min": 143.95547485351562,
+        "max": 228.0993194580078,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_diurnal_range_k": {
+        "min": 0.0458555594086647,
+        "max": 130.70394897460938,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "tsurf_seasonal_range_k": {
+        "min": 3.9971249103546143,
+        "max": 104.0479965209961,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "ps_mean_pa": {
+        "min": 92.21907043457031,
+        "max": 1176.172607421875,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "ps_min_pa": {
+        "min": 75.98310089111328,
+        "max": 1026.239990234375,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "liquid_water_window_frac": {
+        "min": 0.0,
+        "max": 0.22517035901546478,
+        "zero_cells": 773724,
+        "one_cells": 0
+      },
+      "wind_mean_ms": {
+        "min": 1.4240591526031494,
+        "max": 32.06129455566406,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "wind_max_seasonal_ms": {
+        "min": 2.3845200538635254,
+        "max": 40.06639862060547,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dust_tau_mean": {
+        "min": 0.06757321953773499,
+        "max": 0.8504409193992615,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dust_tau_max": {
+        "min": 0.16258199512958527,
+        "max": 1.571120023727417,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "surface_stress_mean_npm2": {
+        "min": 0.0001091569138225168,
+        "max": 0.010726464912295341,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "dust_lifting_season_frac": {
+        "min": 0.0,
+        "max": 0.14246127009391785,
+        "zero_cells": 1035288,
+        "one_cells": 0
+      },
+      "insolation_surface_wm2": {
+        "min": 50.28838348388672,
+        "max": 163.2122802734375,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "co2_frost_max_kgm2": {
+        "min": 0.0,
+        "max": 3642.75,
+        "zero_cells": 402090,
+        "one_cells": 0
+      },
+      "h2o_frost_max_kgm2": {
+        "min": 2.2334500044962624e-06,
+        "max": 12.924699783325195,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "insolation_toa_wm2": {
+        "min": 79.7717514038086,
+        "max": 178.62220764160156,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "boulder_hazard_index": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 617673,
+        "one_cells": 43742
+      },
+      "landing_hazard_index": {
+        "min": 0.0004988915170542896,
+        "max": 0.983642578125,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "traversability_index": {
+        "min": 0.17050781846046448,
+        "max": 0.9993953108787537,
+        "zero_cells": 0,
+        "one_cells": 0
+      },
+      "cold_trap_flag": {
+        "min": 0.0,
+        "max": 0.0,
+        "zero_cells": 1036800,
+        "one_cells": 0
+      },
+      "hydrogen_enrichment_pct": {
+        "min": -102.19869995117188,
+        "max": 78.51791381835938,
+        "zero_cells": 64,
+        "one_cells": 0
+      },
+      "water_indicator_score": {
+        "min": -3.70074332718459e-16,
+        "max": 1.0,
+        "zero_cells": 3030,
+        "one_cells": 229
+      },
+      "biosignature_preservation_context_proxy": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 131538,
+        "one_cells": 98571
+      },
+      "lava_tube_context_flag": {
+        "min": 0.0,
+        "max": 1.0,
+        "zero_cells": 1028393,
+        "one_cells": 8407
+      },
+      "solar_power_index": {
+        "min": 0.20115353167057037,
+        "max": 0.6528491377830505,
+        "zero_cells": 0,
+        "one_cells": 0
+      }
+    },
+    "categories": {
+      "geo_unit": {
+        "mNh": 189661,
+        "lHl": 145459,
+        "eNh": 93664,
+        "Apu": 70575,
+        "AHv": 69768,
+        "AHi": 53034,
+        "lApc": 52509,
+        "lNh": 51412,
+        "mAl": 29426,
+        "eHv": 29053,
+        "Hp": 19959,
+        "eHt": 19562,
+        "lNv": 18444,
+        "lAv": 16790,
+        "HNt": 14644,
+        "Av": 12774,
+        "eNhm": 12653,
+        "lHt": 12647,
+        "lHv": 11613,
+        "mNhm": 11409,
+        "AHtu": 10144,
+        "eHh": 9158,
+        "Nhu": 7902,
+        "lApd": 7534,
+        "Hto": 6398,
+        "lHb": 5610,
+        "HNhu": 5261,
+        "Hpe": 5227,
+        "Aa": 4965,
+        "Ap": 4963,
+        "Ht": 4248,
+        "Ave": 4043,
+        "HNb": 3965,
+        "eAb": 3504,
+        "Htu": 3385,
+        "eHb": 2380,
+        "ANa": 2357,
+        "lHvf": 2251,
+        "Hve": 1945,
+        "lAvf": 1431,
+        "Nhe": 1354,
+        "Nve": 1302,
+        "lAa": 1301,
+        "Hpu": 1116
+      },
+      "geo_class": {
+        "highland": 382474,
+        "lowland": 174885,
+        "volcanic": 169414,
+        "polar": 161883,
+        "transition": 71028,
+        "impact_crater": 53034,
+        "impact_basin": 15459,
+        "apron": 8623
+      },
+      "geo_age": {
+        "Noachian": 387801,
+        "Hesperian": 280011,
+        "Amazonian": 209815,
+        "Amazonian-Hesperian": 132946,
+        "Hesperian-Noachian": 23870,
+        "Amazonian-Noachian": 2357
+      },
+      "nearest_cave_setting": {
+        "pol": 374420,
+        "pit": 140091,
+        "crk": 98493,
+        "srp": 89018,
+        "irr": 65752,
+        "APC": 65550,
+        "lat": 64873,
+        "kst": 61641,
+        "sky": 47538,
+        "rim": 8071,
+        "flr": 7463,
+        "end": 5866,
+        "pin": 4169,
+        "smrp": 3838,
+        "con": 17
+      },
+      "terrain_class": {
+        "smooth": 807211,
+        "moderate": 174938,
+        "rugged": 28227,
+        "null": 23040,
+        "steep": 3384
+      }
+    },
+    "complete_terrain_cells": 1013760,
+    "dem_valid_below_10pct_cells": 0,
+    "dem_valid_below_50pct_cells": 0,
+    "configured_analog_features": {
+      "terrain": {
+        "slope_median_deg": 1.0,
+        "slope_p90_deg": 1.0,
+        "roughness_rms_m": 1.0,
+        "relief_m": 1.0,
+        "tri_mean_m": 0.5,
+        "crater_density_d1": 0.75,
+        "crater_density_d5": 0.75,
+        "crater_sfd_slope": 0.5
+      },
+      "geology": {
+        "feo_wt": 1.0,
+        "sio2_wt": 1.0,
+        "k_ppm": 0.75,
+        "th_ppm": 0.75
+      },
+      "environment": {
+        "tsurf_max_k": 1.0,
+        "tsurf_min_k": 1.0,
+        "tsurf_mean_k": 1.0,
+        "tsurf_diurnal_range_k": 1.0,
+        "insolation_toa_wm2": 0.5
+      },
+      "surface_processes": {
+        "rock_abundance": 1.0
+      },
+      "subsurface": {
+        "cave_candidate_distance_km": 1.0
+      },
+      "exploration": {
+        "landing_hazard_index": 1.0
+      }
+    },
+    "declared_but_missing_files": []
+  },
+  "shared": {
+    "all_three": [
+      "cave_candidate_count",
+      "cave_candidate_distance_km",
+      "cold_trap_flag",
+      "crater_density_d1",
+      "crater_density_d20",
+      "crater_density_d5",
+      "crater_largest_d_km",
+      "dem_valid_frac",
+      "elev_max_m",
+      "elev_mean_m",
+      "elev_min_m",
+      "geo_class",
+      "geo_unit",
+      "geo_unit_diversity_3x3",
+      "geo_unit_frac",
+      "insolation_toa_wm2",
+      "landing_hazard_index",
+      "lava_tube_context_flag",
+      "liquid_water_window_frac",
+      "nearest_cave_setting",
+      "relief_m",
+      "roughness_rms_m",
+      "slope_frac_gt_landing",
+      "slope_frac_gt_mobility",
+      "slope_mean_deg",
+      "slope_median_deg",
+      "slope_p90_deg",
+      "solar_power_index",
+      "terrain_class",
+      "traversability_index",
+      "tri_mean_m",
+      "tsurf_diurnal_range_k",
+      "tsurf_max_k",
+      "tsurf_mean_k",
+      "tsurf_min_k",
+      "water_indicator_score"
+    ],
+    "earth_moon": [
+      "cave_candidate_count",
+      "cave_candidate_distance_km",
+      "cold_trap_flag",
+      "crater_density_d1",
+      "crater_density_d20",
+      "crater_density_d5",
+      "crater_largest_d_km",
+      "dem_valid_frac",
+      "elev_max_m",
+      "elev_mean_m",
+      "elev_min_m",
+      "geo_class",
+      "geo_unit",
+      "geo_unit_diversity_3x3",
+      "geo_unit_frac",
+      "insolation_toa_wm2",
+      "landing_hazard_index",
+      "lava_tube_context_flag",
+      "liquid_water_window_frac",
+      "nearest_cave_setting",
+      "relief_m",
+      "roughness_rms_m",
+      "slope_frac_gt_landing",
+      "slope_frac_gt_mobility",
+      "slope_mean_deg",
+      "slope_median_deg",
+      "slope_p90_deg",
+      "solar_power_index",
+      "terrain_class",
+      "traversability_index",
+      "tri_mean_m",
+      "tsurf_diurnal_range_k",
+      "tsurf_max_k",
+      "tsurf_mean_k",
+      "tsurf_min_k",
+      "water_indicator_score"
+    ],
+    "earth_mars": [
+      "albedo_lambert",
+      "cave_candidate_count",
+      "cave_candidate_distance_km",
+      "cold_trap_flag",
+      "crater_density_d1",
+      "crater_density_d20",
+      "crater_density_d5",
+      "crater_largest_d_km",
+      "dem_valid_frac",
+      "dune_cover_frac",
+      "dune_field_distance_km",
+      "elev_max_m",
+      "elev_mean_m",
+      "elev_min_m",
+      "geo_class",
+      "geo_unit",
+      "geo_unit_diversity_3x3",
+      "geo_unit_frac",
+      "h2o_frost_max_kgm2",
+      "insolation_surface_wm2",
+      "insolation_toa_wm2",
+      "landing_hazard_index",
+      "lava_tube_context_flag",
+      "liquid_water_window_frac",
+      "nearest_cave_setting",
+      "ps_mean_pa",
+      "ps_min_pa",
+      "relief_m",
+      "roughness_rms_m",
+      "slope_frac_gt_landing",
+      "slope_frac_gt_mobility",
+      "slope_mean_deg",
+      "slope_median_deg",
+      "slope_p90_deg",
+      "solar_power_index",
+      "surface_stress_mean_npm2",
+      "terrain_class",
+      "traversability_index",
+      "tri_mean_m",
+      "tsurf_diurnal_range_k",
+      "tsurf_max_k",
+      "tsurf_mean_k",
+      "tsurf_min_k",
+      "tsurf_seasonal_range_k",
+      "water_indicator_score",
+      "wind_max_seasonal_ms",
+      "wind_mean_ms"
+    ]
+  },
+  "recipe_earth_availability": {
+    "terrain": {
+      "available": [
+        "crater_density_d1",
+        "crater_density_d5",
+        "relief_m",
+        "roughness_rms_m",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "tri_mean_m"
+      ],
+      "missing": [
+        "crater_sfd_slope"
+      ]
+    },
+    "geology": {
+      "available": [],
+      "missing": [
+        "feo_wt",
+        "k_ppm",
+        "sio2_wt",
+        "th_ppm"
+      ]
+    },
+    "environment": {
+      "available": [
+        "insolation_toa_wm2",
+        "tsurf_diurnal_range_k",
+        "tsurf_max_k",
+        "tsurf_mean_k",
+        "tsurf_min_k"
+      ],
+      "missing": []
+    },
+    "surface_processes": {
+      "available": [],
+      "missing": [
+        "rock_abundance"
+      ]
+    },
+    "subsurface": {
+      "available": [
+        "cave_candidate_distance_km"
+      ],
+      "missing": []
+    },
+    "exploration": {
+      "available": [
+        "landing_hazard_index"
+      ],
+      "missing": []
+    }
+  }
+}

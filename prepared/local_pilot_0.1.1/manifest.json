@@ -1,0 +1,28 @@
+{
+  "files": {
+    "patch_candidates.geojson": {
+      "bytes": 174795,
+      "sha256": "e3849fe1de494be38b4c9de6481a6678422bb992f6df80b5a3780dbe18214fc5"
+    },
+    "metadata.json": {
+      "bytes": 11027,
+      "sha256": "3a28ad1430ddfe5c70fd22f810e9859beaa112969eb7913e8fd4a9deb277c6f4"
+    },
+    "dsm_utm30m.tif": {
+      "bytes": 50757,
+      "sha256": "6f54449b209b3d6399685e10cceb451ba6738971d58c22c7e05d8a881c7dc382"
+    },
+    "local_pilot.png": {
+      "bytes": 302032,
+      "sha256": "b71424a007dff4ff824a91ca726e740774c1b8ad6b121f828a6f6f523cb62f75"
+    },
+    "slope_utm30m.tif": {
+      "bytes": 54574,
+      "sha256": "99957a59e812de61dfb44de7f165ac8de7b75fa943442e3b59ea397be8e3aad5"
+    },
+    "local_pilot.pdf": {
+      "bytes": 261778,
+      "sha256": "c50f1d7f7a3bd5b07ca2b679d72f0d8be19d4fe1836cb26cbac0557ec54db3a9"
+    }
+  }
+}

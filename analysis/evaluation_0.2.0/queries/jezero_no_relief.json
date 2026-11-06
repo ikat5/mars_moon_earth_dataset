@@ -1,0 +1,1281 @@
+{
+  "dataset_version": "0.2.0",
+  "profile": "dry_barren_terrain",
+  "candidates": [
+    {
+      "feature_id": "earth:1547940",
+      "lat": 22.8125,
+      "lon": -7.4375,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.5,
+              22.75
+            ],
+            [
+              -7.375,
+              22.75
+            ],
+            [
+              -7.375,
+              22.875
+            ],
+            [
+              -7.5,
+              22.875
+            ],
+            [
+              -7.5,
+              22.75
+            ]
+          ]
+        ]
+      },
+      "area_km2": 178.08055114746094,
+      "target_area_ratio": 0.8545267408657786,
+      "observed_fit": 99.89728432893753,
+      "supported_fit_lower": 99.89728432893753,
+      "possible_fit_upper": 99.89728432893753,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5517324209213257,
+          "absolute_difference": 0.005019962787628174,
+          "normalized_distance": 0.0010039925575256348,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.97490018606186
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.2140693664550781,
+          "absolute_difference": 0.01776909828186035,
+          "normalized_distance": 0.001776909828186035,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.95557725429535
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 49.093292236328125,
+          "absolute_difference": 98.90670776367188,
+          "normalized_distance": 0.19781341552734374,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.2306547164917,
+          "absolute_difference": 0.06638622283935547,
+          "normalized_distance": 0.0006638622283935547,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.96680688858032
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 1.0,
+        "landcover_barren_class_fraction": 1.0,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.0035146665810733206,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.10001013455586745,
+        "ndvi_peak_climatology_provisional": 0.10178981252345298,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.4850812114935208
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1487751",
+      "lat": 25.4375,
+      "lon": 28.9375,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.875,
+              25.375
+            ],
+            [
+              29.0,
+              25.375
+            ],
+            [
+              29.0,
+              25.5
+            ],
+            [
+              28.875,
+              25.5
+            ],
+            [
+              28.875,
+              25.375
+            ]
+          ]
+        ]
+      },
+      "area_km2": 174.4631805419922,
+      "target_area_ratio": 0.8371686414322519,
+      "observed_fit": 99.82998919487,
+      "supported_fit_lower": 99.82998919487,
+      "possible_fit_upper": 99.82998919487,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5537815690040588,
+          "absolute_difference": 0.0029708147048950195,
+          "normalized_distance": 0.0005941629409790039,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.985145926475525
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.1732587814331055,
+          "absolute_difference": 0.05857968330383301,
+          "normalized_distance": 0.0058579683303833004,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.853550791740417
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 143.27981567382812,
+          "absolute_difference": 4.720184326171875,
+          "normalized_distance": 0.00944036865234375,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.181683540344238,
+          "absolute_difference": 0.01741504669189453,
+          "normalized_distance": 0.00017415046691894533,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.99129247665405
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 0.9997765731404142,
+        "landcover_barren_class_fraction": 0.8109711695978961,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.014439569021370391,
+        "aridity_index": 0.0,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.13507144609286353,
+        "ndvi_peak_climatology_provisional": 0.14152147530644363,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.49619772209925184
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1571156",
+      "lat": 21.8125,
+      "lon": 14.5625,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.5,
+              21.75
+            ],
+            [
+              14.625,
+              21.75
+            ],
+            [
+              14.625,
+              21.875
+            ],
+            [
+              14.5,
+              21.875
+            ],
+            [
+              14.5,
+              21.75
+            ]
+          ]
+        ]
+      },
+      "area_km2": 179.36068725585938,
+      "target_area_ratio": 0.8606695258556369,
+      "observed_fit": 99.82992255687714,
+      "supported_fit_lower": 99.82992255687714,
+      "possible_fit_upper": 99.82992255687714,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5740920305252075,
+          "absolute_difference": 0.017339646816253662,
+          "normalized_distance": 0.0034679293632507322,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.91330176591873
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.222990870475769,
+          "absolute_difference": 0.008847594261169434,
+          "normalized_distance": 0.0008847594261169433,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.977881014347076
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 64.16873168945312,
+          "absolute_difference": 83.83126831054688,
+          "normalized_distance": 0.16766253662109376,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.286788940429688,
+          "absolute_difference": 0.12252044677734375,
+          "normalized_distance": 0.0012252044677734375,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.93873977661133
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 1.0,
+        "landcover_barren_class_fraction": 1.0,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.008245373245336723,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.09579110085434078,
+        "ndvi_peak_climatology_provisional": 0.0963971666670931,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.4932942665872981
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1352238",
+      "lat": 31.3125,
+      "lon": 9.8125,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.75,
+              31.25
+            ],
+            [
+              9.875,
+              31.25
+            ],
+            [
+              9.875,
+              31.375
+            ],
+            [
+              9.75,
+              31.375
+            ],
+            [
+              9.75,
+              31.25
+            ]
+          ]
+        ]
+      },
+      "area_km2": 165.05299377441406,
+      "target_area_ratio": 0.7920134789081973,
+      "observed_fit": 99.82771813869476,
+      "supported_fit_lower": 99.82771813869476,
+      "possible_fit_upper": 99.82771813869476,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5628527998924255,
+          "absolute_difference": 0.00610041618347168,
+          "normalized_distance": 0.0012200832366943359,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.96949791908264
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.194298267364502,
+          "absolute_difference": 0.03754019737243652,
+          "normalized_distance": 0.0037540197372436523,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.90614950656891
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 78.27371215820312,
+          "absolute_difference": 69.72628784179688,
+          "normalized_distance": 0.13945257568359376,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.260127067565918,
+          "absolute_difference": 0.09585857391357422,
+          "normalized_distance": 0.0009585857391357422,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.95207071304321
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 1.0,
+        "landcover_barren_class_fraction": 1.0,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.01694306849042956,
+        "aridity_index_area_coverage": 0.9999999999999999,
+        "ndvi_mean_provisional": 0.11146751010658115,
+        "ndvi_peak_climatology_provisional": 0.11299286176788173,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.5148378435313344
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1447584",
+      "lat": 27.1875,
+      "lon": 48.0625,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              48.0,
+              27.125
+            ],
+            [
+              48.125,
+              27.125
+            ],
+            [
+              48.125,
+              27.25
+            ],
+            [
+              48.0,
+              27.25
+            ],
+            [
+              48.0,
+              27.125
+            ]
+          ]
+        ]
+      },
+      "area_km2": 171.84768676757812,
+      "target_area_ratio": 0.8246180885706198,
+      "observed_fit": 99.81789672374725,
+      "supported_fit_lower": 99.81789672374725,
+      "possible_fit_upper": 99.81789672374725,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5669941306114197,
+          "absolute_difference": 0.01024174690246582,
+          "normalized_distance": 0.002048349380493164,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.94879126548767
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.2696456909179688,
+          "absolute_difference": 0.03780722618103027,
+          "normalized_distance": 0.0037807226181030273,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.905481934547424
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 89.82328796386719,
+          "absolute_difference": 58.17671203613281,
+          "normalized_distance": 0.11635342407226562,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.09151554107666,
+          "absolute_difference": 0.0727529525756836,
+          "normalized_distance": 0.0007275295257568359,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.96362352371216
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 0.9999999999999999,
+        "landcover_barren_class_fraction": 0.9999999999999999,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.03734130263557143,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.09206718370051832,
+        "ndvi_peak_climatology_provisional": 0.0929457420500025,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.512792371059366
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1412789",
+      "lat": 28.6875,
+      "lon": 18.6875,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.625,
+              28.625
+            ],
+            [
+              18.75,
+              28.625
+            ],
+            [
+              18.75,
+              28.75
+            ],
+            [
+              18.625,
+              28.75
+            ],
+            [
+              18.625,
+              28.625
+            ]
+          ]
+        ]
+      },
+      "area_km2": 169.4781494140625,
+      "target_area_ratio": 0.8132477675613213,
+      "observed_fit": 99.81111186742783,
+      "supported_fit_lower": 99.81111186742783,
+      "possible_fit_upper": 99.81111186742783,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.557559609413147,
+          "absolute_difference": 0.0008072257041931152,
+          "normalized_distance": 0.00016144514083862304,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.995963871479034
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.2313923835754395,
+          "absolute_difference": 0.00044608116149902344,
+          "normalized_distance": 4.460811614990234e-05,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.998884797096252
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 90.81141662597656,
+          "absolute_difference": 57.18858337402344,
+          "normalized_distance": 0.11437716674804688,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.531742095947266,
+          "absolute_difference": 0.3674736022949219,
+          "normalized_distance": 0.0036747360229492185,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.81626319885254
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 0.9999999999999999,
+        "landcover_barren_class_fraction": 0.9999999999999999,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.0070146320483005075,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.09955012424992832,
+        "ndvi_peak_climatology_provisional": 0.10113766438191507,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.4920113383912991
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1542358",
+      "lat": 23.0625,
+      "lon": 14.8125,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.75,
+              23.0
+            ],
+            [
+              14.875,
+              23.0
+            ],
+            [
+              14.875,
+              23.125
+            ],
+            [
+              14.75,
+              23.125
+            ],
+            [
+              14.75,
+              23.0
+            ]
+          ]
+        ]
+      },
+      "area_km2": 177.7520294189453,
+      "target_area_ratio": 0.8529503160391305,
+      "observed_fit": 99.80618965625763,
+      "supported_fit_lower": 99.80618965625763,
+      "possible_fit_upper": 99.80618965625763,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5592711567878723,
+          "absolute_difference": 0.002518773078918457,
+          "normalized_distance": 0.0005037546157836914,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.987406134605408
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.2480456829071045,
+          "absolute_difference": 0.016207218170166016,
+          "normalized_distance": 0.0016207218170166016,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.959481954574585
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 101.08795166015625,
+          "absolute_difference": 46.91204833984375,
+          "normalized_distance": 0.0938240966796875,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 9.882871627807617,
+          "absolute_difference": 0.28139686584472656,
+          "normalized_distance": 0.0028139686584472655,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.85930156707764
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 1.0,
+        "landcover_barren_class_fraction": 1.0,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.005087596379364504,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.09714715724684478,
+        "ndvi_peak_climatology_provisional": 0.09795075254993071,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.48268803849889236
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1090899",
+      "lat": 42.6875,
+      "lon": 102.4375,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.375,
+              42.625
+            ],
+            [
+              102.5,
+              42.625
+            ],
+            [
+              102.5,
+              42.75
+            ],
+            [
+              102.375,
+              42.75
+            ],
+            [
+              102.375,
+              42.625
+            ]
+          ]
+        ]
+      },
+      "area_km2": 142.00843811035156,
+      "target_area_ratio": 0.6814332447421143,
+      "observed_fit": 99.78986370563507,
+      "supported_fit_lower": 99.78986370563507,
+      "possible_fit_upper": 99.78986370563507,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5654479265213013,
+          "absolute_difference": 0.008695542812347412,
+          "normalized_distance": 0.0017391085624694825,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.956522285938263
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.2938071489334106,
+          "absolute_difference": 0.06196868419647217,
+          "normalized_distance": 0.006196868419647217,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.84507828950882
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 149.5426025390625,
+          "absolute_difference": 1.5426025390625,
+          "normalized_distance": 0.003085205078125,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.187742233276367,
+          "absolute_difference": 0.023473739624023438,
+          "normalized_distance": 0.00023473739624023436,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.98826313018799
+        }
+      ],
+      "largest_numeric_mismatch": "slope_p90_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 0.9999999999999999,
+        "landcover_barren_class_fraction": 0.9999999999999999,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.03612954562469705,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.0835698130289439,
+        "ndvi_peak_climatology_provisional": 0.08935465852012874,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.5232301010312186
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1680727",
+      "lat": 17.0625,
+      "lon": 30.9375,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.875,
+              17.0
+            ],
+            [
+              31.0,
+              17.0
+            ],
+            [
+              31.0,
+              17.125
+            ],
+            [
+              30.875,
+              17.125
+            ],
+            [
+              30.875,
+              17.0
+            ]
+          ]
+        ]
+      },
+      "area_km2": 184.68902587890625,
+      "target_area_ratio": 0.8862377746534026,
+      "observed_fit": 99.78782165050507,
+      "supported_fit_lower": 99.78782165050507,
+      "possible_fit_upper": 99.78782165050507,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.5766202211380005,
+          "absolute_difference": 0.01986783742904663,
+          "normalized_distance": 0.003973567485809326,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.900660812854767
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.2284716367721558,
+          "absolute_difference": 0.003366827964782715,
+          "normalized_distance": 0.0003366827964782715,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.991582930088043
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 99.50057983398438,
+          "absolute_difference": 48.499420166015625,
+          "normalized_distance": 0.09699884033203125,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 9.955424308776855,
+          "absolute_difference": 0.20884418487548828,
+          "normalized_distance": 0.0020884418487548827,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.895577907562256
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 0.9999999999999999,
+        "landcover_barren_class_fraction": 0.968225299178729,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.018288548415762076,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.11267522322198224,
+        "ndvi_peak_climatology_provisional": 0.1136578305532021,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.49474838024712264
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1309004",
+      "lat": 33.1875,
+      "lon": 5.5625,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5,
+              33.125
+            ],
+            [
+              5.625,
+              33.125
+            ],
+            [
+              5.625,
+              33.25
+            ],
+            [
+              5.5,
+              33.25
+            ],
+            [
+              5.5,
+              33.125
+            ]
+          ]
+        ]
+      },
+      "area_km2": 161.6795196533203,
+      "target_area_ratio": 0.7758257266381235,
+      "observed_fit": 99.7826052904129,
+      "supported_fit_lower": 99.7826052904129,
+      "possible_fit_upper": 99.7826052904129,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.5567523837089539,
+          "earth_value": 0.56192946434021,
+          "absolute_difference": 0.0051770806312561035,
+          "normalized_distance": 0.0010354161262512208,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.97411459684372
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 1.2318384647369385,
+          "earth_value": 1.1847587823867798,
+          "absolute_difference": 0.04707968235015869,
+          "normalized_distance": 0.0047079682350158695,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.882300794124603
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 148.0,
+          "earth_value": 83.6129379272461,
+          "absolute_difference": 64.3870620727539,
+          "normalized_distance": 0.12877412414550782,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 10.164268493652344,
+          "earth_value": 10.016648292541504,
+          "absolute_difference": 0.14762020111083984,
+          "normalized_distance": 0.0014762020111083985,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.92618989944458
+        }
+      ],
+      "largest_numeric_mismatch": "relief_m",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "land_cover_screened": true,
+      "aridity_screened": true,
+      "earth_environment_context": {
+        "landcover_strict_area_coverage": 0.9999999999999999,
+        "landcover_barren_class_fraction": 0.9999999999999999,
+        "landcover_water_class_fraction": 0.0,
+        "landcover_built_class_fraction": 0.0,
+        "landcover_cropland_or_mosaic_class_fraction": 0.0,
+        "aridity_index": 0.025018707058906457,
+        "aridity_index_area_coverage": 1.0,
+        "ndvi_mean_provisional": 0.09779095697237912,
+        "ndvi_peak_climatology_provisional": 0.09846024734984214,
+        "ndvi_valid_month_count": 204.0,
+        "ndvi_gapfilled_area_time_fraction": 0.4997233240131481
+      },
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "period": "2001-2017",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "scale_status": "provisional_not_used_in_gates",
+          "meaning": "Smoothed/gap-filled monthly composites, not current site observations."
+        }
+      },
+      "local_site_verified": false,
+      "rank_stability": null
+    }
+  ],
+  "profile_status": "experimental_available",
+  "scientific_validation": "not_performed",
+  "target": {
+    "body": "mars",
+    "requested_lat": 18.41,
+    "requested_lon": 77.69,
+    "feature_id": "mars:412870",
+    "cell_center": {
+      "lat": 18.375,
+      "lon": 77.625
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            77.5,
+            18.25
+          ],
+          [
+            77.75,
+            18.25
+          ],
+          [
+            77.75,
+            18.5
+          ],
+          [
+            77.5,
+            18.5
+          ],
+          [
+            77.5,
+            18.25
+          ]
+        ]
+      ]
+    },
+    "area_km2": 208.39669799804688,
+    "quality_flags": 0,
+    "core_terrain": {
+      "slope_median_deg": 0.5567523837089539,
+      "slope_p90_deg": 1.2318384647369385,
+      "relief_m": 148.0,
+      "roughness_rms_m": 10.164268493652344,
+      "tri_mean_m": 4.3409423828125
+    },
+    "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+  },
+  "limitations": [
+    "Tolerances, area ratio and minimum fit are uncalibrated engineering defaults.",
+    "Native grid cells have approximately comparable but unequal physical support.",
+    "Fit is not a probability, accuracy estimate or hardware-performance prediction.",
+    "Selection resolves to an entire native cell. Small clicks across a cell boundary can change the compared region and ranking sharply; always display its footprint.",
+    "Environmental thresholds are experimental screening choices; no success probability is estimated.",
+    "Land cover and aridity are Earth-only filters from different historical periods, not additional similarity terms.",
+    "Seasonal greenness, actual access, exposed mineralogy, boulders and mechanical strength remain unverified.",
+    "NDVI scale is provisional; NDVI does not affect eligibility or rank."
+  ],
+  "configuration": {
+    "weights": {
+      "slope_median_deg": 0.25,
+      "slope_p90_deg": 0.25,
+      "relief_m": 0.0,
+      "roughness_rms_m": 0.5
+    },
+    "tolerances": {
+      "slope_median_deg": 5.0,
+      "slope_p90_deg": 10.0,
+      "relief_m": 500.0,
+      "roughness_rms_m": 100.0
+    },
+    "area_ratio": [
+      0.6666666666666666,
+      1.5
+    ],
+    "minimum_fit": 50.0,
+    "minimum_separation_km": 100.0,
+    "origin": null,
+    "radius_km": null
+  },
+  "eligible_after_area_filter": 98158,
+  "earth_environment_rules": {
+    "minimum_landcover_coverage": 0.95,
+    "minimum_aridity_coverage": 0.95,
+    "minimum_barren_class_fraction": 0.8,
+    "maximum_water_class_fraction": 0.05,
+    "maximum_built_class_fraction": 0.01,
+    "maximum_cropland_or_mosaic_class_fraction": 0.05,
+    "maximum_aridity_index": 0.2
+  },
+  "eligible_after_radius_filter": 98158,
+  "above_minimum_fit": 87334,
+  "status": "ok",
+  "elapsed_seconds": 0.381128629000159
+}

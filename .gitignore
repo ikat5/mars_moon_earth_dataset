@@ -6,3 +6,28 @@
 !*_integrated_dataset/*_feature_dictionary.json
 !*_integrated_dataset/*_metadata.json
 !README.md
+
+# TerraTwin preparation documents, pipeline and versioned outputs
+!TERRATWIN_MASTER_BLUEPRINT.md
+!analysis/
+!analysis/**
+!processing/
+!processing/**
+!prepared/
+!prepared/**
+!sources/
+!sources/**
+
+# Regenerable downloads, environments and superseded/failed builds
+__pycache__/
+*.py[cod]
+.venv/
+sources/*/*.part
+sources/ndvi_2001_2017/*.tif
+sources/aridity_v3/*.zip
+sources/aridity_v3/extracted/
+sources/lola_polar_context/*.TIF
+sources/landcover_2017/*.tif
+prepared/*.failed_*/
+prepared/**/*.building/
+prepared/environment_0.1.0/aridity/

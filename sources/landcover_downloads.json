@@ -1,0 +1,24 @@
+[
+  {
+    "name": "lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+    "folder": "landcover_2017",
+    "url": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content",
+    "bytes": 133810856,
+    "md5": "fe7c80efc951f8e36295c092aba807c7",
+    "source": "https://doi.org/10.5281/zenodo.8367523",
+    "path": "sources/landcover_2017/lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+    "sha256": "590ba64c5c1a0dec42ed1d9cbdad41b7b0ad960e2402d87b7bb4ddc38e975f54",
+    "status": "verified_download"
+  },
+  {
+    "name": "lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+    "folder": "landcover_2017",
+    "url": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content",
+    "bytes": 32909285,
+    "md5": "b8ac37847fb0e985709610488ae70894",
+    "source": "https://doi.org/10.5281/zenodo.8367523",
+    "path": "sources/landcover_2017/lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+    "sha256": "85ec309e3dc758f624c32aac7eb36240e67ab6ca983e795d4f9e5f6f8078878e",
+    "status": "verified_download"
+  }
+]

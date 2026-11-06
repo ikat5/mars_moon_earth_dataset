@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-11-06T03:37:01.875490+00:00",
+  "files": [
+    {
+      "key": "roughness_400m",
+      "path": "sources/lola_polar_context/LDRM_80S_1000MPP_ADJ_ROUGH_400M.TIF",
+      "url": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDRM_80S_1000MPP_ADJ_ROUGH_400M.TIF",
+      "source_page": "https://pgda.gsfc.nasa.gov/products/90",
+      "bytes": 1532181,
+      "sha256": "5ccf66fa521e32aa9ccdf6dda80090fc46c0cfce96ea148ea9057e49ddb2834c",
+      "publisher_checksum": "not_provided",
+      "units": "m",
+      "definition": "Spread of LOLA height residuals around a plane fit within a 400 m diameter window.",
+      "baseline_m": 400,
+      "raster_spacing_m": 1000
+    },
+    {
+      "key": "slope_400m",
+      "path": "sources/lola_polar_context/LDRM_80S_1000MPP_ADJ_SLP_400M.TIF",
+      "url": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDRM_80S_1000MPP_ADJ_SLP_400M.TIF",
+      "source_page": "https://pgda.gsfc.nasa.gov/products/90",
+      "bytes": 1544190,
+      "sha256": "e165ae2a381f55aa49d8ed403f1eb109729409ab6b019c589b75fd9c8ed56e74",
+      "publisher_checksum": "not_provided",
+      "units": "degree",
+      "definition": "Slope of the fitted plane within a 400 m diameter window.",
+      "baseline_m": 400,
+      "raster_spacing_m": 1000
+    }
+  ]
+}

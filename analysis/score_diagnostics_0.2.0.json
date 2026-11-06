@@ -1,0 +1,158 @@
+{
+  "dataset_version": "0.2.0",
+  "profile": "dry_barren_terrain",
+  "manifest_sha256": "cd76e6ae67124f64f1bd65a12d925ef1098dc2158f8bcd11f2d4a8983ef85a2e",
+  "code_sha256": "be161f21dd3af4691aeb1dd17924764d3be5a84470cd4867f8900d406be7663f",
+  "cases": [
+    {
+      "id": "jezero",
+      "target": {
+        "body": "mars",
+        "requested_lat": 18.41,
+        "requested_lon": 77.69,
+        "feature_id": "mars:412870",
+        "cell_center": {
+          "lat": 18.375,
+          "lon": 77.625
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                77.5,
+                18.25
+              ],
+              [
+                77.75,
+                18.25
+              ],
+              [
+                77.75,
+                18.5
+              ],
+              [
+                77.5,
+                18.5
+              ],
+              [
+                77.5,
+                18.25
+              ]
+            ]
+          ]
+        },
+        "area_km2": 208.39669799804688,
+        "quality_flags": 0,
+        "core_terrain": {
+          "slope_median_deg": 0.5567523837089539,
+          "slope_p90_deg": 1.2318384647369385,
+          "relief_m": 148.0,
+          "roughness_rms_m": 10.164268493652344,
+          "tri_mean_m": 4.3409423828125
+        },
+        "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+      },
+      "eligible_after_environment_and_area": 98158,
+      "score_quantiles": {
+        "minimum": 0.0,
+        "p10": 40.3293304514885,
+        "median": 89.20396026819944,
+        "p90": 95.25214516997337,
+        "p95": 96.35618537843227,
+        "p99": 97.9222709238529,
+        "maximum": 99.71860201358795
+      },
+      "cells_at_or_above_fit": {
+        "50": 86587,
+        "90": 43919,
+        "95": 11190,
+        "99": 94,
+        "99.5": 3,
+        "99.7": 1
+      },
+      "mean_normalized_difference_by_feature": {
+        "slope_median_deg": 0.15424195319059733,
+        "slope_p90_deg": 0.19687437056248652,
+        "relief_m": 0.28025255850453995,
+        "roughness_rms_m": 0.1760325776383626
+      }
+    },
+    {
+      "id": "lunar_equatorial_coordinate",
+      "target": {
+        "body": "moon",
+        "requested_lat": 0.0,
+        "requested_lon": 0.0,
+        "feature_id": "moon:129960",
+        "cell_center": {
+          "lat": -0.25,
+          "lon": 0.25
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                0.0,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -0.5
+              ]
+            ]
+          ]
+        },
+        "area_km2": 229.87347412109375,
+        "quality_flags": 0,
+        "core_terrain": {
+          "slope_median_deg": 0.38715648651123047,
+          "slope_p90_deg": 0.914922297000885,
+          "relief_m": 95.5,
+          "roughness_rms_m": 8.503240585327148,
+          "tri_mean_m": 3.381591796875
+        },
+        "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+      },
+      "eligible_after_environment_and_area": 86164,
+      "score_quantiles": {
+        "minimum": 0.0,
+        "p10": 36.716095248460775,
+        "median": 92.51163816750051,
+        "p90": 97.23794725239277,
+        "p95": 97.91447540342807,
+        "p99": 98.78710464823246,
+        "maximum": 99.77525297403335
+      },
+      "cells_at_or_above_fit": {
+        "50": 75281,
+        "90": 56498,
+        "95": 25951,
+        "99": 469,
+        "99.5": 36,
+        "99.7": 4
+      },
+      "mean_normalized_difference_by_feature": {
+        "slope_median_deg": 0.1485645472805119,
+        "slope_p90_deg": 0.19540210463459448,
+        "relief_m": 0.24082831541863806,
+        "roughness_rms_m": 0.17457680415774413
+      }
+    }
+  ],
+  "scope": "Entire Earth pool after environment and target-area gates, before minimum-fit cutoff or geographic thinning; no travel radius.",
+  "interpretation": "These are spatially correlated native cells. High-score counts describe selectivity under chosen tolerances, not independent sites, p-values, confidence or validated analog accuracy."
+}

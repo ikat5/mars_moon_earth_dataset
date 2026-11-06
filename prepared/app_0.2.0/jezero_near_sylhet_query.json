@@ -1,0 +1,102 @@
+{
+  "dataset_version": "0.2.0",
+  "profile": "dry_barren_terrain",
+  "profile_status": "experimental_available",
+  "scientific_validation": "not_performed",
+  "target": {
+    "body": "mars",
+    "requested_lat": 18.41,
+    "requested_lon": 77.69,
+    "feature_id": "mars:412870",
+    "cell_center": {
+      "lat": 18.375,
+      "lon": 77.625
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            77.5,
+            18.25
+          ],
+          [
+            77.75,
+            18.25
+          ],
+          [
+            77.75,
+            18.5
+          ],
+          [
+            77.5,
+            18.5
+          ],
+          [
+            77.5,
+            18.25
+          ]
+        ]
+      ]
+    },
+    "area_km2": 208.39669799804688,
+    "quality_flags": 0,
+    "core_terrain": {
+      "slope_median_deg": 0.5567523837089539,
+      "slope_p90_deg": 1.2318384647369385,
+      "relief_m": 148.0,
+      "roughness_rms_m": 10.164268493652344,
+      "tri_mean_m": 4.3409423828125
+    },
+    "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+  },
+  "limitations": [
+    "Tolerances, area ratio and minimum fit are uncalibrated engineering defaults.",
+    "Native grid cells have approximately comparable but unequal physical support.",
+    "Fit is not a probability, accuracy estimate or hardware-performance prediction.",
+    "Selection resolves to an entire native cell. Small clicks across a cell boundary can change the compared region and ranking sharply; always display its footprint.",
+    "Environmental thresholds are experimental screening choices; no success probability is estimated.",
+    "Land cover and aridity are Earth-only filters from different historical periods, not additional similarity terms.",
+    "Seasonal greenness, actual access, exposed mineralogy, boulders and mechanical strength remain unverified.",
+    "NDVI scale is provisional; NDVI does not affect eligibility or rank."
+  ],
+  "configuration": {
+    "weights": {
+      "slope_median_deg": 0.25,
+      "slope_p90_deg": 0.25,
+      "relief_m": 0.25,
+      "roughness_rms_m": 0.25
+    },
+    "tolerances": {
+      "slope_median_deg": 5.0,
+      "slope_p90_deg": 10.0,
+      "relief_m": 500.0,
+      "roughness_rms_m": 100.0
+    },
+    "area_ratio": [
+      0.6666666666666666,
+      1.5
+    ],
+    "minimum_fit": 50.0,
+    "minimum_separation_km": 100.0,
+    "origin": [
+      24.89,
+      91.87
+    ],
+    "radius_km": 500
+  },
+  "eligible_after_area_filter": 98158,
+  "earth_environment_rules": {
+    "minimum_landcover_coverage": 0.95,
+    "minimum_aridity_coverage": 0.95,
+    "minimum_barren_class_fraction": 0.8,
+    "maximum_water_class_fraction": 0.05,
+    "maximum_built_class_fraction": 0.01,
+    "maximum_cropland_or_mosaic_class_fraction": 0.05,
+    "maximum_aridity_index": 0.2
+  },
+  "eligible_after_radius_filter": 0,
+  "status": "no_candidates_under_filters",
+  "elapsed_seconds": 0.33278707600038615,
+  "earth_geojson": "jezero_near_sylhet_earth.geojson"
+}

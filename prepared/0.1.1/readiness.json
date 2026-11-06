@@ -1,0 +1,19 @@
+{
+  "version": "0.1.1",
+  "goal_complete": false,
+  "status": "experimental_environment_screening",
+  "completed": [
+    "three_body_verified_tables",
+    "global_landcover_and_aridity_context",
+    "Earth_only_screening_profile"
+  ],
+  "remaining": [
+    "complete_full_NDVI_acquisition_and_processing",
+    "verify_or_replace_NDVI_scale",
+    "independent_control_and_candidate_validation",
+    "matched_physical_footprints_for_polar_queries",
+    "material_crosswalk_validation",
+    "temperature_sampling_harmonization",
+    "full_UI_integration_and_demo_validation"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-11-06T04:04:32.388106+00:00",
+  "analysis_bounds": [
+    92.005,
+    25.14,
+    92.035,
+    25.17
+  ],
+  "selection": "Small exploratory window around the Jaflong landscape northeast of Sylhet; not a site boundary or permission to conduct field operations.",
+  "location_evidence": "https://hims.bwdb.gov.bd/hydrology/includes/bm_pillar_sw_print.php?dist=&river=",
+  "location_note": "BWDB lists Jaflong_Spill station at 25.156,92.018 inside this window; the window itself is analyst-selected.",
+  "files": [
+    {
+      "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N24E090_Map.tif",
+      "documentation": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/docs/WorldCover_PUM_V2.0.pdf",
+      "source": "ESA WorldCover 2021 v200, derived from Copernicus Sentinel-1 and Sentinel-2",
+      "license": "CC BY 4.0",
+      "period": "2021",
+      "buffer_deg": 0,
+      "key": "worldcover_2021",
+      "path": "sources/local_pilot/jaflong_worldcover_2021.tif",
+      "bytes": 11468,
+      "sha256": "d3370e1818e54b847d12f1c364d135eaa5ec9bccf61d52f9f6ed82b641bd7a92",
+      "remote_headers": {
+        "ETag": "\"b3a5a4399b5a029b16a30102ef5daeb6-12\"",
+        "Last-Modified": "Wed, 26 Oct 2022 12:44:43 GMT",
+        "Content-Length": "98826043",
+        "Accept-Ranges": "bytes"
+      },
+      "original_grid": {
+        "shape": [
+          36000,
+          36000
+        ],
+        "transform": [
+          8.333333333333333e-05,
+          0.0,
+          90.0,
+          0.0,
+          -8.333333333333333e-05,
+          27.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "crs": "EPSG:4326",
+        "nodata": 0.0,
+        "source_window": [
+          24059,
+          21959,
+          361,
+          361
+        ]
+      },
+      "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N25_00_E092_00_DEM/Copernicus_DSM_COG_10_N25_00_E092_00_DEM.tif",
+      "documentation": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
+      "source": "Copernicus DEM GLO-30 public AWS COG; surface model including vegetation/buildings",
+      "license": "Copernicus DEM GLO-30 license; retain provider attribution",
+      "license_url": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM/resources/license/License-COPDEM-30.pdf",
+      "period": "TanDEM-X acquisition primarily 2011-2015; mosaic and edits may have other source epochs",
+      "buffer_deg": 0.003,
+      "key": "copernicus_dsm",
+      "path": "sources/local_pilot/jaflong_copernicus_dsm.tif",
+      "bytes": 51775,
+      "sha256": "9192fe182446838a8dc0f22c28f9e0da0355366aebfa544661fc77d3cd9b1320",
+      "remote_headers": {
+        "ETag": "\"28501821b08d52fee65c246467f5f293\"",
+        "Last-Modified": "Mon, 09 May 2022 14:11:08 GMT",
+        "Content-Length": "45729100",
+        "Accept-Ranges": "bytes"
+      },
+      "original_grid": {
+        "shape": [
+          3600,
+          3600
+        ],
+        "transform": [
+          0.0002777777777777778,
+          0.0,
+          91.99986111111112,
+          0.0,
+          -0.0002777777777777778,
+          26.000138888888888,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "crs": "EPSG:4326",
+        "nodata": null,
+        "source_window": [
+          7,
+          2977,
+          131,
+          131
+        ]
+      },
+      "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+    }
+  ],
+  "worldcover_input_quality": "Not yet acquired; discrete classes must not be treated as local confidence scores."
+}

@@ -1,0 +1,255 @@
+{
+  "version": "0.1.1",
+  "status": "local_remote_sensing_candidates_not_verified_analogs",
+  "analysis_bounds": [
+    92.00491666666667,
+    25.14,
+    92.03500000000001,
+    25.170083333333334
+  ],
+  "requested_bounds": [
+    92.005,
+    25.14,
+    92.035,
+    25.17
+  ],
+  "regional_bounds": [
+    92.0,
+    25.125,
+    92.125,
+    25.25
+  ],
+  "patch_count": 8,
+  "minimum_component_area_m2": 5000,
+  "connectivity": "four neighboring pixels",
+  "local_landcover_class_fractions": {
+    "10": 0.38503408670607714,
+    "20": 0.0,
+    "30": 0.06278408037381887,
+    "40": 0.37879015027849233,
+    "50": 0.023263641398571056,
+    "60": 0.05482469156885722,
+    "70": 0.0,
+    "80": 0.0953033496984901,
+    "90": 0.0,
+    "95": 0.0,
+    "100": 0.0
+  },
+  "regional_landcover_class_fractions": {
+    "10": 0.6483279177283464,
+    "20": 0.0,
+    "30": 0.04593743406244286,
+    "40": 0.22645349621525168,
+    "50": 0.015596607420226746,
+    "60": 0.019695205396911792,
+    "70": 0.0,
+    "80": 0.025669868863546295,
+    "90": 0.018319470336938756,
+    "95": 0.0,
+    "100": 0.0
+  },
+  "local_classified_coverage": 1.0000000000243068,
+  "regional_classified_coverage": 1.0000000000236646,
+  "class_names": {
+    "10": "Tree cover",
+    "20": "Shrubland",
+    "30": "Grassland",
+    "40": "Cropland",
+    "50": "Built-up",
+    "60": "Bare / sparse vegetation",
+    "70": "Snow / ice",
+    "80": "Water",
+    "90": "Herbaceous wetland",
+    "95": "Mangrove",
+    "100": "Moss / lichen"
+  },
+  "sources": {
+    "local_pilot": {
+      "created_utc": "2026-11-06T04:04:32.388106+00:00",
+      "analysis_bounds": [
+        92.005,
+        25.14,
+        92.035,
+        25.17
+      ],
+      "selection": "Small exploratory window around the Jaflong landscape northeast of Sylhet; not a site boundary or permission to conduct field operations.",
+      "location_evidence": "https://hims.bwdb.gov.bd/hydrology/includes/bm_pillar_sw_print.php?dist=&river=",
+      "location_note": "BWDB lists Jaflong_Spill station at 25.156,92.018 inside this window; the window itself is analyst-selected.",
+      "files": [
+        {
+          "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N24E090_Map.tif",
+          "documentation": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/docs/WorldCover_PUM_V2.0.pdf",
+          "source": "ESA WorldCover 2021 v200, derived from Copernicus Sentinel-1 and Sentinel-2",
+          "license": "CC BY 4.0",
+          "period": "2021",
+          "buffer_deg": 0,
+          "key": "worldcover_2021",
+          "path": "sources/local_pilot/jaflong_worldcover_2021.tif",
+          "bytes": 11468,
+          "sha256": "d3370e1818e54b847d12f1c364d135eaa5ec9bccf61d52f9f6ed82b641bd7a92",
+          "remote_headers": {
+            "ETag": "\"b3a5a4399b5a029b16a30102ef5daeb6-12\"",
+            "Last-Modified": "Wed, 26 Oct 2022 12:44:43 GMT",
+            "Content-Length": "98826043",
+            "Accept-Ranges": "bytes"
+          },
+          "original_grid": {
+            "shape": [
+              36000,
+              36000
+            ],
+            "transform": [
+              8.333333333333333e-05,
+              0.0,
+              90.0,
+              0.0,
+              -8.333333333333333e-05,
+              27.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "crs": "EPSG:4326",
+            "nodata": 0.0,
+            "source_window": [
+              24059,
+              21959,
+              361,
+              361
+            ]
+          },
+          "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+        },
+        {
+          "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N25_00_E092_00_DEM/Copernicus_DSM_COG_10_N25_00_E092_00_DEM.tif",
+          "documentation": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
+          "source": "Copernicus DEM GLO-30 public AWS COG; surface model including vegetation/buildings",
+          "license": "Copernicus DEM GLO-30 license; retain provider attribution",
+          "license_url": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM/resources/license/License-COPDEM-30.pdf",
+          "period": "TanDEM-X acquisition primarily 2011-2015; mosaic and edits may have other source epochs",
+          "buffer_deg": 0.003,
+          "key": "copernicus_dsm",
+          "path": "sources/local_pilot/jaflong_copernicus_dsm.tif",
+          "bytes": 51775,
+          "sha256": "9192fe182446838a8dc0f22c28f9e0da0355366aebfa544661fc77d3cd9b1320",
+          "remote_headers": {
+            "ETag": "\"28501821b08d52fee65c246467f5f293\"",
+            "Last-Modified": "Mon, 09 May 2022 14:11:08 GMT",
+            "Content-Length": "45729100",
+            "Accept-Ranges": "bytes"
+          },
+          "original_grid": {
+            "shape": [
+              3600,
+              3600
+            ],
+            "transform": [
+              0.0002777777777777778,
+              0.0,
+              91.99986111111112,
+              0.0,
+              -0.0002777777777777778,
+              26.000138888888888,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "crs": "EPSG:4326",
+            "nodata": null,
+            "source_window": [
+              7,
+              2977,
+              131,
+              131
+            ]
+          },
+          "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+        }
+      ],
+      "worldcover_input_quality": "Not yet acquired; discrete classes must not be treated as local confidence scores."
+    },
+    "local_pilot_regional": {
+      "created_utc": "2026-11-06T04:05:41.921538+00:00",
+      "analysis_bounds": [
+        92.0,
+        25.125,
+        92.125,
+        25.25
+      ],
+      "selection": "Small exploratory window around the Jaflong landscape northeast of Sylhet; not a site boundary or permission to conduct field operations.",
+      "location_evidence": "https://hims.bwdb.gov.bd/hydrology/includes/bm_pillar_sw_print.php?dist=&river=",
+      "location_note": "BWDB lists Jaflong_Spill station at 25.156,92.018 inside this window; the window itself is analyst-selected.",
+      "files": [
+        {
+          "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N24E090_Map.tif",
+          "documentation": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/docs/WorldCover_PUM_V2.0.pdf",
+          "source": "ESA WorldCover 2021 v200, derived from Copernicus Sentinel-1 and Sentinel-2",
+          "license": "CC BY 4.0",
+          "period": "2021",
+          "buffer_deg": 0,
+          "key": "worldcover_2021",
+          "path": "sources/local_pilot_regional/jaflong_worldcover_2021.tif",
+          "bytes": 118944,
+          "sha256": "1fa16465cc473b7b1d471687fce4ac55f919bca09f6a13cc14076fc78f2996d4",
+          "remote_headers": {
+            "ETag": "\"b3a5a4399b5a029b16a30102ef5daeb6-12\"",
+            "Last-Modified": "Wed, 26 Oct 2022 12:44:43 GMT",
+            "Content-Length": "98826043",
+            "Accept-Ranges": "bytes"
+          },
+          "original_grid": {
+            "shape": [
+              36000,
+              36000
+            ],
+            "transform": [
+              8.333333333333333e-05,
+              0.0,
+              90.0,
+              0.0,
+              -8.333333333333333e-05,
+              27.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "crs": "EPSG:4326",
+            "nodata": 0.0,
+            "source_window": [
+              24000,
+              21000,
+              1500,
+              1500
+            ]
+          },
+          "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+        }
+      ],
+      "worldcover_input_quality": "Not yet acquired; discrete classes must not be treated as local confidence scores."
+    }
+  },
+  "code_sha256": "97a8e855e498322afb2c779f56e6bdfb9062f889831289a494415a3ca9754eb7",
+  "terrain_method": "Bilinear geographic DSM to UTM 46N at 30 m; central finite-difference gradient; statistics at pixel centers in each classified patch; least-squares plane residual only with >=9 valid samples and full rank.",
+  "water_proximity_method": "WorldCover pixel centers within 30 m of mapped water using metric spacing at window center; water outside the retrieved crop is not assessed.",
+  "hydrology_source": "https://dataspace.copernicus.eu/sites/default/files/media/files/2024-06/geo1988-copernicusdem-spe-002_producthandbook_i5.0.pdf",
+  "hydrology_review_rule": "Flag when any patch pixels are within 30 m of mapped water or more than 25% of sampled DSM slopes are numerically zero. This flags a possible influence, not a causal diagnosis.",
+  "comparison_policy": "30 m DSM features are local context. They are not substituted into the ~470 m planetary/terrestrial score or claimed to measure boulder roughness.",
+  "regional_geology_evidence": {
+    "source": "https://sparrso.gov.bd/sites/default/files/files/sparrso.portal.gov.bd/annual_reports/0b6f4c6e_9faf_48ac_a8f7_16dfb644815e/2022-03-09-08-39-75d87c64703469c15254710071319051.pdf",
+    "locator": "Geology Division, printed pages 28\u201329",
+    "summary": "SPARRSO describes gravelly sand and marsh clay/peat within the wider Jaflong region. This is regional context; individual patch materials have not been mapped or sampled here."
+  },
+  "potential_use": "Investigate local exposed-surface patches for later navigation or traverse-planning field exercises, subject to current imagery and site review.",
+  "limitations": [
+    "A 2021 class prediction is not confirmation of current exposed ground or operational suitability.",
+    "The WorldCover input-quality layer was not acquired; no per-patch confidence or accuracy percentage is claimed.",
+    "Bare/sparse class includes soil, sand, rocks, extraction sites and other surfaces; it does not imply regolith chemistry or strength.",
+    "River-adjacent terrain can change. Annual cover does not establish a safe or dry testing season.",
+    "The DSM includes vegetation and buildings and predates the 2021 land-cover map; source epochs differ.",
+    "Copernicus DSM includes water-body flattening and river editing. A zero or gentle DSM slope near water does not establish flat exposed ground.",
+    "Component polygons are clipped to the retrieved raster. Boundary-touching patches may continue beyond the analysis extent.",
+    "Averaged regional conditions can hide local patches. Both scales use the same WorldCover product/year in this diagnostic.",
+    "No current access, national boundary, tenure or field permission assessment has been made.",
+    "This site does not reproduce lunar vacuum/gravity or Martian atmosphere. No claim of a full Moon/Mars analog or novel discovery is made."
+  ]
+}

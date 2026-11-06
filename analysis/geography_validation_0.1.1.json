@@ -1,0 +1,536 @@
+{
+  "dataset_version": "0.1.1",
+  "created_utc": "2026-11-06T04:44:19.708806+00:00",
+  "prepared_manifest_sha256": "996a881c58ec83da74c94b76834cf69277913d462eb1c8788b1ed785220ffbf3",
+  "engine_sha256": "fb95bf16c47c2591f8601276dafbfa72de1429867a39f41c108727c791fa5fe8",
+  "scope": "Functional geography and boundary diagnostics; not scientific analog accuracy. Arbitrary points are not selected mission sites.",
+  "arbitrary_queries": [
+    {
+      "body": "moon",
+      "lat": 43.123,
+      "lon": 27.456,
+      "resolved_id": "moon:67374",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": -17.42,
+      "lon": 138.13,
+      "resolved_id": "moon:154716",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": -52.83,
+      "lon": -69.17,
+      "resolved_id": "moon:205421",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": 23.4,
+      "lon": -127.8,
+      "resolved_id": "moon:95864",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": 71.2,
+      "lon": 47.7,
+      "resolved_id": "moon:27095",
+      "status": "no_candidates_under_filters",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": -72.6,
+      "lon": 99.1,
+      "resolved_id": "moon:234558",
+      "status": "no_candidates_under_filters",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": 0,
+      "lon": 180,
+      "resolved_id": "moon:129600",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": 0,
+      "lon": -180,
+      "resolved_id": "moon:129600",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": 12.34,
+      "lon": 359.2,
+      "resolved_id": "moon:111958",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": 12.34,
+      "lon": -0.8,
+      "resolved_id": "moon:111958",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": 90,
+      "lon": 42,
+      "resolved_id": "moon:444",
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "moon",
+      "lat": -90,
+      "lon": -85,
+      "resolved_id": "moon:258670",
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 43.123,
+      "lon": 27.456,
+      "resolved_id": "mars:270109",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": -17.42,
+      "lon": 138.13,
+      "resolved_id": "mars:619032",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": -52.83,
+      "lon": -69.17,
+      "resolved_id": "mars:822683",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 23.4,
+      "lon": -127.8,
+      "resolved_id": "mars:383248",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 71.2,
+      "lon": 47.7,
+      "resolved_id": "mars:108910",
+      "status": "no_candidates_under_filters",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": -72.6,
+      "lon": 99.1,
+      "resolved_id": "mars:937116",
+      "status": "no_candidates_under_filters",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 0,
+      "lon": 180,
+      "resolved_id": "mars:518400",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 0,
+      "lon": -180,
+      "resolved_id": "mars:518400",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 12.34,
+      "lon": 359.2,
+      "resolved_id": "mars:447116",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 12.34,
+      "lon": -0.8,
+      "resolved_id": "mars:447116",
+      "status": "ok",
+      "candidate_count": 3,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": 90,
+      "lon": 42,
+      "resolved_id": "mars:888",
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    },
+    {
+      "body": "mars",
+      "lat": -90,
+      "lon": -85,
+      "resolved_id": "mars:1035740",
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "independent_bounds_lookup": "passed"
+    }
+  ],
+  "aliases": [
+    {
+      "body": "moon",
+      "locations": [
+        [
+          0,
+          180
+        ],
+        [
+          0,
+          -180
+        ]
+      ],
+      "status": "identical_target_and_results"
+    },
+    {
+      "body": "moon",
+      "locations": [
+        [
+          12.34,
+          359.2
+        ],
+        [
+          12.34,
+          -0.8
+        ]
+      ],
+      "status": "identical_target_and_results"
+    },
+    {
+      "body": "mars",
+      "locations": [
+        [
+          0,
+          180
+        ],
+        [
+          0,
+          -180
+        ]
+      ],
+      "status": "identical_target_and_results"
+    },
+    {
+      "body": "mars",
+      "locations": [
+        [
+          12.34,
+          359.2
+        ],
+        [
+          12.34,
+          -0.8
+        ]
+      ],
+      "status": "identical_target_and_results"
+    }
+  ],
+  "boundary_cases": [
+    {
+      "id": "jezero_northern_cell_boundary",
+      "body": "mars",
+      "selection_separation_m": 11.854939504661246,
+      "north_target": {
+        "body": "mars",
+        "requested_lat": 18.5001,
+        "requested_lon": 77.69,
+        "feature_id": "mars:411430",
+        "cell_center": {
+          "lat": 18.625,
+          "lon": 77.625
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                77.5,
+                18.5
+              ],
+              [
+                77.75,
+                18.5
+              ],
+              [
+                77.75,
+                18.75
+              ],
+              [
+                77.5,
+                18.75
+              ],
+              [
+                77.5,
+                18.5
+              ]
+            ]
+          ]
+        },
+        "area_km2": 208.09266662597656,
+        "quality_flags": 0,
+        "core_terrain": {
+          "slope_median_deg": 1.1884437799453735,
+          "slope_p90_deg": 3.2175509929656982,
+          "relief_m": 408.0,
+          "roughness_rms_m": 29.743553161621094,
+          "tri_mean_m": 10.44287109375
+        },
+        "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+      },
+      "south_target": {
+        "body": "mars",
+        "requested_lat": 18.4999,
+        "requested_lon": 77.69,
+        "feature_id": "mars:412870",
+        "cell_center": {
+          "lat": 18.375,
+          "lon": 77.625
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                77.5,
+                18.25
+              ],
+              [
+                77.75,
+                18.25
+              ],
+              [
+                77.75,
+                18.5
+              ],
+              [
+                77.5,
+                18.5
+              ],
+              [
+                77.5,
+                18.25
+              ]
+            ]
+          ]
+        },
+        "area_km2": 208.39669799804688,
+        "quality_flags": 0,
+        "core_terrain": {
+          "slope_median_deg": 0.5567523837089539,
+          "slope_p90_deg": 1.2318384647369385,
+          "relief_m": 148.0,
+          "roughness_rms_m": 10.164268493652344,
+          "tri_mean_m": 4.3409423828125
+        },
+        "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+      },
+      "north_candidate_ids": [
+        "earth:1323820",
+        "earth:1312254",
+        "earth:1240282",
+        "earth:1341083",
+        "earth:1467396",
+        "earth:1320964",
+        "earth:1594225",
+        "earth:1444580",
+        "earth:1148521",
+        "earth:1539420"
+      ],
+      "south_candidate_ids": [
+        "earth:1090899",
+        "earth:1102432",
+        "earth:1487751",
+        "earth:1113911",
+        "earth:1482082",
+        "earth:1203158",
+        "earth:1510590",
+        "earth:1427344",
+        "earth:1070778",
+        "earth:1366858"
+      ],
+      "top_ten_regional_retention_100km": 0.0,
+      "interpretation": "A tiny click movement changes the whole containing source cell. This tests grid sensitivity, not a physical change over this small ground distance."
+    },
+    {
+      "id": "lunar_equatorial_cell_boundary",
+      "body": "moon",
+      "selection_separation_m": 6.0646700848298964,
+      "north_target": {
+        "body": "moon",
+        "requested_lat": 0.0001,
+        "requested_lon": 0.25,
+        "feature_id": "moon:129240",
+        "cell_center": {
+          "lat": 0.25,
+          "lon": 0.25
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.0
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                0.0,
+                0.5
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          ]
+        },
+        "area_km2": 229.87347412109375,
+        "quality_flags": 0,
+        "core_terrain": {
+          "slope_median_deg": 0.6668093204498291,
+          "slope_p90_deg": 2.6551096439361572,
+          "relief_m": 334.0,
+          "roughness_rms_m": 34.10786819458008,
+          "tri_mean_m": 8.07196044921875
+        },
+        "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+      },
+      "south_target": {
+        "body": "moon",
+        "requested_lat": -0.0001,
+        "requested_lon": 0.25,
+        "feature_id": "moon:129960",
+        "cell_center": {
+          "lat": -0.25,
+          "lon": 0.25
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                0.0,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -0.5
+              ]
+            ]
+          ]
+        },
+        "area_km2": 229.87347412109375,
+        "quality_flags": 0,
+        "core_terrain": {
+          "slope_median_deg": 0.38715648651123047,
+          "slope_p90_deg": 0.914922297000885,
+          "relief_m": 95.5,
+          "roughness_rms_m": 8.503240585327148,
+          "tri_mean_m": 3.381591796875
+        },
+        "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+      },
+      "north_candidate_ids": [
+        "earth:1556923",
+        "earth:1697935",
+        "earth:1352687",
+        "earth:1536692",
+        "earth:2601534",
+        "earth:1349782",
+        "earth:1302280",
+        "earth:1770118",
+        "earth:1602617",
+        "earth:1539394"
+      ],
+      "south_candidate_ids": [
+        "earth:1493510",
+        "earth:1579753",
+        "earth:1651603",
+        "earth:1614485",
+        "earth:1666513",
+        "earth:1364197",
+        "earth:1378375",
+        "earth:1332178",
+        "earth:1482231",
+        "earth:1683737"
+      ],
+      "top_ten_regional_retention_100km": 0.0,
+      "interpretation": "A tiny click movement changes the whole containing source cell. This tests grid sensitivity, not a physical change over this small ground distance."
+    }
+  ],
+  "status": "functional_checks_passed_boundary_sensitivity_reported"
+}

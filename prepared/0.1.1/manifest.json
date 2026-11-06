@@ -1,0 +1,45 @@
+{
+  "version": "0.1.1",
+  "files": {
+    "profiles.json": {
+      "bytes": 6762,
+      "sha256": "2d46250fabd263e91aca52ae5d49697c7ec3b0a8c82a5d6ec93615ffadd5a791"
+    },
+    "targets.json": {
+      "bytes": 1007,
+      "sha256": "aede11c8c2a9d95c0e65eb4801be0050b3b62af1d1401e25ec4a475b71fa050a"
+    },
+    "planetary_features.parquet": {
+      "bytes": 112829825,
+      "sha256": "a570d14f7424ddf974bc29cece611e32975bacba6dcf24af7cbba7a18a35cc86"
+    },
+    "provenance.json": {
+      "bytes": 369933,
+      "sha256": "34f9f551cee898a14e2b4db402a870d4799368cd8342e2e26e45ac96aa915edf"
+    },
+    "feature_registry.json": {
+      "bytes": 214994,
+      "sha256": "76f7c67367d2cae4f4186c643c80648514fdc939723572692021ec0f1daf5d8a"
+    },
+    "earth_features.parquet": {
+      "bytes": 152892315,
+      "sha256": "31e4af03c869f3c5a50fd32449b5ce7669835321937d3137eef9082f2cae4b78"
+    },
+    "validation.json": {
+      "bytes": 1473,
+      "sha256": "c140300543194aa25d7b119d938332fdd69f3b39a535d2bd846b874fab340701"
+    },
+    "moon_features.parquet": {
+      "bytes": 27356599,
+      "sha256": "add9209d938fc0180e290b7b3b47050815ad0916e7a6df6b482efe37f159c9d6"
+    },
+    "mars_features.parquet": {
+      "bytes": 85267365,
+      "sha256": "2bd83b9fec15b5931f78a8551e0dace0e6fd8d73f17fb701618dc33362284047"
+    },
+    "readiness.json": {
+      "bytes": 577,
+      "sha256": "5ff978388177a31d171ec44b470aa99d8870cba4d0d6746b9caa4bbf1b2a97cc"
+    }
+  }
+}

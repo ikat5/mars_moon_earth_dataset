@@ -1,0 +1,1285 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "earth:1459425",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.125,
+              26.625
+            ],
+            [
+              88.25,
+              26.625
+            ],
+            [
+              88.25,
+              26.75
+            ],
+            [
+              88.125,
+              26.75
+            ],
+            [
+              88.125,
+              26.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1459425",
+        "lat": 26.6875,
+        "lon": 88.1875,
+        "area_km2": 172.61143493652344,
+        "target_area_ratio": 0.8282829651079269,
+        "observed_fit": 99.06564411520958,
+        "supported_fit_lower": 99.06564411520958,
+        "possible_fit_upper": 99.06564411520958,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 419.3522011733991,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.4912823736667633,
+            "absolute_difference": 0.06547001004219055,
+            "normalized_distance": 0.01309400200843811,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.672649949789047
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.1832964420318604,
+            "absolute_difference": 0.048542022705078125,
+            "normalized_distance": 0.0048542022705078125,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.878644943237305
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 148.157470703125,
+            "absolute_difference": 0.157470703125,
+            "normalized_distance": 0.00031494140625,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.99212646484375
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 12.075377464294434,
+            "absolute_difference": 1.9111089706420898,
+            "normalized_distance": 0.0191110897064209,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.522222757339478
+          }
+        ],
+        "largest_numeric_mismatch": "roughness_rms_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 1,
+        "source_cell_id": 1459425,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": false,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 4,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "unconsolidated.sediment",
+          "geo_class": "plains",
+          "quality_flags": 0,
+          "tsurf_mean_k": 297.29266357421875
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 4906.889194490086,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.4906889194490086,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 0,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 0.40360746284541765,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1456563",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              90.375,
+              26.75
+            ],
+            [
+              90.5,
+              26.75
+            ],
+            [
+              90.5,
+              26.875
+            ],
+            [
+              90.375,
+              26.875
+            ],
+            [
+              90.375,
+              26.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1456563",
+        "lat": 26.8125,
+        "lon": 90.4375,
+        "area_km2": 172.42172241210938,
+        "target_area_ratio": 0.8273726218719902,
+        "observed_fit": 98.85940498113632,
+        "supported_fit_lower": 98.85940498113632,
+        "possible_fit_upper": 98.85940498113632,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 257.3780505270767,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.5562673211097717,
+            "absolute_difference": 0.0004850625991821289,
+            "normalized_distance": 9.701251983642578e-05,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.99757468700409
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.0714563131332397,
+            "absolute_difference": 0.16038215160369873,
+            "normalized_distance": 0.01603821516036987,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.599044620990753
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 157.2542266845703,
+            "absolute_difference": 9.254226684570312,
+            "normalized_distance": 0.018508453369140625,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.537288665771484
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 9.066256523132324,
+            "absolute_difference": 1.0980119705200195,
+            "normalized_distance": 0.010980119705200195,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.725497007369995
+          }
+        ],
+        "largest_numeric_mismatch": "relief_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 2,
+        "source_cell_id": 1456563,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 5,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "unconsolidated.sediment",
+          "geo_class": "plains",
+          "quality_flags": 0,
+          "tsurf_mean_k": 296.4111633300781
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 6184.150016373678,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.6184150016373678,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 1,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 0.0,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1560281",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.125,
+              22.25
+            ],
+            [
+              95.25,
+              22.25
+            ],
+            [
+              95.25,
+              22.375
+            ],
+            [
+              95.125,
+              22.375
+            ],
+            [
+              95.125,
+              22.25
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1560281",
+        "lat": 22.3125,
+        "lon": 95.1875,
+        "area_km2": 178.72743225097656,
+        "target_area_ratio": 0.8576308260539312,
+        "observed_fit": 98.79658266305923,
+        "supported_fit_lower": 98.79658266305923,
+        "possible_fit_upper": 98.79658266305923,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 443.14005889311204,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.5131112337112427,
+            "absolute_difference": 0.04364114999771118,
+            "normalized_distance": 0.008728229999542236,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.781794250011444
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.152876853942871,
+            "absolute_difference": 0.07896161079406738,
+            "normalized_distance": 0.007896161079406739,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.80259597301483
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 163.46351623535156,
+            "absolute_difference": 15.463516235351562,
+            "normalized_distance": 0.030927032470703126,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.22682418823242
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 10.105741500854492,
+            "absolute_difference": 0.05852699279785156,
+            "normalized_distance": 0.0005852699279785157,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.985368251800537
+          }
+        ],
+        "largest_numeric_mismatch": "relief_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 3,
+        "source_cell_id": 1560281,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 5,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "unconsolidated.sediment",
+          "geo_class": "plains",
+          "quality_flags": 0,
+          "tsurf_mean_k": 302.853759765625
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 3578.2068115795023,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.35782068115795024,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 0,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 1.0,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1528537",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.125,
+              23.625
+            ],
+            [
+              87.25,
+              23.625
+            ],
+            [
+              87.25,
+              23.75
+            ],
+            [
+              87.125,
+              23.75
+            ],
+            [
+              87.125,
+              23.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1528537",
+        "lat": 23.6875,
+        "lon": 87.1875,
+        "area_km2": 176.91592407226562,
+        "target_area_ratio": 0.8489382306524056,
+        "observed_fit": 98.71826235055924,
+        "supported_fit_lower": 98.71826235055924,
+        "possible_fit_upper": 98.71826235055924,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 493.02465036102546,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.519915759563446,
+            "absolute_difference": 0.03683662414550781,
+            "normalized_distance": 0.007367324829101562,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.81581687927246
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.1069215536117554,
+            "absolute_difference": 0.1249169111251831,
+            "normalized_distance": 0.01249169111251831,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.687707722187042
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 153.76351928710938,
+            "absolute_difference": 5.763519287109375,
+            "normalized_distance": 0.01152703857421875,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.71182403564453
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 12.152613639831543,
+            "absolute_difference": 1.9883451461791992,
+            "normalized_distance": 0.019883451461791993,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.5029137134552
+          }
+        ],
+        "largest_numeric_mismatch": "roughness_rms_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 4,
+        "source_cell_id": 1528537,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 5,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "siliciclastic.sedimentary",
+          "geo_class": "other",
+          "quality_flags": 0,
+          "tsurf_mean_k": 299.4436950683594
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 2953.917498023406,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.2953917498023406,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 0,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 0.9994868081657191,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1505497",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.125,
+              24.625
+            ],
+            [
+              87.25,
+              24.625
+            ],
+            [
+              87.25,
+              24.75
+            ],
+            [
+              87.125,
+              24.75
+            ],
+            [
+              87.125,
+              24.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1505497",
+        "lat": 24.6875,
+        "lon": 87.1875,
+        "area_km2": 175.534423828125,
+        "target_area_ratio": 0.8423090457497082,
+        "observed_fit": 98.56733129024505,
+        "supported_fit_lower": 98.56733129024505,
+        "possible_fit_upper": 98.56733129024505,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 473.20836388869054,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.6954764723777771,
+            "absolute_difference": 0.13872408866882324,
+            "normalized_distance": 0.027744817733764648,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.306379556655884
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.1310009956359863,
+            "absolute_difference": 0.10083746910095215,
+            "normalized_distance": 0.010083746910095216,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.74790632724762
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 149.4014129638672,
+            "absolute_difference": 1.4014129638671875,
+            "normalized_distance": 0.002802825927734375,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.92992935180664
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 11.831804275512695,
+            "absolute_difference": 1.6675357818603516,
+            "normalized_distance": 0.016675357818603517,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.583116054534912
+          }
+        ],
+        "largest_numeric_mismatch": "slope_median_deg",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 5,
+        "source_cell_id": 1505497,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 5,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "metamorphics",
+          "geo_class": "other",
+          "quality_flags": 0,
+          "tsurf_mean_k": 299.2372741699219
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 2942.7637768811583,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.2942763776881158,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 0,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 1.0,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1494046",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.75,
+              25.125
+            ],
+            [
+              95.875,
+              25.125
+            ],
+            [
+              95.875,
+              25.25
+            ],
+            [
+              95.75,
+              25.25
+            ],
+            [
+              95.75,
+              25.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1494046",
+        "lat": 25.1875,
+        "lon": 95.8125,
+        "area_km2": 174.82359313964844,
+        "target_area_ratio": 0.838898095886754,
+        "observed_fit": 98.0330112338066,
+        "supported_fit_lower": 98.0330112338066,
+        "possible_fit_upper": 98.0330112338066,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 398.5474198365427,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.6209730505943298,
+            "absolute_difference": 0.06422066688537598,
+            "normalized_distance": 0.012844133377075195,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.67889666557312
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.4010003805160522,
+            "absolute_difference": 0.16916191577911377,
+            "normalized_distance": 0.016916191577911376,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.577095210552216
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 137.62229919433594,
+            "absolute_difference": 10.377700805664062,
+            "normalized_distance": 0.020755401611328127,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.481114959716795
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 12.980650901794434,
+            "absolute_difference": 2.81638240814209,
+            "normalized_distance": 0.0281638240814209,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.295904397964478
+          }
+        ],
+        "largest_numeric_mismatch": "roughness_rms_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 6,
+        "source_cell_id": 1494046,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 5,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "basic.volcanics",
+          "geo_class": "volcanic",
+          "quality_flags": 0,
+          "tsurf_mean_k": 295.7983093261719
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 8059.7684095826235,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.8059768409582624,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 0,
+          "ndvi_mean_area_coverage": 0.9999999999999999,
+          "ndvi_gapfilled_area_time_fraction": 0.8498284835036644,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1476747",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              93.375,
+              25.875
+            ],
+            [
+              93.5,
+              25.875
+            ],
+            [
+              93.5,
+              26.0
+            ],
+            [
+              93.375,
+              26.0
+            ],
+            [
+              93.375,
+              25.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1476747",
+        "lat": 25.9375,
+        "lon": 93.4375,
+        "area_km2": 173.73239135742188,
+        "target_area_ratio": 0.8336619199170331,
+        "observed_fit": 97.86601855754851,
+        "supported_fit_lower": 97.86601855754851,
+        "possible_fit_upper": 97.86601855754851,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 195.83157940706386,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.6092020869255066,
+            "absolute_difference": 0.052449703216552734,
+            "normalized_distance": 0.010489940643310547,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.737751483917236
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.39229154586792,
+            "absolute_difference": 0.16045308113098145,
+            "normalized_distance": 0.016045308113098143,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.598867297172546
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 143.7325439453125,
+            "absolute_difference": 4.2674560546875,
+            "normalized_distance": 0.008534912109375,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.786627197265627
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 15.193178176879883,
+            "absolute_difference": 5.028909683227539,
+            "normalized_distance": 0.05028909683227539,
+            "normalized_weight": 0.25,
+            "fit_contribution": 23.742772579193115
+          }
+        ],
+        "largest_numeric_mismatch": "roughness_rms_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 7,
+        "source_cell_id": 1476747,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 5,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "siliciclastic.sedimentary",
+          "geo_class": "other",
+          "quality_flags": 0,
+          "tsurf_mean_k": 296.1340026855469
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 6351.169031365511,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.6351169031365511,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 1,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 0.014010063438743892,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1522811",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              91.375,
+              23.875
+            ],
+            [
+              91.5,
+              23.875
+            ],
+            [
+              91.5,
+              24.0
+            ],
+            [
+              91.375,
+              24.0
+            ],
+            [
+              91.375,
+              23.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1522811",
+        "lat": 23.9375,
+        "lon": 91.4375,
+        "area_km2": 176.57559204101562,
+        "target_area_ratio": 0.8473051336095091,
+        "observed_fit": 97.67968299388885,
+        "supported_fit_lower": 97.67968299388885,
+        "possible_fit_upper": 97.67968299388885,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 114.60922887838207,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.5047074556350708,
+            "absolute_difference": 0.05204492807388306,
+            "normalized_distance": 0.01040898561477661,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.739775359630585
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.1872278451919556,
+            "absolute_difference": 0.04461061954498291,
+            "normalized_distance": 0.004461061954498291,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.888473451137543
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 113.35191345214844,
+            "absolute_difference": 34.64808654785156,
+            "normalized_distance": 0.06929617309570313,
+            "normalized_weight": 0.25,
+            "fit_contribution": 23.26759567260742
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 11.028914451599121,
+            "absolute_difference": 0.8646459579467773,
+            "normalized_distance": 0.008646459579467773,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.783838510513306
+          }
+        ],
+        "largest_numeric_mismatch": "relief_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 8,
+        "source_cell_id": 1522811,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 5,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "siliciclastic.sedimentary",
+          "geo_class": "other",
+          "quality_flags": 0,
+          "tsurf_mean_k": 297.31524658203125
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 6313.4813033254195,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.631348130332542,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 1,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 0.027392183612164726,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1540130",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              96.25,
+              23.125
+            ],
+            [
+              96.375,
+              23.125
+            ],
+            [
+              96.375,
+              23.25
+            ],
+            [
+              96.25,
+              23.25
+            ],
+            [
+              96.25,
+              23.125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1540130",
+        "lat": 23.1875,
+        "lon": 96.3125,
+        "area_km2": 177.5865020751953,
+        "target_area_ratio": 0.8521560263726428,
+        "observed_fit": 97.21404089927674,
+        "supported_fit_lower": 97.21404089927674,
+        "possible_fit_upper": 97.21404089927674,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 489.2080666904144,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.5715388655662537,
+            "absolute_difference": 0.014786481857299805,
+            "normalized_distance": 0.0029572963714599608,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.9260675907135
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.2665445804595947,
+            "absolute_difference": 0.03470611572265625,
+            "normalized_distance": 0.003470611572265625,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.91323471069336
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 102.50947570800781,
+            "absolute_difference": 45.49052429199219,
+            "normalized_distance": 0.09098104858398437,
+            "normalized_weight": 0.25,
+            "fit_contribution": 22.72547378540039
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 11.567209243774414,
+            "absolute_difference": 1.4029407501220703,
+            "normalized_distance": 0.014029407501220703,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.649264812469482
+          }
+        ],
+        "largest_numeric_mismatch": "relief_m",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 9,
+        "source_cell_id": 1540130,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": false,
+            "balanced": true,
+            "no_median_slope": false,
+            "no_relief": true,
+            "slope_emphasis": true
+          },
+          "retained_scenarios": 3,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "carbonate.sedimentary.rock",
+          "geo_class": "other",
+          "quality_flags": 0,
+          "tsurf_mean_k": 298.2260437011719
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 6707.851543024871,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.6707851543024871,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 0,
+          "ndvi_mean_area_coverage": 1.0,
+          "ndvi_gapfilled_area_time_fraction": 1.0,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "earth:1476721",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              90.125,
+              25.875
+            ],
+            [
+              90.25,
+              25.875
+            ],
+            [
+              90.25,
+              26.0
+            ],
+            [
+              90.125,
+              26.0
+            ],
+            [
+              90.125,
+              25.875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "earth:1476721",
+        "lat": 25.9375,
+        "lon": 90.1875,
+        "area_km2": 173.73239135742188,
+        "target_area_ratio": 0.8336619199170331,
+        "observed_fit": 97.06372455358505,
+        "supported_fit_lower": 97.06372455358505,
+        "possible_fit_upper": 97.06372455358505,
+        "scored_feature_coverage": 1.0,
+        "distance_from_origin_km": 205.23156223527894,
+        "comparisons": [
+          {
+            "feature": "slope_median_deg",
+            "target_value": 0.5567523837089539,
+            "earth_value": 0.26597142219543457,
+            "absolute_difference": 0.2907809615135193,
+            "normalized_distance": 0.05815619230270386,
+            "normalized_weight": 0.25,
+            "fit_contribution": 23.546095192432404
+          },
+          {
+            "feature": "slope_p90_deg",
+            "target_value": 1.2318384647369385,
+            "earth_value": 1.1235084533691406,
+            "absolute_difference": 0.10833001136779785,
+            "normalized_distance": 0.010833001136779786,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.729174971580505
+          },
+          {
+            "feature": "relief_m",
+            "target_value": 148.0,
+            "earth_value": 128.05137634277344,
+            "absolute_difference": 19.948623657226562,
+            "normalized_distance": 0.03989724731445313,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.002568817138673
+          },
+          {
+            "feature": "roughness_rms_m",
+            "target_value": 10.164268493652344,
+            "earth_value": 11.020726203918457,
+            "absolute_difference": 0.8564577102661133,
+            "normalized_distance": 0.008564577102661133,
+            "normalized_weight": 0.25,
+            "fit_contribution": 24.78588557243347
+          }
+        ],
+        "largest_numeric_mismatch": "slope_median_deg",
+        "review_status": "unreviewed_screening_candidate",
+        "vegetation_screened": false,
+        "aridity_screened": false,
+        "local_site_verified": false,
+        "rank_stability": null,
+        "body": "earth",
+        "rank": 10,
+        "source_cell_id": 1476721,
+        "terrain_source_registry": "feature_registry.json#bodies/earth/features",
+        "sensitivity": {
+          "scenarios": {
+            "amplitude_emphasis": true,
+            "balanced": true,
+            "no_median_slope": true,
+            "no_relief": false,
+            "slope_emphasis": false
+          },
+          "retained_scenarios": 3,
+          "scenario_count": 5,
+          "nearby_threshold_km": 100,
+          "definition": "Any top-ten candidate within 100 km under each declared weight/feature scenario; scenarios are not independent trials."
+        },
+        "unscored_source_context": {
+          "geology_unit_known": "unconsolidated.sediment",
+          "geo_class": "plains",
+          "quality_flags": 0,
+          "tsurf_mean_k": 296.7693786621094
+        },
+        "vegetation_diagnostic": {
+          "ndvi_mean_raw": 5049.414172141444,
+          "ndvi_peak_climatology_raw": null,
+          "ndvi_min_climatology_raw": null,
+          "ndvi_mean_provisional": 0.5049414172141444,
+          "ndvi_peak_climatology_provisional": null,
+          "ndvi_min_climatology_provisional": null,
+          "ndvi_valid_month_count": 1,
+          "ndvi_low_gapfill_month_count": 0,
+          "ndvi_mean_area_coverage": 0.9481735698795064,
+          "ndvi_gapfilled_area_time_fraction": 0.5653680779574433,
+          "ndvi_min_calendar_month_years": 0,
+          "period": "January 2001 only",
+          "scale_status": "provisional_inferred_1e-4",
+          "source": "https://doi.org/10.5281/zenodo.4305975",
+          "used_in_rank": false,
+          "limitations": "One smoothed/gap-filled historical monthly composite; no seasonal or bare-ground conclusion."
+        }
+      }
+    }
+  ]
+}

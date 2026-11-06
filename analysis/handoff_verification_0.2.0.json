@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "dataset_version": "0.2.0",
+  "created_utc": "2026-11-06T05:18:50.659213+00:00",
+  "scope": "Serving files and scientific-status contracts; not deployed UI or field validation.",
+  "verified_manifests": {
+    "prepared/0.2.0": "cd76e6ae67124f64f1bd65a12d925ef1098dc2158f8bcd11f2d4a8983ef85a2e",
+    "prepared/app_0.2.0": "dc87e1864b64550ca6e8a5ff5492ce0aa6685acb35b446e36cbe062e35316495",
+    "prepared/gobi_candidate_0.1.0": "f1237c5ccf0dacfce8deabb402a333152c8c26b468c272a9e95c63a77a8ee698",
+    "prepared/local_pilot_0.1.1": "344b565f998d6752703ecfbb342cdbea7d5419e6ce3613de9203b61ef6f27c31",
+    "prepared/environment_0.1.0/landcover_2017": "c4798cfe3c1bb1063324b3dd26845539a826808e90223967ebe19638efa9c0ee",
+    "prepared/environment_0.1.0/aridity_0.1.1": "86be3a0c2fc342feefecdc84323dabb92bea21bb44738c1d61b2ea3f962d8b0e",
+    "prepared/environment_0.1.0/ndvi": "0c891b6944b99df8fc5ad9e985f7c42676f839b96f64f4952c04644650b1aa1a"
+  },
+  "supporting_reports": {
+    "ndvi_verification.json": "a2534f4a0ccc7ed2202a1d24c46e8c337164c8b7724cf0d98473740b36e41160",
+    "release_upgrade_verification.json": "8ed7c2f9460f70c40e282d5c23706dee7f4412ccd8d27d801c0d41958826420a",
+    "control_evaluation_0.2.0.json": "1fd26f8d06287aecf25d4bd5eb251a858888fda557038fe3c044c18d686057de",
+    "geography_validation_0.2.0.json": "78a667b8ef0344e053f87e73fcb732f6e6539cbb0fdd6aeafebb1127d5937c04",
+    "release_summary_0.2.0.json": "1a614638395c3bdf2f487804371b311da8be8a8d423952bad62c2b42f4f2b2a3",
+    "score_diagnostics_0.2.0.json": "244f37bb877c0617e14c53fba26478caf05548ae16da94dc3d18300c67a4d9ea",
+    "benchmark_0.2.0.json": "747ef56118c607f8414c185659d1d951009097315edb121f11737d011196b00d"
+  },
+  "cases": [
+    {
+      "id": "jezero",
+      "status": "ok",
+      "candidate_count": 10,
+      "checks": "passed"
+    },
+    {
+      "id": "lunar_equatorial_coordinate",
+      "status": "ok",
+      "candidate_count": 10,
+      "checks": "passed"
+    },
+    {
+      "id": "jezero_near_sylhet",
+      "status": "no_candidates_under_filters",
+      "candidate_count": 0,
+      "checks": "passed"
+    },
+    {
+      "id": "shackleton",
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "checks": "passed"
+    }
+  ],
+  "app_file_bytes": 348711,
+  "source_plan_files_verified": 410,
+  "source_worker_finished": true,
+  "code_sha256": "c49a2f14f61b1656970d4f0e62d477c3c172e5c09fb32d294602f066b3f0fc40"
+}

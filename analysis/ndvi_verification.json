@@ -1,0 +1,213 @@
+{
+  "kind": "ndvi",
+  "status": "passed",
+  "period": "2001-2017",
+  "checked_months": 204,
+  "checks": [
+    {
+      "id": "yungay_atacama",
+      "cell_id": 2627440,
+      "bounds": [
+        -70.0,
+        -24.125,
+        -69.875,
+        -24.0
+      ],
+      "actual_features": {
+        "ndvi_mean_raw": 1117.2744463810911,
+        "ndvi_peak_climatology_raw": 1158.522288691997,
+        "ndvi_min_climatology_raw": 1075.7281734260732,
+        "ndvi_mean_provisional": 0.11172744463810912,
+        "ndvi_peak_climatology_provisional": 0.1158522288691997,
+        "ndvi_min_climatology_provisional": 0.10757281734260733,
+        "ndvi_valid_month_count": 204,
+        "ndvi_low_gapfill_month_count": 90,
+        "ndvi_mean_area_coverage": 1.0,
+        "ndvi_gapfilled_area_time_fraction": 0.4959000416077642,
+        "ndvi_min_calendar_month_years": 17
+      },
+      "absolute_errors": {
+        "ndvi_mean_raw": 1.1596057447604835e-11,
+        "ndvi_peak_climatology_raw": 1.1596057447604835e-11,
+        "ndvi_min_climatology_raw": 1.1141310096718371e-11,
+        "ndvi_mean_provisional": 1.1657341758564144e-15,
+        "ndvi_peak_climatology_provisional": 1.1518563880486e-15,
+        "ndvi_min_climatology_provisional": 1.1102230246251565e-15,
+        "ndvi_mean_area_coverage": 5.540012892879531e-14,
+        "ndvi_gapfilled_area_time_fraction": 1.1102230246251565e-15
+      },
+      "status": "passed"
+    },
+    {
+      "id": "manaus_k34",
+      "cell_id": 2132158,
+      "bounds": [
+        -60.25,
+        -2.625,
+        -60.125,
+        -2.5
+      ],
+      "actual_features": {
+        "ndvi_mean_raw": 8580.99827076636,
+        "ndvi_peak_climatology_raw": 8657.931301339364,
+        "ndvi_min_climatology_raw": 8500.892895654943,
+        "ndvi_mean_provisional": 0.8580998270766361,
+        "ndvi_peak_climatology_provisional": 0.8657931301339364,
+        "ndvi_min_climatology_provisional": 0.8500892895654943,
+        "ndvi_valid_month_count": 204,
+        "ndvi_low_gapfill_month_count": 25,
+        "ndvi_mean_area_coverage": 1.0,
+        "ndvi_gapfilled_area_time_fraction": 0.7381656932377395,
+        "ndvi_min_calendar_month_years": 17
+      },
+      "absolute_errors": {
+        "ndvi_mean_raw": 0.0,
+        "ndvi_peak_climatology_raw": 1.8189894035458565e-12,
+        "ndvi_min_climatology_raw": 3.637978807091713e-12,
+        "ndvi_mean_provisional": 0.0,
+        "ndvi_peak_climatology_provisional": 2.220446049250313e-16,
+        "ndvi_min_climatology_provisional": 4.440892098500626e-16,
+        "ndvi_mean_area_coverage": 1.2367884494324244e-13,
+        "ndvi_gapfilled_area_time_fraction": 3.552713678800501e-15
+      },
+      "status": "passed"
+    },
+    {
+      "id": "cinder_lake",
+      "cell_id": 1259107,
+      "bounds": [
+        -111.625,
+        35.25,
+        -111.5,
+        35.375
+      ],
+      "actual_features": {
+        "ndvi_mean_raw": 4563.584235560876,
+        "ndvi_peak_climatology_raw": 5043.440175816544,
+        "ndvi_min_climatology_raw": 4112.902626614668,
+        "ndvi_mean_provisional": 0.4563584235560876,
+        "ndvi_peak_climatology_provisional": 0.5043440175816545,
+        "ndvi_min_climatology_provisional": 0.41129026266146684,
+        "ndvi_valid_month_count": 204,
+        "ndvi_low_gapfill_month_count": 7,
+        "ndvi_mean_area_coverage": 1.0,
+        "ndvi_gapfilled_area_time_fraction": 0.8313793483918499,
+        "ndvi_min_calendar_month_years": 17
+      },
+      "absolute_errors": {
+        "ndvi_mean_raw": 9.367795428261161e-11,
+        "ndvi_peak_climatology_raw": 9.185896487906575e-11,
+        "ndvi_min_climatology_raw": 1.000444171950221e-10,
+        "ndvi_mean_provisional": 9.381384558082573e-15,
+        "ndvi_peak_climatology_provisional": 9.103828801926284e-15,
+        "ndvi_min_climatology_provisional": 1.0047518372857667e-14,
+        "ndvi_mean_area_coverage": 1.1368683772161603e-13,
+        "ndvi_gapfilled_area_time_fraction": 1.4432899320127035e-15
+      },
+      "status": "passed"
+    },
+    {
+      "id": "garwood_valley",
+      "cell_id": 3873473,
+      "bounds": [
+        164.125,
+        -78.125,
+        164.25,
+        -78.0
+      ],
+      "actual_features": {
+        "ndvi_mean_raw": null,
+        "ndvi_peak_climatology_raw": null,
+        "ndvi_min_climatology_raw": null,
+        "ndvi_mean_provisional": null,
+        "ndvi_peak_climatology_provisional": null,
+        "ndvi_min_climatology_provisional": null,
+        "ndvi_valid_month_count": 0,
+        "ndvi_low_gapfill_month_count": 0,
+        "ndvi_mean_area_coverage": 0.0,
+        "ndvi_gapfilled_area_time_fraction": null,
+        "ndvi_min_calendar_month_years": 0
+      },
+      "absolute_errors": {
+        "ndvi_mean_area_coverage": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "id": "gobi_candidate",
+      "cell_id": 1090899,
+      "bounds": [
+        102.375,
+        42.625,
+        102.5,
+        42.75
+      ],
+      "actual_features": {
+        "ndvi_mean_raw": 835.698130289439,
+        "ndvi_peak_climatology_raw": 893.5465852012874,
+        "ndvi_min_climatology_raw": 773.6746192701019,
+        "ndvi_mean_provisional": 0.0835698130289439,
+        "ndvi_peak_climatology_provisional": 0.08935465852012874,
+        "ndvi_min_climatology_provisional": 0.07736746192701019,
+        "ndvi_valid_month_count": 204,
+        "ndvi_low_gapfill_month_count": 94,
+        "ndvi_mean_area_coverage": 1.0,
+        "ndvi_gapfilled_area_time_fraction": 0.5232301010312186,
+        "ndvi_min_calendar_month_years": 17
+      },
+      "absolute_errors": {
+        "ndvi_mean_raw": 1.261923898709938e-11,
+        "ndvi_peak_climatology_raw": 1.4097167877480388e-11,
+        "ndvi_min_climatology_raw": 1.1254996934439987e-11,
+        "ndvi_mean_provisional": 1.2628786905111156e-15,
+        "ndvi_peak_climatology_provisional": 1.4155343563970746e-15,
+        "ndvi_min_climatology_provisional": 1.124100812432971e-15,
+        "ndvi_mean_area_coverage": 2.2737367544323206e-13,
+        "ndvi_gapfilled_area_time_fraction": 8.881784197001252e-16
+      },
+      "status": "passed"
+    },
+    {
+      "id": "high_greenness_candidate",
+      "cell_id": 1908640,
+      "bounds": [
+        80.0,
+        7.125,
+        80.125,
+        7.25
+      ],
+      "actual_features": {
+        "ndvi_mean_raw": 7784.781155086978,
+        "ndvi_peak_climatology_raw": 7921.707575076383,
+        "ndvi_min_climatology_raw": 7669.525780811891,
+        "ndvi_mean_provisional": 0.7784781155086978,
+        "ndvi_peak_climatology_provisional": 0.7921707575076383,
+        "ndvi_min_climatology_provisional": 0.7669525780811892,
+        "ndvi_valid_month_count": 204,
+        "ndvi_low_gapfill_month_count": 14,
+        "ndvi_mean_area_coverage": 1.0,
+        "ndvi_gapfilled_area_time_fraction": 0.7253762372119092,
+        "ndvi_min_calendar_month_years": 17
+      },
+      "absolute_errors": {
+        "ndvi_mean_raw": 1.1823431123048067e-11,
+        "ndvi_peak_climatology_raw": 1.4551915228366852e-11,
+        "ndvi_min_climatology_raw": 9.094947017729282e-12,
+        "ndvi_mean_provisional": 1.2212453270876722e-15,
+        "ndvi_peak_climatology_provisional": 1.5543122344752192e-15,
+        "ndvi_min_climatology_provisional": 8.881784197001252e-16,
+        "ndvi_mean_area_coverage": 3.714806240395774e-13,
+        "ndvi_gapfilled_area_time_fraction": 7.771561172376096e-16
+      },
+      "status": "passed"
+    }
+  ],
+  "source_manifest_sha256": "0c891b6944b99df8fc5ad9e985f7c42676f839b96f64f4952c04644650b1aa1a",
+  "method": "Direct spherical source-pixel intersections at six independent control/candidate windows, then separate temporal means, calendar-month extrema, accepted counts and QA area-time reductions.",
+  "tolerances": {
+    "raw_units_absolute": 0.0001,
+    "fractions_or_provisional_units_absolute": 1e-08,
+    "counts": "exact"
+  },
+  "scope": "Verifies processing against source pixels, not the undocumented NDVI scale, provider gap-filling accuracy or field vegetation conditions."
+}

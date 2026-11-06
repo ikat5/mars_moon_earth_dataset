@@ -1,0 +1,28 @@
+{
+  "files": {
+    "candidate.geojson": {
+      "bytes": 1182,
+      "sha256": "d235d908adffc197c83a93f99d83112e600b41b6d56da2e9abfeeaa0570c71f3"
+    },
+    "candidate_context.pdf": {
+      "bytes": 313032,
+      "sha256": "6644a0f21f069ee31929196e81c66280f4f6978752727db1f1d80d49f96aac81"
+    },
+    "metadata.json": {
+      "bytes": 13174,
+      "sha256": "d678f325e6e211193a514a6dc5b63d98605aa26afb302d7f621de4c96760a6e6"
+    },
+    "candidate_context.png": {
+      "bytes": 683515,
+      "sha256": "f513ea3e374e88c54ff19f34d82a97d5462ccd58aac7e76d07c9cf14db5a63f2"
+    },
+    "dsm_utm30m.tif": {
+      "bytes": 523859,
+      "sha256": "23c40fa8512075eed8e64c3011b6f0c078236aa1f3ff506f76c7731de83290e5"
+    },
+    "slope_utm30m.tif": {
+      "bytes": 628955,
+      "sha256": "0c787cc51b3b4824d6c75ab78c25ff254c43e2294a4a5c194c036cbe386a5976"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "files": {
+    "features.parquet": {
+      "bytes": 46210922,
+      "sha256": "1557349b9eacb962959e9566d3442fe4593a1e93479d5ea59c8a0e9e80629821"
+    },
+    "metadata.json": {
+      "bytes": 252811,
+      "sha256": "aaa250b46b09e49c0eba03d4524d9a4c3196d3171b4ece6212d1dad91557f39b"
+    }
+  }
+}

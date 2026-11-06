@@ -1,0 +1,10 @@
+{
+  "version": "0.2.0",
+  "data_directory": "0.2.0",
+  "app_index": "app_0.2.0/cases.json",
+  "manifest_sha256": "cd76e6ae67124f64f1bd65a12d925ef1098dc2158f8bcd11f2d4a8983ef85a2e",
+  "app_manifest_sha256": "dc87e1864b64550ca6e8a5ff5492ce0aa6685acb35b446e36cbe062e35316495",
+  "status": "experimental_regional_terrain_and_historical_dry_barren_screening",
+  "ndvi_policy": "complete_2001_2017_series_provisional_and_unscored",
+  "full_product_or_field_validation": false
+}

@@ -1,0 +1,47 @@
+{
+  "version": "0.1.0",
+  "created_utc": "2026-11-06T03:38:30.284030+00:00",
+  "cases": [
+    {
+      "id": "jezero",
+      "title": "Jezero crater-center cell",
+      "status": "ok",
+      "candidate_count": 10,
+      "query": "jezero_query.json",
+      "earth_geojson": "jezero_earth.geojson"
+    },
+    {
+      "id": "lunar_equatorial_coordinate",
+      "title": "Illustrative lunar coordinate, 0\u00b0N 0\u00b0E",
+      "status": "ok",
+      "candidate_count": 10,
+      "query": "lunar_equatorial_coordinate_query.json",
+      "earth_geojson": "lunar_equatorial_coordinate_earth.geojson"
+    },
+    {
+      "id": "jezero_near_sylhet",
+      "title": "Jezero terrain query within 500 km of Sylhet",
+      "status": "ok",
+      "candidate_count": 10,
+      "query": "jezero_near_sylhet_query.json",
+      "earth_geojson": "jezero_near_sylhet_earth.geojson"
+    },
+    {
+      "id": "shackleton",
+      "title": "Shackleton center: insufficient integrated terrain",
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "query": "shackleton_query.json",
+      "earth_geojson": "shackleton_earth.geojson"
+    }
+  ],
+  "scientific_status": "Experimental regional terrain screening; no verified analog discoveries.",
+  "usage": "Render returned Earth polygons as screening footprints. Keep target planetary geometry on its own body globe.",
+  "score_label": "Terrain resemblance (uncalibrated)",
+  "required_visible_caveats": [
+    "Fit does not measure overall analog suitability or confidence.",
+    "Named planetary centers are not landing ellipses or base footprints.",
+    "January 2001 vegetation sample is provisional context, not a seasonal vegetation screen.",
+    "Scenario retention is sensitivity evidence, not a confidence probability."
+  ]
+}

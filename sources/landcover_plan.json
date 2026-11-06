@@ -1,0 +1,18 @@
+[
+  {
+    "name": "lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+    "folder": "landcover_2017",
+    "url": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content",
+    "bytes": 133810856,
+    "md5": "fe7c80efc951f8e36295c092aba807c7",
+    "source": "https://doi.org/10.5281/zenodo.8367523"
+  },
+  {
+    "name": "lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+    "folder": "landcover_2017",
+    "url": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content",
+    "bytes": 32909285,
+    "md5": "b8ac37847fb0e985709610488ae70894",
+    "source": "https://doi.org/10.5281/zenodo.8367523"
+  }
+]

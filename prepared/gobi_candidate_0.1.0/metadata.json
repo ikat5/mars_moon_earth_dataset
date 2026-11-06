@@ -1,0 +1,327 @@
+{
+  "status": "regional_dry_barren_terrain_candidate_with_finer_remote_sensing_context",
+  "feature_id": "earth:1090899",
+  "center": {
+    "lat": 42.6875,
+    "lon": 102.4375
+  },
+  "bounds": [
+    102.375,
+    42.625,
+    102.5,
+    42.75
+  ],
+  "source_cell_area_km2": 142.00843811035156,
+  "terrain_query": {
+    "feature_id": "earth:1090899",
+    "lat": 42.6875,
+    "lon": 102.4375,
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            102.375,
+            42.625
+          ],
+          [
+            102.5,
+            42.625
+          ],
+          [
+            102.5,
+            42.75
+          ],
+          [
+            102.375,
+            42.75
+          ],
+          [
+            102.375,
+            42.625
+          ]
+        ]
+      ]
+    },
+    "area_km2": 142.00843811035156,
+    "target_area_ratio": 0.6814332447421143,
+    "observed_fit": 99.71860201358795,
+    "supported_fit_lower": 99.71860201358795,
+    "possible_fit_upper": 99.71860201358795,
+    "scored_feature_coverage": 1.0,
+    "distance_from_origin_km": null,
+    "comparisons": [
+      {
+        "feature": "slope_median_deg",
+        "target_value": 0.5567523837089539,
+        "earth_value": 0.5654479265213013,
+        "absolute_difference": 0.008695542812347412,
+        "normalized_distance": 0.0017391085624694825,
+        "normalized_weight": 0.25,
+        "fit_contribution": 24.956522285938263
+      },
+      {
+        "feature": "slope_p90_deg",
+        "target_value": 1.2318384647369385,
+        "earth_value": 1.2938071489334106,
+        "absolute_difference": 0.06196868419647217,
+        "normalized_distance": 0.006196868419647217,
+        "normalized_weight": 0.25,
+        "fit_contribution": 24.84507828950882
+      },
+      {
+        "feature": "relief_m",
+        "target_value": 148.0,
+        "earth_value": 149.5426025390625,
+        "absolute_difference": 1.5426025390625,
+        "normalized_distance": 0.003085205078125,
+        "normalized_weight": 0.25,
+        "fit_contribution": 24.922869873046874
+      },
+      {
+        "feature": "roughness_rms_m",
+        "target_value": 10.164268493652344,
+        "earth_value": 10.187742233276367,
+        "absolute_difference": 0.023473739624023438,
+        "normalized_distance": 0.00023473739624023436,
+        "normalized_weight": 0.25,
+        "fit_contribution": 24.994131565093994
+      }
+    ],
+    "largest_numeric_mismatch": "slope_p90_deg",
+    "review_status": "unreviewed_screening_candidate",
+    "vegetation_screened": false,
+    "aridity_screened": false,
+    "local_site_verified": false,
+    "rank_stability": null
+  },
+  "earth_environment": {
+    "landcover_2017": {
+      "cell_id": 1090899,
+      "landcover_forest_class_fraction": 0.0,
+      "landcover_shrub_class_fraction": 0.0,
+      "landcover_savanna_class_fraction": 0.0,
+      "landcover_grass_class_fraction": 0.0,
+      "landcover_wetland_class_fraction": 0.0,
+      "landcover_cropland_or_mosaic_class_fraction": 0.0,
+      "landcover_built_class_fraction": 0.0,
+      "landcover_snow_ice_class_fraction": 0.0,
+      "landcover_barren_class_fraction": 0.9999999999999999,
+      "landcover_water_class_fraction": 0.0,
+      "landcover_strict_area_coverage": 0.9999999999999999,
+      "landcover_labeled_area_coverage": 0.9999999999999999,
+      "landcover_modified_quality_fraction": 0.0,
+      "landcover_unclassified_land_fraction": 0.0
+    },
+    "aridity_1970_2000": {
+      "cell_id": 1090899,
+      "aridity_index": 0.03612954562469705,
+      "aridity_index_area_coverage": 1.0,
+      "reference_et0_mm_yr": 1885.8061948199745,
+      "reference_et0_mm_yr_area_coverage": 1.0
+    }
+  },
+  "worldcover_2021": {
+    "class_fractions": {
+      "10": 1.8207066809536107e-05,
+      "20": 1.8218708071610412e-05,
+      "30": 0.00431644302032551,
+      "40": 0.0,
+      "50": 0.0,
+      "60": 0.9956471312711515,
+      "70": 0.0,
+      "80": 0.0,
+      "90": 0.0,
+      "95": 0.0,
+      "100": 0.0
+    },
+    "classified_area_coverage": 1.000000000066358,
+    "class_names": {
+      "10": "Tree cover",
+      "20": "Shrubland",
+      "30": "Grassland",
+      "40": "Cropland",
+      "50": "Built-up",
+      "60": "Bare / sparse vegetation",
+      "70": "Snow / ice",
+      "80": "Water",
+      "90": "Herbaceous wetland",
+      "95": "Mangrove",
+      "100": "Moss / lichen"
+    },
+    "qa_status": "InputQuality raster not acquired; class predictions are not local accuracy estimates."
+  },
+  "surface_model_30m_context": {
+    "surface_model_spacing_m": 30,
+    "pixel_center_coverage": 1.0,
+    "valid_pixel_count": 158100,
+    "median_slope_deg": 1.404038429260254,
+    "p90_slope_deg": 5.230138778686523,
+    "p99_slope_deg": 12.956358909606934,
+    "slope_gt_5deg_fraction": 0.10843769765970905,
+    "slope_gt_10deg_fraction": 0.023934218848829854,
+    "surface_elevation_min_m": 1276.8004150390625,
+    "surface_elevation_max_m": 1457.9901123046875,
+    "surface_relief_m": 181.189697265625
+  },
+  "terrain_method": "Copernicus DSM bilinearly reprojected to UTM 48N at 30 m; central finite-difference gradient; statistics at pixel centers inside original Earth cell.",
+  "comparison_policy": "Finer Earth context is not inserted into the regional planetary score; source resolution, aggregation and slope definitions differ.",
+  "mapped_geology_context": {
+    "geo_unit": "carbonate.sedimentary.rock",
+    "geo_class": "other",
+    "geo_unit_frac": 0.7130555510520935
+  },
+  "material_interpretation": "Mapped carbonate sedimentary context does not establish exposed patch material or mineralogical similarity to any Jezero unit.",
+  "possible_experiment": "Investigate a dry exposed-land regional setting for route-planning and navigation exercises after local imagery and field review.",
+  "experiment_outcome": "Compare planned and field-measured route lengths, slope distributions and localization drift at a subsequently surveyed local plot. No traction or hardware pass/fail prediction is made.",
+  "planetary_limitations": [
+    "Earth gravity, atmosphere and radiation differ substantially.",
+    "A Jezero center-cell terrain match is not a match to its delta, rover traverse or a particular lithologic unit.",
+    "No boulder census, soil bearing strength, wheel slip, dust properties, ice or biological evidence is measured by these layers."
+  ],
+  "discovery_review": {
+    "status": "novelty_not_established",
+    "findings": "The Gobi already has published Mars-analog studies. This exact cell has not been established as new; a spatial known-site inventory and deeper literature review remain necessary.",
+    "primary_sources": [
+      {
+        "url": "https://www.hou.usra.edu/meetings/terrestrialanalogs2021/pdf/8083.pdf",
+        "title": "Scuderi and Mason (2021), Gobi Desert Deltas as Analogs for Jezero Delta Mars",
+        "scope": "Prior Gobi-delta analog work; not evidence that this cell contains a delta or is the same study site."
+      },
+      {
+        "url": "https://doi.org/10.3390/min10090792",
+        "title": "2020 study, Hydrogeochemical Study on Closed-Basin Lakes in Cold and Semi-Arid Climates of the Valley of the Gobi Lakes",
+        "scope": "Prior Mongolian lake-system analog work; not a characterization of this selected cell."
+      }
+    ]
+  },
+  "jezero_geology_reference": {
+    "url": "https://www.usgs.gov/publications/aqueously-altered-igneous-rocks-sampled-floor-jezero-crater-mars",
+    "interpretation": "In-situ observations show igneous crater-floor units altered by water; a generic Earth carbonate label is not equivalent evidence."
+  },
+  "current_condition_verified": false,
+  "access_status": "not_assessed",
+  "field_validation": "not_performed",
+  "limitations": [
+    "WorldCover 2021 and historical climate cannot establish present-day exposure or a suitable testing season.",
+    "MODIS 2017 and WorldCover 2021 use different resolutions and class definitions; differences are not measured land-cover change.",
+    "Copernicus is a surface model with multiple source epochs and editing; it cannot resolve wheel-contact obstacles.",
+    "The absence of a class in a remote-sensing map is not proof that small water, vegetation or buildings are absent.",
+    "No road, land tenure, protected-area, national-boundary or permission assessment has been made."
+  ],
+  "sources": {
+    "created_utc": "2026-11-06T04:21:09.810700+00:00",
+    "analysis_bounds": [
+      102.375,
+      42.625,
+      102.5,
+      42.75
+    ],
+    "selection": "Earth cell 1090899 selected by the archived Jezero terrain query; footprint is a source cell, not an analog-site boundary.",
+    "location_evidence": "analysis/queries/jezero_balanced.json",
+    "location_note": "Center 42.6875 N, 102.4375 E. No administrative, protected-area or access determination is made.",
+    "files": [
+      {
+        "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N42E102_Map.tif",
+        "documentation": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/docs/WorldCover_PUM_V2.0.pdf",
+        "source": "ESA WorldCover 2021 v200, derived from Copernicus Sentinel-1 and Sentinel-2",
+        "license": "CC BY 4.0",
+        "period": "2021",
+        "buffer_deg": 0,
+        "key": "worldcover_2021",
+        "path": "sources/gobi_candidate/gobi_worldcover_2021.tif",
+        "bytes": 27896,
+        "sha256": "09c2443ec258a479df0da1df9a69018c37ace294ef4f322ea4c267426a8dcfec",
+        "remote_headers": {
+          "ETag": "\"60a27062861694760697b8e4a979123b-3\"",
+          "Last-Modified": "Wed, 26 Oct 2022 12:55:27 GMT",
+          "Content-Length": "24698801",
+          "Accept-Ranges": "bytes"
+        },
+        "original_grid": {
+          "shape": [
+            36000,
+            36000
+          ],
+          "transform": [
+            8.333333333333333e-05,
+            0.0,
+            102.0,
+            0.0,
+            -8.333333333333333e-05,
+            45.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "crs": "EPSG:4326",
+          "nodata": 0.0,
+          "source_window": [
+            4500,
+            27000,
+            1500,
+            1500
+          ]
+        },
+        "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+      },
+      {
+        "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N42_00_E102_00_DEM/Copernicus_DSM_COG_10_N42_00_E102_00_DEM.tif",
+        "documentation": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
+        "source": "Copernicus DEM GLO-30 public AWS COG; surface model including vegetation/buildings",
+        "license": "Copernicus DEM GLO-30 license; retain provider attribution",
+        "license_url": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM/resources/license/License-COPDEM-30.pdf",
+        "period": "TanDEM-X acquisition primarily 2011-2015; mosaic and edits may have other source epochs",
+        "buffer_deg": 0.003,
+        "key": "copernicus_dsm",
+        "path": "sources/gobi_candidate/gobi_copernicus_dsm.tif",
+        "bytes": 665053,
+        "sha256": "51120f5e56ce612aa0fe0a801e3215ce02f9f72bc27c6fe1b603effac064a148",
+        "remote_headers": {
+          "ETag": "\"ac56a214979910362856c77dd4307a9d\"",
+          "Last-Modified": "Mon, 09 May 2022 14:22:56 GMT",
+          "Content-Length": "35023006",
+          "Accept-Ranges": "bytes"
+        },
+        "original_grid": {
+          "shape": [
+            3600,
+            3600
+          ],
+          "transform": [
+            0.0002777777777777778,
+            0.0,
+            101.99986111111112,
+            0.0,
+            -0.0002777777777777778,
+            43.00013888888889,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "crs": "EPSG:4326",
+          "nodata": null,
+          "source_window": [
+            1339,
+            889,
+            473,
+            473
+          ]
+        },
+        "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+      }
+    ],
+    "worldcover_input_quality": "Not yet acquired; discrete classes must not be treated as local confidence scores."
+  },
+  "code_sha256": "d604b8fb4bcef8cba84676572341d93d7a191b5195b52a5e94a85a639060dd80",
+  "input_manifests": {
+    "prepared/0.1.0/manifest.json": "f23e78329cebb517fd48b78f9bd07d23a37e8cedf9f5b53564fb5898fdcd0b82",
+    "prepared/environment_0.1.0/landcover_2017/manifest.json": "c4798cfe3c1bb1063324b3dd26845539a826808e90223967ebe19638efa9c0ee",
+    "prepared/environment_0.1.0/aridity_0.1.1/manifest.json": "86be3a0c2fc342feefecdc84323dabb92bea21bb44738c1d61b2ea3f962d8b0e"
+  },
+  "bibliographic_erratum": {
+    "updated_utc": "2026-11-06T04:29:15.351070+00:00",
+    "change": "Removed a coauthor shorthand from the lake-paper title; the paper title and DOI identify the source. No source measurement or derived data changed.",
+    "previous_title": "Fukushi et al. (2020), Hydrogeochemical Study on Closed-Basin Lakes in Cold and Semi-Arid Climates of the Valley of the Gobi Lakes"
+  }
+}

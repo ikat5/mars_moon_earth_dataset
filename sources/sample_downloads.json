@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Global-AI_PET_v3 - Readme.pdf",
+    "folder": "aridity_v3",
+    "url": "https://ndownloader.figshare.com/files/34377206",
+    "bytes": 882442,
+    "md5": "d55e6926ce32d3874e96698d6cf84ae2",
+    "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+    "path": "sources/aridity_v3/Global-AI_PET_v3 - Readme.pdf",
+    "sha256": "dec546112be56cdb8895d9008c433d611cf820cd381bbeef5edc58f83538c8f1",
+    "status": "verified_download"
+  },
+  {
+    "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+    "folder": "ndvi_2001_2017",
+    "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif/content",
+    "bytes": 1267814,
+    "md5": "b299284ce1d3776b17161c8528954e31",
+    "source": "https://doi.org/10.5281/zenodo.4305975",
+    "path": "sources/ndvi_2001_2017/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+    "sha256": "b23c2f68956fe2d546a1a4ff4b1c1cf1a6e31fa3562963d21aa6e02559e01220",
+    "status": "verified_download"
+  },
+  {
+    "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+    "folder": "ndvi_2001_2017",
+    "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif/content",
+    "bytes": 14799381,
+    "md5": "45bc379d310edc2fd19370ddfc86da8e",
+    "source": "https://doi.org/10.5281/zenodo.4305975",
+    "path": "sources/ndvi_2001_2017/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+    "sha256": "822c18c75b3fade50c5a7e87d51190fea0eacc34f89548c1bf86e6d8f732a52c",
+    "status": "verified_download"
+  }
+]

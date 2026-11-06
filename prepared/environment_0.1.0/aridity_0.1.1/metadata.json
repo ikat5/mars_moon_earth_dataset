@@ -1,0 +1,102 @@
+{
+  "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+  "period": "1970-2000",
+  "status": "processed_documented_scale",
+  "processing_version": "0.1.1",
+  "validity_policy": "AI must have finite nonnegative storage and finite, unmasked, positive ET0 at the corresponding pixel. AI alone has no nodata tag and zero includes both hyperarid land and ocean background. Valid dry zero is retained; undefined support is excluded.",
+  "support_grid_alignment": "Same dimensions, CRS and pixel indices; transform coefficients agree within 1e-7 degrees (origins differ by approximately 1.4e-8 degrees).",
+  "supersedes": "prepared/environment_0.1.0/aridity \u2014 incorrectly treated all AI background pixels as observed support; do not use that sidecar for screening.",
+  "definition": "Annual precipitation divided by annual FAO56 Penman-Monteith reference evapotranspiration; smaller is drier.",
+  "aridity_storage_scale": 0.0001,
+  "et0_units": "mm/year",
+  "source_grids": {
+    "aridity_index": {
+      "shape": [
+        21600,
+        43200
+      ],
+      "transform": [
+        0.008333333333,
+        0.0,
+        -180.0,
+        0.0,
+        -0.008333333333,
+        90.0000000576,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "crs": "EPSG:4326",
+      "nodata": null,
+      "storage_dtype": "uint16"
+    },
+    "reference_et0_mm_yr": {
+      "shape": [
+        21600,
+        43200
+      ],
+      "transform": [
+        0.008333333333,
+        0.0,
+        -180.0,
+        0.0,
+        -0.008333333333,
+        90.0000000432,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "crs": "EPSG:4326",
+      "nodata": 65535.0,
+      "storage_dtype": "uint16"
+    }
+  },
+  "eligible_95pct_coverage_cells": 1324648,
+  "arid_cells_ai_le_0_2_95pct_coverage": 392327,
+  "license_metadata": "CC BY 4.0",
+  "license_readme_and_description": "Non-commercial use; commercial permission requested by provider.",
+  "license_status": "Conflicting provider statements preserved; no commercial clearance inferred.",
+  "caveats": [
+    "Historical terrestrial climate index, not a direct Moon/Mars measurement.",
+    "Unsigned 16-bit AI has a finite storage ceiling; upper-end values must not be interpreted as uncensored humidity estimates. This does not affect the <=0.2 arid screen.",
+    "Screen Earth climate separately from terrain fit; not a planetary similarity score.",
+    "Low aridity index alone does not establish bare ground, geological similarity or field suitability."
+  ],
+  "created_utc": "2026-11-06T04:16:20.038942+00:00",
+  "rows": 1413693,
+  "base_release": "prepared/0.1.0",
+  "base_earth_sha256": "81e86f96d628931f82436718d1e6b12ccd2a9d54d95c8161395cb5a4a69f768b",
+  "aggregation": "Exact spherical overlap of piecewise-constant source pixels, with separate observed/modelled valid-area fraction.",
+  "sources": [
+    {
+      "name": "Global-AI_ET0_annual_v3.zip",
+      "folder": "aridity_v3",
+      "url": "https://ndownloader.figshare.com/files/34377245",
+      "bytes": 797584309,
+      "md5": "8c8ff5d82897382bab0b8e652484d90f",
+      "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+      "path": "sources/aridity_v3/Global-AI_ET0_annual_v3.zip",
+      "sha256": "8bcb059302a04fe0792f078ed35769dbefd89db3d76547acc464f0f36188d060"
+    },
+    {
+      "name": "Global-AI_PET_v3 - Readme.pdf",
+      "folder": "aridity_v3",
+      "url": "https://ndownloader.figshare.com/files/34377206",
+      "bytes": 882442,
+      "md5": "d55e6926ce32d3874e96698d6cf84ae2",
+      "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+      "path": "sources/aridity_v3/Global-AI_PET_v3 - Readme.pdf",
+      "sha256": "dec546112be56cdb8895d9008c433d611cf820cd381bbeef5edc58f83538c8f1"
+    }
+  ],
+  "software": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "duckdb": "2.0.0"
+  },
+  "code_sha256": {
+    "processing/environment.py": "fb74517ef9099942cf9e2061de6ee5b2d094e4ebafd1f4716c062220558d6238",
+    "processing/aggregate.py": "c4ecaf1376a92680a4bfc19e9dbce549f59eb0a24af76a6f5f05d131b2aa53dc"
+  },
+  "output_invariants": "Unique original Earth cell IDs; row counts and all exported values verified."
+}

@@ -1,0 +1,25 @@
+{
+  "retrieved_utc": "2026-11-06T04:40:05.287926+00:00",
+  "source_url": "https://5j7x5wew8j.execute-api.us-west-2.amazonaws.com/prod/api/terrestrial-analog-sites",
+  "official_portal": "https://tadp.astrogeology.usgs.gov/",
+  "endpoint_discovered_in": "https://tadp.astrogeology.usgs.gov/assets/index-CRhX0gaw.js",
+  "related_data_release": "https://doi.org/10.5066/P9J72921",
+  "version_scope": "Snapshot of the current portal feed; not verified byte-identical to the 2020 ScienceBase release. Direct ScienceBase catalog retrieval returned HTTP 403.",
+  "rights_context": "USGS describes the related known-analog release as CC0 1.0 Universal. Retain individual record references and attribution.",
+  "records": 4,
+  "checksum_scope": "Local snapshot SHA-256; no publisher checksum supplied by this API response.",
+  "files": {
+    "response.json": {
+      "bytes": 2050,
+      "sha256": "0c2776746b8f0bad3479995a8e823560d09b80552dd0462020f89f567697a1bf"
+    },
+    "sites.geojson": {
+      "bytes": 1565,
+      "sha256": "ccdd2b5b51ba5cbed0262ffbf6b233657256f42a22fada3b3ca4998772f707cc"
+    },
+    "portal_client.js": {
+      "bytes": 884470,
+      "sha256": "977e0d5941a172207fe696baf6d8f955751dfc9d9ba2acfd1dc33f9d32f70cad"
+    }
+  }
+}

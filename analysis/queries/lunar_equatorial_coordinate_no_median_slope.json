@@ -1,0 +1,918 @@
+{
+  "dataset_version": "0.1.0",
+  "profile": "terrain_screening",
+  "candidates": [
+    {
+      "feature_id": "earth:1672097",
+      "lat": 17.4375,
+      "lon": 32.1875,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              32.125,
+              17.375
+            ],
+            [
+              32.25,
+              17.375
+            ],
+            [
+              32.25,
+              17.5
+            ],
+            [
+              32.125,
+              17.5
+            ],
+            [
+              32.125,
+              17.375
+            ]
+          ]
+        ]
+      },
+      "area_km2": 184.31405639648438,
+      "target_area_ratio": 0.8018065464107904,
+      "observed_fit": 99.95341490507126,
+      "supported_fit_lower": 99.95341490507126,
+      "possible_fit_upper": 99.95341490507126,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.48000550270080566,
+          "absolute_difference": 0.0928490161895752,
+          "normalized_distance": 0.018569803237915038,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9131884574890137,
+          "absolute_difference": 0.0017338395118713379,
+          "normalized_distance": 0.0001733839511871338,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.99133080244064
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 95.33804321289062,
+          "absolute_difference": 0.161956787109375,
+          "normalized_distance": 0.00032391357421875,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.99190216064453
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.622512817382812,
+          "absolute_difference": 0.11927223205566406,
+          "normalized_distance": 0.0011927223205566407,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.970181941986084
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1352458",
+      "lat": 31.3125,
+      "lon": 37.3125,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.25,
+              31.25
+            ],
+            [
+              37.375,
+              31.25
+            ],
+            [
+              37.375,
+              31.375
+            ],
+            [
+              37.25,
+              31.375
+            ],
+            [
+              37.25,
+              31.25
+            ]
+          ]
+        ]
+      },
+      "area_km2": 165.05299377441406,
+      "target_area_ratio": 0.7180167020378643,
+      "observed_fit": 99.93066464662552,
+      "supported_fit_lower": 99.93066464662552,
+      "possible_fit_upper": 99.93066464662552,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.4132327735424042,
+          "absolute_difference": 0.026076287031173706,
+          "normalized_distance": 0.005215257406234741,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9128290414810181,
+          "absolute_difference": 0.0020932555198669434,
+          "normalized_distance": 0.00020932555198669434,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.989533722400665
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 95.74847412109375,
+          "absolute_difference": 0.24847412109375,
+          "normalized_distance": 0.0004969482421875,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.987576293945313
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.317459106445312,
+          "absolute_difference": 0.18578147888183594,
+          "normalized_distance": 0.0018578147888183593,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.95355463027954
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:2640444",
+      "lat": -24.5625,
+      "lon": 115.5625,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.5,
+              -24.625
+            ],
+            [
+              115.625,
+              -24.625
+            ],
+            [
+              115.625,
+              -24.5
+            ],
+            [
+              115.5,
+              -24.5
+            ],
+            [
+              115.5,
+              -24.625
+            ]
+          ]
+        ]
+      },
+      "area_km2": 175.7100372314453,
+      "target_area_ratio": 0.7643771770677813,
+      "observed_fit": 99.92199573516845,
+      "supported_fit_lower": 99.92199573516845,
+      "possible_fit_upper": 99.92199573516845,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.29679352045059204,
+          "absolute_difference": 0.09036296606063843,
+          "normalized_distance": 0.018072593212127685,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9205561280250549,
+          "absolute_difference": 0.005633831024169922,
+          "normalized_distance": 0.0005633831024169922,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.97183084487915
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 95.87373352050781,
+          "absolute_difference": 0.3737335205078125,
+          "normalized_distance": 0.000747467041015625,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.98131332397461
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.62783432006836,
+          "absolute_difference": 0.12459373474121094,
+          "normalized_distance": 0.0012459373474121094,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.968851566314697
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:2709837",
+      "lat": -27.5625,
+      "lon": 149.6875,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              149.625,
+              -27.625
+            ],
+            [
+              149.75,
+              -27.625
+            ],
+            [
+              149.75,
+              -27.5
+            ],
+            [
+              149.625,
+              -27.5
+            ],
+            [
+              149.625,
+              -27.625
+            ]
+          ]
+        ]
+      },
+      "area_km2": 171.2662811279297,
+      "target_area_ratio": 0.7450458639595332,
+      "observed_fit": 99.92057423591613,
+      "supported_fit_lower": 99.92057423591613,
+      "possible_fit_upper": 99.92057423591613,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.5583441257476807,
+          "absolute_difference": 0.1711876392364502,
+          "normalized_distance": 0.03423752784729004,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9294934868812561,
+          "absolute_difference": 0.014571189880371094,
+          "normalized_distance": 0.0014571189880371095,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.927144050598145
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 95.41098022460938,
+          "absolute_difference": 0.089019775390625,
+          "normalized_distance": 0.00017803955078125,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.99554901123047
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.51171588897705,
+          "absolute_difference": 0.008475303649902344,
+          "normalized_distance": 8.475303649902344e-05,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.997881174087524
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:2605208",
+      "lat": -23.0625,
+      "lon": 31.0625,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              31.0,
+              -23.125
+            ],
+            [
+              31.125,
+              -23.125
+            ],
+            [
+              31.125,
+              -23.0
+            ],
+            [
+              31.0,
+              -23.0
+            ],
+            [
+              31.0,
+              -23.125
+            ]
+          ]
+        ]
+      },
+      "area_km2": 177.7520294189453,
+      "target_area_ratio": 0.7732602906819441,
+      "observed_fit": 99.91879264116287,
+      "supported_fit_lower": 99.91879264116287,
+      "possible_fit_upper": 99.91879264116287,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.6101287603378296,
+          "absolute_difference": 0.22297227382659912,
+          "normalized_distance": 0.04459445476531983,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9175143241882324,
+          "absolute_difference": 0.002592027187347412,
+          "normalized_distance": 0.0002592027187347412,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.98703986406326
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 94.69741821289062,
+          "absolute_difference": 0.802581787109375,
+          "normalized_distance": 0.00160516357421875,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.95987091064453
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.615713119506836,
+          "absolute_difference": 0.1124725341796875,
+          "normalized_distance": 0.001124725341796875,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.971881866455078
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1640423",
+      "lat": 18.8125,
+      "lon": 32.9375,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              32.875,
+              18.75
+            ],
+            [
+              33.0,
+              18.75
+            ],
+            [
+              33.0,
+              18.875
+            ],
+            [
+              32.875,
+              18.875
+            ],
+            [
+              32.875,
+              18.75
+            ]
+          ]
+        ]
+      },
+      "area_km2": 182.87179565429688,
+      "target_area_ratio": 0.7955323960430636,
+      "observed_fit": 99.91304602622986,
+      "supported_fit_lower": 99.91304602622986,
+      "possible_fit_upper": 99.91304602622986,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.3259923458099365,
+          "absolute_difference": 0.061164140701293945,
+          "normalized_distance": 0.012232828140258788,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9227758049964905,
+          "absolute_difference": 0.007853507995605469,
+          "normalized_distance": 0.0007853507995605469,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.96073246002197
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 95.86212158203125,
+          "absolute_difference": 0.36212158203125,
+          "normalized_distance": 0.0007242431640625,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.981893920898436
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.384919166564941,
+          "absolute_difference": 0.11832141876220703,
+          "normalized_distance": 0.0011832141876220704,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.97041964530945
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1378313",
+      "lat": 30.1875,
+      "lon": 29.1875,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              29.125,
+              30.125
+            ],
+            [
+              29.25,
+              30.125
+            ],
+            [
+              29.25,
+              30.25
+            ],
+            [
+              29.125,
+              30.25
+            ],
+            [
+              29.125,
+              30.125
+            ]
+          ]
+        ]
+      },
+      "area_km2": 166.99246215820312,
+      "target_area_ratio": 0.7264538146329754,
+      "observed_fit": 99.91149727106094,
+      "supported_fit_lower": 99.91149727106094,
+      "possible_fit_upper": 99.91149727106094,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.49172699451446533,
+          "absolute_difference": 0.10457050800323486,
+          "normalized_distance": 0.020914101600646974,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.906915545463562,
+          "absolute_difference": 0.008006751537322998,
+          "normalized_distance": 0.0008006751537322998,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.959966242313385
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 96.4638671875,
+          "absolute_difference": 0.9638671875,
+          "normalized_distance": 0.001927734375,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.951806640624998
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.504343032836914,
+          "absolute_difference": 0.001102447509765625,
+          "normalized_distance": 1.102447509765625e-05,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.99972438812256
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:1343500",
+      "lat": 31.6875,
+      "lon": -2.4375,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.5,
+              31.625
+            ],
+            [
+              -2.375,
+              31.625
+            ],
+            [
+              -2.375,
+              31.75
+            ],
+            [
+              -2.5,
+              31.75
+            ],
+            [
+              -2.5,
+              31.625
+            ]
+          ]
+        ]
+      },
+      "area_km2": 164.39231872558594,
+      "target_area_ratio": 0.7151426207574808,
+      "observed_fit": 99.90995868444442,
+      "supported_fit_lower": 99.90995868444442,
+      "possible_fit_upper": 99.90995868444442,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.29424065351486206,
+          "absolute_difference": 0.09291583299636841,
+          "normalized_distance": 0.01858316659927368,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.914419412612915,
+          "absolute_difference": 0.0005028843879699707,
+          "normalized_distance": 5.028843879699707e-05,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.99748557806015
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 95.029541015625,
+          "absolute_difference": 0.470458984375,
+          "normalized_distance": 0.00094091796875,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.976477050781252
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.247224807739258,
+          "absolute_difference": 0.2560157775878906,
+          "normalized_distance": 0.0025601577758789062,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.935996055603027
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:2629038",
+      "lat": -24.0625,
+      "lon": 129.8125,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              129.75,
+              -24.125
+            ],
+            [
+              129.875,
+              -24.125
+            ],
+            [
+              129.875,
+              -24.0
+            ],
+            [
+              129.75,
+              -24.0
+            ],
+            [
+              129.75,
+              -24.125
+            ]
+          ]
+        ]
+      },
+      "area_km2": 176.40415954589844,
+      "target_area_ratio": 0.7673967612851733,
+      "observed_fit": 99.9054225564003,
+      "supported_fit_lower": 99.9054225564003,
+      "possible_fit_upper": 99.9054225564003,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.5477226972579956,
+          "absolute_difference": 0.16056621074676514,
+          "normalized_distance": 0.03211324214935303,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9170072078704834,
+          "absolute_difference": 0.0020849108695983887,
+          "normalized_distance": 0.00020849108695983887,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.98957544565201
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 96.1815185546875,
+          "absolute_difference": 0.6815185546875,
+          "normalized_distance": 0.001363037109375,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.965924072265626
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.703548431396484,
+          "absolute_difference": 0.20030784606933594,
+          "normalized_distance": 0.0020030784606933595,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.949923038482666
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    },
+    {
+      "feature_id": "earth:2223162",
+      "lat": -6.4375,
+      "lon": 155.3125,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              155.25,
+              -6.5
+            ],
+            [
+              155.375,
+              -6.5
+            ],
+            [
+              155.375,
+              -6.375
+            ],
+            [
+              155.25,
+              -6.375
+            ],
+            [
+              155.25,
+              -6.5
+            ]
+          ]
+        ]
+      },
+      "area_km2": 191.97421264648438,
+      "target_area_ratio": 0.8351299051814711,
+      "observed_fit": 99.8934916973114,
+      "supported_fit_lower": 99.8934916973114,
+      "possible_fit_upper": 99.8934916973114,
+      "scored_feature_coverage": 1.0,
+      "distance_from_origin_km": null,
+      "comparisons": [
+        {
+          "feature": "slope_median_deg",
+          "target_value": 0.38715648651123047,
+          "earth_value": 0.38018521666526794,
+          "absolute_difference": 0.006971269845962524,
+          "normalized_distance": 0.001394253969192505,
+          "normalized_weight": 0.0,
+          "fit_contribution": 0.0
+        },
+        {
+          "feature": "slope_p90_deg",
+          "target_value": 0.914922297000885,
+          "earth_value": 0.9261730313301086,
+          "absolute_difference": 0.011250734329223633,
+          "normalized_distance": 0.0011250734329223632,
+          "normalized_weight": 0.5,
+          "fit_contribution": 49.94374632835388
+        },
+        {
+          "feature": "relief_m",
+          "target_value": 95.5,
+          "earth_value": 94.85537719726562,
+          "absolute_difference": 0.644622802734375,
+          "normalized_distance": 0.00128924560546875,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.96776885986328
+        },
+        {
+          "feature": "roughness_rms_m",
+          "target_value": 8.503240585327148,
+          "earth_value": 8.575334548950195,
+          "absolute_difference": 0.07209396362304688,
+          "normalized_distance": 0.0007209396362304688,
+          "normalized_weight": 0.25,
+          "fit_contribution": 24.98197650909424
+        }
+      ],
+      "largest_numeric_mismatch": "slope_median_deg",
+      "review_status": "unreviewed_screening_candidate",
+      "vegetation_screened": false,
+      "aridity_screened": false,
+      "local_site_verified": false,
+      "rank_stability": null
+    }
+  ],
+  "profile_status": "experimental_available",
+  "scientific_validation": "not_performed",
+  "target": {
+    "body": "moon",
+    "requested_lat": 0.0,
+    "requested_lon": 0.0,
+    "feature_id": "moon:129960",
+    "cell_center": {
+      "lat": -0.25,
+      "lon": 0.25
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            0.0,
+            -0.5
+          ],
+          [
+            0.5,
+            -0.5
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.5
+          ]
+        ]
+      ]
+    },
+    "area_km2": 229.87347412109375,
+    "quality_flags": 0,
+    "core_terrain": {
+      "slope_median_deg": 0.38715648651123047,
+      "slope_p90_deg": 0.914922297000885,
+      "relief_m": 95.5,
+      "roughness_rms_m": 8.503240585327148,
+      "tri_mean_m": 3.381591796875
+    },
+    "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+  },
+  "limitations": [
+    "Tolerances, area ratio and minimum fit are uncalibrated engineering defaults.",
+    "Native grid cells have approximately comparable but unequal physical support.",
+    "Vegetation, land cover, aridity, access, boulders and mechanical strength are not screened.",
+    "Fit is not a probability, accuracy estimate or hardware-performance prediction."
+  ],
+  "configuration": {
+    "weights": {
+      "slope_median_deg": 0.0,
+      "slope_p90_deg": 0.5,
+      "relief_m": 0.25,
+      "roughness_rms_m": 0.25
+    },
+    "tolerances": {
+      "slope_median_deg": 5.0,
+      "slope_p90_deg": 10.0,
+      "relief_m": 500.0,
+      "roughness_rms_m": 100.0
+    },
+    "area_ratio": [
+      0.6666666666666666,
+      1.5
+    ],
+    "minimum_fit": 50.0,
+    "minimum_separation_km": 100.0,
+    "origin": null,
+    "radius_km": null
+  },
+  "eligible_after_area_filter": 437174,
+  "eligible_after_radius_filter": 437174,
+  "above_minimum_fit": 323823,
+  "status": "ok",
+  "elapsed_seconds": 0.16868117099875235
+}

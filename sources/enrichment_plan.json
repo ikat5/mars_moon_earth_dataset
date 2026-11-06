@@ -1,0 +1,3295 @@
+{
+  "ndvi_period": [
+    2001,
+    2017
+  ],
+  "aridity_period": [
+    1970,
+    2000
+  ],
+  "temporal_caveat": "Separate historical products; not contemporaneous local testing conditions.",
+  "file_count": 410,
+  "bytes": 4087137428,
+  "files": [
+    {
+      "name": "Global-AI_ET0_annual_v3.zip",
+      "folder": "aridity_v3",
+      "url": "https://ndownloader.figshare.com/files/34377245",
+      "bytes": 797584309,
+      "md5": "8c8ff5d82897382bab0b8e652484d90f",
+      "source": "https://doi.org/10.6084/m9.figshare.7504448.v5"
+    },
+    {
+      "name": "Global-AI_PET_v3 - Readme.pdf",
+      "folder": "aridity_v3",
+      "url": "https://ndownloader.figshare.com/files/34377206",
+      "bytes": 882442,
+      "md5": "d55e6926ce32d3874e96698d6cf84ae2",
+      "source": "https://doi.org/10.6084/m9.figshare.7504448.v5"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif/content",
+      "bytes": 1267814,
+      "md5": "b299284ce1d3776b17161c8528954e31",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010201..20010228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010201..20010228_v1.0.tif/content",
+      "bytes": 1350677,
+      "md5": "14b209775d72f19796d5c485f280bfb3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010301..20010331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010301..20010331_v1.0.tif/content",
+      "bytes": 1301784,
+      "md5": "1c15d33e319136f3b055c51f980b1428",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010401..20010430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010401..20010430_v1.0.tif/content",
+      "bytes": 1363969,
+      "md5": "2cb5045432e2b50ab01c5b89862d7084",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010501..20010531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010501..20010531_v1.0.tif/content",
+      "bytes": 1392067,
+      "md5": "158bc0e16f17d380ba12242ad545185f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010601..20010630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010601..20010630_v1.0.tif/content",
+      "bytes": 1474614,
+      "md5": "64e8d41230097863feb19efbe2d309fa",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010701..20010731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010701..20010731_v1.0.tif/content",
+      "bytes": 1394777,
+      "md5": "e883818ef215933017ad7d2135146941",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010801..20010831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010801..20010831_v1.0.tif/content",
+      "bytes": 1399832,
+      "md5": "87ac58df57f07a4fc2700e1462ac4d2c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010901..20010930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010901..20010930_v1.0.tif/content",
+      "bytes": 1346569,
+      "md5": "bb13545b72b360f4e39724f53aade8d6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20011001..20011031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20011001..20011031_v1.0.tif/content",
+      "bytes": 1289137,
+      "md5": "69f41fe941a5b4f344fe3adb0fe7b5a1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20011101..20011130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20011101..20011130_v1.0.tif/content",
+      "bytes": 1227503,
+      "md5": "dea3027cb1f6fecb396f4a60303255f7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20011201..20011231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20011201..20011231_v1.0.tif/content",
+      "bytes": 1281471,
+      "md5": "948de474263d1cf6dc56264aee5d2802",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020101..20020131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020101..20020131_v1.0.tif/content",
+      "bytes": 1278367,
+      "md5": "c66d183ad45bac106af8a021fa873b67",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020201..20020228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020201..20020228_v1.0.tif/content",
+      "bytes": 1359796,
+      "md5": "916b5fe860a923ee354b55971be40257",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020301..20020331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020301..20020331_v1.0.tif/content",
+      "bytes": 1274428,
+      "md5": "9972e99301cd6b6acc4c5146e88d4ddd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020401..20020430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020401..20020430_v1.0.tif/content",
+      "bytes": 1330628,
+      "md5": "a774b64c3869dbb234af7f8b9bb97c81",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020501..20020531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020501..20020531_v1.0.tif/content",
+      "bytes": 1348873,
+      "md5": "7a57ae611ef3df0d30a9869a2e3e95c3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020601..20020630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020601..20020630_v1.0.tif/content",
+      "bytes": 1419540,
+      "md5": "1d3a76d52fea704858b81e250363757d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020701..20020731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020701..20020731_v1.0.tif/content",
+      "bytes": 1408919,
+      "md5": "cb8d33c24e38826509dd25dde2d721b6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020801..20020831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020801..20020831_v1.0.tif/content",
+      "bytes": 1428553,
+      "md5": "a031fe03b29e72c6f39807f4dc4fe22c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020901..20020930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20020901..20020930_v1.0.tif/content",
+      "bytes": 1354217,
+      "md5": "76638cc329d3ad0aebedd77eb063158c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20021001..20021031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20021001..20021031_v1.0.tif/content",
+      "bytes": 1278765,
+      "md5": "5b440e36c9a31187d2d9206e13c786c5",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20021101..20021130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20021101..20021130_v1.0.tif/content",
+      "bytes": 1226957,
+      "md5": "0358ca31de72169619349d49e93362f6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20021201..20021231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20021201..20021231_v1.0.tif/content",
+      "bytes": 1286969,
+      "md5": "a06fef2640da3ad0fdb19896ba69857d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030101..20030131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030101..20030131_v1.0.tif/content",
+      "bytes": 1262507,
+      "md5": "1f6581f0722eed99f44adaba58d5c0b4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030201..20030228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030201..20030228_v1.0.tif/content",
+      "bytes": 1317173,
+      "md5": "5daa3c3a1c09aa561bf9178edbda4833",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030301..20030331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030301..20030331_v1.0.tif/content",
+      "bytes": 1284658,
+      "md5": "a8eb1d014a5972bbc0f5504ca140b90e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030401..20030430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030401..20030430_v1.0.tif/content",
+      "bytes": 1324007,
+      "md5": "100166313157fe18677b4610f72eea02",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030501..20030531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030501..20030531_v1.0.tif/content",
+      "bytes": 1365080,
+      "md5": "31f15e57436750e93699ffba73e835aa",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030601..20030630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030601..20030630_v1.0.tif/content",
+      "bytes": 1456099,
+      "md5": "f28c44c25022b98bcedeaa02c1e3065a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030701..20030731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030701..20030731_v1.0.tif/content",
+      "bytes": 1402554,
+      "md5": "6c2924b8ec627c925ca450122df3c0b5",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030801..20030831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030801..20030831_v1.0.tif/content",
+      "bytes": 1433478,
+      "md5": "3fa31600c3fbc03199b5c96a63012fee",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030901..20030930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20030901..20030930_v1.0.tif/content",
+      "bytes": 1375935,
+      "md5": "bb1c2e5762a6db10166d77b6770aa868",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20031001..20031031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20031001..20031031_v1.0.tif/content",
+      "bytes": 1292784,
+      "md5": "b5ce9d59bed017eeec67a1b5bbb4d521",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20031101..20031130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20031101..20031130_v1.0.tif/content",
+      "bytes": 1213056,
+      "md5": "7625c1ea546243ab262c75294a41bb72",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20031201..20031231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20031201..20031231_v1.0.tif/content",
+      "bytes": 1290459,
+      "md5": "65a68e88c95b14b2a03738892e7a5eba",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040101..20040131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040101..20040131_v1.0.tif/content",
+      "bytes": 1259090,
+      "md5": "a6cf9860ad740bc3e42927563b5405db",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040201..20040229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040201..20040229_v1.0.tif/content",
+      "bytes": 1339751,
+      "md5": "7801c9933015b4e654c1e5ab3bd12b5a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040301..20040331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040301..20040331_v1.0.tif/content",
+      "bytes": 1297821,
+      "md5": "9a54c2c9927f25294c1a055a3816d1a7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040401..20040430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040401..20040430_v1.0.tif/content",
+      "bytes": 1316718,
+      "md5": "6ed62690cdeab2ca8590bd0d640eefdb",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040501..20040531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040501..20040531_v1.0.tif/content",
+      "bytes": 1371122,
+      "md5": "01c09c3e497c9ef645c8b7fe73d3dc4a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040601..20040630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040601..20040630_v1.0.tif/content",
+      "bytes": 1440224,
+      "md5": "9fdfc45393f085996ea8127ad3c05768",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040701..20040731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040701..20040731_v1.0.tif/content",
+      "bytes": 1392530,
+      "md5": "417390d455598dbc50091606d5cb32cd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040801..20040831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040801..20040831_v1.0.tif/content",
+      "bytes": 1397896,
+      "md5": "9a9e82a8dcf80828ddd57d082c01a8bb",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040901..20040930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20040901..20040930_v1.0.tif/content",
+      "bytes": 1339941,
+      "md5": "61534ba31c5e469b3dbe4c3de32ae18a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20041001..20041031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20041001..20041031_v1.0.tif/content",
+      "bytes": 1261664,
+      "md5": "15f6a6797be86d65b1db8c89278eacb5",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20041101..20041130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20041101..20041130_v1.0.tif/content",
+      "bytes": 1205612,
+      "md5": "04b9beeaf8fee723ab8a39e79a8c2db4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20041201..20041231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20041201..20041231_v1.0.tif/content",
+      "bytes": 1286845,
+      "md5": "48e7420fb8a1a2ef33d346ba4de1bb5d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050101..20050131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050101..20050131_v1.0.tif/content",
+      "bytes": 1248163,
+      "md5": "8d4311d7b57fe19d262f4e40c46fa732",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050201..20050228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050201..20050228_v1.0.tif/content",
+      "bytes": 1312396,
+      "md5": "ff26ca1fb6cabcf3ad641de1fafde4eb",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050301..20050331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050301..20050331_v1.0.tif/content",
+      "bytes": 1284865,
+      "md5": "e364cc79ed29038a9bbb718f2848a58a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050401..20050430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050401..20050430_v1.0.tif/content",
+      "bytes": 1343879,
+      "md5": "4bd8cee9f0596478eda1de4555a77cf6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050501..20050531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050501..20050531_v1.0.tif/content",
+      "bytes": 1368757,
+      "md5": "a00cf0fa2c354302334675353f198e7a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050601..20050630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050601..20050630_v1.0.tif/content",
+      "bytes": 1435572,
+      "md5": "3ad3b32a456a38c26f1f6fb347fe46bf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050701..20050731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050701..20050731_v1.0.tif/content",
+      "bytes": 1406958,
+      "md5": "9e9bea405b8088962da176458d502c89",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050801..20050831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050801..20050831_v1.0.tif/content",
+      "bytes": 1408733,
+      "md5": "a047da6f0ca0c77c092d09c3b5f18275",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050901..20050930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20050901..20050930_v1.0.tif/content",
+      "bytes": 1366778,
+      "md5": "ac9b17fa8a74f8d9b582af1b7767de96",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20051001..20051031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20051001..20051031_v1.0.tif/content",
+      "bytes": 1315085,
+      "md5": "fa55275fa9434e331569127bf9091715",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20051101..20051130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20051101..20051130_v1.0.tif/content",
+      "bytes": 1212283,
+      "md5": "060c638f3d5dac8bc6c8598b605a7472",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20051201..20051231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20051201..20051231_v1.0.tif/content",
+      "bytes": 1289830,
+      "md5": "f73eab0f9c03fe0328a50256a8fffc5b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060101..20060131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060101..20060131_v1.0.tif/content",
+      "bytes": 1246397,
+      "md5": "1eef37695c187a70db68259d34b9a0ae",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060201..20060228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060201..20060228_v1.0.tif/content",
+      "bytes": 1323256,
+      "md5": "84c5d25465424656560c451be1a5c4b0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060301..20060331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060301..20060331_v1.0.tif/content",
+      "bytes": 1301670,
+      "md5": "03348d81e159d8ffea6d5e9cf3e500bf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060401..20060430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060401..20060430_v1.0.tif/content",
+      "bytes": 1338845,
+      "md5": "d115efd712ae510006c962314f609c12",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060501..20060531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060501..20060531_v1.0.tif/content",
+      "bytes": 1332603,
+      "md5": "c3fcbf65b08876ec45de1c6f77eb463d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060601..20060630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060601..20060630_v1.0.tif/content",
+      "bytes": 1409192,
+      "md5": "f3ade507d9e137e9bdbe3cb90745d46e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060701..20060731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060701..20060731_v1.0.tif/content",
+      "bytes": 1388401,
+      "md5": "6c2f17674085272bab10f853f5f8d5d7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060801..20060831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060801..20060831_v1.0.tif/content",
+      "bytes": 1391966,
+      "md5": "1b678f32fabf335faa1d1f1c73f1239e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060901..20060930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20060901..20060930_v1.0.tif/content",
+      "bytes": 1358516,
+      "md5": "d79f18baf6570e4018e3d2b104ddebaa",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20061001..20061031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20061001..20061031_v1.0.tif/content",
+      "bytes": 1277292,
+      "md5": "f5f33c300d385f2530ce4350d7ea1d8d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20061101..20061130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20061101..20061130_v1.0.tif/content",
+      "bytes": 1223660,
+      "md5": "d1677ad27fb441cb6f041a4a60d9e897",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20061201..20061231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20061201..20061231_v1.0.tif/content",
+      "bytes": 1329597,
+      "md5": "d2684a91c2623ad05ed14ddeb0bf55af",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070101..20070131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070101..20070131_v1.0.tif/content",
+      "bytes": 1284477,
+      "md5": "5e41f166ca8387b0c5dc71c78e0ca7b7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070201..20070228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070201..20070228_v1.0.tif/content",
+      "bytes": 1312204,
+      "md5": "1f29d81236a409d2db4e12b9254909f7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070301..20070331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070301..20070331_v1.0.tif/content",
+      "bytes": 1313166,
+      "md5": "6fec55066e467c5dfb639c4dec5936d1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070401..20070430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070401..20070430_v1.0.tif/content",
+      "bytes": 1329351,
+      "md5": "ad4397793fc698357dc88957fb0c2a41",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070501..20070531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070501..20070531_v1.0.tif/content",
+      "bytes": 1336287,
+      "md5": "e653d47480b6a5822a57180cad075dd0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070601..20070630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070601..20070630_v1.0.tif/content",
+      "bytes": 1455562,
+      "md5": "af143b7f76de07d8997765f2a0200aca",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070701..20070731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070701..20070731_v1.0.tif/content",
+      "bytes": 1416631,
+      "md5": "b8453f1005d2ad31cadf0dd93fefcafe",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070801..20070831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070801..20070831_v1.0.tif/content",
+      "bytes": 1400114,
+      "md5": "2d23a80ca0e8c751c5147afc103bc8c3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070901..20070930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20070901..20070930_v1.0.tif/content",
+      "bytes": 1348556,
+      "md5": "b4f1765ac029ae1ff483d787a62e02d9",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20071001..20071031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20071001..20071031_v1.0.tif/content",
+      "bytes": 1274548,
+      "md5": "f4b174ba42a6519084d0b4faee49313a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20071101..20071130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20071101..20071130_v1.0.tif/content",
+      "bytes": 1205628,
+      "md5": "a61323cc569199a2167eb0f134ed0966",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20071201..20071231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20071201..20071231_v1.0.tif/content",
+      "bytes": 1319846,
+      "md5": "029d14c101580116ba20765ee1899a92",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080101..20080131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080101..20080131_v1.0.tif/content",
+      "bytes": 1280912,
+      "md5": "a1eae4a4f5102f94d5a01aefab172f87",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080201..20080229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080201..20080229_v1.0.tif/content",
+      "bytes": 1312925,
+      "md5": "e2f83e1d692c8e1b14bb8d978607bddc",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080301..20080331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080301..20080331_v1.0.tif/content",
+      "bytes": 1285743,
+      "md5": "3cd5289221d0e2aa3ed4294fce4164d4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080401..20080430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080401..20080430_v1.0.tif/content",
+      "bytes": 1323794,
+      "md5": "a54ebd7fdfa9be37419f8fedec8ccd4a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080501..20080531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080501..20080531_v1.0.tif/content",
+      "bytes": 1345207,
+      "md5": "b0371ee6614a07e2447a04084d9b499e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080601..20080630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080601..20080630_v1.0.tif/content",
+      "bytes": 1429814,
+      "md5": "4249dc9c574974b54d1e593437af3fd6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080701..20080731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080701..20080731_v1.0.tif/content",
+      "bytes": 1399333,
+      "md5": "feccd2041f873e648b6bbad61fadb0fa",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080801..20080831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080801..20080831_v1.0.tif/content",
+      "bytes": 1434297,
+      "md5": "6e61cfc5c87f96741fa157610380a676",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080901..20080930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20080901..20080930_v1.0.tif/content",
+      "bytes": 1346631,
+      "md5": "e1bbb8506c9b79dcddf48c890cbc028d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20081001..20081031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20081001..20081031_v1.0.tif/content",
+      "bytes": 1326200,
+      "md5": "d3298b421f01b4fd57b99b4c8d3fcab8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20081101..20081130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20081101..20081130_v1.0.tif/content",
+      "bytes": 1234150,
+      "md5": "c9b18c08a045f8cb9ee90266efc2ccb2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20081201..20081231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20081201..20081231_v1.0.tif/content",
+      "bytes": 1292929,
+      "md5": "66851ae14707e1ceb078afdcaf974dd8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090101..20090131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090101..20090131_v1.0.tif/content",
+      "bytes": 1266825,
+      "md5": "4ed0321d4c831993ea227bdad9fd2487",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090201..20090228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090201..20090228_v1.0.tif/content",
+      "bytes": 1316739,
+      "md5": "22ec9f37e533a5f05a3b77bd7b303a29",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090301..20090331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090301..20090331_v1.0.tif/content",
+      "bytes": 1276841,
+      "md5": "83209429c542305cd0e7478a596268a9",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090401..20090430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090401..20090430_v1.0.tif/content",
+      "bytes": 1317114,
+      "md5": "48dddb5fa9cdd202279e013b24f3891d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090501..20090531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090501..20090531_v1.0.tif/content",
+      "bytes": 1340108,
+      "md5": "b4f0d1a70f2f52249c81afd68aa12bbb",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090601..20090630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090601..20090630_v1.0.tif/content",
+      "bytes": 1384818,
+      "md5": "e9ac2a9a651e676c23fe85e1a470a4c4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090701..20090731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090701..20090731_v1.0.tif/content",
+      "bytes": 1375851,
+      "md5": "35f92fcd959fb60c927911953e4a8d58",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090801..20090831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090801..20090831_v1.0.tif/content",
+      "bytes": 1369915,
+      "md5": "618934d01bd0e4b239d381de2b094b93",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090901..20090930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20090901..20090930_v1.0.tif/content",
+      "bytes": 1374176,
+      "md5": "eeb50b7a1cef00ee595305ebd137734a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20091001..20091031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20091001..20091031_v1.0.tif/content",
+      "bytes": 1273855,
+      "md5": "f9ab3a5537868ae869ab57cfaa11e4e9",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20091101..20091130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20091101..20091130_v1.0.tif/content",
+      "bytes": 1222919,
+      "md5": "106544d2af35347076a3a2f4392aba29",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20091201..20091231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20091201..20091231_v1.0.tif/content",
+      "bytes": 1281262,
+      "md5": "ee32d28aad5a2e6adc143d92f3fd451b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100101..20100131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100101..20100131_v1.0.tif/content",
+      "bytes": 1240252,
+      "md5": "d15df1e8c8cd0affa6a6bfb84cc3fe3f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100201..20100228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100201..20100228_v1.0.tif/content",
+      "bytes": 1314496,
+      "md5": "1dea849ca9eb725c3957007011635bc6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100301..20100331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100301..20100331_v1.0.tif/content",
+      "bytes": 1317163,
+      "md5": "c0ddbd0bb841938a0e7ea5cb7e2f081a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100401..20100430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100401..20100430_v1.0.tif/content",
+      "bytes": 1345730,
+      "md5": "f1f7910739a82eae4d2e7ac93dba26cf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100501..20100531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100501..20100531_v1.0.tif/content",
+      "bytes": 1329880,
+      "md5": "5b25bc4bf7753d25bf2ac02bd7226398",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100601..20100630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100601..20100630_v1.0.tif/content",
+      "bytes": 1422674,
+      "md5": "de385ad3b8a6ad42dd93498a800d6e5a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100701..20100731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100701..20100731_v1.0.tif/content",
+      "bytes": 1380146,
+      "md5": "965c558861521701c5ce1b01404cd509",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100801..20100831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100801..20100831_v1.0.tif/content",
+      "bytes": 1425459,
+      "md5": "59d535cb80133ed7e9969e94f3d5e722",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100901..20100930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20100901..20100930_v1.0.tif/content",
+      "bytes": 1346248,
+      "md5": "dbd5c395d458e6b3803a0478190e4eaf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20101001..20101031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20101001..20101031_v1.0.tif/content",
+      "bytes": 1294938,
+      "md5": "639c094b69ce8d1e1eadb5204642465b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20101101..20101130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20101101..20101130_v1.0.tif/content",
+      "bytes": 1193539,
+      "md5": "2be9109dda297941e34f02b1325c8576",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20101201..20101231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20101201..20101231_v1.0.tif/content",
+      "bytes": 1295585,
+      "md5": "d03b1e967ba7475b41cea3816ec43363",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110101..20110131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110101..20110131_v1.0.tif/content",
+      "bytes": 1284236,
+      "md5": "5b5bfe08d448b2ac91c34411a7bc09f4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110201..20110228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110201..20110228_v1.0.tif/content",
+      "bytes": 1328725,
+      "md5": "e35127291c6022ba6c403e8d82d12165",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110301..20110331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110301..20110331_v1.0.tif/content",
+      "bytes": 1312119,
+      "md5": "1ddf00454f49930879dc823bbb4ac42a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110401..20110430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110401..20110430_v1.0.tif/content",
+      "bytes": 1335348,
+      "md5": "a4220f4616b2540046cbfcf485d28b73",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110501..20110531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110501..20110531_v1.0.tif/content",
+      "bytes": 1325763,
+      "md5": "9de3505b7ba553ea15bef0a0dc85c905",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110601..20110630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110601..20110630_v1.0.tif/content",
+      "bytes": 1446798,
+      "md5": "d6239ed040691a8d18552a7d525897b8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110701..20110731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110701..20110731_v1.0.tif/content",
+      "bytes": 1394211,
+      "md5": "c55f312273f4c48c42e03bd92cabaf2e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110801..20110831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110801..20110831_v1.0.tif/content",
+      "bytes": 1421576,
+      "md5": "55f28ad28752830e66ce34d935b03b39",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110901..20110930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20110901..20110930_v1.0.tif/content",
+      "bytes": 1356508,
+      "md5": "ef64e20fc49f8d0511328707da8e20e9",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20111001..20111031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20111001..20111031_v1.0.tif/content",
+      "bytes": 1275144,
+      "md5": "ec7891ed8676dad36aaf52ef6a850512",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20111101..20111130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20111101..20111130_v1.0.tif/content",
+      "bytes": 1215574,
+      "md5": "a02934e150c6b49dfc9596de8e57413b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20111201..20111231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20111201..20111231_v1.0.tif/content",
+      "bytes": 1269890,
+      "md5": "de7aaf4001f0e2d22187402663ec008d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120101..20120131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120101..20120131_v1.0.tif/content",
+      "bytes": 1271312,
+      "md5": "b1ea9c87e5b68217e6afe49250d205e1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120201..20120229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120201..20120229_v1.0.tif/content",
+      "bytes": 1318747,
+      "md5": "88ed803c5b233ebd8ff03d0c8d26f5f8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120301..20120331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120301..20120331_v1.0.tif/content",
+      "bytes": 1290746,
+      "md5": "74a9f5ffce476467d825a019cdccaa09",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120401..20120430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120401..20120430_v1.0.tif/content",
+      "bytes": 1326448,
+      "md5": "3cf223a9fb3510d1a6602885f296478d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120501..20120531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120501..20120531_v1.0.tif/content",
+      "bytes": 1326434,
+      "md5": "9af271747c5bb8ec2530adbd1d80c975",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120601..20120630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120601..20120630_v1.0.tif/content",
+      "bytes": 1411184,
+      "md5": "39b0f6d92fd364563383e6766a85a2d8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120701..20120731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120701..20120731_v1.0.tif/content",
+      "bytes": 1376037,
+      "md5": "af269213771196d26ea24e9a8184412b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120801..20120831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120801..20120831_v1.0.tif/content",
+      "bytes": 1385436,
+      "md5": "517988eadd20720f542aed56b71f83fe",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120901..20120930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20120901..20120930_v1.0.tif/content",
+      "bytes": 1383949,
+      "md5": "6ddbb7b644fdfb013a2559e22cff5dc0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20121001..20121031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20121001..20121031_v1.0.tif/content",
+      "bytes": 1278170,
+      "md5": "8607afdd5f3deba522a8290358877ee8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20121101..20121130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20121101..20121130_v1.0.tif/content",
+      "bytes": 1208880,
+      "md5": "3b07844ab5c025d65051e1aaeab9ced3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20121201..20121231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20121201..20121231_v1.0.tif/content",
+      "bytes": 1268179,
+      "md5": "0a21fddcec988bd38e2c75a40f216e4f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130101..20130131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130101..20130131_v1.0.tif/content",
+      "bytes": 1268598,
+      "md5": "77ca2ae5081bc2b47b39501f969bf829",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130201..20130228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130201..20130228_v1.0.tif/content",
+      "bytes": 1353071,
+      "md5": "c70d442c16ace0ce626d23f98c7b8057",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130301..20130331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130301..20130331_v1.0.tif/content",
+      "bytes": 1268254,
+      "md5": "5afba19b2a5e8d832eff3a8f658087d2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130401..20130430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130401..20130430_v1.0.tif/content",
+      "bytes": 1369877,
+      "md5": "4c9ea7585b9ea88ebe24144c611f1bb2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130501..20130531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130501..20130531_v1.0.tif/content",
+      "bytes": 1335488,
+      "md5": "f2c43f44379d88cc073975351b53adc6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130601..20130630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130601..20130630_v1.0.tif/content",
+      "bytes": 1402402,
+      "md5": "812c829cc184bbf33bd0ce83841e9c27",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130701..20130731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130701..20130731_v1.0.tif/content",
+      "bytes": 1408812,
+      "md5": "4ebd457168f70c852794b7a005d477ff",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130801..20130831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130801..20130831_v1.0.tif/content",
+      "bytes": 1411583,
+      "md5": "0c7be534d8659294faff2d5f8fc322ce",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130901..20130930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20130901..20130930_v1.0.tif/content",
+      "bytes": 1389923,
+      "md5": "1624bdfa3fe3de94e62c65236c9d9bf8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20131001..20131031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20131001..20131031_v1.0.tif/content",
+      "bytes": 1303691,
+      "md5": "a6b91bd624352b27d08a72f619910edc",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20131101..20131130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20131101..20131130_v1.0.tif/content",
+      "bytes": 1208768,
+      "md5": "9dd4b13c21e046fe70fb47d9accc1e08",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20131201..20131231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20131201..20131231_v1.0.tif/content",
+      "bytes": 1289948,
+      "md5": "4aeb492ada5bad3db53879ac78917272",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140101..20140131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140101..20140131_v1.0.tif/content",
+      "bytes": 1277506,
+      "md5": "b8646466c9799a7f7568e085b98432cd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140201..20140228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140201..20140228_v1.0.tif/content",
+      "bytes": 1394877,
+      "md5": "6164a7f59c753390f53d1ae9bbeea39a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140301..20140331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140301..20140331_v1.0.tif/content",
+      "bytes": 1310499,
+      "md5": "ae0322f0095c042b57fd4c4bbd83c946",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140401..20140430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140401..20140430_v1.0.tif/content",
+      "bytes": 1386795,
+      "md5": "d45fb76a1ae91cc29501e58199acc882",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140501..20140531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140501..20140531_v1.0.tif/content",
+      "bytes": 1333704,
+      "md5": "639718e94c42c1f66abf7629a6e629b6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140601..20140630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140601..20140630_v1.0.tif/content",
+      "bytes": 1375887,
+      "md5": "442e7430b04c1c2a88e30d6fde49952e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140701..20140731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140701..20140731_v1.0.tif/content",
+      "bytes": 1364222,
+      "md5": "038a90eb830f296d7e71be4653602568",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140801..20140831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140801..20140831_v1.0.tif/content",
+      "bytes": 1392614,
+      "md5": "891f6df6b5d290163aa03f362c1b1998",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140901..20140930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20140901..20140930_v1.0.tif/content",
+      "bytes": 1370219,
+      "md5": "7b9e3c4935abb301177e179095d07fdb",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20141001..20141031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20141001..20141031_v1.0.tif/content",
+      "bytes": 1313546,
+      "md5": "f64bb1d0ce2707c3c68647e4f82fd9c8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20141101..20141130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20141101..20141130_v1.0.tif/content",
+      "bytes": 1225220,
+      "md5": "967cbd3e796ab64d3375d50be3d7262e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20141201..20141231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20141201..20141231_v1.0.tif/content",
+      "bytes": 1306398,
+      "md5": "5552ae09c54c7e81f8b073365b8d0746",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150101..20150131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150101..20150131_v1.0.tif/content",
+      "bytes": 1304071,
+      "md5": "7d2909a0ea7be80e3d3d28308116b16e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150201..20150228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150201..20150228_v1.0.tif/content",
+      "bytes": 1377420,
+      "md5": "c99eca1a0456805380134a1206e346a7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150301..20150331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150301..20150331_v1.0.tif/content",
+      "bytes": 1302019,
+      "md5": "712c2ba2c077efd7b1b162043021f68d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150401..20150430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150401..20150430_v1.0.tif/content",
+      "bytes": 1329675,
+      "md5": "81195cb20e7ebf7ad860ef2de94820c8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150501..20150531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150501..20150531_v1.0.tif/content",
+      "bytes": 1372868,
+      "md5": "ea4b3f88a47fc58863f031c591917bee",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150601..20150630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150601..20150630_v1.0.tif/content",
+      "bytes": 1454761,
+      "md5": "337a1adc44fd9ad1208a46bffccc0a7c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150701..20150731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150701..20150731_v1.0.tif/content",
+      "bytes": 1437969,
+      "md5": "666e9a33c862c1d5b68fae3987737350",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150801..20150831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150801..20150831_v1.0.tif/content",
+      "bytes": 1430032,
+      "md5": "0f01a076b20417a3947dadf4b077be52",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150901..20150930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20150901..20150930_v1.0.tif/content",
+      "bytes": 1394851,
+      "md5": "ee92fbbd5a2fa6803a071fa6c5c336c3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20151001..20151031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20151001..20151031_v1.0.tif/content",
+      "bytes": 1355065,
+      "md5": "cc4f7826393e6024721928916980d0bc",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20151101..20151130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20151101..20151130_v1.0.tif/content",
+      "bytes": 1227460,
+      "md5": "158d526215baffc78ccecf3d8d6425c5",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20151201..20151231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20151201..20151231_v1.0.tif/content",
+      "bytes": 1304866,
+      "md5": "d1ea30c1fd8b47cea5fb95f4ca91ac67",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160101..20160131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160101..20160131_v1.0.tif/content",
+      "bytes": 1337405,
+      "md5": "539afe4e5a4bd9be30e13e37bd58d40b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160201..20160229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160201..20160229_v1.0.tif/content",
+      "bytes": 1350949,
+      "md5": "9398c418d8e64c0c337ee1df5c45047e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160301..20160331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160301..20160331_v1.0.tif/content",
+      "bytes": 1341066,
+      "md5": "9af33a3575e83f936fb94e321652fe6a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160401..20160430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160401..20160430_v1.0.tif/content",
+      "bytes": 1357421,
+      "md5": "bd7975c771671c77f5b6316db4afbff4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160501..20160531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160501..20160531_v1.0.tif/content",
+      "bytes": 1384026,
+      "md5": "a0ed4c7c7fe5dfbdea5e16eb3c710230",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160601..20160630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160601..20160630_v1.0.tif/content",
+      "bytes": 1463531,
+      "md5": "62e4a4f1adf42b84396d2567697a916f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160701..20160731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160701..20160731_v1.0.tif/content",
+      "bytes": 1428110,
+      "md5": "b016dac82ca606482a355d9e5ed60b51",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160801..20160831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160801..20160831_v1.0.tif/content",
+      "bytes": 1441328,
+      "md5": "0817b1c7540ab641bd417fbd1d9260d3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160901..20160930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20160901..20160930_v1.0.tif/content",
+      "bytes": 1378784,
+      "md5": "a57868a8c924570dc10f19eebf5e438b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20161001..20161031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20161001..20161031_v1.0.tif/content",
+      "bytes": 1260032,
+      "md5": "71ddd46a3e82908a75a563c90af598cf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20161101..20161130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20161101..20161130_v1.0.tif/content",
+      "bytes": 1243419,
+      "md5": "d277942574c0bc8dbd56880a29cd8468",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20161201..20161231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20161201..20161231_v1.0.tif/content",
+      "bytes": 1305849,
+      "md5": "f357c5796d0c1d662bbf2a40a51a2466",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170101..20170131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170101..20170131_v1.0.tif/content",
+      "bytes": 1348662,
+      "md5": "4e8cf09ae6a77f0ef0b0ffc114415737",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170201..20170228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170201..20170228_v1.0.tif/content",
+      "bytes": 1380518,
+      "md5": "74f754c465d697ba8f70be6e8cf6f3a8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170301..20170331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170301..20170331_v1.0.tif/content",
+      "bytes": 1360496,
+      "md5": "f8c7ee1e1c05bca0d9174a701bcbb472",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170401..20170430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170401..20170430_v1.0.tif/content",
+      "bytes": 1349706,
+      "md5": "0d1c944171df9df41676ca7acd5846f1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170501..20170531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170501..20170531_v1.0.tif/content",
+      "bytes": 1383161,
+      "md5": "8fe81baef37dcc843eea8189767f2bd4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170601..20170630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170601..20170630_v1.0.tif/content",
+      "bytes": 1433598,
+      "md5": "d25e3a60b0dc673de2b1091cf3b9c0c2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170701..20170731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170701..20170731_v1.0.tif/content",
+      "bytes": 1436886,
+      "md5": "c218911e87faaab7624f8aa7271a449e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170801..20170831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170801..20170831_v1.0.tif/content",
+      "bytes": 1424402,
+      "md5": "bcf9f0897507911523918719ffa0a93d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170901..20170930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20170901..20170930_v1.0.tif/content",
+      "bytes": 1373491,
+      "md5": "59d5666834bbe7597b76341ecf29dbff",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20171001..20171031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20171001..20171031_v1.0.tif/content",
+      "bytes": 1274227,
+      "md5": "7f9e162d9f0e5d59738a212b5f47d7b1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20171101..20171130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20171101..20171130_v1.0.tif/content",
+      "bytes": 1261157,
+      "md5": "9c5fbb187bbbb11ec221e83e64047c12",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20171201..20171231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20171201..20171231_v1.0.tif/content",
+      "bytes": 1278954,
+      "md5": "eb2d7ccd38d5a22163309ceeeddfe406",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif/content",
+      "bytes": 14799381,
+      "md5": "45bc379d310edc2fd19370ddfc86da8e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010201..20010228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010201..20010228_v1.0.tif/content",
+      "bytes": 14793229,
+      "md5": "d11be38f5419c3b7fd78ed860fa57fda",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010301..20010331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010301..20010331_v1.0.tif/content",
+      "bytes": 14794899,
+      "md5": "c05480fc4fc4f3efa7954ce39d591531",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010401..20010430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010401..20010430_v1.0.tif/content",
+      "bytes": 14792037,
+      "md5": "34c4164aca8d9ffc8fc9cd5b7e7d478a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010501..20010531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010501..20010531_v1.0.tif/content",
+      "bytes": 14786128,
+      "md5": "4e6462a5df3ad609c4f4f39092467e8f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010601..20010630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010601..20010630_v1.0.tif/content",
+      "bytes": 14772970,
+      "md5": "87295aab7662727c316be1b0384c9b15",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010701..20010731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010701..20010731_v1.0.tif/content",
+      "bytes": 14760263,
+      "md5": "7796086bb73b531509674c63ce1b0228",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010801..20010831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010801..20010831_v1.0.tif/content",
+      "bytes": 14760799,
+      "md5": "7c56851d4bfb2323780dd7b32bb7e070",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010901..20010930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010901..20010930_v1.0.tif/content",
+      "bytes": 14775131,
+      "md5": "b85d277b2f3a7bc146ec27b923fa1850",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20011001..20011031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20011001..20011031_v1.0.tif/content",
+      "bytes": 14791825,
+      "md5": "7891e58af487fe14c1177d14240c39a8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20011101..20011130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20011101..20011130_v1.0.tif/content",
+      "bytes": 14798914,
+      "md5": "b5baa97a2cb449b39f497b5bbffdb526",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20011201..20011231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20011201..20011231_v1.0.tif/content",
+      "bytes": 14797345,
+      "md5": "bb9e6083e43eb1afb592fc27654d345a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020101..20020131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020101..20020131_v1.0.tif/content",
+      "bytes": 14787259,
+      "md5": "430aede50e9dd743de311bd2de3b25fd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020201..20020228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020201..20020228_v1.0.tif/content",
+      "bytes": 14779823,
+      "md5": "cacfc1e8af55d93f279bee9fd6fd3b07",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020301..20020331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020301..20020331_v1.0.tif/content",
+      "bytes": 14778339,
+      "md5": "e5236935c5cabe8e2d928d7d7da34903",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020401..20020430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020401..20020430_v1.0.tif/content",
+      "bytes": 14773208,
+      "md5": "44ef3d2a7e67777b509eef9c48f8cddd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020501..20020531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020501..20020531_v1.0.tif/content",
+      "bytes": 14768244,
+      "md5": "126eb624cdacac6848d13ab7114e800c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020601..20020630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020601..20020630_v1.0.tif/content",
+      "bytes": 14766593,
+      "md5": "f5e9ccadfa91ac8cd1b76a25a9355862",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020701..20020731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020701..20020731_v1.0.tif/content",
+      "bytes": 14766417,
+      "md5": "1c30376acd7b2d9a8be2ffd20cf626cf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020801..20020831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020801..20020831_v1.0.tif/content",
+      "bytes": 14776480,
+      "md5": "fceb1b696d64559d2d6e55926228b612",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020901..20020930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20020901..20020930_v1.0.tif/content",
+      "bytes": 14789725,
+      "md5": "ce6f426b4c13db6e256bce0b413cabe4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20021001..20021031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20021001..20021031_v1.0.tif/content",
+      "bytes": 14797641,
+      "md5": "149e59e1f496d813b6f4cd7fd54e65bc",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20021101..20021130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20021101..20021130_v1.0.tif/content",
+      "bytes": 14786950,
+      "md5": "587be81ec12777cd601b2b7ec129d629",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20021201..20021231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20021201..20021231_v1.0.tif/content",
+      "bytes": 14782577,
+      "md5": "873aa88b2ad7c466e40aa14097bbc943",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030101..20030131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030101..20030131_v1.0.tif/content",
+      "bytes": 14773922,
+      "md5": "36235f92522ac81baee25c4af3659d4d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030201..20030228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030201..20030228_v1.0.tif/content",
+      "bytes": 14769148,
+      "md5": "02784935615da40d01b3b1be8023795d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030301..20030331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030301..20030331_v1.0.tif/content",
+      "bytes": 14771271,
+      "md5": "01100aad48bf78155f6d0b5a891b55df",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030401..20030430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030401..20030430_v1.0.tif/content",
+      "bytes": 14774049,
+      "md5": "e0841e2aa14ffa1842d19830dc21b95e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030501..20030531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030501..20030531_v1.0.tif/content",
+      "bytes": 14767532,
+      "md5": "103c80b8754d9d234f8b92d85534d8ca",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030601..20030630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030601..20030630_v1.0.tif/content",
+      "bytes": 14757435,
+      "md5": "d77873398d18959fa08c3e2c9a133181",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030701..20030731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030701..20030731_v1.0.tif/content",
+      "bytes": 14752126,
+      "md5": "57f4402a97da821bad16dc124c439f07",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030801..20030831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030801..20030831_v1.0.tif/content",
+      "bytes": 14754634,
+      "md5": "7fe780e99c6da87b3e174de90776d78b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030901..20030930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20030901..20030930_v1.0.tif/content",
+      "bytes": 14773810,
+      "md5": "d6677e9798ba8295705d31cafb2c6af4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20031001..20031031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20031001..20031031_v1.0.tif/content",
+      "bytes": 14791177,
+      "md5": "02fefd2e15b16d3e5f4cbb15c4b074d9",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20031101..20031130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20031101..20031130_v1.0.tif/content",
+      "bytes": 14804207,
+      "md5": "fdc8c9617d3ace3462d53fb6f3bfaa3b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20031201..20031231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20031201..20031231_v1.0.tif/content",
+      "bytes": 14808264,
+      "md5": "c5150e9234a75ba54bd8b2a761c2dd0c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040101..20040131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040101..20040131_v1.0.tif/content",
+      "bytes": 14805038,
+      "md5": "7c25fc474682f2233cdcc0b511aa6e1f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040201..20040229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040201..20040229_v1.0.tif/content",
+      "bytes": 14794792,
+      "md5": "4dc1eb047b744528b9a15aef6e64ce76",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040301..20040331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040301..20040331_v1.0.tif/content",
+      "bytes": 14788981,
+      "md5": "e66da1e5ff840ee8031eb03edb8d6d4a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040401..20040430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040401..20040430_v1.0.tif/content",
+      "bytes": 14779998,
+      "md5": "915e3d1343cae3668927c91a16a7d464",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040501..20040531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040501..20040531_v1.0.tif/content",
+      "bytes": 14766418,
+      "md5": "f822271d6a2feef9806d11cb19541b18",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040601..20040630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040601..20040630_v1.0.tif/content",
+      "bytes": 14750887,
+      "md5": "fcdb9415a3dac6b177a611888a30bc4f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040701..20040731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040701..20040731_v1.0.tif/content",
+      "bytes": 14746155,
+      "md5": "6ca819cf33fd844cd35563c73264b3c2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040801..20040831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040801..20040831_v1.0.tif/content",
+      "bytes": 14749189,
+      "md5": "c8a84a44edf747c8d580725e8bf6e1ec",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040901..20040930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20040901..20040930_v1.0.tif/content",
+      "bytes": 14764268,
+      "md5": "c637ef7bc8d2a36a69f122f4cf4acc03",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20041001..20041031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20041001..20041031_v1.0.tif/content",
+      "bytes": 14775275,
+      "md5": "59e0b07c9123ee35c1452a804ca6b16a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20041101..20041130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20041101..20041130_v1.0.tif/content",
+      "bytes": 14780181,
+      "md5": "1c6bab28b2b33369307feb74ea159b1e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20041201..20041231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20041201..20041231_v1.0.tif/content",
+      "bytes": 14779246,
+      "md5": "bcc9915655712aeeef96ad182a186bae",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050101..20050131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050101..20050131_v1.0.tif/content",
+      "bytes": 14773379,
+      "md5": "601a9841539e9cd4b1d521b9f1197505",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050201..20050228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050201..20050228_v1.0.tif/content",
+      "bytes": 14769418,
+      "md5": "c176d724023e25c6896b65cd684a3e84",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050301..20050331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050301..20050331_v1.0.tif/content",
+      "bytes": 14767416,
+      "md5": "37abc54ee7308c50c18754c12a583c1a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050401..20050430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050401..20050430_v1.0.tif/content",
+      "bytes": 14762421,
+      "md5": "3bf6b80a31f9043ce8f2bb75efc50932",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050501..20050531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050501..20050531_v1.0.tif/content",
+      "bytes": 14756104,
+      "md5": "b15f2eab5e208b950ccf3300f1323719",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050601..20050630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050601..20050630_v1.0.tif/content",
+      "bytes": 14745527,
+      "md5": "2916a2daa2a3031fd0a44d0803a78bfc",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050701..20050731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050701..20050731_v1.0.tif/content",
+      "bytes": 14742665,
+      "md5": "797b063acac9f17e92deb766f0c06881",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050801..20050831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050801..20050831_v1.0.tif/content",
+      "bytes": 14744463,
+      "md5": "6ea55950d3399c799fb39c32320156ec",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050901..20050930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20050901..20050930_v1.0.tif/content",
+      "bytes": 14761924,
+      "md5": "ed7d1251f992720569075712d4310a16",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20051001..20051031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20051001..20051031_v1.0.tif/content",
+      "bytes": 14779685,
+      "md5": "e65c75c6a2ac4db28238ae6edfa7912b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20051101..20051130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20051101..20051130_v1.0.tif/content",
+      "bytes": 14790458,
+      "md5": "d7247c9cff9b5eb28becf7ba0a193467",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20051201..20051231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20051201..20051231_v1.0.tif/content",
+      "bytes": 14790348,
+      "md5": "0b1e6c761b130368278352ee2b0d48fe",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060101..20060131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060101..20060131_v1.0.tif/content",
+      "bytes": 14788076,
+      "md5": "400fb16d7d0f9cfcf48bcc6077f44266",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060201..20060228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060201..20060228_v1.0.tif/content",
+      "bytes": 14781998,
+      "md5": "e893f14fe95e6a2482eeb0c54baa0d69",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060301..20060331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060301..20060331_v1.0.tif/content",
+      "bytes": 14780349,
+      "md5": "9fd3046bc4f9becca07955e4a3e9f1b2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060401..20060430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060401..20060430_v1.0.tif/content",
+      "bytes": 14769827,
+      "md5": "3d96fa517f26433142bd3e91bafc1d1e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060501..20060531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060501..20060531_v1.0.tif/content",
+      "bytes": 14755428,
+      "md5": "0df3f5cc985a12caa974ead9de6d5518",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060601..20060630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060601..20060630_v1.0.tif/content",
+      "bytes": 14736288,
+      "md5": "c863ee2b01de1ff7986f44411b22efe6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060701..20060731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060701..20060731_v1.0.tif/content",
+      "bytes": 14739207,
+      "md5": "30427f08ca6df714537dd4e5a0b0f3dd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060801..20060831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060801..20060831_v1.0.tif/content",
+      "bytes": 14746293,
+      "md5": "e9108e46ca61325597c67bedf9b188ee",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060901..20060930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20060901..20060930_v1.0.tif/content",
+      "bytes": 14767345,
+      "md5": "ef0c9b82311f87b3eb911474a804783d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20061001..20061031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20061001..20061031_v1.0.tif/content",
+      "bytes": 14781050,
+      "md5": "bfbaa7ea262adb9ecce764993f65027f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20061101..20061130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20061101..20061130_v1.0.tif/content",
+      "bytes": 14786082,
+      "md5": "158bcb32aee4ba10499a1a5f1901c3ee",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20061201..20061231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20061201..20061231_v1.0.tif/content",
+      "bytes": 14782860,
+      "md5": "561bb9581e628cdf861d44eef843818f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070101..20070131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070101..20070131_v1.0.tif/content",
+      "bytes": 14773362,
+      "md5": "c5c2e1e2d17977192791678b7a4762c0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070201..20070228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070201..20070228_v1.0.tif/content",
+      "bytes": 14760701,
+      "md5": "620c26fc7c841b9d03a0cc3e2667fdcf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070301..20070331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070301..20070331_v1.0.tif/content",
+      "bytes": 14756910,
+      "md5": "50da482ccf7d6ca706feeea45834bbbf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070401..20070430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070401..20070430_v1.0.tif/content",
+      "bytes": 14755870,
+      "md5": "834ee2ba086c6b4f7f8ed4b5f3aaaef3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070501..20070531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070501..20070531_v1.0.tif/content",
+      "bytes": 14747314,
+      "md5": "dc443e1710aad721e04c42e6d6c32502",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070601..20070630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070601..20070630_v1.0.tif/content",
+      "bytes": 14736766,
+      "md5": "edd3498bb350003d33805c0d0a0a44c2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070701..20070731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070701..20070731_v1.0.tif/content",
+      "bytes": 14738098,
+      "md5": "24f7233a5c0b09df06eedef535e21414",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070801..20070831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070801..20070831_v1.0.tif/content",
+      "bytes": 14743582,
+      "md5": "15b1eb8dfd9113e80a5cb8dcaba9fe4f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070901..20070930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20070901..20070930_v1.0.tif/content",
+      "bytes": 14758361,
+      "md5": "a9d26a0f19f85522dc248b256aae3ba6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20071001..20071031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20071001..20071031_v1.0.tif/content",
+      "bytes": 14775475,
+      "md5": "dd66a256c784779152430816b3633bb1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20071101..20071130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20071101..20071130_v1.0.tif/content",
+      "bytes": 14780251,
+      "md5": "527f4b36fda85542f68840e517ad5553",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20071201..20071231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20071201..20071231_v1.0.tif/content",
+      "bytes": 14774680,
+      "md5": "da91f8721ac102ab8809dcec1b85fe34",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080101..20080131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080101..20080131_v1.0.tif/content",
+      "bytes": 14765733,
+      "md5": "4bb57113bc435cbd123aa1d6610f9562",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080201..20080229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080201..20080229_v1.0.tif/content",
+      "bytes": 14756662,
+      "md5": "36a2e9763502e6abf93ef0cfc079a5dc",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080301..20080331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080301..20080331_v1.0.tif/content",
+      "bytes": 14751853,
+      "md5": "267d7466b41336e7bd69b560888114b6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080401..20080430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080401..20080430_v1.0.tif/content",
+      "bytes": 14750936,
+      "md5": "25a8932042a96e9d609824c8c8d5869c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080501..20080531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080501..20080531_v1.0.tif/content",
+      "bytes": 14743567,
+      "md5": "4ae3435f4064e50048772b9e52e1992a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080601..20080630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080601..20080630_v1.0.tif/content",
+      "bytes": 14732439,
+      "md5": "2d7bba8e9ad6f13af4727a67ec3e2048",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080701..20080731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080701..20080731_v1.0.tif/content",
+      "bytes": 14735987,
+      "md5": "1afa7de4b48429b574f6077cb0d9e99f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080801..20080831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080801..20080831_v1.0.tif/content",
+      "bytes": 14752815,
+      "md5": "d7831b2783baf1015c161086621e219c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080901..20080930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20080901..20080930_v1.0.tif/content",
+      "bytes": 14776977,
+      "md5": "09c6e02ff0e799e620ce1ce4dd0e7d7a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20081001..20081031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20081001..20081031_v1.0.tif/content",
+      "bytes": 14799231,
+      "md5": "b1d47b257eb6890660ac2eb1dda7dee2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20081101..20081130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20081101..20081130_v1.0.tif/content",
+      "bytes": 14806737,
+      "md5": "41ab2ad032ca0cf7a5b7a50b3c76d4fb",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20081201..20081231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20081201..20081231_v1.0.tif/content",
+      "bytes": 14801108,
+      "md5": "4dd6bc7fb8a14893e1d3871a22bfecfd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090101..20090131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090101..20090131_v1.0.tif/content",
+      "bytes": 14788305,
+      "md5": "cb7adb15b987600d0d6247821d46681a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090201..20090228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090201..20090228_v1.0.tif/content",
+      "bytes": 14777923,
+      "md5": "fb681690273b3ce9eb70bcfcef91bedf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090301..20090331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090301..20090331_v1.0.tif/content",
+      "bytes": 14774985,
+      "md5": "26efd052b0c4d3661e9e08d7c4dc4a8e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090401..20090430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090401..20090430_v1.0.tif/content",
+      "bytes": 14769499,
+      "md5": "1e0dd2493d3f5ff8c103d2dbaae2f851",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090501..20090531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090501..20090531_v1.0.tif/content",
+      "bytes": 14754869,
+      "md5": "038b889e3245d4b54a0b49eb417b2b39",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090601..20090630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090601..20090630_v1.0.tif/content",
+      "bytes": 14738165,
+      "md5": "dfd02b831d0000cfeedf32a3ea48ca07",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090701..20090731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090701..20090731_v1.0.tif/content",
+      "bytes": 14733954,
+      "md5": "57641e5409162d7397953bc8bcfdc9c1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090801..20090831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090801..20090831_v1.0.tif/content",
+      "bytes": 14742270,
+      "md5": "8540d1c6274070d308d6a690605abb49",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090901..20090930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20090901..20090930_v1.0.tif/content",
+      "bytes": 14767472,
+      "md5": "1e4009612ec05067bb9386f35051d9f4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20091001..20091031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20091001..20091031_v1.0.tif/content",
+      "bytes": 14781031,
+      "md5": "bf34bba5e38688f20f430ac3fcef4fcb",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20091101..20091130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20091101..20091130_v1.0.tif/content",
+      "bytes": 14788137,
+      "md5": "75b7ac4b5dd3ff7da2a03c3ad98975be",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20091201..20091231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20091201..20091231_v1.0.tif/content",
+      "bytes": 14785664,
+      "md5": "d2d1c61db13b8d4f70bdf8b85e33d6c4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100101..20100131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100101..20100131_v1.0.tif/content",
+      "bytes": 14781282,
+      "md5": "a291a1ac3d9f98fb4949a03e78af0da8",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100201..20100228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100201..20100228_v1.0.tif/content",
+      "bytes": 14773972,
+      "md5": "e8edb10c5b9953e99ef9007c1cb7b2ae",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100301..20100331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100301..20100331_v1.0.tif/content",
+      "bytes": 14771618,
+      "md5": "68bced298ae081fe177b48bd1fdbcb09",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100401..20100430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100401..20100430_v1.0.tif/content",
+      "bytes": 14767853,
+      "md5": "30f96ffbcdaeb891372715b34dfafdff",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100501..20100531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100501..20100531_v1.0.tif/content",
+      "bytes": 14756790,
+      "md5": "d33ed0598a37e96b7689f7c175689d91",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100601..20100630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100601..20100630_v1.0.tif/content",
+      "bytes": 14747337,
+      "md5": "532ec4176fcb41d48fd4e635b274ddbd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100701..20100731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100701..20100731_v1.0.tif/content",
+      "bytes": 14743946,
+      "md5": "debd62647c15a32a9f7964993631ae89",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100801..20100831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100801..20100831_v1.0.tif/content",
+      "bytes": 14756964,
+      "md5": "405816ef96ee07b031569ed8ac97c7d0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100901..20100930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20100901..20100930_v1.0.tif/content",
+      "bytes": 14781219,
+      "md5": "5c3cce7bcf02ca80b8da9d3c279ddf74",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20101001..20101031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20101001..20101031_v1.0.tif/content",
+      "bytes": 14793799,
+      "md5": "19d70faa8926401638a2ab4595dabe09",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20101101..20101130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20101101..20101130_v1.0.tif/content",
+      "bytes": 14797675,
+      "md5": "0f1b5bd5d8128836eb79b2aeb47615ef",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20101201..20101231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20101201..20101231_v1.0.tif/content",
+      "bytes": 14790090,
+      "md5": "8a9070bbe3c0dd2cc595236d5773956a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110101..20110131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110101..20110131_v1.0.tif/content",
+      "bytes": 14779115,
+      "md5": "7df4dde5630e9b2b02471e61d49a2fad",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110201..20110228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110201..20110228_v1.0.tif/content",
+      "bytes": 14765571,
+      "md5": "1970405afec6f8591194a5d8a8551c3a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110301..20110331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110301..20110331_v1.0.tif/content",
+      "bytes": 14764419,
+      "md5": "0310ce03557cebf80b6c90fdf8454eca",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110401..20110430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110401..20110430_v1.0.tif/content",
+      "bytes": 14768876,
+      "md5": "fe46a0408c6752f107372b3b0ce33298",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110501..20110531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110501..20110531_v1.0.tif/content",
+      "bytes": 14764607,
+      "md5": "820caf605295b6816d2254c2e8f70b27",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110601..20110630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110601..20110630_v1.0.tif/content",
+      "bytes": 14755165,
+      "md5": "912864b1322cd3304197485eb2077f51",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110701..20110731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110701..20110731_v1.0.tif/content",
+      "bytes": 14756833,
+      "md5": "a0e1445709fb8dd10c251b893332cd6c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110801..20110831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110801..20110831_v1.0.tif/content",
+      "bytes": 14774445,
+      "md5": "4d75747ba4dbdec1899fd3ce49b288aa",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110901..20110930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20110901..20110930_v1.0.tif/content",
+      "bytes": 14800056,
+      "md5": "efd725909a71cff3601ccd895dbf5453",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20111001..20111031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20111001..20111031_v1.0.tif/content",
+      "bytes": 14816785,
+      "md5": "f4d1c0136908299a474d6a2c4571923f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20111101..20111130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20111101..20111130_v1.0.tif/content",
+      "bytes": 14815971,
+      "md5": "d9fe09726427e956bc73db734a8ad271",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20111201..20111231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20111201..20111231_v1.0.tif/content",
+      "bytes": 14802694,
+      "md5": "0254cd3c500809a6589441a26325aff1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120101..20120131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120101..20120131_v1.0.tif/content",
+      "bytes": 14784798,
+      "md5": "937eac345c2beca92601e30e8470faa9",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120201..20120229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120201..20120229_v1.0.tif/content",
+      "bytes": 14771813,
+      "md5": "61447dfc0d20424ddd6be613d84323a0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120301..20120331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120301..20120331_v1.0.tif/content",
+      "bytes": 14772798,
+      "md5": "3daa5589acbede354ba8ec3f569ae71b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120401..20120430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120401..20120430_v1.0.tif/content",
+      "bytes": 14774368,
+      "md5": "b228eccd90f60b9b21418739b1ba5987",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120501..20120531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120501..20120531_v1.0.tif/content",
+      "bytes": 14766301,
+      "md5": "4607a44174d354eaddbf621136deddfd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120601..20120630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120601..20120630_v1.0.tif/content",
+      "bytes": 14753176,
+      "md5": "805a31656c5436d451a736b6699de3bf",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120701..20120731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120701..20120731_v1.0.tif/content",
+      "bytes": 14753099,
+      "md5": "1c92f197a1362d93e6bd6ca2e3016da5",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120801..20120831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120801..20120831_v1.0.tif/content",
+      "bytes": 14763249,
+      "md5": "1b0da5b6b1414c3f834c4ea11e562403",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120901..20120930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20120901..20120930_v1.0.tif/content",
+      "bytes": 14791483,
+      "md5": "ad373258f10ac4362db7fc9c2e9186a1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20121001..20121031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20121001..20121031_v1.0.tif/content",
+      "bytes": 14812234,
+      "md5": "5e3ec90733bbdf5a06fcbd72e694d487",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20121101..20121130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20121101..20121130_v1.0.tif/content",
+      "bytes": 14821068,
+      "md5": "f411bbaed2a77a34f3003ead2357a76f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20121201..20121231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20121201..20121231_v1.0.tif/content",
+      "bytes": 14820587,
+      "md5": "3bdb10f7fb4b1ec860410d2e2c1d3751",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130101..20130131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130101..20130131_v1.0.tif/content",
+      "bytes": 14811818,
+      "md5": "36ba8ba782fd5dc726410151a4613e3b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130201..20130228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130201..20130228_v1.0.tif/content",
+      "bytes": 14806937,
+      "md5": "9195156b071ae4e0dd4213cb9f59547e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130301..20130331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130301..20130331_v1.0.tif/content",
+      "bytes": 14803848,
+      "md5": "facdf9eef97a5acd2607e9c967730b7d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130401..20130430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130401..20130430_v1.0.tif/content",
+      "bytes": 14803985,
+      "md5": "cae0546804bb79f2da609759bdcd8060",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130501..20130531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130501..20130531_v1.0.tif/content",
+      "bytes": 14787611,
+      "md5": "addb982a1a6a982893a1fc74ef1c2cb2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130601..20130630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130601..20130630_v1.0.tif/content",
+      "bytes": 14774661,
+      "md5": "8c06d665977c57bb5fdfb77d9e2ff767",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130701..20130731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130701..20130731_v1.0.tif/content",
+      "bytes": 14769912,
+      "md5": "942f1e8c3b8f4b945a17460208d2ceac",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130801..20130831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130801..20130831_v1.0.tif/content",
+      "bytes": 14783056,
+      "md5": "c5e92caaf40f0b411be52a55c8268033",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130901..20130930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20130901..20130930_v1.0.tif/content",
+      "bytes": 14806822,
+      "md5": "56bc0b4d7f0e69356d2da2d3d46ceaa4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20131001..20131031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20131001..20131031_v1.0.tif/content",
+      "bytes": 14819312,
+      "md5": "a19657be58292ed35afb5a641238803d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20131101..20131130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20131101..20131130_v1.0.tif/content",
+      "bytes": 14820166,
+      "md5": "ee5d83686e08e4139644ed026eb8cc4b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20131201..20131231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20131201..20131231_v1.0.tif/content",
+      "bytes": 14811745,
+      "md5": "b3b10404a0a62de482383d11c5a38ebd",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140101..20140131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140101..20140131_v1.0.tif/content",
+      "bytes": 14801269,
+      "md5": "fa9d37c68ca8239792ad20fd5635ff33",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140201..20140228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140201..20140228_v1.0.tif/content",
+      "bytes": 14788601,
+      "md5": "e6362bdf66bd2d9bd79aa445651aba96",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140301..20140331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140301..20140331_v1.0.tif/content",
+      "bytes": 14782056,
+      "md5": "5a1548a425f43809e47d1ab9f1c96ee1",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140401..20140430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140401..20140430_v1.0.tif/content",
+      "bytes": 14776461,
+      "md5": "e0ed4319e32a005319c7fcda85dc66cc",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140501..20140531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140501..20140531_v1.0.tif/content",
+      "bytes": 14758614,
+      "md5": "07a00cefea44e29f0da4354759f77142",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140601..20140630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140601..20140630_v1.0.tif/content",
+      "bytes": 14748274,
+      "md5": "ffa07eafe3cf65cc4030f6c8a81f10f3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140701..20140731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140701..20140731_v1.0.tif/content",
+      "bytes": 14753290,
+      "md5": "3271b56e44e86658a4317ad553209737",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140801..20140831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140801..20140831_v1.0.tif/content",
+      "bytes": 14780102,
+      "md5": "00eab6bf79fb9cd8172493b2ffc743e2",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140901..20140930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20140901..20140930_v1.0.tif/content",
+      "bytes": 14822465,
+      "md5": "55af9f1b9d44e4dec6984cd7d34a1e9c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20141001..20141031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20141001..20141031_v1.0.tif/content",
+      "bytes": 14848056,
+      "md5": "b952568acc02c24eb4dda53236ce75da",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20141101..20141130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20141101..20141130_v1.0.tif/content",
+      "bytes": 14850707,
+      "md5": "56a0eba0b820755e63dc99f7b814eec5",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20141201..20141231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20141201..20141231_v1.0.tif/content",
+      "bytes": 14839551,
+      "md5": "4da89bd0f32750579d3c968e9b539224",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150101..20150131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150101..20150131_v1.0.tif/content",
+      "bytes": 14823818,
+      "md5": "6389240528ed4c9dfde39f0332b6189f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150201..20150228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150201..20150228_v1.0.tif/content",
+      "bytes": 14812921,
+      "md5": "6ee0bb23e5f84a0521b674c9d2cae650",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150301..20150331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150301..20150331_v1.0.tif/content",
+      "bytes": 14813504,
+      "md5": "5d1b6aea1e6110fc919bb1f07889f857",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150401..20150430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150401..20150430_v1.0.tif/content",
+      "bytes": 14818228,
+      "md5": "ca65b3db93fb6563c3072c357c44c27a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150501..20150531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150501..20150531_v1.0.tif/content",
+      "bytes": 14811081,
+      "md5": "2ada49a0e7dd3c2c06030b5c2cf194e0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150601..20150630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150601..20150630_v1.0.tif/content",
+      "bytes": 14802070,
+      "md5": "4956551b4d2e09ea1b12eb1506cbcaca",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150701..20150731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150701..20150731_v1.0.tif/content",
+      "bytes": 14814896,
+      "md5": "4c54e993ce00c83c54a7757c31174b79",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150801..20150831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150801..20150831_v1.0.tif/content",
+      "bytes": 14834340,
+      "md5": "f427f65f721d5c4ce6b1c5151a4a7c5e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150901..20150930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20150901..20150930_v1.0.tif/content",
+      "bytes": 14859740,
+      "md5": "99ce2c05d456f7698f5c01cfb2716dd6",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20151001..20151031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20151001..20151031_v1.0.tif/content",
+      "bytes": 14878197,
+      "md5": "68edb0151ceddb0e429ab43b5a883ba3",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20151101..20151130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20151101..20151130_v1.0.tif/content",
+      "bytes": 14879630,
+      "md5": "323794b58ec8c17112651b38b018d35e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20151201..20151231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20151201..20151231_v1.0.tif/content",
+      "bytes": 14873862,
+      "md5": "944d6e45b6398b8ced02cf871eb99a74",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160101..20160131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160101..20160131_v1.0.tif/content",
+      "bytes": 14860977,
+      "md5": "eb0f2262f4109e20cef66e973d59d627",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160201..20160229_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160201..20160229_v1.0.tif/content",
+      "bytes": 14845251,
+      "md5": "af69ba6949ee6c949e1f5b6e2dd6049b",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160301..20160331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160301..20160331_v1.0.tif/content",
+      "bytes": 14840870,
+      "md5": "54f0cc375bc8f35dac43c863d0a98252",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160401..20160430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160401..20160430_v1.0.tif/content",
+      "bytes": 14833069,
+      "md5": "ba4e2a266d6139f206bedd02416838b0",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160501..20160531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160501..20160531_v1.0.tif/content",
+      "bytes": 14819120,
+      "md5": "0ecd8e4d150aa9c377c89307bbe2dd0c",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160601..20160630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160601..20160630_v1.0.tif/content",
+      "bytes": 14797957,
+      "md5": "38e82a89c788b8707f0c54f6e59d0139",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160701..20160731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160701..20160731_v1.0.tif/content",
+      "bytes": 14792148,
+      "md5": "834bcad2c7166cfae68f40951be52d2f",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160801..20160831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160801..20160831_v1.0.tif/content",
+      "bytes": 14802105,
+      "md5": "c69e626aadffc092fb5ba316d8b6d31d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160901..20160930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20160901..20160930_v1.0.tif/content",
+      "bytes": 14824551,
+      "md5": "1f7e12f10136fbe32769cadbabdacc72",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20161001..20161031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20161001..20161031_v1.0.tif/content",
+      "bytes": 14840188,
+      "md5": "ff4a93afbb5a556fb48d45929406c474",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20161101..20161130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20161101..20161130_v1.0.tif/content",
+      "bytes": 14844601,
+      "md5": "3f2e74838fcfcaecb9d727b50d3ee46a",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20161201..20161231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20161201..20161231_v1.0.tif/content",
+      "bytes": 14841788,
+      "md5": "c18837acefce36c90972fab8a3ec58d7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170101..20170131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170101..20170131_v1.0.tif/content",
+      "bytes": 14834948,
+      "md5": "1bd58ec08b6519ba41e326895991fa87",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170201..20170228_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170201..20170228_v1.0.tif/content",
+      "bytes": 14828455,
+      "md5": "40249e347676f30bc0aea35fe2a05f19",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170301..20170331_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170301..20170331_v1.0.tif/content",
+      "bytes": 14829876,
+      "md5": "51ed535bcb80d342e579da6a8e2267f4",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170401..20170430_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170401..20170430_v1.0.tif/content",
+      "bytes": 14831613,
+      "md5": "2bf879c3bdccfeedff1969529404de67",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170501..20170531_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170501..20170531_v1.0.tif/content",
+      "bytes": 14818217,
+      "md5": "8a48cf809a7f4cc9d93f779bb9e0ea6d",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170601..20170630_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170601..20170630_v1.0.tif/content",
+      "bytes": 14795646,
+      "md5": "bdc8140a8f6b0b4cc0315d4b0c695c2e",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170701..20170731_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170701..20170731_v1.0.tif/content",
+      "bytes": 14791930,
+      "md5": "a82f764052860ed64484d6fe9a279d44",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170801..20170831_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170801..20170831_v1.0.tif/content",
+      "bytes": 14803258,
+      "md5": "f41e41226386cc9f37255dc92cc029ad",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170901..20170930_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20170901..20170930_v1.0.tif/content",
+      "bytes": 14833377,
+      "md5": "7fc79e8859e58ca0f9e6b2fd476109de",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20171001..20171031_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20171001..20171031_v1.0.tif/content",
+      "bytes": 14851650,
+      "md5": "2c8e104cf227b43da6129a2748f981b7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20171101..20171130_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20171101..20171130_v1.0.tif/content",
+      "bytes": 14849348,
+      "md5": "451c1d81be1838a05cb9f8dfdc218a32",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20171201..20171231_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20171201..20171231_v1.0.tif/content",
+      "bytes": 14841279,
+      "md5": "886697a5350cfdf50d2a8043c01522f7",
+      "source": "https://doi.org/10.5281/zenodo.4305975"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "updated_utc": "2026-11-06T05:09:16.490106+00:00",
+  "goal_scope": "analysis_and_regional_data_preparation",
+  "scope_status": "complete",
+  "full_product_complete": false,
+  "current_data_release": "prepared/0.2.0",
+  "current_app_assets": "prepared/app_0.2.0",
+  "release_pointer": "prepared/current_release.json",
+  "blueprint": "TERRATWIN_MASTER_BLUEPRINT.md",
+  "results": "analysis/PREPARATION_RESULTS.md",
+  "integration_handoff": "analysis/APP_DATA_HANDOFF.md",
+  "completion_audit": "analysis/COMPLETION_AUDIT.md",
+  "bulk_acquisition": {
+    "verified_files": 410,
+    "failed_files": 0,
+    "expected_files": 410,
+    "status": "complete"
+  },
+  "environment_processing": "complete",
+  "active_task_jobs": [],
+  "final_checks": {
+    "independent_ndvi_sites": 6,
+    "independent_ndvi_months": 204,
+    "handoff": "passed",
+    "upgrade": "passed",
+    "controls": "declared_checks_passed",
+    "geography": "functional_checks_passed_boundary_sensitivity_reported",
+    "local_markdown_links_checked": 85
+  },
+  "superseded_do_not_use": [
+    "prepared/environment_0.1.0/aridity"
+  ],
+  "preserved_failed_build": "prepared/app_0.1.1.failed_relative_path",
+  "future_product_work": [
+    "Integrate and verify existing globe/API",
+    "Matched physical terrain footprints and polar retrieval",
+    "Confirm or replace NDVI scale before scoring",
+    "Material evidence and broader independent/field validation",
+    "Current rules and submission preparation"
+  ]
+}

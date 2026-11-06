@@ -1,0 +1,203 @@
+{
+  "version": "0.1.1",
+  "profiles": {
+    "terrain_screening": {
+      "name": "Regional terrain resemblance",
+      "status": "experimental_available",
+      "eligibility_column": "eligible_terrain",
+      "purpose": "Regional slope and terrain-amplitude screening for field navigation exercises",
+      "features": {
+        "slope_median_deg": {
+          "weight": 0.25,
+          "tolerance": 5.0,
+          "group": "slope"
+        },
+        "slope_p90_deg": {
+          "weight": 0.25,
+          "tolerance": 10.0,
+          "group": "slope"
+        },
+        "relief_m": {
+          "weight": 0.25,
+          "tolerance": 500.0,
+          "group": "terrain_amplitude"
+        },
+        "roughness_rms_m": {
+          "weight": 0.25,
+          "tolerance": 100.0,
+          "group": "terrain_amplitude"
+        }
+      },
+      "required_features": [
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "roughness_rms_m",
+        "tri_mean_m"
+      ],
+      "minimum_dem_valid_fraction": 0.95,
+      "earth_target_area_ratio": [
+        0.6666666666666666,
+        1.5
+      ],
+      "minimum_fit": 50.0,
+      "default_separation_km": 100.0,
+      "limitations": [
+        "Tolerances, area ratio and minimum fit are uncalibrated engineering defaults.",
+        "Native grid cells have approximately comparable but unequal physical support.",
+        "Vegetation, land cover, aridity, access, boulders and mechanical strength are not screened.",
+        "Fit is not a probability, accuracy estimate or hardware-performance prediction."
+      ],
+      "earth_context_features": [
+        "landcover_strict_area_coverage",
+        "landcover_barren_class_fraction",
+        "landcover_water_class_fraction",
+        "landcover_built_class_fraction",
+        "landcover_cropland_or_mosaic_class_fraction",
+        "aridity_index",
+        "aridity_index_area_coverage"
+      ],
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "status": "not_included_full_series_pending",
+          "used_in_gates": false
+        }
+      }
+    },
+    "volcanic_field_geology": {
+      "status": "pending_enrichment",
+      "missing": [
+        "exposed_material_evidence",
+        "validated_geology_crosswalk",
+        "vegetation_land_cover"
+      ]
+    },
+    "cold_dry_operations": {
+      "status": "pending_enrichment",
+      "missing": [
+        "precipitation_pet",
+        "vegetation_land_cover",
+        "temperature_sampling_harmonization",
+        "antarctic_temperature"
+      ]
+    },
+    "cave_reconnaissance": {
+      "status": "pending_validation",
+      "missing": [
+        "verified_cave_catalog_and_local_evidence"
+      ]
+    },
+    "ice_drilling": {
+      "status": "unsupported",
+      "missing": [
+        "ice_depth_and_properties",
+        "substrate_mechanical_properties"
+      ]
+    },
+    "dry_barren_terrain": {
+      "name": "Dry, predominantly barren Earth terrain",
+      "status": "experimental_available",
+      "eligibility_column": "eligible_terrain",
+      "purpose": "Regional terrain exercises on Earth cells meeting explicit historical aridity and barren-class filters",
+      "features": {
+        "slope_median_deg": {
+          "weight": 0.25,
+          "tolerance": 5.0,
+          "group": "slope"
+        },
+        "slope_p90_deg": {
+          "weight": 0.25,
+          "tolerance": 10.0,
+          "group": "slope"
+        },
+        "relief_m": {
+          "weight": 0.25,
+          "tolerance": 500.0,
+          "group": "terrain_amplitude"
+        },
+        "roughness_rms_m": {
+          "weight": 0.25,
+          "tolerance": 100.0,
+          "group": "terrain_amplitude"
+        }
+      },
+      "required_features": [
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "roughness_rms_m",
+        "tri_mean_m"
+      ],
+      "minimum_dem_valid_fraction": 0.95,
+      "earth_target_area_ratio": [
+        0.6666666666666666,
+        1.5
+      ],
+      "minimum_fit": 50.0,
+      "default_separation_km": 100.0,
+      "limitations": [
+        "Tolerances, area ratio and minimum fit are uncalibrated engineering defaults.",
+        "Native grid cells have approximately comparable but unequal physical support.",
+        "Fit is not a probability, accuracy estimate or hardware-performance prediction.",
+        "Environmental thresholds are experimental screening choices; no success probability is estimated.",
+        "Land cover and aridity are Earth-only filters from different historical periods, not additional similarity terms.",
+        "Seasonal greenness, actual access, exposed mineralogy, boulders and mechanical strength remain unverified.",
+        "NDVI scale is provisional; NDVI does not affect eligibility or rank."
+      ],
+      "earth_context_features": [
+        "landcover_strict_area_coverage",
+        "landcover_barren_class_fraction",
+        "landcover_water_class_fraction",
+        "landcover_built_class_fraction",
+        "landcover_cropland_or_mosaic_class_fraction",
+        "aridity_index",
+        "aridity_index_area_coverage"
+      ],
+      "environment_evidence": {
+        "landcover": {
+          "period": "2017",
+          "source": "https://doi.org/10.5281/zenodo.8367523",
+          "license": {
+            "id": "cc-by-sa-4.0"
+          },
+          "meaning": "Area classified as a land-cover class; not measured percent bare rock."
+        },
+        "aridity": {
+          "period": "1970-2000",
+          "source": "https://doi.org/10.6084/m9.figshare.7504448.v5",
+          "meaning": "Terrestrial climate screen only."
+        },
+        "ndvi": {
+          "status": "not_included_full_series_pending",
+          "used_in_gates": false
+        }
+      },
+      "target_eligibility_column": "eligible_terrain",
+      "earth_eligibility_column": "eligible_dry_barren",
+      "earth_environment_rules": {
+        "minimum_landcover_coverage": 0.95,
+        "minimum_aridity_coverage": 0.95,
+        "minimum_barren_class_fraction": 0.8,
+        "maximum_water_class_fraction": 0.05,
+        "maximum_built_class_fraction": 0.01,
+        "maximum_cropland_or_mosaic_class_fraction": 0.05,
+        "maximum_aridity_index": 0.2
+      },
+      "land_cover_screened": true,
+      "aridity_screened": true
+    }
+  }
+}

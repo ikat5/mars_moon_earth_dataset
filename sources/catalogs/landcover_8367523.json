@@ -1,0 +1,1680 @@
+{
+  "created": "2023-09-21T14:59:45.556563+00:00",
+  "modified": "2023-09-22T02:26:59.092769+00:00",
+  "id": 8367523,
+  "conceptrecid": "8338927",
+  "doi": "10.5281/zenodo.8367523",
+  "conceptdoi": "10.5281/zenodo.8338927",
+  "doi_url": "https://doi.org/10.5281/zenodo.8367523",
+  "metadata": {
+    "title": "MODIS MCD12Q1 Land Cover and Land Use Time Series Global Mosaics 2001-2022 (500 m)",
+    "doi": "10.5281/zenodo.8367523",
+    "publication_date": "2023-09-12",
+    "description": "<p><strong>General Description</strong></p>\n<p>The yearly land use and land cover dataset is derived from \n    <a href=\"https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MCD12Q1\"><abbr title=\"MCD12Q1 MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500m\">MCD12Q1 v061</abbr></a>. \n    This data provides an yearly mosaics of land use and land cover data from 2001 to 2022 in cloud optimized Geotiff (COG) format. \n    This dataset includes layers of land cover type 1 (t1), 2 (t2), and 5 (t5), land cover property 1 (p1) and 2 (p2), \n    land cover property assessment 1 (p1a) and 2 (p2a), and land cover quality control (qc).\n</p>\n<p><strong>Data Details</strong></p>\n<ul>\n    <li><strong>Time period:</strong> 2001\u20132022</li>\n    <li><strong>Type of data:</strong> Land cover and land use</li>\n    <li><strong>How the data was collected or derived:</strong> Derived from MCD12Q1 v061 using \n        <a href=\"https://earthengine.google.com\">Google Earth Engine</a>.</li>\n    <li><strong>Statistical methods used:</strong> None</li>\n    <li><strong>Limitations or exclusions in the data:</strong> The dataset does not include data for Antarctica.</li>\n    <li><strong>Coordinate reference system:</strong> EPSG:4326</li>\n    <li><strong>Bounding box (Xmin, Ymin, Xmax, Ymax):</strong> (-180.00000, -62.00081, 179.99994, 87.37000)</li>\n    <li><strong>Spatial resolution:</strong> 1/120 d.d. = 0.008333333 (1km)</li>\n    <li><strong>Image size:</strong> 86,400 x 35,849</li>\n    <li><strong>File format:</strong> Cloud optimized Geotiff.</li>\n</ul>\n<p><strong>Support</strong></p>\n<p>If you discover a bug, artifact, or inconsistency, or if you have a question please use some of the following \n    channels:</p>\n<ul>\n    <li>Technical issues and questions about the code: <a href=\"https://gitlab.com/openlandmap/global-layers/-/issues\">GitLab Issues</a></li>\n    <li>General questions and comments: <a href=\"https://disqus.com/home/forums/landgis\">LandGIS Forum</a></li>\n</ul>\n<p><strong>Name convention</strong></p>\n<p>To ensure consistency and ease of use across and within the projects, we follow the \n    standard Open-Earth-Monitor file-naming convention. The convention works with 10 fields that describes important \n    properties of the data. In this way users can search files, prepare data analysis etc, without needing to \n    open files. The fields are:\n</p>\n<ol>\n    <li>generic variable name: lc = Land cover</li>\n    <li>variable procedure combination: mcd12q1v061.t1 = MCD12Q1 v061 LC Type1 band</li>\n    <li>Position in the probability distribution / variable type: c = class | p = probability</li>\n    <li>Spatial support: 500m</li>\n    <li>Depth reference: s = surface</li>\n    <li>Time reference begin time: 20010101 = 2001-01-01</li>\n    <li>Time reference end time: 20011231 = 2001-12-31</li>\n    <li>Bounding box: go = global (without Antarctica)</li>\n    <li>EPSG code: epsg.4326 = EPSG:4326</li>\n    <li>Version code: v20230818 = creation date</li>\n</ol>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Rolf Simoes",
+        "affiliation": "OpenGeoHub",
+        "orcid": "0000-0003-0953-4132"
+      }
+    ],
+    "keywords": [
+      "MODIS",
+      "Land Cover",
+      "Land Use",
+      "global",
+      "OEMC"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5067/MODIS/MCD12Q1.061",
+        "relation": "isDerivedFrom",
+        "resource_type": "dataset",
+        "scheme": "doi"
+      }
+    ],
+    "locations": [
+      {
+        "place": "Earth",
+        "description": "World map without Antarctica"
+      }
+    ],
+    "dates": [
+      {
+        "type": "collected",
+        "description": "Processed period.",
+        "start": "2001-01-01",
+        "end": "2022-12-31"
+      }
+    ],
+    "version": "v20230818",
+    "language": "eng",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-sa-4.0"
+    },
+    "grants": [
+      {
+        "code": "101059548",
+        "internal_id": "10.13039/501100000780::101059548",
+        "funder": {
+          "name": "European Commission",
+          "doi": "10.13039/501100000780",
+          "acronym": "EC"
+        },
+        "title": "Open-Earth-Monitor Cyberinfrastructure",
+        "acronym": "OEMC",
+        "program": "HORIZON.2.6",
+        "url": "https://cordis.europa.eu/projects/101059548",
+        "doi": "10.3030/101059548"
+      }
+    ],
+    "communities": [
+      {
+        "id": "eu"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 1,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "8338927"
+          }
+        }
+      ]
+    }
+  },
+  "title": "MODIS MCD12Q1 Land Cover and Land Use Time Series Global Mosaics 2001-2022 (500 m)",
+  "links": {
+    "self": "https://zenodo.org/api/records/8367523",
+    "self_html": "https://zenodo.org/records/8367523",
+    "preview_html": "https://zenodo.org/records/8367523?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.8367523",
+    "self_doi": "https://doi.org/10.5281/zenodo.8367523",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.8367523",
+    "reserve_doi": "https://zenodo.org/api/records/8367523/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/8338927",
+    "parent_html": "https://zenodo.org/records/8338927",
+    "parent_doi": "https://doi.org/10.5281/zenodo.8338927",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.8338927",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:8367523/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:8367523/sequence/default",
+    "files": "https://zenodo.org/api/records/8367523/files",
+    "media_files": "https://zenodo.org/api/records/8367523/media-files",
+    "thumbnails": {
+      "10": "https://zenodo.org/api/iiif/record:8367523:lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/full/%5E10,/0/default.jpg",
+      "50": "https://zenodo.org/api/iiif/record:8367523:lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/full/%5E50,/0/default.jpg",
+      "100": "https://zenodo.org/api/iiif/record:8367523:lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/full/%5E100,/0/default.jpg",
+      "250": "https://zenodo.org/api/iiif/record:8367523:lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/full/%5E250,/0/default.jpg",
+      "750": "https://zenodo.org/api/iiif/record:8367523:lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/full/%5E750,/0/default.jpg",
+      "1200": "https://zenodo.org/api/iiif/record:8367523:lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/full/%5E1200,/0/default.jpg"
+    },
+    "latest": "https://zenodo.org/api/records/8367523/versions/latest",
+    "latest_html": "https://zenodo.org/records/8367523/latest",
+    "versions": "https://zenodo.org/api/records/8367523/versions",
+    "draft": "https://zenodo.org/api/records/8367523/draft",
+    "access_links": "https://zenodo.org/api/records/8367523/access/links",
+    "access_grants": "https://zenodo.org/api/records/8367523/access/grants",
+    "access_users": "https://zenodo.org/api/records/8367523/access/users",
+    "access_request": "https://zenodo.org/api/records/8367523/access/request",
+    "access": "https://zenodo.org/api/records/8367523/access",
+    "communities": "https://zenodo.org/api/records/8367523/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/8367523/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/8367523/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/8367523/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/8367523/quota-increase",
+    "requests": "https://zenodo.org/api/records/8367523/requests"
+  },
+  "updated": "2023-09-22T02:26:59.092769+00:00",
+  "recid": "8367523",
+  "revision": 2,
+  "files": [
+    {
+      "id": "0ea4ec8d-20a3-40c5-9a27-fb88351b58f4",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 151891918,
+      "checksum": "md5:cbf51775847c5015830faa25de6b4f5c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3041dc7b-40b5-4879-bbd3-2722fd38595d",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 32946335,
+      "checksum": "md5:38dfb31a9c61c2022a28d7ff70c4baad",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "5cfb5fed-9439-42f1-af57-d996da1bc500",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 98804552,
+      "checksum": "md5:dd286354142abb62b402e71f181bc30c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "b52bce71-dccd-42d6-b767-ddb494fd2bf7",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 475158647,
+      "checksum": "md5:a0bf9ba1c767cfa27602d57623f09967",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "954df2a6-1510-43b3-8528-b9c6b08b01ba",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 475889541,
+      "checksum": "md5:f6e54b6e2a16d1b513a9ae9be3715dd2",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "6131f5fb-fe8c-47dd-af96-d8973a0e6b0b",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 99343145,
+      "checksum": "md5:5b1beb4f64f7bcd2c2738ac70c295cf0",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3ab1dcac-0ac2-482c-8cfc-9eca39182333",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 473516883,
+      "checksum": "md5:659b6c5e90357695e1ce13954fb581d3",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "7c32f7f9-d537-4e56-86c8-f16498facd63",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 474390608,
+      "checksum": "md5:b9b45ea2a8f5ad897d23943cc7ac0dab",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3440b696-6679-4789-bd77-25a970354d28",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 475666270,
+      "checksum": "md5:ff8334449cd3e0dc5c9cb3d2520bb599",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "78df14c9-3785-4d34-b639-ca3ffc5c633f",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 476595774,
+      "checksum": "md5:27596fe2346d9e326ea78f848db042f7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3134fe19-592b-41f0-84f5-a716e43ea739",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 477509485,
+      "checksum": "md5:939928dfc0f85d0bc04f7e7530f1e51c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "ade7434b-10f8-4201-8c86-1af12989f47b",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 477327098,
+      "checksum": "md5:52667d3d15a9fd91c1edca6ad9afe8f1",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "192e78df-e05a-4874-820b-e0e9657db61a",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 99290126,
+      "checksum": "md5:67471ded007602f9072b34ee983c05f7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "5bc61524-0ffc-4d47-bcee-a7789bd55a24",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 99510780,
+      "checksum": "md5:01010b697ab35eb03e9b368e5c1576a8",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "091850e3-5f52-4cb4-861a-ab868b4e87fd",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 475081841,
+      "checksum": "md5:39e66d7e86e9d5e6e8450415bc55fe1d",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "07e494db-06d8-4d37-b847-9b3b28f1b789",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 177949592,
+      "checksum": "md5:0dc71477f1d11573c68f87e550533952",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "4f798d85-3f17-4b65-be10-e99e271836eb",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 99522073,
+      "checksum": "md5:8e872b379b5cd7f679183ff8a43af58b",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "72c34268-230b-4f7b-99bb-0533c23ae5b4",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 165367756,
+      "checksum": "md5:8ee22ed6e9c36499a9e0d0638c41d1e7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "ff759c92-d29a-4ceb-b7b8-2a6466ba963b",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 99627955,
+      "checksum": "md5:a1275fd944c1323866d508bae7bdb82c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "052bee15-a659-4921-82a9-d8adfab86fb8",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 99315555,
+      "checksum": "md5:e162e55d87a7fb1777b946db9a9a0d5c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "bb9d0ea3-2169-4b4c-96cf-4829b10dfa81",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 160308409,
+      "checksum": "md5:03b3cb85d63b448f5e6213432e67fed7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "4fde15c2-6a79-4621-9555-fc2c82ee28e4",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 98764966,
+      "checksum": "md5:7c6e532b869737b0acd73b5f7000f195",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "e1e3dbfb-1035-45cb-9397-53282f173839",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 98047210,
+      "checksum": "md5:2bf04e76f6b4a08712b3391b8cfad7a9",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "6e4ab44d-f79b-4d53-8665-641fe82b99b5",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 97950040,
+      "checksum": "md5:8e3bd41b412f1e47dc8b4a15cab33e92",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "c79b21da-1bfc-4f09-8c6a-89baa1848a9e",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 98029366,
+      "checksum": "md5:0a6478367678f2c0900ece97862cc56f",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "77828c6b-bc8e-4e24-b321-6b6667795d6e",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 98067962,
+      "checksum": "md5:8b6dc65e301b8822995762f394f5a990",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "684c92e1-2ad5-4964-9276-7d122d0d2100",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 158225383,
+      "checksum": "md5:74569d3026d8150df68842554a6cd342",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "250b5661-8b76-4117-adc5-546b877de2b8",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 98512884,
+      "checksum": "md5:ec3b38576af4a033705b31da54522726",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "47c962c8-341a-4df3-a40b-1ab851dd9075",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 156658209,
+      "checksum": "md5:ea5a03b109bc4b8e9822bc18c1de596e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "55d1ac90-77f1-4b98-b066-208a744351ad",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 155154251,
+      "checksum": "md5:ffb79901c91c1cc0d82fdb0a334e4b6d",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "e9de082f-11fe-49c8-8b8a-53208978b851",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 155411621,
+      "checksum": "md5:0ebf86403ab30072da5f511a968d04b2",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "5e9cf352-6a37-4b00-b254-dc626eb0420a",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 155457207,
+      "checksum": "md5:67cc52f44873a08fffa2dbe1845f0006",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "21969374-b743-4ffb-8a6d-6204e0168cd0",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 155465558,
+      "checksum": "md5:7553ed7214fb8a72ced40c5da4f55b91",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "a0e5172f-0a81-4a2e-a2fc-75e2fd1baf9f",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 155466983,
+      "checksum": "md5:eb7e5d46f6b7d9cef8a8bd7c801f2a63",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "dfa46d6c-cec7-4516-b015-0eeae2179f9b",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 156320096,
+      "checksum": "md5:8a5782d4df140d24a639a16eeede9e0e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "beb31f74-4a3b-43a4-8a1c-c5ccb9c79297",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 156292202,
+      "checksum": "md5:a27bfeca226b090125f66f78189dfe40",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d584d164-01c1-42f3-8ea9-a12d2e46bbf4",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 98714853,
+      "checksum": "md5:3c03aff0de89217b631fa961ae810171",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "18067947-7aee-4ad4-8429-7ba9c9772d7f",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 156503119,
+      "checksum": "md5:0ed19b5dc5923cb5f2530a4e92c73a2a",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "095978fb-c8de-4d86-90d5-a8e62794e396",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 157318612,
+      "checksum": "md5:5a2da4915f819e6392e7d2d79a926d95",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "61a848c5-3a1d-48de-a6a8-c0b46ae4349b",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 157700234,
+      "checksum": "md5:d2104e6f5351f5ab07542bc88a14f9f6",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "97402e77-08b1-4bdd-a25b-1026e1b5e8b5",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 157741313,
+      "checksum": "md5:45df47f981b0e0804452bdc792803087",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "7ea28d75-7f60-46f7-98fb-0ca4c2ab8b00",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 98704569,
+      "checksum": "md5:c77546a7046bd506ddb9b9a2da58f359",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "ce17591f-dbd4-4d59-a506-e0593afdf668",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 98796316,
+      "checksum": "md5:9eb00d805eb425290ff9b5bff0bf1040",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "54b041d2-e0dd-41b2-aca6-4b39ef0eca97",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 157704551,
+      "checksum": "md5:b7f1dc4caeffe5a795a7accf0d777ef4",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "36b1d5c1-7878-4560-ad0f-c4930b25a4f3",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 99718345,
+      "checksum": "md5:0d366fb70b52ab3911d36f757daf0b51",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "58462d3c-ebc1-4dac-88dc-f763906f9980",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 101163337,
+      "checksum": "md5:e8ecf259c55427f443446b831b61e80d",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "f2f53ec0-44fb-4b18-bc04-026363227cc2",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 157437788,
+      "checksum": "md5:11670f9b5cab700033da0626ac2a3833",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "78de048a-38da-4427-9a56-d6f90aa537e4",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 102955721,
+      "checksum": "md5:1615a947c364a6138d929a67114b32e5",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "9b955885-0328-4af1-bf70-9d18785b829c",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 105897249,
+      "checksum": "md5:76d6577c444702f59cdfeb548941ed82",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "71222848-34cb-4af4-96cd-835d1f90355b",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 484034922,
+      "checksum": "md5:9225f2418b4d1df4afd93657c3032c87",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "2506dff4-8c18-47d4-a97b-906a52c8e355",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 479307815,
+      "checksum": "md5:26d951161f94f5cd73319bbcae5da83e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d9815cf4-eb63-45d8-ac18-39e4d54400f2",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 133233234,
+      "checksum": "md5:c176a1a642c1b86b1e0b09926982f257",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "8a733ff1-038d-4299-8b4c-1da591d5c2ea",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 477010215,
+      "checksum": "md5:e6b82f929add3a2ce88f0f49ed4fa82d",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "6b97ad54-ea57-4182-80d6-a54a4b85c7ce",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 474115220,
+      "checksum": "md5:6a805ba495c528abbccd8e39dc91eca6",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "f7ef83cf-7d46-4dda-aca1-c36df7efd9da",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 133691418,
+      "checksum": "md5:c33162020a3670ed35baf2df7b1c790e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d127f8cb-d664-4e92-b592-8de30fe382d6",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 472134252,
+      "checksum": "md5:b17becb9964e8093c5dee7149eb4496b",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "35ea3f12-732a-45be-bf6b-196af6fdd4fd",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 133810856,
+      "checksum": "md5:fe7c80efc951f8e36295c092aba807c7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3953fd64-d935-433a-af0f-de05acf0e20d",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 470812566,
+      "checksum": "md5:e176d306983e3d299c97d38d5bd818ec",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "876711ae-ad59-4d91-a906-9dacf589b00d",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 474834437,
+      "checksum": "md5:0a6446b6a716bf0b16c08a6aaf5514e7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "9fc300c3-a26c-4879-a4e6-48f18a27f1eb",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 473480428,
+      "checksum": "md5:c406068ef4b6fdb4e143f3d459fa1b1f",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d78bc9cf-0d67-4db2-bff0-dfca231a9239",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 133802762,
+      "checksum": "md5:9b55322ed35598f4df5530356307233f",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "245e71f3-ada3-444d-ba33-11765aaee429",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 146964541,
+      "checksum": "md5:f01d349c085ebb42cb3d2417e448c92a",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "7c97c413-2cbe-4805-82d6-51768f5be893",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 147150751,
+      "checksum": "md5:39b94524297dad3c51c6a009ce3eba6e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "5fb1da21-8a64-4dc9-9fb4-5373f2cf3bf5",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 147108709,
+      "checksum": "md5:4af3cd8e363f831495bcb3fb9d5987fc",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "2c6a55bc-ead0-4fce-856f-afbb6c6ee9a3",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 133673999,
+      "checksum": "md5:70227ea6a4d6c03d10c1d4c240e09c6e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "22f8dd8d-0450-43fc-8947-4ae2bd8c2042",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 133309002,
+      "checksum": "md5:c68157268a12a495db862567d039b280",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d8c2c63e-abef-45f2-8fe8-9545ba58c61c",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 132659201,
+      "checksum": "md5:5dd57287f08ebf9d35134533dec9eb52",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "544686ea-d3e2-4912-9e2b-f78b9145d212",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 147098929,
+      "checksum": "md5:7fa38e35d5a33080cf41a729489e738c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "e11cb638-8465-4652-bf76-991e7d41ab4b",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 147194882,
+      "checksum": "md5:2de8f7d33be511c55181e101bd981804",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "23d76137-989e-4856-b5e2-156864c3b407",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 132546734,
+      "checksum": "md5:e17e92c7c56b2783e34e20644d117eb9",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "1130200b-be8d-42d5-86be-1847c477f238",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 147576419,
+      "checksum": "md5:ac924abbf438745482fc675c907cc835",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "b500f1f2-f1c8-4387-8c7c-b2e47d82452d",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 132867034,
+      "checksum": "md5:e92c3f5d56637511edd6743a1d0f86a7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "bae1aea9-ae99-4adf-8417-d770528192aa",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 132277397,
+      "checksum": "md5:1f8469b6172f13ece61d199d53b608c0",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d74d5877-c689-47f6-bd1d-1200ffc82eb9",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 132127536,
+      "checksum": "md5:7a5f07319b6fe60f11e5268619e6c659",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "8dba7968-23d8-4dcb-abe8-afe59ce9038a",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 147194159,
+      "checksum": "md5:17fb09cad933248c8e21db098bbd0299",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "9f7fc03a-367e-49c8-b644-3c6ac3fde301",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 131869096,
+      "checksum": "md5:ccace06899d7881bc578b449214ea464",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "b8247a3a-d979-4540-9a8f-92b5f373d524",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 147355910,
+      "checksum": "md5:0a314c0090b24fd22c78c65106f727fd",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "29e74a3e-d894-44f5-9ef0-8b67a0b57a03",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 131794391,
+      "checksum": "md5:e04ff7c8b0cb8a322120d3c1a7908a43",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "6bf64b4e-ff56-4197-9e6c-4a1e313e671c",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 131516460,
+      "checksum": "md5:2e611bb4f292a143fbb5ac79a655ba40",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "13e6d8de-a1e7-476b-a672-56c6a1320c91",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 132610374,
+      "checksum": "md5:b3a224e994e09657b3bf957d918e8530",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "7083761a-d19a-469a-8f8e-365d951b17bb",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 148176829,
+      "checksum": "md5:602353b8ca5452fbc56550768fec0b42",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "cbfce1e5-e570-4e90-addb-c7ca6ef7c733",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 148752599,
+      "checksum": "md5:5a617bebaeb45525b1f6c6eeda28685e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "5f92b659-5793-4194-9abe-31b7345f8c4c",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 148943534,
+      "checksum": "md5:e56dc6b9f4334cb484cee5e0646e1957",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "cce95102-f85f-45fa-9ebd-a69a9bfb5b0b",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 148891788,
+      "checksum": "md5:6e835e113f2b6ee2f89ed98e6b170ee9",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "b9e3e52f-5773-4edc-b01f-4878e31f3329",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 148650152,
+      "checksum": "md5:75b9f258b18e592db64b097f4cf6db0f",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "af0c73ec-e340-4526-8ed7-e9744cdbef27",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 133726600,
+      "checksum": "md5:791ccbcb69b37187f2703508af896789",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "0995eef2-4483-4723-b2c4-363f8ef70a5a",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 148072906,
+      "checksum": "md5:51da25fcf351ea16e3848cc8e0b584ac",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "a058f892-2101-49e0-ac7c-f2c3aad8b77a",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 147783307,
+      "checksum": "md5:74e6344996134865c9b7814134ed8d67",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3cfbe93a-c04e-483d-a251-8b458267f408",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 147225956,
+      "checksum": "md5:6c869603d21403e489842e6896b0a18a",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "acf8ea2d-040c-4301-94f8-3dc70eaf10d9",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 33646807,
+      "checksum": "md5:36b7e4771fd5a52c7bb36adbd580f298",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "38953cbd-1f87-4d76-adb3-6dc9b9ff1d57",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 33526628,
+      "checksum": "md5:ee4d3c16755f1d06353e78102a73178b",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "7308bcc7-622a-4c22-8606-3ea5d971524d",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 33303138,
+      "checksum": "md5:24eeb32049b2c2978c71915f924d9d7d",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3221c88e-650a-477f-9bc4-b086520aa1ae",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 32972887,
+      "checksum": "md5:cdb306922b57cace613d22e02540202b",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "9089aac9-7c14-4203-811a-3f707e2e1208",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 32741033,
+      "checksum": "md5:505d3a54d87408063c126e4ca3c6f982",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d82ade59-d0ec-4ea2-9112-8d047da2de28",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 32653415,
+      "checksum": "md5:17a580a2b5ce091d9b93ccd6de96c53c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "f1ef72f4-2e2a-4521-bc8c-2e038707bac7",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 32559344,
+      "checksum": "md5:40172a9f5003591760f87f6453f109ab",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "a2062c9b-1b8c-453a-a246-0bbb4be99abc",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 32606490,
+      "checksum": "md5:b0c4e08b081b74f8c2ef1661609cf239",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "1ac401cc-0c6b-4fa8-8137-2b54e35aa895",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 32678494,
+      "checksum": "md5:b718b2503ad5bdcb0e21396a31243163",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "2f87735a-ec4c-4269-b1b6-39c19af29370",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 32632418,
+      "checksum": "md5:b1f000bb4487a12692a79f858984d1e8",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "f737fa88-dbbc-4ae0-8a5c-769d9858f12b",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 32599016,
+      "checksum": "md5:db4453b2f388baf659ceafcc2af9ca00",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "a3d95757-5cbd-4dd2-895b-e3bac5983e3d",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 32578734,
+      "checksum": "md5:be3e24604ed8c45f77f76c845a3fbe3b",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "fb45f84f-4b5e-4648-8666-dfdffe4557f2",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 32623898,
+      "checksum": "md5:45898a71588c78b35bd797c0661081a9",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d7c07630-193f-4e2f-b06a-2720429ded74",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 32692805,
+      "checksum": "md5:7fe18730f5d018103bc4cd74e8c137d5",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "b7d0d81b-bb16-4f3e-893d-59e53511e74f",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 32812955,
+      "checksum": "md5:7c6103672757cbe702b27044170484e7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "8819d10f-0655-46ff-95ea-d2320ba8beed",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 32887546,
+      "checksum": "md5:8275426d10cc4cf19f27ed65a872bae5",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "1990b326-fa44-471f-8dae-f3392f8ee1fa",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 32909285,
+      "checksum": "md5:b8ac37847fb0e985709610488ae70894",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "e6538bcd-a322-4554-b6f9-ea08941baff7",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 135519046,
+      "checksum": "md5:9b278377126e28794796f995cec55883",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "a3064334-7a12-465e-9199-c021c2ccd3f7",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 32877442,
+      "checksum": "md5:9aa5f93bee262358bde6ed810ee40999",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "661a811f-6154-41b5-8eef-986709d013a4",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 32923754,
+      "checksum": "md5:4034ceb675606622a41efd688b566872",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "387ea250-f6dd-4fb7-871c-71e3d9b58028",
+      "key": "lc_mcd12q1v061.qc_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 32930723,
+      "checksum": "md5:b8cc3310c79d50a7f89bff8ad8db5316",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "ff1da87a-ac65-4058-b151-e75949ee92e0",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 140091600,
+      "checksum": "md5:dd25d676e30677fa859eaaaf36a27d3c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "b7ab09d0-bea6-49c3-a1cb-970cf2200814",
+      "key": "lc_mcd12q1v061.t5_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 113900562,
+      "checksum": "md5:3dfefcea144e113a4e747fa9acb9676c",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t5_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "198268e6-a485-40d9-92d2-f3f45e589cea",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 156967315,
+      "checksum": "md5:4cd039b9369091ad8bbda24561a09980",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "bc6c3116-50e6-454f-a565-99ff00bc5f7f",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 125286185,
+      "checksum": "md5:3227d962efae1029a27d224c1080f557",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "f3b085ba-71a6-4341-a12e-a6ef5ca90be6",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 156866758,
+      "checksum": "md5:13be2f475b391fbe73616e2a749d6df0",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "31651d27-8953-4ed6-bf3b-ebdba4fbeada",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 125910757,
+      "checksum": "md5:63add749718837210225765799807684",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "64205adc-3404-47ad-8eff-e8a38122307c",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 126088614,
+      "checksum": "md5:7adbe2a72c28d29954d0b61725fcdd21",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "0613f584-dfdf-462f-914b-6118d812ac9e",
+      "key": "lc_mcd12q1v061.p1_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 156270736,
+      "checksum": "md5:067152cfc0e6fd6158b1b6924ebdf36b",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "00e9e52c-a1d8-43a4-ab4e-e16d4c6818e4",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 633601019,
+      "checksum": "md5:e4ed0ce58440cd9136b30716ebdd86e5",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3dd25c36-9028-4f83-9a9c-b39d3bfff2e3",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 545848133,
+      "checksum": "md5:b9d885f6e70e659f52c2fed6e30c9555",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "c0416afa-0a69-4974-860f-7878083d5100",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 513468623,
+      "checksum": "md5:735f10f267bb6c3b656a5255b82cd9c3",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "12dceec6-5819-4ba9-8ef2-47dfa7d9205e",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 126506946,
+      "checksum": "md5:c839e22199cf4cf3be47b6e08101bda7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "5f71bba9-8a01-4c2a-baaa-f5d06e14c643",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 126714402,
+      "checksum": "md5:8a1d1971521be5d8ae191cb943e24440",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "cf3c2a21-9158-456a-b891-c187143dc382",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 499712315,
+      "checksum": "md5:6c14af0576e6a46602626c7d994529f9",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "28e2946a-2c7d-4a09-a583-dea4f8ff864b",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 491286225,
+      "checksum": "md5:baa00c97c21dd33b0f60c8f5d33103b7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "ed7afde9-e5f9-4ae9-ba40-a0ccc868ba17",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 126785156,
+      "checksum": "md5:7d84466aceb9e7c7ded67781928deff7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "ef3898b4-31d5-4c4a-a444-9502b1f9cfc0",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 486965071,
+      "checksum": "md5:4d9dc82432e1a831d184299c1829860e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "f3c3d329-9a9f-407a-a688-b867c72e6148",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 126608405,
+      "checksum": "md5:65aea109eed0dabf8f3f671e53f89d98",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "46fe0624-98b2-4aa0-a369-3e7539e392c1",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 484919720,
+      "checksum": "md5:50ca692bd0be8e32f16aa9a08c96c51d",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "97b4f661-b9d2-4d2a-ba88-deb840de6da9",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 482482020,
+      "checksum": "md5:9ab5d6f095dfde68ba0eb6e387722c33",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d9b103bf-7ab9-477f-b156-cc7cb8ff0fee",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 480658179,
+      "checksum": "md5:7d912430fc4102e7145c29eed65e87c7",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "381cdde6-d0c5-4961-8080-0b8be9ab1251",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 479552361,
+      "checksum": "md5:6760c50721dcf72640b065188361878a",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "04d77625-a118-4145-acc5-afeadd80b218",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 482534279,
+      "checksum": "md5:1a059340fbc0b83638736abaf92e9e32",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "a77b7896-9fed-493b-9680-55a3e9a1c7d7",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 126239654,
+      "checksum": "md5:3853d202fc1ae9f38765a56888d69aff",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "9dd8f63a-93c2-4925-9628-ac4703364ecc",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 125617119,
+      "checksum": "md5:0ef8b6b320ad1c1baa49c03f4fe13ab4",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "0c3dd610-0347-4664-bfc6-ba42824c0c82",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 125540930,
+      "checksum": "md5:97b9ea748147d0aa22b4dc2674e4ba96",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "0c3e2845-e39b-4255-b60d-a2b8f1dc8201",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif",
+      "size": 125789012,
+      "checksum": "md5:e4a5a03a13a833200d6b98dc4597fdd0",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20110101_20111231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "8b6cb7ea-81d4-4fc8-afad-8a250555509b",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif",
+      "size": 481556582,
+      "checksum": "md5:7b2a77811e29d29856ae1cc2d2623041",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20120101_20121231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "4e00b7ba-48eb-4db2-abb4-2032f6eabc93",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif",
+      "size": 125220905,
+      "checksum": "md5:2b925c073274843bd1ddb089a1744417",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20100101_20101231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "a8d175cf-6d6b-430b-a2df-9bc847cc78e2",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif",
+      "size": 483025602,
+      "checksum": "md5:919283999c0800e398d1a0d89a1b34b0",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20130101_20131231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "c7a13104-bbc7-4763-b749-b99da1496753",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif",
+      "size": 483604246,
+      "checksum": "md5:ce26b4ba2293b9684b449c397cfb7309",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20140101_20141231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "535a8ff7-3d74-49d9-8aa3-86f662ac0138",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif",
+      "size": 481648080,
+      "checksum": "md5:ae7c2a82575c7bf89fdfcdc2abd0c945",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20150101_20151231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d83c14e1-106d-4729-8b10-e07639ac78e6",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif",
+      "size": 124988885,
+      "checksum": "md5:13d502ed7106920c93964ab4a29e4d7e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20090101_20091231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "6e016b22-fc30-4b1a-8656-827f0bbf3476",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif",
+      "size": 482293532,
+      "checksum": "md5:d011a4b1efa9dbfb2dff9769b7c4a5e1",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20160101_20161231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "f17c620a-9f8d-4c1f-829b-58b553396a76",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif",
+      "size": 124914826,
+      "checksum": "md5:77e0b4ba170a9fddfc77ec10598cabe1",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20080101_20081231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "01791395-1084-4496-97da-8ce14d2154bb",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif",
+      "size": 124820234,
+      "checksum": "md5:b760bf3c2c3f6c193f63fbbadcb6d6cb",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20070101_20071231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "45dc4afb-dce0-4fa7-9dda-5368a194baae",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "size": 483305281,
+      "checksum": "md5:d8d45f9b8673c32444c28adb4beba222",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "2618b5e0-bd60-485f-9f6e-05cefe25c24e",
+      "key": "00_preview.png",
+      "size": 85094,
+      "checksum": "md5:6db51df3a7fcf051da6ed0385e2236de",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/00_preview.png/content"
+      }
+    },
+    {
+      "id": "77ec1e43-af34-4924-9e0b-f7bf9fbba1ef",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif",
+      "size": 485024750,
+      "checksum": "md5:7f647d005b4c2d9d4b79bca0acc068e6",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20180101_20181231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3fce8d04-de02-47ea-9f5e-06c70a74f163",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif",
+      "size": 486331331,
+      "checksum": "md5:9d6d0b642c21e4b418b04c1781c84409",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20190101_20191231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "37b69c5d-7d1e-47f3-9d55-a69c73fb87fd",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 486035369,
+      "checksum": "md5:a5ec2710b51f97e6e388ec5b48793368",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "aa8ff4d2-e2d7-492d-989a-d64da1ee5979",
+      "key": "lc_mcd12q1v061.p2a_p_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 484148522,
+      "checksum": "md5:7d9a431570c51986dbb913a534ecb797",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2a_p_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "018d07da-fbb8-4e8d-8748-474334dc2607",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 167208600,
+      "checksum": "md5:9895af261e78562534ff453e59f2378e",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "fb38ee3a-5fa0-4fea-8835-2f3a24e1908d",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 155798518,
+      "checksum": "md5:3a65ed73effd5b46d14fff4c38d5f181",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "9956862f-e08e-4092-a044-366b4ed2e39f",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 151689549,
+      "checksum": "md5:359c75bd0f29d2df4da7ae1dda005ffe",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "961ad53a-373a-4fec-9a91-a2d1c8f2f7c6",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 149720472,
+      "checksum": "md5:a10e64f91e4801af593d87ace4f83276",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "2777086a-3c4a-4cb5-90bc-3bbca590a362",
+      "key": "lc_mcd12q1v061.p2_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 148314982,
+      "checksum": "md5:a3ef0bcf0be6e766ffe79d38bb412915",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p2_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "c03d39ae-423c-4471-b89d-70eabcc20632",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif",
+      "size": 124486186,
+      "checksum": "md5:dc9efa34c9121717c4c5acb51ce1b034",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20060101_20061231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "c0b332c7-0f21-4567-8d5a-51b4657860dd",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif",
+      "size": 125372874,
+      "checksum": "md5:98e25abc1e6f89c4bcfa0d041c244646",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20050101_20051231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "b8c4f3af-a863-4d68-ab16-1b5a8f695c9b",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 126446193,
+      "checksum": "md5:c8af6ece4e89d119791e7125e12f39ae",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "d0e04184-b302-4940-ba70-af3862ac1414",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 128256117,
+      "checksum": "md5:49dea664dda90751e91e80042e6009c8",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "00c0da5a-d614-4b0a-ba96-991d7347dca0",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 132325510,
+      "checksum": "md5:52f3e77f98972460b340df4c413cf440",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "e8956b48-2072-4b41-8964-256dcce94624",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 631186858,
+      "checksum": "md5:06fe5ea23f265d795af703e0c587ab54",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "11342a49-3fd6-45a2-848f-154c31c03fdb",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif",
+      "size": 542204156,
+      "checksum": "md5:28bb482660f26b45a9d736bd20b9b84d",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20020101_20021231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "622158c5-a89c-4475-9a79-7e5d33439684",
+      "key": "lc_mcd12q1v061.t2_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif",
+      "size": 141757257,
+      "checksum": "md5:e25e046c4942f42b6acec02f0d4db27b",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t2_c_500m_s_20010101_20011231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "3bb2ba1b-5fa1-4ad3-85a2-291968a74495",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif",
+      "size": 506283931,
+      "checksum": "md5:7a653189ff37614eab42e0aa1070aa58",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20030101_20031231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "16405f8b-7546-4047-9d0b-e4d6e5286694",
+      "key": "lc_mcd12q1v061.p1a_p_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif",
+      "size": 492547045,
+      "checksum": "md5:3004d327016ea0a93fef8a5a4d470ecd",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.p1a_p_500m_s_20040101_20041231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "550ce6fb-53f2-4dae-a6f8-c07b2a2a13d1",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif",
+      "size": 132512453,
+      "checksum": "md5:862010ec14d621333126336a65ee01c5",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20210101_20211231_go_epsg.4326_v20230818.tif/content"
+      }
+    },
+    {
+      "id": "7223717d-0e42-4db2-b160-55041afeabfd",
+      "key": "lc_mcd12q1v061.t1_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif",
+      "size": 133084928,
+      "checksum": "md5:575a64810bbbd95ccd7d6153cff9e3c5",
+      "links": {
+        "self": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20200101_20201231_go_epsg.4326_v20230818.tif/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "142392"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 66503,
+    "unique_downloads": 59135,
+    "views": 4325,
+    "unique_views": 3957,
+    "version_downloads": 45346,
+    "version_unique_downloads": 39049,
+    "version_unique_views": 3238,
+    "version_views": 3547
+  },
+  "state": "done",
+  "submitted": true
+}

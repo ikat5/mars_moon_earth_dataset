@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "goal_complete": false,
+  "completed": [
+    "immutable_input_inventory",
+    "all_body_feature_tables",
+    "quality_flags_and_eligibility",
+    "feature_policy_registry",
+    "experimental_terrain_profile"
+  ],
+  "remaining": [
+    "earth_vegetation_and_land_cover",
+    "precipitation_and_aridity",
+    "polar_terrain_harmonization",
+    "regional_material_crosswalk_validation",
+    "temperature_sampling_harmonization",
+    "local_candidate_characterization",
+    "ranking_stability_and_external_validation"
+  ],
+  "scientific_status": "Prepared for regional terrain screening; does not certify physical analog suitability."
+}

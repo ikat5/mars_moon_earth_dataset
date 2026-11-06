@@ -1,0 +1,669 @@
+{
+  "created_utc": "2026-11-06T04:41:10.119106+00:00",
+  "source_manifest_sha256": "5029263caa646c007eaf4830299bf64f654866080ce55954a5c71999cb508ae2",
+  "source_url": "https://5j7x5wew8j.execute-api.us-west-2.amazonaws.com/prod/api/terrestrial-analog-sites",
+  "portal": "https://tadp.astrogeology.usgs.gov/",
+  "total_records": 4,
+  "valid_point_records": 4,
+  "excluded_records": [],
+  "coordinate_policy": "Feed has no explicit CRS; coordinates interpreted using standard GeoJSON longitude/latitude. Geometry coordinates take precedence; attribute-coordinate disagreements are retained and measured.",
+  "catalog_completeness_status": "The current endpoint returns only four volcanic records. It is inadequate as a global inventory; do not use absence or large distances to claim novelty.",
+  "proximity_policy": "Great-circle point-to-point center distance on a 6371 km sphere; 25/100 km are review diagnostics, not site identity or novelty thresholds.",
+  "limitations": [
+    "Catalog is not exhaustive and points may represent large or vaguely located regions.",
+    "A nearby catalog point does not prove the candidate is the same field site; a distant one does not prove novelty.",
+    "Catalog entries are prior-documentation context, not ground-truth analog labels for this target/profile.",
+    "The source feed is snapshotted at retrieval time; no current site condition or access verification is implied."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "earth:1090899",
+      "lat": 42.6875,
+      "lon": 102.4375,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 6938.537468650392
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 6938.698680595947
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 6952.63809550459
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1102432",
+      "lat": 42.1875,
+      "lon": 104.0625,
+      "nearest_catalog_records": [
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 7044.215201835981
+        },
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 7044.274739143872
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 7058.239186221959
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1487751",
+      "lat": 25.4375,
+      "lon": 28.9375,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 5436.643281479741
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 5447.803908342248
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 5448.937677169102
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1113911",
+      "lat": 41.6875,
+      "lon": 98.9375,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 6916.439806212147
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 6917.29434208471
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 6930.940809736465
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1482082",
+      "lat": 25.6875,
+      "lon": 40.3125,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 5895.599366964175
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 5906.9536976921045
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 5908.936960989869
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1203158",
+      "lat": 37.8125,
+      "lon": 94.8125,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 7150.8140923231795
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 7152.78770752345
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 7165.872618961829
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1510590",
+      "lat": 24.4375,
+      "lon": 3.8125,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 4733.396141697807
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 4737.069014656593
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 4745.586472586599
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1427344",
+      "lat": 28.0625,
+      "lon": 38.0625,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 5559.587125446296
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 5571.032948593972
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 5572.777081512171
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1070778",
+      "lat": 43.5625,
+      "lon": 107.3125,
+      "nearest_catalog_records": [
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 7009.884373907314
+        },
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 7010.622093183891
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 7024.141503644467
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "earth:1366858",
+      "lat": 30.6875,
+      "lon": 37.3125,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 5266.818984090622
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 5278.184524064202
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 5280.14056309643
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    },
+    {
+      "candidate_id": "jaflong:window_center",
+      "lat": 25.155,
+      "lon": 92.02,
+      "nearest_catalog_records": [
+        {
+          "source_index": 1,
+          "source_id": 192,
+          "lat": 64.9282,
+          "lon": -16.52165,
+          "properties": {
+            "FID": 192,
+            "Name": "Holuhraun Lava Flow",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 64.9282,
+            "Lon": -16.5217
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0023559628899554852,
+          "center_distance_km": 8311.722997457206
+        },
+        {
+          "source_index": 2,
+          "source_id": 209,
+          "lat": 65.01,
+          "lon": -16.71,
+          "properties": {
+            "FID": 209,
+            "Name": "Oskjuvatn",
+            "AnalogType": "Volcanic",
+            "AnalogBody": " ",
+            "Lat": 65.01,
+            "Lon": -16.71
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 0.0,
+          "center_distance_km": 8315.434147108694
+        },
+        {
+          "source_index": 3,
+          "source_id": 214,
+          "lat": 64.8910229071218,
+          "lon": -16.8511133156688,
+          "properties": {
+            "FID": 214,
+            "Name": "Baugur",
+            "AnalogType": "Volcanic",
+            "AnalogBody": null,
+            "Lat": 64.85942,
+            "Lon": -16.85907
+          },
+          "geometry_vs_attribute_coordinate_distance_km": 3.5341045118154004,
+          "center_distance_km": 8327.421443335947
+        }
+      ],
+      "records_within_25km": 0,
+      "records_within_100km": 0,
+      "novelty_established": false,
+      "review_state": "limited_feed_checked_not_a_global_novelty_review"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "dataset_version": "0.1.1",
+  "profile": "dry_barren_terrain",
+  "prepared_manifest_verified": true,
+  "engine_sha256": "fb95bf16c47c2591f8601276dafbfa72de1429867a39f41c108727c791fa5fe8",
+  "interpretation": "Weight/feature sensitivity of experimental terrain retrieval. This is not analog accuracy, novelty or suitability validation.",
+  "regional_matching_threshold_km": 100,
+  "cases": {
+    "jezero": {
+      "balanced": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 1.0,
+        "regional_retention": 1.0,
+        "candidate_ids": [
+          "earth:1090899",
+          "earth:1102432",
+          "earth:1487751",
+          "earth:1113911",
+          "earth:1482082",
+          "earth:1203158",
+          "earth:1510590",
+          "earth:1427344",
+          "earth:1070778",
+          "earth:1366858"
+        ],
+        "elapsed_seconds": 0.17256538400033605
+      },
+      "slope_emphasis": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.4,
+        "regional_retention": 0.5,
+        "candidate_ids": [
+          "earth:1102432",
+          "earth:1090899",
+          "earth:1487751",
+          "earth:1510590",
+          "earth:1341158",
+          "earth:1435984",
+          "earth:1108214",
+          "earth:1331085",
+          "earth:1134068",
+          "earth:1251676"
+        ],
+        "elapsed_seconds": 0.14286886799891363
+      },
+      "amplitude_emphasis": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.8,
+        "regional_retention": 0.8,
+        "candidate_ids": [
+          "earth:1090899",
+          "earth:1482082",
+          "earth:1113911",
+          "earth:1203158",
+          "earth:1487751",
+          "earth:1663374",
+          "earth:1366858",
+          "earth:1672266",
+          "earth:1070778",
+          "earth:1102432"
+        ],
+        "elapsed_seconds": 0.15789931799918122
+      },
+      "no_median_slope": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.2,
+        "regional_retention": 0.2,
+        "candidate_ids": [
+          "earth:1672266",
+          "earth:1695283",
+          "earth:1548200",
+          "earth:1113911",
+          "earth:1145591",
+          "earth:1415668",
+          "earth:1482082",
+          "earth:1455868",
+          "earth:1134106",
+          "earth:1453441"
+        ],
+        "elapsed_seconds": 0.1353312700011884
+      },
+      "no_relief": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.2,
+        "regional_retention": 0.2,
+        "candidate_ids": [
+          "earth:1547940",
+          "earth:1487751",
+          "earth:1571156",
+          "earth:1352238",
+          "earth:1447584",
+          "earth:1412789",
+          "earth:1542358",
+          "earth:1090899",
+          "earth:1680727",
+          "earth:1309004"
+        ],
+        "elapsed_seconds": 0.13874876399859204
+      }
+    },
+    "lunar_equatorial_coordinate": {
+      "balanced": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 1.0,
+        "regional_retention": 1.0,
+        "candidate_ids": [
+          "earth:1493510",
+          "earth:1579753",
+          "earth:1651603",
+          "earth:1614485",
+          "earth:1666513",
+          "earth:1364197",
+          "earth:1378375",
+          "earth:1332178",
+          "earth:1482231",
+          "earth:1683737"
+        ],
+        "elapsed_seconds": 0.09501538600125059
+      },
+      "slope_emphasis": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.7,
+        "regional_retention": 0.7,
+        "candidate_ids": [
+          "earth:1493510",
+          "earth:1651603",
+          "earth:1614485",
+          "earth:1378375",
+          "earth:1579753",
+          "earth:1666513",
+          "earth:1436062",
+          "earth:1646135",
+          "earth:1364197",
+          "earth:1409991"
+        ],
+        "elapsed_seconds": 0.11015141700045206
+      },
+      "amplitude_emphasis": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.6,
+        "regional_retention": 0.6,
+        "candidate_ids": [
+          "earth:1579753",
+          "earth:1640423",
+          "earth:1493510",
+          "earth:1332178",
+          "earth:1418556",
+          "earth:1364197",
+          "earth:1596863",
+          "earth:1342605",
+          "earth:1666513",
+          "earth:1651603"
+        ],
+        "elapsed_seconds": 0.08974940799998876
+      },
+      "no_median_slope": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.1,
+        "regional_retention": 0.1,
+        "candidate_ids": [
+          "earth:1672097",
+          "earth:1640423",
+          "earth:1378313",
+          "earth:1343500",
+          "earth:1562441",
+          "earth:1361023",
+          "earth:1619993",
+          "earth:1493510",
+          "earth:1444427",
+          "earth:1435586"
+        ],
+        "elapsed_seconds": 0.09681326200006879
+      },
+      "no_relief": {
+        "status": "ok",
+        "candidate_count": 10,
+        "exact_cell_retention": 0.1,
+        "regional_retention": 0.2,
+        "candidate_ids": [
+          "earth:1533947",
+          "earth:1533821",
+          "earth:1559756",
+          "earth:1692076",
+          "earth:1493510",
+          "earth:1404346",
+          "earth:1539601",
+          "earth:1513675",
+          "earth:1660490",
+          "earth:1663628"
+        ],
+        "elapsed_seconds": 0.08871595100026752
+      }
+    },
+    "jezero_near_sylhet": {
+      "balanced": {
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0,
+        "exact_cell_retention": null,
+        "regional_retention": null,
+        "candidate_ids": [],
+        "elapsed_seconds": 0.0827836100015702
+      },
+      "slope_emphasis": {
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0,
+        "exact_cell_retention": null,
+        "regional_retention": null,
+        "candidate_ids": [],
+        "elapsed_seconds": 0.07967346999976144
+      },
+      "amplitude_emphasis": {
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0,
+        "exact_cell_retention": null,
+        "regional_retention": null,
+        "candidate_ids": [],
+        "elapsed_seconds": 0.08067376100007095
+      },
+      "no_median_slope": {
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0,
+        "exact_cell_retention": null,
+        "regional_retention": null,
+        "candidate_ids": [],
+        "elapsed_seconds": 0.08595554400017136
+      },
+      "no_relief": {
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0,
+        "exact_cell_retention": null,
+        "regional_retention": null,
+        "candidate_ids": [],
+        "elapsed_seconds": 0.08684572899983323
+      }
+    }
+  },
+  "timing_scope": "Sequential local diagnostic queries; includes prepared-file reads; excludes HTTP/frontend and concurrent load.",
+  "timing_seconds": {
+    "queries": 15,
+    "median": 0.09501538600125059,
+    "max": 0.17256538400033605,
+    "p95": 0.16229913779952765
+  },
+  "remaining_validation": [
+    "Independent candidate/site evidence",
+    "Vegetation and aridity controls",
+    "Source-scale/boundary sensitivity",
+    "Expert/task relevance",
+    "Concurrent web-service benchmark"
+  ]
+}

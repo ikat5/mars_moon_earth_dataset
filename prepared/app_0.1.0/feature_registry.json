@@ -1,0 +1,4689 @@
+{
+  "version": "0.1.0",
+  "bodies": {
+    "earth": {
+      "crs": "EPSG:4326",
+      "grid": {
+        "type": "equirectangular lat/lon cells",
+        "res_deg": 0.125,
+        "shape": [
+          1440,
+          2880
+        ],
+        "cell_size_km_at_equator": 13.9,
+        "radius_km": 6371.0,
+        "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+      },
+      "features": {
+        "elev_mean_m": {
+          "name": "elev_mean_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean elevation (Moon: rel. 1737.4 km sphere; Mars: rel. areoid; Earth: rel. EGM2008 geoid)",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": -4936.22216796875,
+          "max": 6306.8876953125,
+          "mean": 1108.9337158203125,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "elev_min_m": {
+          "name": "elev_min_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Minimum elevation in cell",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": -4936.22216796875,
+          "max": 5809.00830078125,
+          "mean": 1005.3329467773438,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "elev_max_m": {
+          "name": "elev_max_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Maximum elevation in cell",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": -4936.22216796875,
+          "max": 8585.7158203125,
+          "mean": 1254.9527587890625,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "relief_m": {
+          "name": "relief_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Local relief (max - min) within the ~15 km cell",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 5690.4375,
+          "mean": 249.6197967529297,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_mean_deg": {
+          "name": "slope_mean_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean slope at ~470 m baseline",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 57.116695404052734,
+          "mean": 2.2818830013275146,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "slope_median_deg": {
+          "name": "slope_median_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Median slope at ~470 m baseline",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 61.073143005371094,
+          "mean": 2.0249156951904297,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_p90_deg": {
+          "name": "slope_p90_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "90th-percentile slope at ~470 m baseline",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 72.94489288330078,
+          "mean": 4.1992011070251465,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_frac_gt_landing": {
+          "name": "slope_frac_gt_landing",
+          "units": "fraction",
+          "dimensions": [
+            "exploration",
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of pixels steeper than 15 deg (landing tilt limit)",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.03191188722848892,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "slope_frac_gt_mobility": {
+          "name": "slope_frac_gt_mobility",
+          "units": "fraction",
+          "dimensions": [
+            "exploration",
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of pixels steeper than 25 deg (rover limit)",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0067779081873595715,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tri_mean_m": {
+          "name": "tri_mean_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Terrain Ruggedness Index (mean |dz| to 8 neighbours, ~470 m spacing)",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 0.9960252642631531,
+          "min": 0.0,
+          "max": 1115.75048828125,
+          "mean": 15.987955093383789,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "roughness_rms_m": {
+          "name": "roughness_rms_m",
+          "units": "m",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "RMS of elevation residual after plane fit over the cell (surface roughness)",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 0.9198518991470337,
+          "min": 3.968121929540059e-15,
+          "max": 925.7913208007812,
+          "mean": 37.072383880615234,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "dem_valid_frac": {
+          "name": "dem_valid_frac",
+          "units": "fraction",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of valid DEM pixels in cell (QC)",
+          "native_resolution": "463 m DEM, reduced per 0.125 deg cell",
+          "categories": null,
+          "source": "earth_etopo2022",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.3282635807991028,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "crater_density_d1": {
+          "name": "crater_density_d1",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "earth_impact_craters",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 10.912333488464355,
+          "mean": 0.0029403020162135363,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_density_d5": {
+          "name": "crater_density_d5",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "earth_impact_craters",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 10.912333488464355,
+          "mean": 0.0023344699293375015,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_density_d20": {
+          "name": "crater_density_d20",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "earth_impact_craters",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 10.912333488464355,
+          "mean": 0.0010814779670909047,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_largest_d_km": {
+          "name": "crater_largest_d_km",
+          "units": "km",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Largest crater centred in cell",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "earth_impact_craters",
+          "body": "earth",
+          "coverage_area_frac": 0.0001512847375124693,
+          "min": 0.024000000208616257,
+          "max": 160.0,
+          "mean": 17.934186935424805,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "geo_unit": {
+          "name": "geo_unit",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Dominant surface lithology class (USGS EcoTapestry / GLiM-derived, 15 classes)",
+          "native_resolution": "250 m class raster, counted per cell",
+          "categories": [
+            "acid.plutonics",
+            "acid.volcanic",
+            "basic.plutonics",
+            "basic.volcanics",
+            "carbonate.sedimentary.rock",
+            "evaporite",
+            "ice.and.glaciers",
+            "intermediate.plutonics",
+            "intermediate.volcanics",
+            "metamorphics",
+            "mixed.sedimentary.rock",
+            "pyroclastics",
+            "siliciclastic.sedimentary",
+            "unconsolidated.sediment",
+            "undefined"
+          ],
+          "source": "earth_usgs_lithology",
+          "body": "earth",
+          "coverage_area_frac": 0.9046097993850708,
+          "min": 0.0,
+          "max": 14.0,
+          "mean": 9.239381790161133,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_unit_frac": {
+          "name": "geo_unit_frac",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Areal fraction of the dominant unit in cell",
+          "native_resolution": "250 m class raster, counted per cell",
+          "categories": null,
+          "source": "earth_usgs_lithology",
+          "body": "earth",
+          "coverage_area_frac": 0.9046097993850708,
+          "min": 0.00027777778450399637,
+          "max": 1.0,
+          "mean": 0.7744045257568359,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "geo_class": {
+          "name": "geo_class",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Shared process class (volcanic / impact_crater / impact_basin / plains / highland / lowland / polar / ...); Earth: volcanic+pyroclastic = volcanic, ice = polar, unconsolidated sediment = plains, rest = other",
+          "native_resolution": "250 m class raster, counted per cell",
+          "categories": [
+            "volcanic",
+            "impact_crater",
+            "impact_basin",
+            "plains",
+            "highland",
+            "lowland",
+            "polar",
+            "transition",
+            "apron",
+            "other"
+          ],
+          "source": "earth_usgs_lithology",
+          "body": "earth",
+          "coverage_area_frac": 0.9046097993850708,
+          "min": 0.0,
+          "max": 9.0,
+          "mean": 6.913757801055908,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_unit_diversity_3x3": {
+          "name": "geo_unit_diversity_3x3",
+          "units": "count",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Number of distinct units within a 3x3-cell neighbourhood",
+          "native_resolution": "250 m class raster, counted per cell",
+          "categories": null,
+          "source": "earth_usgs_lithology",
+          "body": "earth",
+          "coverage_area_frac": 0.9046097993850708,
+          "min": 1.0,
+          "max": 13.0,
+          "mean": 3.511993885040283,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tsurf_max_k": {
+          "name": "tsurf_max_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Warmest monthly-median daytime LST (~10:30 local; below the true afternoon peak)",
+          "native_resolution": "1 km, cell mean",
+          "categories": null,
+          "source": "earth_modis_lst",
+          "body": "earth",
+          "coverage_area_frac": 0.9140207171440125,
+          "min": 252.94000244140625,
+          "max": 337.131103515625,
+          "mean": 302.8327941894531,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_min_k": {
+          "name": "tsurf_min_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Coldest monthly-median night-time LST (~22:30 local; above the true pre-dawn minimum)",
+          "native_resolution": "1 km, cell mean",
+          "categories": null,
+          "source": "earth_modis_lst",
+          "body": "earth",
+          "coverage_area_frac": 0.9140244126319885,
+          "min": 222.4475555419922,
+          "max": 302.0458679199219,
+          "mean": 265.10498046875,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_mean_k": {
+          "name": "tsurf_mean_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Annual mean of monthly (day+night)/2 LST; only cells with all 12 months",
+          "native_resolution": "1 km, cell mean",
+          "categories": null,
+          "source": "earth_modis_lst",
+          "body": "earth",
+          "coverage_area_frac": 0.9139601588249207,
+          "min": 237.87351989746094,
+          "max": 314.1708068847656,
+          "mean": 282.1299133300781,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_diurnal_range_k": {
+          "name": "tsurf_diurnal_range_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Mean day-minus-night LST over months with both overpasses (~10:30 vs ~22:30: a lower bound; slightly negative in ~0.1% of cells where day and night medians come from different clear-sky samples)",
+          "native_resolution": "1 km, cell mean",
+          "categories": null,
+          "source": "earth_modis_lst",
+          "body": "earth",
+          "coverage_area_frac": 0.9139665365219116,
+          "min": -7.980010986328125,
+          "max": 42.199424743652344,
+          "mean": 10.946028709411621,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_seasonal_range_k": {
+          "name": "tsurf_seasonal_range_k",
+          "units": "K",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Range of monthly (day+night)/2 LST across the year",
+          "native_resolution": "1 km, cell mean",
+          "categories": null,
+          "source": "earth_modis_lst",
+          "body": "earth",
+          "coverage_area_frac": 0.9139601588249207,
+          "min": 0.384521484375,
+          "max": 66.43338012695312,
+          "mean": 26.879497528076172,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "liquid_water_window_frac": {
+          "name": "liquid_water_window_frac",
+          "units": "fraction",
+          "dimensions": [
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Fraction of the 24 monthly day/night LST samples above 273.15 K (surface pressure is always above the H2O triple point on Earth)",
+          "native_resolution": "1 km, cell mean",
+          "categories": null,
+          "source": "earth_modis_lst",
+          "body": "earth",
+          "coverage_area_frac": 0.9140703082084656,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6916227340698242,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "lst_sample_coverage": {
+          "name": "lst_sample_coverage",
+          "units": "fraction",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Fraction of the 24 monthly day/night LST samples observed (QC)",
+          "native_resolution": "1 km, cell mean",
+          "categories": null,
+          "source": "earth_modis_lst",
+          "body": "earth",
+          "coverage_area_frac": 0.9140703082084656,
+          "min": 0.0416666679084301,
+          "max": 1.0,
+          "mean": 0.999774694442749,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "ps_mean_pa": {
+          "name": "ps_mean_pa",
+          "units": "Pa",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean surface pressure",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 49316.9296875,
+          "max": 103073.125,
+          "mean": 96672.703125,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "ps_min_pa": {
+          "name": "ps_min_pa",
+          "units": "Pa",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Minimum monthly-mean surface pressure",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 48528.0078125,
+          "max": 102340.9140625,
+          "mean": 96295.46875,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "wind_mean_ms": {
+          "name": "wind_mean_ms",
+          "units": "m/s",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean 10 m wind speed",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.4830783009529114,
+          "max": 15.432315826416016,
+          "mean": 6.375184059143066,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "wind_max_seasonal_ms": {
+          "name": "wind_max_seasonal_ms",
+          "units": "m/s",
+          "dimensions": [
+            "surface_processes",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Highest monthly-mean 10 m wind speed",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.5219061970710754,
+          "max": 17.81355857849121,
+          "mean": 7.37567138671875,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "surface_stress_mean_npm2": {
+          "name": "surface_stress_mean_npm2",
+          "units": "N/m2",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean surface wind stress (magnitude of monthly-mean components: underestimates gusty stress)",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.001018119277432561,
+          "max": 2.8426618576049805,
+          "mean": 0.08897478133440018,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "insolation_surface_wm2": {
+          "name": "insolation_surface_wm2",
+          "units": "W/m2",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean downward solar flux at the surface (includes cloud and aerosol attenuation)",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 61.23817443847656,
+          "max": 310.0650329589844,
+          "mean": 164.14210510253906,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "h2o_frost_max_kgm2": {
+          "name": "h2o_frost_max_kgm2",
+          "units": "kg/m2",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Peak monthly-mean snow water equivalent (Earth's seasonal surface H2O ice; capped at 1e4 over glaciers)",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 10000.0,
+          "mean": 1156.349609375,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "albedo_lambert": {
+          "name": "albedo_lambert",
+          "units": "dimensionless",
+          "dimensions": [
+            "environment",
+            "surface_processes"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean broadband surface albedo (ERA5 forecast albedo)",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.03984443098306656,
+          "max": 0.8500012159347534,
+          "mean": 0.2685115337371826,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "soil_water_vol_frac": {
+          "name": "soil_water_vol_frac",
+          "units": "m3/m3",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean volumetric soil water, 0-7 cm (Earth only; NaN on ERA5 glacier points)",
+          "native_resolution": "0.25 deg reanalysis (containing node)",
+          "categories": null,
+          "source": "earth_era5_climate",
+          "body": "earth",
+          "coverage_area_frac": 0.906023383140564,
+          "min": 6.07600895818905e-07,
+          "max": 0.7425115704536438,
+          "mean": 0.06739804893732071,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "dune_cover_frac": {
+          "name": "dune_cover_frac",
+          "units": "fraction",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Fraction of 0.1 deg dune-presence pixels centred in the cell that contain dunes",
+          "native_resolution": "0.1 deg presence mask",
+          "categories": null,
+          "source": "earth_dunes",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.016443926841020584,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "dune_field_distance_km": {
+          "name": "dune_field_distance_km",
+          "units": "km",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Distance to the nearest dune-presence pixel (aeolian activity context)",
+          "native_resolution": "0.1 deg presence mask",
+          "categories": null,
+          "source": "earth_dunes",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 1.4704190492630005,
+          "max": 5535.04833984375,
+          "mean": 1456.9134521484375,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cave_candidate_count": {
+          "name": "cave_candidate_count",
+          "units": "count",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Number of Wikidata cave candidates in cell",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "earth_wikidata_caves",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 250.0,
+          "mean": 0.0036590953823179007,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cave_candidate_distance_km": {
+          "name": "cave_candidate_distance_km",
+          "units": "km",
+          "dimensions": [
+            "subsurface",
+            "exploration"
+          ],
+          "measurement_type": "catalog",
+          "description": "Great-circle distance to nearest cave candidate",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "earth_wikidata_caves",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.018490372225642204,
+          "max": 3595.65625,
+          "mean": 1089.498046875,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "nearest_cave_setting": {
+          "name": "nearest_cave_setting",
+          "units": "category",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Host setting/type of nearest cave",
+          "native_resolution": "point catalog",
+          "categories": [
+            "cave",
+            "lava_tube"
+          ],
+          "source": "earth_wikidata_caves",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.11383511871099472,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "insolation_toa_wm2": {
+          "name": "insolation_toa_wm2",
+          "units": "W/m2",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Annual-mean daily top-of-atmosphere insolation on a horizontal surface (orbit & obliquity only)",
+          "native_resolution": "analytic, per latitude",
+          "categories": null,
+          "source": "earth_model_geometry",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 172.35398864746094,
+          "max": 415.5945739746094,
+          "mean": 298.3726806640625,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "landing_hazard_index": {
+          "name": "landing_hazard_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Weighted mean of steep-slope fraction and roughness/50 m (weights {'slope_frac_gt_landing': 0.67, 'roughness': 0.33}); terrain-only so it is consistent at all latitudes - see boulder_hazard_index for rocks",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.13925428688526154,
+          "comparison_policy": "derived_terrain_context",
+          "comparison_note": "Reuses terrain measurements; not independent evidence."
+        },
+        "traversability_index": {
+          "name": "traversability_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 - weighted terrain hazard (weights {'slope_frac_gt_mobility': 0.6, 'roughness': 0.4}); 1 = easiest rover traverse",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.8544111251831055,
+          "comparison_policy": "derived_terrain_context",
+          "comparison_note": "Reuses terrain measurements; not independent evidence."
+        },
+        "terrain_class": {
+          "name": "terrain_class",
+          "units": "category",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Slope-based terrain class from 90th-percentile slope (<5 smooth, 5-15 moderate, 15-25 rugged, >=25 steep)",
+          "native_resolution": "analysis grid",
+          "categories": [
+            "smooth",
+            "moderate",
+            "rugged",
+            "steep"
+          ],
+          "source": "derived",
+          "body": "earth",
+          "coverage_area_frac": 0.997140645980835,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.34823524951934814,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "cold_trap_flag": {
+          "name": "cold_trap_flag",
+          "units": "0/1",
+          "dimensions": [
+            "environment",
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 if any temperature product shows annual max T < 110 K in the cell",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "earth",
+          "coverage_area_frac": 0.9140207171440125,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "water_indicator_score": {
+          "name": "water_indicator_score",
+          "units": "0-1",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "PROXY: mean of available [soil water / 0.5 m3/m3, peak snow water equivalent / 100 kg/m2]",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 6.07600895818905e-07,
+          "max": 1.0,
+          "mean": 0.5922327637672424,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "lava_tube_context_flag": {
+          "name": "lava_tube_context_flag",
+          "units": "0/1",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 if a cave candidate (Mars MGC3 / Earth Wikidata) lies within 50 km AND the dominant unit is volcanic - context only",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0064448220655322075,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "solar_power_index": {
+          "name": "solar_power_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Annual-mean surface insolation (Mars MCD dust-attenuated / Earth ERA5 cloud-attenuated) / 250 W/m2",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "earth",
+          "coverage_area_frac": 1.0,
+          "min": 0.2598084807395935,
+          "max": 1.0,
+          "mean": 0.6558849215507507,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        }
+      }
+    },
+    "moon": {
+      "crs": "IAU_2015:30100",
+      "grid": {
+        "type": "equirectangular lat/lon cells",
+        "res_deg": 0.5,
+        "shape": [
+          360,
+          720
+        ],
+        "cell_size_km_at_equator": 15.16,
+        "radius_km": 1737.4,
+        "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+      },
+      "features": {
+        "elev_mean_m": {
+          "name": "elev_mean_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean elevation (Moon: rel. 1737.4 km sphere; Mars: rel. areoid)",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": -8272.982421875,
+          "max": 9704.9794921875,
+          "mean": -521.5069580078125,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "elev_min_m": {
+          "name": "elev_min_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Minimum elevation in cell",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": -9114.5,
+          "max": 8544.5,
+          "mean": -1160.4794921875,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "elev_max_m": {
+          "name": "elev_max_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Maximum elevation in cell",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": -7773.0,
+          "max": 10757.0,
+          "mean": 123.01576232910156,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "relief_m": {
+          "name": "relief_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Local relief (max - min) within the ~15 km cell",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 9.0,
+          "max": 7010.5,
+          "mean": 1283.4952392578125,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_mean_deg": {
+          "name": "slope_mean_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean slope at ~470 m baseline",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 0.08817445486783981,
+          "max": 28.511613845825195,
+          "mean": 6.724796772003174,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "slope_median_deg": {
+          "name": "slope_median_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Median slope at ~470 m baseline",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 0.06818851083517075,
+          "max": 31.0915584564209,
+          "mean": 5.9490251541137695,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_p90_deg": {
+          "name": "slope_p90_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "90th-percentile slope at ~470 m baseline",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 0.15539193153381348,
+          "max": 36.28063201904297,
+          "mean": 12.611228942871094,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_frac_gt_landing": {
+          "name": "slope_frac_gt_landing",
+          "units": "fraction",
+          "dimensions": [
+            "exploration",
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of pixels steeper than 15 deg (landing tilt limit)",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.10989238321781158,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "slope_frac_gt_mobility": {
+          "name": "slope_frac_gt_mobility",
+          "units": "fraction",
+          "dimensions": [
+            "exploration",
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of pixels steeper than 25 deg (rover limit)",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 0.0,
+          "max": 0.9228515625,
+          "mean": 0.01571621187031269,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tri_mean_m": {
+          "name": "tri_mean_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Terrain Ruggedness Index (mean |dz| to 8 neighbours, ~470 m spacing)",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 0.59716796875,
+          "max": 209.0047607421875,
+          "mean": 44.233154296875,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "roughness_rms_m": {
+          "name": "roughness_rms_m",
+          "units": "m",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "RMS of elevation residual after plane fit over the cell (surface roughness)",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 1.0164291858673096,
+          "max": 1087.9747314453125,
+          "mean": 166.94021606445312,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "dem_valid_frac": {
+          "name": "dem_valid_frac",
+          "units": "fraction",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of valid DEM pixels in cell (QC)",
+          "native_resolution": "474 m DEM, reduced per 0.5 deg cell",
+          "categories": null,
+          "source": "moon_lola_ldem64",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619230641713,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "tsurf_max_k": {
+          "name": "tsurf_max_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Maximum binned bolometric temperature over the lunar day",
+          "native_resolution": "0.5 deg x 15 min local time",
+          "categories": null,
+          "source": "moon_diviner_gcp",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 51.31230163574219,
+          "max": 438.9996032714844,
+          "mean": 335.3384704589844,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_min_k": {
+          "name": "tsurf_min_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Minimum binned bolometric temperature (night)",
+          "native_resolution": "0.5 deg x 15 min local time",
+          "categories": null,
+          "source": "moon_diviner_gcp",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 19.392499923706055,
+          "max": 131.9824981689453,
+          "mean": 82.8902587890625,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_mean_k": {
+          "name": "tsurf_mean_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "measurement",
+          "description": "Diurnal mean Tbol: each cell's own local-time curve, circularly linearly interpolated across gaps <=1.5 h (no spatial interpolation); NaN if any gap is longer",
+          "native_resolution": "0.5 deg x 15 min local time",
+          "categories": null,
+          "source": "moon_diviner_gcp",
+          "body": "moon",
+          "coverage_area_frac": 0.9833046312430612,
+          "min": 40.176475524902344,
+          "max": 230.84019470214844,
+          "mean": 185.43869018554688,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_diurnal_range_k": {
+          "name": "tsurf_diurnal_range_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "measurement",
+          "description": "Diurnal temperature range (max - min)",
+          "native_resolution": "0.5 deg x 15 min local time",
+          "categories": null,
+          "source": "moon_diviner_gcp",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 22.112699508666992,
+          "max": 345.8182067871094,
+          "mean": 252.44818115234375,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_noon_k": {
+          "name": "tsurf_noon_k",
+          "units": "K",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean Tbol at local noon (11:30-12:30)",
+          "native_resolution": "0.5 deg x 15 min local time",
+          "categories": null,
+          "source": "moon_diviner_gcp",
+          "body": "moon",
+          "coverage_area_frac": 0.9864201818929702,
+          "min": 34.71012496948242,
+          "max": 400.08160400390625,
+          "mean": 327.2158508300781,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_midnight_k": {
+          "name": "tsurf_midnight_k",
+          "units": "K",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean Tbol at local midnight (23:30-00:30)",
+          "native_resolution": "0.5 deg x 15 min local time",
+          "categories": null,
+          "source": "moon_diviner_gcp",
+          "body": "moon",
+          "coverage_area_frac": 0.9924412039568965,
+          "min": 34.16812515258789,
+          "max": 200.644287109375,
+          "mean": 90.57821655273438,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "diviner_lt_coverage": {
+          "name": "diviner_lt_coverage",
+          "units": "fraction",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of 96 local-time bins observed (QC)",
+          "native_resolution": "0.5 deg x 15 min local time",
+          "categories": null,
+          "source": "moon_diviner_gcp",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.4166666567325592,
+          "max": 1.0,
+          "mean": 0.6821752786636353,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "prp_tmax_min_k": {
+          "name": "prp_tmax_min_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "resources"
+          ],
+          "measurement_type": "model",
+          "description": "Coldest annual-maximum surface temperature among facets in cell (cold-trap strength)",
+          "native_resolution": "~240 m facets binned per cell",
+          "categories": null,
+          "source": "moon_diviner_prp",
+          "body": "moon",
+          "coverage_area_frac": 0.02029707641318836,
+          "min": 24.125999450683594,
+          "max": 322.5320129394531,
+          "mean": 152.89723205566406,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "prp_tmax_mean_k": {
+          "name": "prp_tmax_mean_k",
+          "units": "K",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "model",
+          "description": "Mean annual maximum surface temperature",
+          "native_resolution": "~240 m facets binned per cell",
+          "categories": null,
+          "source": "moon_diviner_prp",
+          "body": "moon",
+          "coverage_area_frac": 0.02029707641318836,
+          "min": 50.40584182739258,
+          "max": 325.4844970703125,
+          "mean": 230.59701538085938,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "prp_tavg_mean_k": {
+          "name": "prp_tavg_mean_k",
+          "units": "K",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "model",
+          "description": "Mean annual-average temperature at 2 cm depth",
+          "native_resolution": "~240 m facets binned per cell",
+          "categories": null,
+          "source": "moon_diviner_prp",
+          "body": "moon",
+          "coverage_area_frac": 0.02029707641318836,
+          "min": 34.613407135009766,
+          "max": 193.47267150878906,
+          "mean": 112.80746459960938,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cold_trap_area_frac": {
+          "name": "cold_trap_area_frac",
+          "units": "fraction",
+          "dimensions": [
+            "resources",
+            "habitability",
+            "environment"
+          ],
+          "measurement_type": "model",
+          "description": "Fraction of facets with annual max T < 110 K (H2O ice sublimation-stable at surface)",
+          "native_resolution": "~240 m facets binned per cell",
+          "categories": null,
+          "source": "moon_diviner_prp",
+          "body": "moon",
+          "coverage_area_frac": 0.02029707641318836,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.05726324021816254,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "ice_stable_surface_frac": {
+          "name": "ice_stable_surface_frac",
+          "units": "fraction",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Fraction of facets where ice is stable at the surface (PRP depth 0 or T_max < 110 K; model)",
+          "native_resolution": "~240 m facets binned per cell",
+          "categories": null,
+          "source": "moon_diviner_prp",
+          "body": "moon",
+          "coverage_area_frac": 0.02029707641318836,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.059277620166540146,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "ice_stable_1m_frac": {
+          "name": "ice_stable_1m_frac",
+          "units": "fraction",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Fraction of facets where ice is stable within 1 m depth (model)",
+          "native_resolution": "~240 m facets binned per cell",
+          "categories": null,
+          "source": "moon_diviner_prp",
+          "body": "moon",
+          "coverage_area_frac": 0.02029707641318836,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5011681318283081,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "ice_depth_min_m": {
+          "name": "ice_depth_min_m",
+          "units": "m",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "model",
+          "description": "Shallowest modelled ice-stability depth in cell (NaN = deeper than 2.87 m everywhere or no data)",
+          "native_resolution": "~240 m facets binned per cell",
+          "categories": null,
+          "source": "moon_diviner_prp",
+          "body": "moon",
+          "coverage_area_frac": 0.01684515149445586,
+          "min": 0.0,
+          "max": 1.2879199981689453,
+          "mean": 0.05280708149075508,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "rock_abundance": {
+          "name": "rock_abundance",
+          "units": "fraction",
+          "dimensions": [
+            "surface_processes",
+            "exploration"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Areal fraction of surface covered by rocks >~1 m (Diviner) (cell mean)",
+          "native_resolution": "32 ppd (~950 m)",
+          "categories": null,
+          "source": "moon_diviner_rockabundance",
+          "body": "moon",
+          "coverage_area_frac": 0.8660254037844387,
+          "min": 0.0008299595792777836,
+          "max": 0.13125896453857422,
+          "mean": 0.0037581620272248983,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "rock_abundance_p90": {
+          "name": "rock_abundance_p90",
+          "units": "fraction",
+          "dimensions": [
+            "surface_processes",
+            "exploration"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "90th percentile rock abundance in cell (boulder-field hotspots)",
+          "native_resolution": "32 ppd (~950 m)",
+          "categories": null,
+          "source": "moon_diviner_rockabundance",
+          "body": "moon",
+          "coverage_area_frac": 0.8660254037844387,
+          "min": 0.0020000000949949026,
+          "max": 0.2590000033378601,
+          "mean": 0.005975786130875349,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "regolith_temp_anomaly_k": {
+          "name": "regolith_temp_anomaly_k",
+          "units": "K (anomaly)",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Average regolith temperature variation (Bandfield 2011): regolith thermophysical/maturity proxy (cell mean)",
+          "native_resolution": "32 ppd (~950 m)",
+          "categories": null,
+          "source": "moon_diviner_rockabundance",
+          "body": "moon",
+          "coverage_area_frac": 0.8660254037844387,
+          "min": -15.64921760559082,
+          "max": 32.14838790893555,
+          "mean": 0.49088406562805176,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "mgo_wt": {
+          "name": "mgo_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "MgO abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 23.702999114990234,
+          "mean": 6.515716552734375,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "mgo_wt_sigma": {
+          "name": "mgo_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of MgO (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.46049973368644714,
+          "max": 5.224366188049316,
+          "mean": 3.100437879562378,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "al2o3_wt": {
+          "name": "al2o3_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Al2O3 abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 48.36399841308594,
+          "mean": 22.918819427490234,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "al2o3_wt_sigma": {
+          "name": "al2o3_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of Al2O3 (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.7170565128326416,
+          "max": 8.226178169250488,
+          "mean": 4.83713960647583,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "sio2_wt": {
+          "name": "sio2_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "SiO2 abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 20.566999435424805,
+          "max": 66.44000244140625,
+          "mean": 43.33855056762695,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "sio2_wt_sigma": {
+          "name": "sio2_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of SiO2 (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.6231131553649902,
+          "max": 7.114773273468018,
+          "mean": 4.169703483581543,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "cao_wt": {
+          "name": "cao_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "CaO abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 31.908000946044922,
+          "mean": 15.773137092590332,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cao_wt_sigma": {
+          "name": "cao_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of CaO (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.42559370398521423,
+          "max": 4.898571014404297,
+          "mean": 2.886181116104126,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "tio2_wt": {
+          "name": "tio2_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TiO2 abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 11.993000030517578,
+          "mean": 0.8383920192718506,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tio2_wt_sigma": {
+          "name": "tio2_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of TiO2 (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.06570235639810562,
+          "max": 1.917576551437378,
+          "mean": 0.5433948636054993,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "feo_wt": {
+          "name": "feo_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "FeO abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 30.749000549316406,
+          "mean": 6.778196811676025,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "feo_wt_sigma": {
+          "name": "feo_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of FeO (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.12670832872390747,
+          "max": 2.9984161853790283,
+          "mean": 0.9849007725715637,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "k_ppm": {
+          "name": "k_ppm",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "K abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 4356.39990234375,
+          "mean": 724.23828125,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "k_ppm_sigma": {
+          "name": "k_ppm_sigma",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of K (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 28.34872055053711,
+          "max": 335.79754638671875,
+          "mean": 193.89779663085938,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "th_ppm": {
+          "name": "th_ppm",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Th abundance",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.003662999952211976,
+          "max": 11.644000053405762,
+          "mean": 1.5890440940856934,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "th_ppm_sigma": {
+          "name": "th_ppm_sigma",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of Th (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.03291504085063934,
+          "max": 0.39756760001182556,
+          "mean": 0.2241888791322708,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "u_ppm": {
+          "name": "u_ppm",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "U abundance (U is tied to Th, U=0.27Th, not independent)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 3.1777000427246094,
+          "mean": 0.43280887603759766,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "u_ppm_sigma": {
+          "name": "u_ppm_sigma",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of U (sqrt of error-matrix diagonal)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.024847937747836113,
+          "max": 0.2909364104270935,
+          "mean": 0.16929316520690918,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "mg_number": {
+          "name": "mg_number",
+          "units": "molar %",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Mg# = 100 Mg/(Mg+Fe) molar, from GRS MgO and FeO (mafic-mineral chemistry indicator)",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_grs",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 100.0,
+          "mean": 59.78974533081055,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "lp_epithermal_counts": {
+          "name": "lp_epithermal_counts",
+          "units": "counts/32s",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "measurement",
+          "description": "LP epithermal neutron counting rate per 32 s",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_neutrons",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 531.52001953125,
+          "max": 615.8300170898438,
+          "mean": 575.574951171875,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "lp_epithermal_sigma": {
+          "name": "lp_epithermal_sigma",
+          "units": "counts/32s",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "measurement",
+          "description": "1-sigma of epithermal counts",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_neutrons",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 13.359999656677246,
+          "max": 42.13999938964844,
+          "mean": 25.7929630279541,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "lp_thermal_counts": {
+          "name": "lp_thermal_counts",
+          "units": "counts/32s",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "measurement",
+          "description": "LP thermal neutron counting rate per 32 s",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_neutrons",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 285.5299987792969,
+          "max": 822.52001953125,
+          "mean": 635.0927124023438,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "lp_thermal_sigma": {
+          "name": "lp_thermal_sigma",
+          "units": "counts/32s",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "measurement",
+          "description": "1-sigma of thermal counts",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_neutrons",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 12.420000076293945,
+          "max": 76.23999786376953,
+          "mean": 45.89701461791992,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "lp_fast_counts": {
+          "name": "lp_fast_counts",
+          "units": "counts/32s",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "measurement",
+          "description": "LP fast neutron counting rate per 32 s",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_neutrons",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 375.79998779296875,
+          "max": 499.7900085449219,
+          "mean": 407.8952941894531,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "lp_fast_sigma": {
+          "name": "lp_fast_sigma",
+          "units": "counts/32s",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "measurement",
+          "description": "1-sigma of fast counts",
+          "native_resolution": "2 deg equal-area (~60 km)",
+          "categories": null,
+          "source": "moon_lp_neutrons",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 9.767000198364258,
+          "max": 54.650001525878906,
+          "mean": 24.725008010864258,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "grail_bouguer_mgal": {
+          "name": "grail_bouguer_mgal",
+          "units": "mGal",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "GRAIL GRGM900C Bouguer gravity anomaly (l<=600)",
+          "native_resolution": "SH degree 600 (~9 km half-wavelength), 0.125 deg grid",
+          "categories": null,
+          "source": "moon_grail_gravity",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": -699.9158935546875,
+          "max": 737.728759765625,
+          "mean": 14.223097801208496,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "grail_freeair_error_mgal": {
+          "name": "grail_freeair_error_mgal",
+          "units": "mGal",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma error of the free-air anomaly (uncertainty)",
+          "native_resolution": "SH degree 600 (~9 km half-wavelength), 0.125 deg grid",
+          "categories": null,
+          "source": "moon_grail_gravity",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.23291164636611938,
+          "max": 7.423984050750732,
+          "mean": 1.6538790464401245,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "grail_bouguer_residual_mgal": {
+          "name": "grail_bouguer_residual_mgal",
+          "units": "mGal",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Bouguer anomaly minus 7x7-cell (~105 km) median: local density-anomaly INDICATOR, not cave evidence",
+          "native_resolution": "derived at 0.5 deg",
+          "categories": null,
+          "source": "moon_grail_gravity",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": -99.29977416992188,
+          "max": 182.47509765625,
+          "mean": 0.5621199607849121,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_density_d1": {
+          "name": "crater_density_d1",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "moon_robbins_craters",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": -9.212183793572137e-11,
+          "max": 2215.646728515625,
+          "mean": 401.0636291503906,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_density_d5": {
+          "name": "crater_density_d5",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "moon_robbins_craters",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": -7.318089710606213e-12,
+          "max": 664.6940307617188,
+          "mean": 23.436307907104492,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_density_d20": {
+          "name": "crater_density_d20",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "moon_robbins_craters",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": -3.07482771882972e-13,
+          "max": 221.56468200683594,
+          "mean": 2.000433921813965,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_sfd_slope": {
+          "name": "crater_sfd_slope",
+          "units": "dimensionless",
+          "dimensions": [
+            "terrain",
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Cumulative size-frequency power-law slope [2, 10] km (5x5 cell window); shallower = degraded/resurfaced or saturated",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "moon_robbins_craters",
+          "body": "moon",
+          "coverage_area_frac": 0.8621009428325088,
+          "min": -19.001585006713867,
+          "max": -0.30129069089889526,
+          "mean": -4.145514965057373,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_largest_d_km": {
+          "name": "crater_largest_d_km",
+          "units": "km",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Largest crater centred in cell",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "moon_robbins_craters",
+          "body": "moon",
+          "coverage_area_frac": 0.9074080639031116,
+          "min": 1.0,
+          "max": 2491.8701171875,
+          "mean": 5.422969818115234,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "geo_unit": {
+          "name": "geo_unit",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Dominant mapped unit (Unified Geologic Map of the Moon 1:5M)",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": [
+            "Cc",
+            "Ccc",
+            "Csc",
+            "EIp",
+            "Ec",
+            "Ecc",
+            "Em",
+            "Esc",
+            "INp",
+            "INt",
+            "Ib",
+            "Ibm",
+            "Ic",
+            "Ic1",
+            "Ic2",
+            "Icc",
+            "Icf",
+            "Id",
+            "Ig",
+            "Iia",
+            "Iiap",
+            "Iic",
+            "Iif",
+            "Im1",
+            "Im2",
+            "Imd",
+            "Iohi",
+            "Ioho",
+            "Iohs",
+            "Iom",
+            "Iork",
+            "Iorm",
+            "Ip",
+            "Isc",
+            "It",
+            "Itd",
+            "Nb",
+            "Nbl",
+            "Nbm",
+            "Nbsc",
+            "Nc",
+            "Nnj",
+            "Np",
+            "Nt",
+            "Ntp",
+            "pNb",
+            "pNbm",
+            "pNc",
+            "pNt"
+          ],
+          "source": "moon_unified_geology",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 48.0,
+          "mean": 30.60337257385254,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_unit_frac": {
+          "name": "geo_unit_frac",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Areal fraction of the dominant unit in cell",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": null,
+          "source": "moon_unified_geology",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.25,
+          "max": 1.0,
+          "mean": 0.8851523995399475,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "geo_class": {
+          "name": "geo_class",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Shared process class (volcanic / impact_crater / impact_basin / plains / highland / lowland / polar / ...)",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": [
+            "volcanic",
+            "impact_crater",
+            "impact_basin",
+            "plains",
+            "highland",
+            "lowland",
+            "polar",
+            "transition",
+            "apron",
+            "other"
+          ],
+          "source": "moon_unified_geology",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 4.0,
+          "mean": 1.9123495817184448,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_age": {
+          "name": "geo_age",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Mapped chronostratigraphic period of the dominant unit",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": [
+            "Copernican",
+            "Eratosthenian",
+            "Eratosthenian-Imbrian",
+            "Imbrian",
+            "Imbrian-Nectarian",
+            "Nectarian",
+            "Pre-Nectarian"
+          ],
+          "source": "moon_unified_geology",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 3.9721181392669678,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_unit_diversity_3x3": {
+          "name": "geo_unit_diversity_3x3",
+          "units": "count",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Number of distinct units within a 3x3-cell neighbourhood",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": null,
+          "source": "moon_unified_geology",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 1.0,
+          "max": 9.0,
+          "mean": 2.5617244243621826,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cave_candidate_count": {
+          "name": "cave_candidate_count",
+          "units": "count",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Number of LROC Lunar Pit Atlas pit candidates in cell",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "moon_lroc_pits",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 41.0,
+          "mean": 0.0010725308675318956,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cave_candidate_distance_km": {
+          "name": "cave_candidate_distance_km",
+          "units": "km",
+          "dimensions": [
+            "subsurface",
+            "exploration"
+          ],
+          "measurement_type": "catalog",
+          "description": "Great-circle distance to nearest pit candidate",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "moon_lroc_pits",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.043371234089136124,
+          "max": 1153.561767578125,
+          "mean": 457.5562438964844,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "nearest_cave_depth_diam_ratio": {
+          "name": "nearest_cave_depth_diam_ratio",
+          "units": "ratio",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Depth/diameter of the nearest pit (where measured)",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "moon_lroc_pits",
+          "body": "moon",
+          "coverage_area_frac": 0.8969937733972531,
+          "min": 0.0,
+          "max": 2.6842105388641357,
+          "mean": 0.5423083305358887,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "nearest_cave_setting": {
+          "name": "nearest_cave_setting",
+          "units": "category",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Host setting/type of nearest pit",
+          "native_resolution": "point catalog",
+          "categories": [
+            "Highland",
+            "Impact Melt",
+            "Mare"
+          ],
+          "source": "moon_lroc_pits",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 1.116608738899231,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "illum_mean_frac": {
+          "name": "illum_mean_frac",
+          "units": "fraction",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Average fraction of solar disk visible (18.6-yr cycle, LOLA horizon model)",
+          "native_resolution": "240 m polar stereographic, binned per cell",
+          "categories": null,
+          "source": "moon_pgda_illumination",
+          "body": "moon",
+          "coverage_area_frac": 0.1200336142227328,
+          "min": 0.0,
+          "max": 0.4999200105667114,
+          "mean": 0.3539571762084961,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "illum_max_frac": {
+          "name": "illum_max_frac",
+          "units": "fraction",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Best-illuminated spot in cell (candidate solar-power site)",
+          "native_resolution": "240 m polar stereographic, binned per cell",
+          "categories": null,
+          "source": "moon_pgda_illumination",
+          "body": "moon",
+          "coverage_area_frac": 0.1200336142227328,
+          "min": 0.0,
+          "max": 0.9347599744796753,
+          "mean": 0.45985928177833557,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "psr_area_frac": {
+          "name": "psr_area_frac",
+          "units": "fraction",
+          "dimensions": [
+            "environment",
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Fraction of cell never illuminated (permanently shadowed)",
+          "native_resolution": "240 m polar stereographic, binned per cell",
+          "categories": null,
+          "source": "moon_pgda_illumination",
+          "body": "moon",
+          "coverage_area_frac": 0.1200336142227328,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0340748131275177,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "insolation_toa_wm2": {
+          "name": "insolation_toa_wm2",
+          "units": "W/m2",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Annual-mean daily top-of-atmosphere insolation on a horizontal surface (orbit & obliquity only)",
+          "native_resolution": "analytic, per latitude",
+          "categories": null,
+          "source": "moon_model_geometry",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 11.743616104125977,
+          "max": 433.197509765625,
+          "mean": 276.06951904296875,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "earth_visibility_frac": {
+          "name": "earth_visibility_frac",
+          "units": "fraction",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Fraction of libration cycle with Earth above horizon (bare sphere; direct-to-Earth comms proxy)",
+          "native_resolution": "analytic",
+          "categories": null,
+          "source": "moon_model_geometry",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "liquid_water_window_frac": {
+          "name": "liquid_water_window_frac",
+          "units": "fraction",
+          "dimensions": [
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Always 0: lunar surface pressure (~1e-10 Pa exosphere) is far below the H2O triple point",
+          "native_resolution": "constant",
+          "categories": null,
+          "source": "moon_model_geometry",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "boulder_hazard_index": {
+          "name": "boulder_hazard_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Rock abundance / 0.2 clipped to 0-1 (1 = boulder-saturated)",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 0.866025447845459,
+          "min": 0.004149797838181257,
+          "max": 0.6562948226928711,
+          "mean": 0.01879081130027771,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "landing_hazard_index": {
+          "name": "landing_hazard_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Weighted mean of steep-slope fraction and roughness/50 m (weights {'slope_frac_gt_landing': 0.67, 'roughness': 0.33}); terrain-only so it is consistent at all latitudes - see boulder_hazard_index for rocks",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619126319885,
+          "min": 0.006708432454615831,
+          "max": 1.0,
+          "mean": 0.3742840886116028,
+          "comparison_policy": "derived_terrain_context",
+          "comparison_note": "Reuses terrain measurements; not independent evidence."
+        },
+        "traversability_index": {
+          "name": "traversability_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 - weighted terrain hazard (weights {'slope_frac_gt_mobility': 0.6, 'roughness': 0.4}); 1 = easiest rover traverse",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619126319885,
+          "min": 0.04628906399011612,
+          "max": 0.9918685555458069,
+          "mean": 0.62613844871521,
+          "comparison_policy": "derived_terrain_context",
+          "comparison_note": "Reuses terrain measurements; not independent evidence."
+        },
+        "terrain_class": {
+          "name": "terrain_class",
+          "units": "category",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Slope-based terrain class from 90th-percentile slope (<5 smooth, 5-15 moderate, 15-25 rugged, >=25 steep)",
+          "native_resolution": "analysis grid",
+          "categories": [
+            "smooth",
+            "moderate",
+            "rugged",
+            "steep"
+          ],
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 0.9999619126319885,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 1.2482154369354248,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "cold_trap_flag": {
+          "name": "cold_trap_flag",
+          "units": "0/1",
+          "dimensions": [
+            "environment",
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 if any temperature product shows annual max T < 110 K in the cell",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.03746141865849495,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "hydrogen_enrichment_pct": {
+          "name": "hydrogen_enrichment_pct",
+          "units": "%",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Epithermal-neutron suppression after an empirical composition correction (OLS on FeO, TiO2, Th fitted at |lat|<60 deg; Fe/Ti/KREEP absorbers otherwise mimic hydrogen in the maria). Positive = more H; relative proxy",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": -5.639002799987793,
+          "max": 5.649463176727295,
+          "mean": 0.4038986563682556,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "water_indicator_score": {
+          "name": "water_indicator_score",
+          "units": "0-1",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "PROXY: mean of available [cold-trap area fraction, ice-stable-within-1 m fraction, H enrichment/5%]",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.14741599559783936,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "volatile_preservation_proxy": {
+          "name": "volatile_preservation_proxy",
+          "units": "0-1",
+          "dimensions": [
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "PROXY: mean of cold-trap and permanently-shadowed area fractions (volatile/organic preservation)",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 0.12003381550312042,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.030350932851433754,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "lava_tube_context_flag": {
+          "name": "lava_tube_context_flag",
+          "units": "0/1",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 if a pit candidate lies within 50 km AND the dominant unit is volcanic (mare) - context only, not a detection",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0022183642722666264,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "solar_power_index": {
+          "name": "solar_power_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Sunlit-time fraction for a sun-tracking panel: PGDA mean solar visibility where mapped (>=65 deg), else 0.5 (bare-sphere day/night). Not comparable 1:1 with the Mars index (horizontal, dust-attenuated)",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "moon",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 0.5,
+          "mean": 0.45419031381607056,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        }
+      }
+    },
+    "mars": {
+      "crs": "IAU_2015:49900",
+      "grid": {
+        "type": "equirectangular lat/lon cells",
+        "res_deg": 0.25,
+        "shape": [
+          720,
+          1440
+        ],
+        "cell_size_km_at_equator": 14.82,
+        "radius_km": 3396.19,
+        "cell_id": "row * n_lon + col, row 0 = northernmost, col 0 = -180 E"
+      },
+      "features": {
+        "elev_mean_m": {
+          "name": "elev_mean_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean elevation (Moon: rel. 1737.4 km sphere; Mars: rel. areoid)",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": -8039.73828125,
+          "max": 21122.966796875,
+          "mean": -755.7673950195312,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "elev_min_m": {
+          "name": "elev_min_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Minimum elevation in cell",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": -8208.0,
+          "max": 21063.0,
+          "mean": -919.6138305664062,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "elev_max_m": {
+          "name": "elev_max_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Maximum elevation in cell",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": -7607.0,
+          "max": 21249.0,
+          "mean": -575.8532104492188,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "relief_m": {
+          "name": "relief_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Local relief (max - min) within the ~15 km cell",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 2.0,
+          "max": 9565.0,
+          "mean": 343.7605285644531,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_mean_deg": {
+          "name": "slope_mean_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Mean slope at ~470 m baseline",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 0.015683703124523163,
+          "max": 26.91478157043457,
+          "mean": 1.687549352645874,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "slope_median_deg": {
+          "name": "slope_median_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "Median slope at ~470 m baseline",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 0.0,
+          "max": 29.624731063842773,
+          "mean": 1.3088891506195068,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_p90_deg": {
+          "name": "slope_p90_deg",
+          "units": "deg",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "90th-percentile slope at ~470 m baseline",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 0.06187685579061508,
+          "max": 41.48680114746094,
+          "mean": 3.4581098556518555,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "slope_frac_gt_landing": {
+          "name": "slope_frac_gt_landing",
+          "units": "fraction",
+          "dimensions": [
+            "exploration",
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of pixels steeper than 15 deg (landing tilt limit)",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 0.0,
+          "max": 0.9755859375,
+          "mean": 0.010563978925347328,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "slope_frac_gt_mobility": {
+          "name": "slope_frac_gt_mobility",
+          "units": "fraction",
+          "dimensions": [
+            "exploration",
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of pixels steeper than 25 deg (rover limit)",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 0.0,
+          "max": 0.7158203125,
+          "mean": 0.001515159267000854,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tri_mean_m": {
+          "name": "tri_mean_m",
+          "units": "m",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Terrain Ruggedness Index (mean |dz| to 8 neighbours, ~470 m spacing)",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 0.098388671875,
+          "max": 187.5655517578125,
+          "mean": 10.864551544189453,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "roughness_rms_m": {
+          "name": "roughness_rms_m",
+          "units": "m",
+          "dimensions": [
+            "terrain",
+            "exploration"
+          ],
+          "measurement_type": "measurement",
+          "description": "RMS of elevation residual after plane fit over the cell (surface roughness)",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 0.075589619576931,
+          "max": 1217.119384765625,
+          "mean": 42.2779426574707,
+          "comparison_policy": "terrain_with_scale_checks",
+          "comparison_note": "Native grid support differs; retain baseline and cell footprint. TRI is diagnostic, not an additional default score term."
+        },
+        "dem_valid_frac": {
+          "name": "dem_valid_frac",
+          "units": "fraction",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "measurement",
+          "description": "Fraction of valid DEM pixels in cell (QC)",
+          "native_resolution": "463 m DEM, reduced per 0.25 deg cell",
+          "categories": null,
+          "source": "mars_mola_megdr128",
+          "body": "mars",
+          "coverage_area_frac": 0.999390827019096,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "crater_density_d1": {
+          "name": "crater_density_d1",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "mars_robbins_craters",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": -3.592047145839494e-11,
+          "max": 437.72705078125,
+          "mean": 22.318021774291992,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_density_d5": {
+          "name": "crater_density_d5",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "mars_robbins_craters",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": -2.4461971077222033e-12,
+          "max": 45.18169403076172,
+          "mean": 2.838862419128418,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_density_d20": {
+          "name": "crater_density_d20",
+          "units": "N per 1e4 km2",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Crater density (5x5 cell window)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "mars_robbins_craters",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": -3.8624163004215284e-13,
+          "max": 45.18169403076172,
+          "mean": 0.6585519313812256,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_sfd_slope": {
+          "name": "crater_sfd_slope",
+          "units": "dimensionless",
+          "dimensions": [
+            "terrain",
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Cumulative size-frequency power-law slope [2, 10] km (5x5 cell window); shallower = degraded/resurfaced or saturated",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "mars_robbins_craters",
+          "body": "mars",
+          "coverage_area_frac": 0.07623091343012833,
+          "min": -18.26192855834961,
+          "max": -0.09974697232246399,
+          "mean": -3.12123703956604,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_largest_d_km": {
+          "name": "crater_largest_d_km",
+          "units": "km",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "catalog",
+          "description": "Largest crater centred in cell",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "mars_robbins_craters",
+          "body": "mars",
+          "coverage_area_frac": 0.33508640408255713,
+          "min": 1.0000009536743164,
+          "max": 1088.0242919921875,
+          "mean": 4.372002601623535,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "crater_rim_freshness_mean": {
+          "name": "crater_rim_freshness_mean",
+          "units": "class 1-4",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Mean rim degradation state of D>=3 km craters (1 = heavily degraded .. 4 = fresh): surface-modification indicator (5x5 cells, >=3 craters)",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "mars_robbins_craters",
+          "body": "mars",
+          "coverage_area_frac": 0.33683757456585334,
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 2.2070844173431396,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "layered_ejecta_frac": {
+          "name": "layered_ejecta_frac",
+          "units": "fraction",
+          "dimensions": [
+            "resources",
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Fraction of D>=3 km craters with layered (fluidized) ejecta: indicator of ground ice at impact time",
+          "native_resolution": "5x5 cell window",
+          "categories": null,
+          "source": "mars_robbins_craters",
+          "body": "mars",
+          "coverage_area_frac": 0.3600152422301551,
+          "min": -4.625929092806288e-16,
+          "max": 1.0,
+          "mean": 0.21632379293441772,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "geo_unit": {
+          "name": "geo_unit",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Dominant mapped unit (USGS SIM 3292)",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": [
+            "AHi",
+            "AHtu",
+            "AHv",
+            "ANa",
+            "Aa",
+            "Ap",
+            "Apu",
+            "Av",
+            "Ave",
+            "HNb",
+            "HNhu",
+            "HNt",
+            "Hp",
+            "Hpe",
+            "Hpu",
+            "Ht",
+            "Hto",
+            "Htu",
+            "Hve",
+            "Nhe",
+            "Nhu",
+            "Nve",
+            "eAb",
+            "eHb",
+            "eHh",
+            "eHt",
+            "eHv",
+            "eNh",
+            "eNhm",
+            "lAa",
+            "lApc",
+            "lApd",
+            "lAv",
+            "lAvf",
+            "lHb",
+            "lHl",
+            "lHt",
+            "lHv",
+            "lHvf",
+            "lNh",
+            "lNv",
+            "mAl",
+            "mNh",
+            "mNhm"
+          ],
+          "source": "mars_sim3292_geology",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 43.0,
+          "mean": 26.38611602783203,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_unit_frac": {
+          "name": "geo_unit_frac",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Areal fraction of the dominant unit in cell",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": null,
+          "source": "mars_sim3292_geology",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.375,
+          "max": 1.0,
+          "mean": 0.9782694578170776,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "geo_class": {
+          "name": "geo_class",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Shared process class (volcanic / impact_crater / impact_basin / plains / highland / lowland / polar / ...)",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": [
+            "volcanic",
+            "impact_crater",
+            "impact_basin",
+            "plains",
+            "highland",
+            "lowland",
+            "polar",
+            "transition",
+            "apron",
+            "other"
+          ],
+          "source": "mars_sim3292_geology",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 8.0,
+          "mean": 3.882861614227295,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_age": {
+          "name": "geo_age",
+          "units": "category",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Mapped chronostratigraphic period of the dominant unit",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": [
+            "Amazonian",
+            "Amazonian-Hesperian",
+            "Amazonian-Noachian",
+            "Hesperian",
+            "Hesperian-Noachian",
+            "Noachian",
+            "other"
+          ],
+          "source": "mars_sim3292_geology",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 2.905264377593994,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "geo_unit_diversity_3x3": {
+          "name": "geo_unit_diversity_3x3",
+          "units": "count",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "map_interpretation",
+          "description": "Number of distinct units within a 3x3-cell neighbourhood",
+          "native_resolution": "1:5M (Moon) / 1:20M (Mars) polygons rasterized at grid/4 then mode",
+          "categories": null,
+          "source": "mars_sim3292_geology",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 1.0,
+          "max": 5.0,
+          "mean": 1.3051137924194336,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_olivine": {
+          "name": "tes_olivine",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES olivine areal abundance",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.17419886589050293,
+          "mean": 0.0038048038259148598,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_hematite": {
+          "name": "tes_hematite",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES hematite abundance",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.22377972304821014,
+          "mean": 0.00824350118637085,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_feldspar": {
+          "name": "tes_feldspar",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES feldspar abundance",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.147202268242836,
+          "mean": 0.02049870602786541,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_plagioclase": {
+          "name": "tes_plagioclase",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES plagioclase abundance",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.7829244136810303,
+          "mean": 0.06262191385030746,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_orthopyroxene": {
+          "name": "tes_orthopyroxene",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES orthopyroxene abundance",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.31968119740486145,
+          "mean": 0.007042399607598782,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_highsilica_glass_clay": {
+          "name": "tes_highsilica_glass_clay",
+          "units": "fraction",
+          "dimensions": [
+            "geology",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES high-silica phases (glass / clay / zeolite group)",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.7328559160232544,
+          "mean": 0.05794713273644447,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_sulfate": {
+          "name": "tes_sulfate",
+          "units": "fraction",
+          "dimensions": [
+            "geology",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES sulfate abundance",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.2662256360054016,
+          "mean": 0.023676911368966103,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_quartz": {
+          "name": "tes_quartz",
+          "units": "fraction",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES quartz abundance",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.0,
+          "max": 0.06385307759046555,
+          "mean": 0.0011804510140791535,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tes_mineral_rms_error": {
+          "name": "tes_mineral_rms_error",
+          "units": "emissivity",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "RMS error of TES spectral unmixing (uncertainty)",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_minerals",
+          "body": "mars",
+          "coverage_area_frac": 0.8385167469235079,
+          "min": 0.000725827703718096,
+          "max": 0.00997779332101345,
+          "mean": 0.002501432318240404,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "thermal_inertia_tiu": {
+          "name": "thermal_inertia_tiu",
+          "units": "J m-2 K-1 s-1/2",
+          "dimensions": [
+            "environment",
+            "surface_processes",
+            "exploration"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES thermal inertia (surface particle size / consolidation)",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_thermophysical",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 25.0,
+          "max": 602.0,
+          "mean": 159.13861083984375,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "albedo_lambert": {
+          "name": "albedo_lambert",
+          "units": "dimensionless",
+          "dimensions": [
+            "environment",
+            "surface_processes"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES Lambert albedo",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_thermophysical",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.07999999821186066,
+          "max": 0.3209448754787445,
+          "mean": 0.19363591074943542,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "rock_abundance": {
+          "name": "rock_abundance",
+          "units": "fraction",
+          "dimensions": [
+            "surface_processes",
+            "exploration"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES rock abundance (Nowicki & Christensen 2007)",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_thermophysical",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 0.5724999904632568,
+          "mean": 0.036154866218566895,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "fine_component_ti": {
+          "name": "fine_component_ti",
+          "units": "J m-2 K-1 s-1/2",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "TES fine-component thermal inertia (rocks removed)",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_tes_thermophysical",
+          "body": "mars",
+          "coverage_area_frac": 0.49237281853664877,
+          "min": 23.0,
+          "max": 797.0,
+          "mean": 249.28494262695312,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "omega_ferric_bd530": {
+          "name": "omega_ferric_bd530",
+          "units": "band depth",
+          "dimensions": [
+            "geology",
+            "surface_processes"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "OMEGA BD530 ferric oxide (nanophase/dust) band depth",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_omega_maps",
+          "body": "mars",
+          "coverage_area_frac": 0.9174422388219617,
+          "min": 0.000132828950881958,
+          "max": 0.254046231508255,
+          "mean": 0.1495690941810608,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "omega_pyroxene_bd2000": {
+          "name": "omega_pyroxene_bd2000",
+          "units": "band depth",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "OMEGA BD2000 pyroxene band depth",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_omega_maps",
+          "body": "mars",
+          "coverage_area_frac": 0.49886485134704367,
+          "min": 0.010016828775405884,
+          "max": 0.0946735069155693,
+          "mean": 0.02514166384935379,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "omega_olivine_osp1": {
+          "name": "omega_olivine_osp1",
+          "units": "spectral parameter",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "OMEGA OSP1 olivine spectral parameter",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_omega_maps",
+          "body": "mars",
+          "coverage_area_frac": 0.02209588615720645,
+          "min": 1.0400490760803223,
+          "max": 1.1933705806732178,
+          "mean": 1.048471450805664,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "omega_albedo_r1080": {
+          "name": "omega_albedo_r1080",
+          "units": "reflectance",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "OMEGA 1.08 um reflectance",
+          "native_resolution": "8 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_omega_maps",
+          "body": "mars",
+          "coverage_area_frac": 0.9803939254139659,
+          "min": 0.09015687555074692,
+          "max": 0.8574504256248474,
+          "mean": 0.2912805378437042,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "h2o_wt": {
+          "name": "h2o_wt",
+          "units": "wt%",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Water-equivalent hydrogen (WEH) as H2O in the upper few tens of cm",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 1.6449999809265137,
+          "max": 7.3979997634887695,
+          "mean": 3.9815869331359863,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "h2o_wt_sigma": {
+          "name": "h2o_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of h2o_wt",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 0.23000000417232513,
+          "max": 0.6669999957084656,
+          "mean": 0.35242706537246704,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "feo_wt": {
+          "name": "feo_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Iron expressed as FeO (Fe x 1.2865), comparable with lunar GRS FeO",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 13.677955627441406,
+          "max": 24.83053207397461,
+          "mean": 18.611370086669922,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "feo_wt_sigma": {
+          "name": "feo_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of feo_wt",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 0.5596228837966919,
+          "max": 1.3083597421646118,
+          "mean": 0.7714372277259827,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "sio2_wt": {
+          "name": "sio2_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Silicon expressed as SiO2 (Si x 2.1393)",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 38.736061096191406,
+          "max": 47.3060417175293,
+          "mean": 43.337852478027344,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "sio2_wt_sigma": {
+          "name": "sio2_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of sio2_wt",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 0.5626323223114014,
+          "max": 2.0793864727020264,
+          "mean": 0.934505045413971,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "k_ppm": {
+          "name": "k_ppm",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Potassium (wt% x 1e4 -> ppm)",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 710.0,
+          "max": 5610.0,
+          "mean": 2984.4443359375,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "k_ppm_sigma": {
+          "name": "k_ppm_sigma",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of k_ppm",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 110.0,
+          "max": 430.0,
+          "mean": 202.24151611328125,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "th_ppm": {
+          "name": "th_ppm",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Thorium",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.16300000250339508,
+          "max": 0.9459999799728394,
+          "mean": 0.5398696064949036,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "th_ppm_sigma": {
+          "name": "th_ppm_sigma",
+          "units": "ppm",
+          "dimensions": [
+            "geology"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of th_ppm",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.03500000014901161,
+          "max": 0.09200000017881393,
+          "mean": 0.05693711340427399,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "cl_wt": {
+          "name": "cl_wt",
+          "units": "wt%",
+          "dimensions": [
+            "geology",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "Chlorine (aqueous-alteration / salt indicator)",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 0.2160000056028366,
+          "max": 0.796999990940094,
+          "mean": 0.48203250765800476,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cl_wt_sigma": {
+          "name": "cl_wt_sigma",
+          "units": "wt%",
+          "dimensions": [
+            "geology",
+            "habitability"
+          ],
+          "measurement_type": "derived_measurement",
+          "description": "1-sigma uncertainty of cl_wt",
+          "native_resolution": "5 deg bins (10 deg boxcar smoothed, ~450 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_grs",
+          "body": "mars",
+          "coverage_area_frac": 0.789114855513709,
+          "min": 0.023000000044703484,
+          "max": 0.05900000035762787,
+          "mean": 0.03357427194714546,
+          "comparison_policy": "quality_or_uncertainty",
+          "comparison_note": "Use for eligibility/uncertainty, not physical resemblance."
+        },
+        "ns_epithermal_cps": {
+          "name": "ns_epithermal_cps",
+          "units": "counts/s",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "measurement",
+          "description": "Odyssey NS epithermal neutron flux (lower = more hydrogen); 0 treated as no data",
+          "native_resolution": "0.5 deg bins (~600 km footprint)",
+          "categories": null,
+          "source": "mars_odyssey_ns",
+          "body": "mars",
+          "coverage_area_frac": 0.9998476951563915,
+          "min": 1.319000005722046,
+          "max": 12.414999961853027,
+          "mean": 5.723125457763672,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "swim_ice_consistency": {
+          "name": "swim_ice_consistency",
+          "units": "index -1..1",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "SWIM combined ice consistency (+1 = all data consistent with ice)",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_swim_ice",
+          "body": "mars",
+          "coverage_area_frac": 0.7952142871365215,
+          "min": -0.4368000030517578,
+          "max": 0.9683459997177124,
+          "mean": 0.03358246386051178,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "swim_ice_consistency_0_1m": {
+          "name": "swim_ice_consistency_0_1m",
+          "units": "index -1..1",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "model",
+          "description": "SWIM ice consistency 0-1 m",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_swim_ice",
+          "body": "mars",
+          "coverage_area_frac": 0.7813941815672945,
+          "min": -0.5445454120635986,
+          "max": 1.0,
+          "mean": -0.014484522864222527,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "swim_ice_consistency_1_5m": {
+          "name": "swim_ice_consistency_1_5m",
+          "units": "index -1..1",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "model",
+          "description": "SWIM ice consistency 1-5 m",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_swim_ice",
+          "body": "mars",
+          "coverage_area_frac": 0.3625645230848158,
+          "min": -0.5,
+          "max": 1.0,
+          "mean": 0.36623653769493103,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "swim_ice_consistency_gt5m": {
+          "name": "swim_ice_consistency_gt5m",
+          "units": "index -1..1",
+          "dimensions": [
+            "resources"
+          ],
+          "measurement_type": "model",
+          "description": "SWIM ice consistency >5 m",
+          "native_resolution": "4 px/deg as served by JMARS WMS",
+          "categories": null,
+          "source": "mars_swim_ice",
+          "body": "mars",
+          "coverage_area_frac": 0.2602166842003395,
+          "min": -0.5,
+          "max": 1.0,
+          "mean": 0.47114306688308716,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cave_candidate_count": {
+          "name": "cave_candidate_count",
+          "units": "count",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Number of MGC3 cave candidates in cell",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "mars_mgc3_caves",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 23.0,
+          "mean": 0.0010243055876344442,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "cave_candidate_distance_km": {
+          "name": "cave_candidate_distance_km",
+          "units": "km",
+          "dimensions": [
+            "subsurface",
+            "exploration"
+          ],
+          "measurement_type": "catalog",
+          "description": "Great-circle distance to nearest cave candidate",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "mars_mgc3_caves",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.15859104692935944,
+          "max": 3243.8134765625,
+          "mean": 1152.7069091796875,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "nearest_cave_depth_diam_ratio": {
+          "name": "nearest_cave_depth_diam_ratio",
+          "units": "ratio",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Depth/diameter of the nearest cave (where measured)",
+          "native_resolution": "point catalog",
+          "categories": null,
+          "source": "mars_mgc3_caves",
+          "body": "mars",
+          "coverage_area_frac": 0.08616912329474334,
+          "min": 0.1538461595773697,
+          "max": 2.090909004211426,
+          "mean": 0.3646782338619232,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "nearest_cave_setting": {
+          "name": "nearest_cave_setting",
+          "units": "category",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "catalog",
+          "description": "Host setting/type of nearest cave",
+          "native_resolution": "point catalog",
+          "categories": [
+            "APC",
+            "con",
+            "crk",
+            "end",
+            "flr",
+            "irr",
+            "kst",
+            "lat",
+            "pin",
+            "pit",
+            "pol",
+            "rim",
+            "sky",
+            "smrp",
+            "srp"
+          ],
+          "source": "mars_mgc3_caves",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 14.0,
+          "mean": 8.093097686767578,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "dune_cover_frac": {
+          "name": "dune_cover_frac",
+          "units": "fraction",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Fraction of cell inside a mapped dune field (MGD3 65N-65S)",
+          "native_resolution": "polygons rasterized at grid/4",
+          "categories": null,
+          "source": "mars_mgd3_dunes",
+          "body": "mars",
+          "coverage_area_frac": 0.90630778703665,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.000674328941386193,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "dune_field_distance_km": {
+          "name": "dune_field_distance_km",
+          "units": "km",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "catalog",
+          "description": "Distance to nearest mapped dune field (aeolian activity context)",
+          "native_resolution": "polygon centroids",
+          "categories": null,
+          "source": "mars_mgd3_dunes",
+          "body": "mars",
+          "coverage_area_frac": 0.90630778703665,
+          "min": 0.20098493993282318,
+          "max": 3217.318359375,
+          "mean": 939.6314697265625,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "tsurf_max_k": {
+          "name": "tsurf_max_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Annual maximum surface temperature (12 Ls x 8 local times)",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 145.92799377441406,
+          "max": 311.22900390625,
+          "mean": 275.9034423828125,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_min_k": {
+          "name": "tsurf_min_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Annual minimum surface temperature",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 141.35400390625,
+          "max": 194.45700073242188,
+          "mean": 156.8388671875,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_mean_k": {
+          "name": "tsurf_mean_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Time-weighted annual mean surface temperature",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 143.95547485351562,
+          "max": 228.0993194580078,
+          "mean": 195.73753356933594,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_diurnal_range_k": {
+          "name": "tsurf_diurnal_range_k",
+          "units": "K",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Time-weighted mean diurnal temperature range",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0458555594086647,
+          "max": 130.70394897460938,
+          "mean": 60.62062454223633,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "tsurf_seasonal_range_k": {
+          "name": "tsurf_seasonal_range_k",
+          "units": "K",
+          "dimensions": [
+            "environment"
+          ],
+          "measurement_type": "model",
+          "description": "Range of diurnal-mean temperature across the year",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 3.9971249103546143,
+          "max": 104.0479965209961,
+          "mean": 57.797245025634766,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "ps_mean_pa": {
+          "name": "ps_mean_pa",
+          "units": "Pa",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean surface pressure",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 92.21907043457031,
+          "max": 1176.172607421875,
+          "mean": 628.5316162109375,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "ps_min_pa": {
+          "name": "ps_min_pa",
+          "units": "Pa",
+          "dimensions": [
+            "environment",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Minimum seasonal (diurnal-mean) surface pressure",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 75.98310089111328,
+          "max": 1026.239990234375,
+          "mean": 544.2671508789062,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "liquid_water_window_frac": {
+          "name": "liquid_water_window_frac",
+          "units": "fraction",
+          "dimensions": [
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Fraction of sampled times with T>273.15 K and P>611.7 Pa (metastable liquid-water window proxy)",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 0.22517035901546478,
+          "mean": 0.017001114785671234,
+          "comparison_policy": "sampling_harmonization_required",
+          "comparison_note": "Earth overpass climatology, Moon lunar-day measurements and Mars modeled seasonal sampling differ."
+        },
+        "wind_mean_ms": {
+          "name": "wind_mean_ms",
+          "units": "m/s",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean 10 m horizontal wind speed",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 1.4240591526031494,
+          "max": 32.06129455566406,
+          "mean": 5.724955081939697,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "wind_max_seasonal_ms": {
+          "name": "wind_max_seasonal_ms",
+          "units": "m/s",
+          "dimensions": [
+            "surface_processes",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Highest seasonal diurnal-mean 10 m wind",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 2.3845200538635254,
+          "max": 40.06639862060547,
+          "mean": 8.375741958618164,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "dust_tau_mean": {
+          "name": "dust_tau_mean",
+          "units": "optical depth",
+          "dimensions": [
+            "surface_processes",
+            "exploration",
+            "environment"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean dust column optical depth",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.06757321953773499,
+          "max": 0.8504409193992615,
+          "mean": 0.3406336307525635,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "dust_tau_max": {
+          "name": "dust_tau_max",
+          "units": "optical depth",
+          "dimensions": [
+            "surface_processes",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Maximum seasonal dust optical depth",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.16258199512958527,
+          "max": 1.571120023727417,
+          "mean": 0.7638362050056458,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "surface_stress_mean_npm2": {
+          "name": "surface_stress_mean_npm2",
+          "units": "N/m2",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean surface wind stress",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0001091569138225168,
+          "max": 0.010726464912295341,
+          "mean": 0.002154817571863532,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "dust_lifting_season_frac": {
+          "name": "dust_lifting_season_frac",
+          "units": "fraction",
+          "dimensions": [
+            "surface_processes"
+          ],
+          "measurement_type": "model",
+          "description": "Fraction of the year diurnal-mean stress exceeds 0.0225 N/m2 (dust-lifting potential proxy)",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 0.14246127009391785,
+          "mean": 0.00013927737018093467,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "insolation_surface_wm2": {
+          "name": "insolation_surface_wm2",
+          "units": "W/m2",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Annual mean incident solar flux at the surface (includes dust attenuation)",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 50.28838348388672,
+          "max": 163.2122802734375,
+          "mean": 106.4195556640625,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "co2_frost_max_kgm2": {
+          "name": "co2_frost_max_kgm2",
+          "units": "kg/m2",
+          "dimensions": [
+            "environment",
+            "surface_processes",
+            "resources"
+          ],
+          "measurement_type": "model",
+          "description": "Peak seasonal CO2 surface ice",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 3642.75,
+          "mean": 232.06605529785156,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "h2o_frost_max_kgm2": {
+          "name": "h2o_frost_max_kgm2",
+          "units": "kg/m2",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "model",
+          "description": "Peak seasonal surface H2O ice",
+          "native_resolution": "5.625 x 3.75 deg GCM grid (nearest node)",
+          "categories": null,
+          "source": "mars_mcd_climate",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 2.2334500044962624e-06,
+          "max": 12.924699783325195,
+          "mean": 0.40357494354248047,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "insolation_toa_wm2": {
+          "name": "insolation_toa_wm2",
+          "units": "W/m2",
+          "dimensions": [
+            "environment",
+            "exploration"
+          ],
+          "measurement_type": "model",
+          "description": "Annual-mean daily top-of-atmosphere insolation on a horizontal surface (orbit & obliquity only)",
+          "native_resolution": "analytic, per latitude",
+          "categories": null,
+          "source": "mars_model_geometry",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 79.7717514038086,
+          "max": 178.62220764160156,
+          "mean": 130.14756774902344,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "boulder_hazard_index": {
+          "name": "boulder_hazard_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Rock abundance / 0.2 clipped to 0-1 (1 = boulder-saturated)",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.1659252643585205,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "landing_hazard_index": {
+          "name": "landing_hazard_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Weighted mean of steep-slope fraction and roughness/50 m (weights {'slope_frac_gt_landing': 0.67, 'roughness': 0.33}); terrain-only so it is consistent at all latitudes - see boulder_hazard_index for rocks",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 0.9993909001350403,
+          "min": 0.0004988915170542896,
+          "max": 0.983642578125,
+          "mean": 0.17124950885772705,
+          "comparison_policy": "derived_terrain_context",
+          "comparison_note": "Reuses terrain measurements; not independent evidence."
+        },
+        "traversability_index": {
+          "name": "traversability_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 - weighted terrain hazard (weights {'slope_frac_gt_mobility': 0.6, 'roughness': 0.4}); 1 = easiest rover traverse",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 0.9993909001350403,
+          "min": 0.17050781846046448,
+          "max": 0.9993953108787537,
+          "mean": 0.8000949621200562,
+          "comparison_policy": "derived_terrain_context",
+          "comparison_note": "Reuses terrain measurements; not independent evidence."
+        },
+        "terrain_class": {
+          "name": "terrain_class",
+          "units": "category",
+          "dimensions": [
+            "terrain"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Slope-based terrain class from 90th-percentile slope (<5 smooth, 5-15 moderate, 15-25 rugged, >=25 steep)",
+          "native_resolution": "analysis grid",
+          "categories": [
+            "smooth",
+            "moderate",
+            "rugged",
+            "steep"
+          ],
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 0.9993909001350403,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.23826546967029572,
+          "comparison_policy": "categorical_crosswalk_required",
+          "comparison_note": "Category names are preserved; numeric subtraction of category IDs is prohibited."
+        },
+        "cold_trap_flag": {
+          "name": "cold_trap_flag",
+          "units": "0/1",
+          "dimensions": [
+            "environment",
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 if any temperature product shows annual max T < 110 K in the cell",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "hydrogen_enrichment_pct": {
+          "name": "hydrogen_enrichment_pct",
+          "units": "%",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Odyssey NS epithermal suppression relative to the Martian median (positive = more hydrogen); relative proxy",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 0.9998476505279541,
+          "min": -102.19869995117188,
+          "max": 78.51791381835938,
+          "mean": 6.789488792419434,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "water_indicator_score": {
+          "name": "water_indicator_score",
+          "units": "0-1",
+          "dimensions": [
+            "resources",
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "PROXY: mean of available [(GRS WEH-2%)/8%, (SWIM consistency+1)/2, layered-ejecta fraction]",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 0.8759904503822327,
+          "min": -3.70074332718459e-16,
+          "max": 1.0,
+          "mean": 0.3690449893474579,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        },
+        "biosignature_preservation_context_proxy": {
+          "name": "biosignature_preservation_context_proxy",
+          "units": "0-1",
+          "dimensions": [
+            "habitability"
+          ],
+          "measurement_type": "derived_index",
+          "description": "LOW-CONFIDENCE PROXY: mean of [Hesperian/Noachian unit, TES sulfate or high-Si phases/15%, GRS Cl/1 wt%]; NOT evidence of life",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5215607285499573,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "lava_tube_context_flag": {
+          "name": "lava_tube_context_flag",
+          "units": "0/1",
+          "dimensions": [
+            "subsurface"
+          ],
+          "measurement_type": "derived_index",
+          "description": "1 if an MGC3 cave candidate lies within 50 km AND the dominant unit is volcanic - context only",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.00810860376805067,
+          "comparison_policy": "context_unvalidated",
+          "comparison_note": "Not admitted to the initial comparison profile; requires a purpose-specific scientific review."
+        },
+        "solar_power_index": {
+          "name": "solar_power_index",
+          "units": "0-1",
+          "dimensions": [
+            "exploration"
+          ],
+          "measurement_type": "derived_index",
+          "description": "Annual-mean surface insolation (MCD, dust-attenuated) / 250 W/m2",
+          "native_resolution": "analysis grid",
+          "categories": null,
+          "source": "derived",
+          "body": "mars",
+          "coverage_area_frac": 1.0,
+          "min": 0.20115353167057037,
+          "max": 0.6528491377830505,
+          "mean": 0.42567822337150574,
+          "comparison_policy": "body_specific_context",
+          "comparison_note": "Different inputs or physical relevance across bodies; direct shared-name scoring prohibited."
+        }
+      }
+    }
+  },
+  "spatial_fields": [
+    "cell_id",
+    "lat",
+    "lon",
+    "area_km2"
+  ],
+  "quality_flags": {
+    "1": "DEM coverage missing or below 95%",
+    "2": "One or more core terrain measurements missing",
+    "4": "Core terrain physical range or quantile ordering invalid",
+    "8": "Elevation minimum/mean/maximum ordering invalid",
+    "16": "Geology missing or undefined",
+    "32": "Mean temperature missing",
+    "64": "Earth mean elevation below -500 m; investigate land mask/source"
+  },
+  "missingness": "SQL NULL means missing; not-applicable is defined by body schema/registry. Zero remains a measured/derived zero."
+}

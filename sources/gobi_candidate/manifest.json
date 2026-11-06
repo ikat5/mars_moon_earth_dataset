@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-11-06T04:21:09.810700+00:00",
+  "analysis_bounds": [
+    102.375,
+    42.625,
+    102.5,
+    42.75
+  ],
+  "selection": "Earth cell 1090899 selected by the archived Jezero terrain query; footprint is a source cell, not an analog-site boundary.",
+  "location_evidence": "analysis/queries/jezero_balanced.json",
+  "location_note": "Center 42.6875 N, 102.4375 E. No administrative, protected-area or access determination is made.",
+  "files": [
+    {
+      "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N42E102_Map.tif",
+      "documentation": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/docs/WorldCover_PUM_V2.0.pdf",
+      "source": "ESA WorldCover 2021 v200, derived from Copernicus Sentinel-1 and Sentinel-2",
+      "license": "CC BY 4.0",
+      "period": "2021",
+      "buffer_deg": 0,
+      "key": "worldcover_2021",
+      "path": "sources/gobi_candidate/gobi_worldcover_2021.tif",
+      "bytes": 27896,
+      "sha256": "09c2443ec258a479df0da1df9a69018c37ace294ef4f322ea4c267426a8dcfec",
+      "remote_headers": {
+        "ETag": "\"60a27062861694760697b8e4a979123b-3\"",
+        "Last-Modified": "Wed, 26 Oct 2022 12:55:27 GMT",
+        "Content-Length": "24698801",
+        "Accept-Ranges": "bytes"
+      },
+      "original_grid": {
+        "shape": [
+          36000,
+          36000
+        ],
+        "transform": [
+          8.333333333333333e-05,
+          0.0,
+          102.0,
+          0.0,
+          -8.333333333333333e-05,
+          45.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "crs": "EPSG:4326",
+        "nodata": 0.0,
+        "source_window": [
+          4500,
+          27000,
+          1500,
+          1500
+        ]
+      },
+      "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N42_00_E102_00_DEM/Copernicus_DSM_COG_10_N42_00_E102_00_DEM.tif",
+      "documentation": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
+      "source": "Copernicus DEM GLO-30 public AWS COG; surface model including vegetation/buildings",
+      "license": "Copernicus DEM GLO-30 license; retain provider attribution",
+      "license_url": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM/resources/license/License-COPDEM-30.pdf",
+      "period": "TanDEM-X acquisition primarily 2011-2015; mosaic and edits may have other source epochs",
+      "buffer_deg": 0.003,
+      "key": "copernicus_dsm",
+      "path": "sources/gobi_candidate/gobi_copernicus_dsm.tif",
+      "bytes": 665053,
+      "sha256": "51120f5e56ce612aa0fe0a801e3215ce02f9f72bc27c6fe1b603effac064a148",
+      "remote_headers": {
+        "ETag": "\"ac56a214979910362856c77dd4307a9d\"",
+        "Last-Modified": "Mon, 09 May 2022 14:22:56 GMT",
+        "Content-Length": "35023006",
+        "Accept-Ranges": "bytes"
+      },
+      "original_grid": {
+        "shape": [
+          3600,
+          3600
+        ],
+        "transform": [
+          0.0002777777777777778,
+          0.0,
+          101.99986111111112,
+          0.0,
+          -0.0002777777777777778,
+          43.00013888888889,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "crs": "EPSG:4326",
+        "nodata": null,
+        "source_window": [
+          1339,
+          889,
+          473,
+          473
+        ]
+      },
+      "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+    }
+  ],
+  "worldcover_input_quality": "Not yet acquired; discrete classes must not be treated as local confidence scores."
+}

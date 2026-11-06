@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "full_product_complete": false,
+  "status": "experimental_environment_screening",
+  "scope": "Prepared regional screening data. The broader product roadmap and external scientific validation remain separate.",
+  "completed": [
+    "three_body_verified_tables",
+    "global_landcover_and_aridity_context",
+    "Earth_only_screening_profile",
+    "full_ndvi_series_provisional_scale"
+  ],
+  "remaining": [
+    "verify_or_replace_NDVI_scale",
+    "broader_independent_and_field_validation",
+    "matched_physical_footprints_for_polar_queries",
+    "material_crosswalk_validation",
+    "temperature_sampling_harmonization",
+    "full_UI_integration_and_demo_validation"
+  ]
+}

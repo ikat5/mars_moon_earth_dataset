@@ -1,0 +1,76 @@
+{
+  "baseline": "0.1.1",
+  "upgraded": "0.2.0",
+  "baseline_manifest_sha256": "996a881c58ec83da74c94b76834cf69277913d462eb1c8788b1ed785220ffbf3",
+  "upgraded_manifest_sha256": "cd76e6ae67124f64f1bd65a12d925ef1098dc2158f8bcd11f2d4a8983ef85a2e",
+  "scope": "NDVI is added as provisional context; existing Earth measurements, gates and terrain ranking parameters must remain unchanged.",
+  "preserved_earth_columns_checked": 90,
+  "changed_measurements_or_gates": {},
+  "earth_rows": 1413693,
+  "ndvi_status": [
+    [
+      "processed_provisional_2001_2017"
+    ]
+  ],
+  "planetary_files_bit_identical": true,
+  "ranking_and_eligibility_configuration_unchanged": true,
+  "query_checks": [
+    {
+      "query": {
+        "body": "mars",
+        "lat": 18.41,
+        "lon": 77.69
+      },
+      "status": "ok",
+      "candidate_count": 10,
+      "ids_and_scores_unchanged": true
+    },
+    {
+      "query": {
+        "body": "moon",
+        "lat": 0,
+        "lon": 0
+      },
+      "status": "ok",
+      "candidate_count": 10,
+      "ids_and_scores_unchanged": true
+    },
+    {
+      "query": {
+        "body": "mars",
+        "lat": 18.41,
+        "lon": 77.69,
+        "origin": [
+          24.89,
+          91.87
+        ],
+        "radius_km": 500
+      },
+      "status": "no_candidates_under_filters",
+      "candidate_count": 0,
+      "ids_and_scores_unchanged": true
+    },
+    {
+      "query": {
+        "body": "moon",
+        "lat": -89.67,
+        "lon": 129.78
+      },
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "ids_and_scores_unchanged": true
+    },
+    {
+      "query": {
+        "body": "mars",
+        "lat": 43.123,
+        "lon": 27.456
+      },
+      "status": "ok",
+      "candidate_count": 10,
+      "ids_and_scores_unchanged": true
+    }
+  ],
+  "status": "passed",
+  "interpretation": "NDVI context does not improve the terrain score or verify analog suitability. This invariant check prevents provisional vegetation values from silently affecting recommendations."
+}

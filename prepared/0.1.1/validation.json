@@ -1,0 +1,43 @@
+{
+  "version": "0.1.1",
+  "ndvi_included": false,
+  "scope": "Source integrity, exact joins, unchanged parent measurements, explicit Earth screening. Not independent analog suitability validation.",
+  "failures": [],
+  "environment_flag_definitions": {
+    "1": "Land-cover evidence missing, invalid, or below 95% strict area coverage",
+    "2": "Aridity evidence missing, invalid, or below 95% area coverage",
+    "4": "Less than 80% of cell area is strictly classified as barren",
+    "8": "More than 5% of cell area is classified as water",
+    "16": "More than 1% of cell area is classified as built-up",
+    "32": "More than 5% of cell area is classified as cropland or crop mosaic",
+    "64": "Historical aridity index exceeds 0.20"
+  },
+  "earth_rows": 1413693,
+  "unique_earth_ids": 1413693,
+  "parent_measurement_changes": 0,
+  "terrain_eligible_rows": 1304254,
+  "dry_barren_eligible_rows": 100797,
+  "environment_flag_counts": {
+    "1": 496853,
+    "2": 89045,
+    "4": 893233,
+    "8": 99752,
+    "16": 21943,
+    "32": 157087,
+    "64": 1006612
+  },
+  "joined_sidecars": [
+    "landcover_2017",
+    "aridity"
+  ],
+  "environment_rules": {
+    "minimum_landcover_coverage": 0.95,
+    "minimum_aridity_coverage": 0.95,
+    "minimum_barren_class_fraction": 0.8,
+    "maximum_water_class_fraction": 0.05,
+    "maximum_built_class_fraction": 0.01,
+    "maximum_cropland_or_mosaic_class_fraction": 0.05,
+    "maximum_aridity_index": 0.2
+  },
+  "status": "passed"
+}

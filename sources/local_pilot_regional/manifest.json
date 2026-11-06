@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-11-06T04:05:41.921538+00:00",
+  "analysis_bounds": [
+    92.0,
+    25.125,
+    92.125,
+    25.25
+  ],
+  "selection": "Small exploratory window around the Jaflong landscape northeast of Sylhet; not a site boundary or permission to conduct field operations.",
+  "location_evidence": "https://hims.bwdb.gov.bd/hydrology/includes/bm_pillar_sw_print.php?dist=&river=",
+  "location_note": "BWDB lists Jaflong_Spill station at 25.156,92.018 inside this window; the window itself is analyst-selected.",
+  "files": [
+    {
+      "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N24E090_Map.tif",
+      "documentation": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/docs/WorldCover_PUM_V2.0.pdf",
+      "source": "ESA WorldCover 2021 v200, derived from Copernicus Sentinel-1 and Sentinel-2",
+      "license": "CC BY 4.0",
+      "period": "2021",
+      "buffer_deg": 0,
+      "key": "worldcover_2021",
+      "path": "sources/local_pilot_regional/jaflong_worldcover_2021.tif",
+      "bytes": 118944,
+      "sha256": "1fa16465cc473b7b1d471687fce4ac55f919bca09f6a13cc14076fc78f2996d4",
+      "remote_headers": {
+        "ETag": "\"b3a5a4399b5a029b16a30102ef5daeb6-12\"",
+        "Last-Modified": "Wed, 26 Oct 2022 12:44:43 GMT",
+        "Content-Length": "98826043",
+        "Accept-Ranges": "bytes"
+      },
+      "original_grid": {
+        "shape": [
+          36000,
+          36000
+        ],
+        "transform": [
+          8.333333333333333e-05,
+          0.0,
+          90.0,
+          0.0,
+          -8.333333333333333e-05,
+          27.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "crs": "EPSG:4326",
+        "nodata": 0.0,
+        "source_window": [
+          24000,
+          21000,
+          1500,
+          1500
+        ]
+      },
+      "checksum_scope": "Local extracted window only. Remote ETag retained; no whole-source checksum verification claimed."
+    }
+  ],
+  "worldcover_input_quality": "Not yet acquired; discrete classes must not be treated as local confidence scores."
+}

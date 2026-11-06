@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "earth:1090899",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.375,
+              42.625
+            ],
+            [
+              102.5,
+              42.625
+            ],
+            [
+              102.5,
+              42.75
+            ],
+            [
+              102.375,
+              42.75
+            ],
+            [
+              102.375,
+              42.625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Gobi regional terrain candidate",
+        "review_status": "regional_dry_barren_terrain_candidate_with_finer_remote_sensing_context",
+        "lat": 42.6875,
+        "lon": 102.4375,
+        "area_km2": 142.00843811035156,
+        "planetary_fit_scope": "four-term regional terrain resemblance only",
+        "aridity_index": 0.03612954562469705,
+        "worldcover_bare_sparse_class_fraction": 0.9956471312711515,
+        "material_similarity_verified": false,
+        "novelty_established": false,
+        "access_status": "not_assessed"
+      }
+    }
+  ]
+}

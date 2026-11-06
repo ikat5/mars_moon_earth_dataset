@@ -1,0 +1,72 @@
+{
+  "version": "0.1.0",
+  "bodies": {
+    "earth": {
+      "input_rows": 1413693,
+      "output_rows": 1413693,
+      "unique_ids": 1413693,
+      "eligible_terrain_rows": 1304254,
+      "terrain_temperature_defined_geology_rows": 889525,
+      "unknown_geology_rows": 441062,
+      "invalid_coordinates": 0,
+      "unexpected_value_changes": 0,
+      "quality_flag_counts": {
+        "1": 97008,
+        "2": 109438,
+        "4": 0,
+        "8": 0,
+        "16": 441062,
+        "32": 397333,
+        "64": 137
+      },
+      "output_bytes": 102614087,
+      "output_sha256": "81e86f96d628931f82436718d1e6b12ccd2a9d54d95c8161395cb5a4a69f768b"
+    },
+    "moon": {
+      "input_rows": 259200,
+      "output_rows": 259200,
+      "unique_ids": 259200,
+      "eligible_terrain_rows": 257760,
+      "terrain_temperature_defined_geology_rows": 254783,
+      "unknown_geology_rows": 0,
+      "invalid_coordinates": 0,
+      "unexpected_value_changes": 0,
+      "quality_flag_counts": {
+        "1": 1440,
+        "2": 1440,
+        "4": 0,
+        "8": 0,
+        "16": 0,
+        "32": 2977,
+        "64": 0
+      },
+      "output_bytes": 27356599,
+      "output_sha256": "add9209d938fc0180e290b7b3b47050815ad0916e7a6df6b482efe37f159c9d6"
+    },
+    "mars": {
+      "input_rows": 1036800,
+      "output_rows": 1036800,
+      "unique_ids": 1036800,
+      "eligible_terrain_rows": 1013760,
+      "terrain_temperature_defined_geology_rows": 1013760,
+      "unknown_geology_rows": 0,
+      "invalid_coordinates": 0,
+      "unexpected_value_changes": 0,
+      "quality_flag_counts": {
+        "1": 23040,
+        "2": 23040,
+        "4": 0,
+        "8": 0,
+        "16": 0,
+        "32": 0,
+        "64": 0
+      },
+      "output_bytes": 85267365,
+      "output_sha256": "2bd83b9fec15b5931f78a8551e0dace0e6fd8d73f17fb701618dc33362284047"
+    }
+  },
+  "failures": [],
+  "scope": "Input integrity, transformation invariants and eligibility; not ground-truth analog validation.",
+  "input_checksums_unchanged": true,
+  "status": "passed"
+}

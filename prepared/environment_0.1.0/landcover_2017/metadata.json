@@ -1,0 +1,147 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.8367523",
+  "parent_source": "https://doi.org/10.5067/MODIS/MCD12Q1.061",
+  "period": "2017",
+  "status": "processed_documented_classes",
+  "class_definitions_source": "https://lpdaac.usgs.gov/documents/1409/MCD12_User_Guide_V61.pdf",
+  "source_grid": {
+    "shape": [
+      35849,
+      86400
+    ],
+    "transform": [
+      0.004166667,
+      0.0,
+      -180.0,
+      0.0,
+      -0.004166667,
+      87.37,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "crs": "EPSG:4326",
+    "landcover_nodata": null,
+    "qc_nodata": null,
+    "actual_angular_resolution_deg": [
+      0.004166667,
+      0.004166667
+    ]
+  },
+  "groups": {
+    "forest": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "shrub": [
+      6,
+      7
+    ],
+    "savanna": [
+      8,
+      9
+    ],
+    "grass": [
+      10
+    ],
+    "wetland": [
+      11
+    ],
+    "cropland_or_mosaic": [
+      12,
+      14
+    ],
+    "built": [
+      13
+    ],
+    "snow_ice": [
+      15
+    ],
+    "barren": [
+      16
+    ],
+    "water": [
+      17
+    ]
+  },
+  "strict_qc_codes": [
+    0,
+    2
+  ],
+  "strict_qc_rule": "Only classified land (0) and classified water (2); excluded corrected, backfilled, unclassified and nodata codes.",
+  "qc_1_trap": "Unclassified land can carry barren class by default; it never contributes to barren fraction here.",
+  "denominator": "Full spherical Earth target-cell area; class fractions sum to strict coverage where available.",
+  "zero_vs_missing": "Absent class is zero only when some strict evidence exists. All class fractions are NULL at zero strict coverage.",
+  "minimum_recommended_coverage": 0.95,
+  "covered_cells_95pct": 916840,
+  "barren_class_80pct_and_coverage95pct_cells": 105337,
+  "qa_window_read_counts": {
+    "0": 1694568349,
+    "1": 255123,
+    "2": 169725522,
+    "3": 1216103660,
+    "4": 8238458,
+    "5": 1637079,
+    "6": 20387003,
+    "7": 646,
+    "8": 665985,
+    "9": 2832715,
+    "10": 132660
+  },
+  "qa_count_caveat": "Source rows at processing block edges can be read twice; counts are diagnostic, not unique global source-pixel totals.",
+  "landcover_code_sha256": "8431461ddfffdc17918dfe23faedf8a48eb5a490ae4c55ce140c055ad38c17c2",
+  "caveats": [
+    "Fractions describe categorical pixels, not measured percentage of bare rock or vegetation.",
+    "Barren class includes sand, rock and soil; it does not establish mineralogy or mechanical properties.",
+    "Historical 2017 cover may differ from present field conditions.",
+    "Antarctica is excluded by the derivative source.",
+    "The source catalog has inconsistent nominal angular-resolution text; actual GeoTIFF transform is recorded."
+  ],
+  "license": {
+    "id": "cc-by-sa-4.0"
+  },
+  "license_source": "sources/catalogs/landcover_8367523.json",
+  "citation_policy": "Cite NASA parent and OpenGeoHub derivative; preserve the pinned derivative license.",
+  "created_utc": "2026-11-06T03:59:05.650369+00:00",
+  "rows": 1413693,
+  "base_release": "prepared/0.1.0",
+  "base_earth_sha256": "81e86f96d628931f82436718d1e6b12ccd2a9d54d95c8161395cb5a4a69f768b",
+  "aggregation": "Exact spherical overlap of piecewise-constant source pixels, with separate observed/modelled valid-area fraction.",
+  "sources": [
+    {
+      "name": "lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "folder": "landcover_2017",
+      "url": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content",
+      "bytes": 133810856,
+      "md5": "fe7c80efc951f8e36295c092aba807c7",
+      "source": "https://doi.org/10.5281/zenodo.8367523",
+      "path": "sources/landcover_2017/lc_mcd12q1v061.t1_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "sha256": "590ba64c5c1a0dec42ed1d9cbdad41b7b0ad960e2402d87b7bb4ddc38e975f54",
+      "status": "verified_download"
+    },
+    {
+      "name": "lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "folder": "landcover_2017",
+      "url": "https://zenodo.org/api/records/8367523/files/lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif/content",
+      "bytes": 32909285,
+      "md5": "b8ac37847fb0e985709610488ae70894",
+      "source": "https://doi.org/10.5281/zenodo.8367523",
+      "path": "sources/landcover_2017/lc_mcd12q1v061.qc_c_500m_s_20170101_20171231_go_epsg.4326_v20230818.tif",
+      "sha256": "85ec309e3dc758f624c32aac7eb36240e67ab6ca983e795d4f9e5f6f8078878e",
+      "status": "verified_download"
+    }
+  ],
+  "software": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "duckdb": "2.0.0"
+  },
+  "code_sha256": {
+    "processing/environment.py": "3da073e70352ca223634ce656168f67b499be41b89c3dcb773f2680ec0bedd2f",
+    "processing/aggregate.py": "7bccbdd812ce36214a901c7baccb25fe0c1e50ab918689c76f88f732654fcc09"
+  },
+  "output_invariants": "Unique original Earth cell IDs; row counts and all exported values verified."
+}

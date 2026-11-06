@@ -1,0 +1,61 @@
+{
+  "version": "0.1.1",
+  "created_utc": "2026-11-06T04:25:34.903776+00:00",
+  "cases": [
+    {
+      "id": "jezero",
+      "title": "Jezero crater-center cell",
+      "status": "ok",
+      "candidate_count": 10,
+      "query": "jezero_query.json",
+      "earth_geojson": "jezero_earth.geojson"
+    },
+    {
+      "id": "lunar_equatorial_coordinate",
+      "title": "Illustrative lunar coordinate, 0\u00b0N 0\u00b0E",
+      "status": "ok",
+      "candidate_count": 10,
+      "query": "lunar_equatorial_coordinate_query.json",
+      "earth_geojson": "lunar_equatorial_coordinate_earth.geojson"
+    },
+    {
+      "id": "jezero_near_sylhet",
+      "title": "Jezero terrain query within 500 km of Sylhet",
+      "status": "no_candidates_under_filters",
+      "candidate_count": 0,
+      "query": "jezero_near_sylhet_query.json",
+      "earth_geojson": "jezero_near_sylhet_earth.geojson"
+    },
+    {
+      "id": "shackleton",
+      "title": "Shackleton center: insufficient integrated terrain",
+      "status": "target_insufficient_evidence",
+      "candidate_count": 0,
+      "query": "shackleton_query.json",
+      "earth_geojson": "shackleton_earth.geojson"
+    }
+  ],
+  "scientific_status": "Experimental regional terrain screening; no verified analog discoveries.",
+  "usage": "Render returned Earth polygons as screening footprints. Keep target planetary geometry on its own body globe.",
+  "score_label": "Terrain resemblance (uncalibrated)",
+  "required_visible_caveats": [
+    "Fit does not measure overall analog suitability or confidence.",
+    "Named planetary centers are not landing ellipses or base footprints.",
+    "Scenario retention is sensitivity evidence, not a confidence probability.",
+    "Earth land cover (2017) and climate (1970\u20132000) are historical screening evidence, not current field conditions."
+  ],
+  "related_investigations": [
+    {
+      "id": "gobi",
+      "path": "../gobi_candidate_0.1.0/metadata.json",
+      "geojson": "../gobi_candidate_0.1.0/candidate.geojson",
+      "status": "finer_remote_sensing_context_unverified_in_field"
+    },
+    {
+      "id": "jaflong",
+      "path": "../local_pilot_0.1.1/metadata.json",
+      "geojson": "../local_pilot_0.1.1/patch_candidates.geojson",
+      "status": "local_exposed_patch_investigation_no_planetary_score"
+    }
+  ]
+}

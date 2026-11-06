@@ -1,0 +1,94 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.4305975",
+  "period": "2001-01 only",
+  "status": "sample_diagnostic",
+  "expected_months": 1,
+  "minimum_monthly_area_coverage": 0.8,
+  "low_gapfill_definition": "Accepted month has gap-filled area <=20% of its valid area.",
+  "raw_scale": 1,
+  "provisional_scale": 0.0001,
+  "scale_verification": "inferred_not_confirmed_by_derivative_provider",
+  "scale_evidence": [
+    "Derivative raw range is consistent with NDVI multiplied by 10,000; not sufficient independent confirmation.",
+    "Referenced NOAA CDR parent documents 0.0001 scaling; derivative GeoTIFF reports identity scale.",
+    "https://developers.google.com/earth-engine/datasets/catalog/NOAA_CDR_AVHRR_NDVI_V5"
+  ],
+  "scoring_policy": "Do not enable a definitive low-vegetation gate until derivative scale is verified; raw and provisional values are diagnostic context.",
+  "processing": "Average accepted monthly p90 composite means with equal month weight. Peak/min are extrema of the 12 calendar-month climatologies, not daily extrema.",
+  "qa_values": {
+    "0": "disregarded",
+    "1": "gap-filled",
+    "2": "smoothed; not an unsmoothed observation"
+  },
+  "source_grid": [
+    [
+      0.044915764205963056,
+      0.0,
+      -180.022382938,
+      0.0,
+      -0.0449157642060878,
+      90.011191469,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      4008,
+      8016
+    ],
+    "EPSG:4326"
+  ],
+  "source_raw_ranges": [
+    [
+      5,
+      10000
+    ]
+  ],
+  "rejected_out_of_range_pixels": 0,
+  "cells_with_any_month": 770147,
+  "cells_with_complete_months": 770147,
+  "caveats": [
+    "Low greenness does not prove bare rock, absence of biology, or safe access.",
+    "Historical climatology does not describe current site conditions.",
+    "Area fraction describes pixel support; it is not measurement accuracy.",
+    "All source values have been smoothed or gap-filled by the provider."
+  ],
+  "license": "CC BY 4.0",
+  "created_utc": "2026-11-06T03:35:07.289932+00:00",
+  "rows": 1413693,
+  "base_release": "prepared/0.1.0",
+  "base_earth_sha256": "81e86f96d628931f82436718d1e6b12ccd2a9d54d95c8161395cb5a4a69f768b",
+  "aggregation": "Exact spherical overlap of piecewise-constant source pixels, with separate observed/modelled valid-area fraction.",
+  "sources": [
+    {
+      "name": "veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif/content",
+      "bytes": 1267814,
+      "md5": "b299284ce1d3776b17161c8528954e31",
+      "source": "https://doi.org/10.5281/zenodo.4305975",
+      "path": "sources/ndvi_2001_2017/veg_ndvi_avhrr.mod09ga.gaps_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+      "sha256": "b23c2f68956fe2d546a1a4ff4b1c1cf1a6e31fa3562963d21aa6e02559e01220"
+    },
+    {
+      "name": "veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+      "folder": "ndvi_2001_2017",
+      "url": "https://zenodo.org/api/records/4305975/files/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif/content",
+      "bytes": 14799381,
+      "md5": "45bc379d310edc2fd19370ddfc86da8e",
+      "source": "https://doi.org/10.5281/zenodo.4305975",
+      "path": "sources/ndvi_2001_2017/veg_ndvi_avhrr.mod09ga_p90_5km_s0..0cm_20010101..20010131_v1.0.tif",
+      "sha256": "822c18c75b3fade50c5a7e87d51190fea0eacc34f89548c1bf86e6d8f732a52c"
+    }
+  ],
+  "software": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "duckdb": "2.0.0"
+  },
+  "code_sha256": {
+    "processing/environment.py": "16581bd85f1365601bf22e34d1aa12f8323b8dae49392782fdaeb6bdcceb4df3",
+    "processing/aggregate.py": "7bccbdd812ce36214a901c7baccb25fe0c1e50ab918689c76f88f732654fcc09"
+  },
+  "output_invariants": "Unique original Earth cell IDs; row counts and all exported values verified."
+}

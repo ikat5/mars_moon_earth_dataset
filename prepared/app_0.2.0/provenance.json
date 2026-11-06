@@ -1,0 +1,24 @@
+{
+  "source_files": {
+    "analysis/evaluation_0.2.0/queries/jezero_amplitude_emphasis.json": "439a7e86ea056d5b7a7f66f32d044d1f6b50ed6154de00458e2d8aef0ab81ee5",
+    "analysis/evaluation_0.2.0/queries/jezero_balanced.json": "dff9f950c5e897dabdcced150e7e88e9233e7f2ebd7aaee5cbb5c42110fff754",
+    "analysis/evaluation_0.2.0/queries/jezero_near_sylhet_amplitude_emphasis.json": "d87394547d498f1da1901e45b991ff4314cc94667ea206d8e7d4b1bf39beaa58",
+    "analysis/evaluation_0.2.0/queries/jezero_near_sylhet_balanced.json": "271100954225cc3722643a26e184791706eb50023ab92ad606c25f05a4af503a",
+    "analysis/evaluation_0.2.0/queries/jezero_near_sylhet_no_median_slope.json": "cbb969851c75903410babaed3f8e8942e0c1e87273fcb353c9b0504afdce1625",
+    "analysis/evaluation_0.2.0/queries/jezero_near_sylhet_no_relief.json": "cb260409eba77ad132f2412784463877bcd03678a70e04ae740ccb6748cc4ec3",
+    "analysis/evaluation_0.2.0/queries/jezero_near_sylhet_slope_emphasis.json": "7b1783a71d88590df34f0eb68ce41756bb4f7185df01bc1bac3fc0d0f14c9bcd",
+    "analysis/evaluation_0.2.0/queries/jezero_no_median_slope.json": "be898c6c53031ec8baa5ef978890aa861f44c848037d4f7130e52474eb7e8010",
+    "analysis/evaluation_0.2.0/queries/jezero_no_relief.json": "3c6c8951313b461410b10194a81fb2741f6e42c45b21a99b4cf990c9d8cd600c",
+    "analysis/evaluation_0.2.0/queries/jezero_slope_emphasis.json": "28956218826f0d69eec5173e30e095075a7daa5138005b43d34c602ad58d3b31",
+    "analysis/evaluation_0.2.0/queries/lunar_equatorial_coordinate_amplitude_emphasis.json": "e4dfdc04c9878a082de9bfd0b9ae0b4d7e6562e7245e0a60096cc63e9de82819",
+    "analysis/evaluation_0.2.0/queries/lunar_equatorial_coordinate_balanced.json": "50174a60b9fad1bf061979e9f1b98540f4fddd37bbf3b16c0be0d3037208b57d",
+    "analysis/evaluation_0.2.0/queries/lunar_equatorial_coordinate_no_median_slope.json": "aebff87b5da75373f37b930f174e2b2e5c3c6c8c1886f5b9e9e634a7719c54db",
+    "analysis/evaluation_0.2.0/queries/lunar_equatorial_coordinate_no_relief.json": "774e4509981eb7cde1141e5d86c7f7e3c6d97c2fa5160b13b0199b5bd578b708",
+    "analysis/evaluation_0.2.0/queries/lunar_equatorial_coordinate_slope_emphasis.json": "132bfff5d6b0663e0f502d775e96288e16646c72ff38f90e743620bbf2043c0e",
+    "analysis/evaluation_0.2.0/queries/shackleton_coverage.json": "4760108abfca2c213cda06a1acb15b0bff586efbcbf03a6e31c526799b5f0b7a",
+    "analysis/evaluation_0.2.0/retrieval_evaluation.json": "b3ade5fd7c798857c543b959c8bd78674bb565c763079a7050c1ed7613e319f8",
+    "prepared/0.2.0/feature_registry.json": "3d07d3f801f2fe02e19b1baa0bda18fa9299b1370a4489eeab022f5f8480e976",
+    "prepared/0.2.0/manifest.json": "cd76e6ae67124f64f1bd65a12d925ef1098dc2158f8bcd11f2d4a8983ef85a2e"
+  },
+  "export_code_sha256": "19f5cad0f758f2c2b04526ad7ad058228a52854f3f6b79fa1b822fc8274ca0b5"
+}

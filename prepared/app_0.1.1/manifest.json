@@ -1,0 +1,48 @@
+{
+  "files": {
+    "jezero_earth.geojson": {
+      "bytes": 46959,
+      "sha256": "70af0687dc55e17ccb229eac1d0f7492e577206e7b1045f817d4725eb7a7fcc3"
+    },
+    "lunar_equatorial_coordinate_query.json": {
+      "bytes": 2863,
+      "sha256": "a0cb8e3949ddcf39ec64b30cc61ac6c552db190214196318a284ee7b520f3444"
+    },
+    "jezero_near_sylhet_query.json": {
+      "bytes": 2893,
+      "sha256": "8131255e2fd2a44ecdf1f2fd7f22cc44c297931b36a6cdabdd8288099b9a0bc0"
+    },
+    "shackleton_earth.geojson": {
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    "lunar_equatorial_coordinate_earth.geojson": {
+      "bytes": 46915,
+      "sha256": "816bb494c9c4e2502fcf9ea666f4fab3889a1c47fa480f8a1925faa175be1d67"
+    },
+    "shackleton_query.json": {
+      "bytes": 2508,
+      "sha256": "0cb7b156d0d5e27b9fced531b5868c46e6cf2ed17344ce8e68c96350b2009008"
+    },
+    "cases.json": {
+      "bytes": 2312,
+      "sha256": "093cf6bf08b76e4faae413c5653e06f584292e88544674b2ca2057ffa6b8a783"
+    },
+    "provenance.json": {
+      "bytes": 2783,
+      "sha256": "cccd2d9d00a425556916aae10e7a0a2969d61e08b4c6656da1325797f3f1699b"
+    },
+    "jezero_query.json": {
+      "bytes": 2864,
+      "sha256": "ca3559ecb4360d25cba91472e949a30892d444627c244140475ffab3262ce591"
+    },
+    "feature_registry.json": {
+      "bytes": 214994,
+      "sha256": "76f7c67367d2cae4f4186c643c80648514fdc939723572692021ec0f1daf5d8a"
+    },
+    "jezero_near_sylhet_earth.geojson": {
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "dataset_version": "0.1.1",
+  "profile": "dry_barren_terrain",
+  "candidates": [],
+  "profile_status": "experimental_available",
+  "scientific_validation": "not_performed",
+  "target": {
+    "body": "moon",
+    "requested_lat": -89.67,
+    "requested_lon": 129.77999999999997,
+    "feature_id": "moon:259099",
+    "cell_center": {
+      "lat": -89.75,
+      "lon": 129.75
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            129.5,
+            -90.0
+          ],
+          [
+            130.0,
+            -90.0
+          ],
+          [
+            130.0,
+            -89.5
+          ],
+          [
+            129.5,
+            -89.5
+          ],
+          [
+            129.5,
+            -90.0
+          ]
+        ]
+      ]
+    },
+    "area_km2": 1.0030186176300049,
+    "quality_flags": 3,
+    "core_terrain": {
+      "slope_median_deg": null,
+      "slope_p90_deg": null,
+      "relief_m": null,
+      "roughness_rms_m": null,
+      "tri_mean_m": null
+    },
+    "interpretation": "Containing native grid cell; not a point measurement or a mission landing footprint."
+  },
+  "limitations": [
+    "Tolerances, area ratio and minimum fit are uncalibrated engineering defaults.",
+    "Native grid cells have approximately comparable but unequal physical support.",
+    "Fit is not a probability, accuracy estimate or hardware-performance prediction.",
+    "Environmental thresholds are experimental screening choices; no success probability is estimated.",
+    "Land cover and aridity are Earth-only filters from different historical periods, not additional similarity terms.",
+    "Seasonal greenness, actual access, exposed mineralogy, boulders and mechanical strength remain unverified.",
+    "NDVI scale is provisional; NDVI does not affect eligibility or rank."
+  ],
+  "configuration": {
+    "weights": {
+      "slope_median_deg": 0.25,
+      "slope_p90_deg": 0.25,
+      "relief_m": 0.25,
+      "roughness_rms_m": 0.25
+    },
+    "tolerances": {
+      "slope_median_deg": 5.0,
+      "slope_p90_deg": 10.0,
+      "relief_m": 500.0,
+      "roughness_rms_m": 100.0
+    },
+    "area_ratio": [
+      0.6666666666666666,
+      1.5
+    ],
+    "minimum_fit": 50.0,
+    "minimum_separation_km": 100.0,
+    "origin": null,
+    "radius_km": null
+  },
+  "status": "target_insufficient_evidence",
+  "missing_terrain": [
+    "slope_median_deg",
+    "slope_p90_deg",
+    "relief_m",
+    "roughness_rms_m",
+    "tri_mean_m"
+  ]
+}

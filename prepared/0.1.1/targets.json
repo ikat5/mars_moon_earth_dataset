@@ -1,0 +1,27 @@
+{
+  "version": "0.1.1",
+  "targets": [
+    {
+      "id": "jezero_center",
+      "body": "mars",
+      "lat": 18.41,
+      "lon": 77.69,
+      "name": "Jezero crater center (regional context)",
+      "geometry_type": "named_feature_point",
+      "source": "https://planetarynames.wr.usgs.gov/Feature/14300",
+      "coordinate_convention": "planetocentric, east-positive",
+      "caveat": "Center is not a landing ellipse or delta footprint; displayed values resolve to the containing native cell."
+    },
+    {
+      "id": "shackleton_center",
+      "body": "moon",
+      "lat": -89.67,
+      "lon": 129.78,
+      "name": "Shackleton crater center (coverage diagnostic)",
+      "geometry_type": "named_feature_point",
+      "source": "https://planetarynames.wr.usgs.gov/Feature/5450",
+      "coordinate_convention": "planetographic, east-positive; lunar spherical working grid",
+      "caveat": "Crater center is not a proposed rim base; core terrain is missing in the current integrated table."
+    }
+  ]
+}

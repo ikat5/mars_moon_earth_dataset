@@ -1,0 +1,355 @@
+{
+  "dataset_version": "0.2.0",
+  "created_utc": "2026-11-06T05:05:02.041242+00:00",
+  "prepared_manifest_sha256": "cd76e6ae67124f64f1bd65a12d925ef1098dc2158f8bcd11f2d4a8983ef85a2e",
+  "engine_sha256": "fb95bf16c47c2591f8601276dafbfa72de1429867a39f41c108727c791fa5fe8",
+  "benchmark_code_sha256": "35e1e881224c79cf6d3bfab5f5f7b4297b89ebc3d70a4bc49c838c40bfa83c1a",
+  "profile": "dry_barren_terrain",
+  "scope": "Prepared-data function plus compact JSON serialization. No HTTP transport, frontend, globe rendering, authentication or deployed-service load is included.",
+  "conditions": "Files were fully read to verify manifests before measurement; one warm-up query was excluded. These are warm-process/cache diagnostics. Other dataset jobs may be active on the machine.",
+  "machine": {
+    "system": "Linux",
+    "architecture": "x86_64",
+    "python": "3.14.4",
+    "logical_cpu_count": 12,
+    "available_cpu_affinity_count": 12
+  },
+  "warmup_excluded": {
+    "query": {
+      "body": "mars",
+      "lat": 18.41,
+      "lon": 77.69
+    },
+    "elapsed_seconds": 0.2013402850006969,
+    "payload_bytes": 29154,
+    "status": "ok",
+    "candidate_count": 10
+  },
+  "sequential": {
+    "summary": {
+      "queries": 5,
+      "median_seconds": 0.17513628100095957,
+      "p95_seconds": 0.2124569783994957,
+      "maximum_seconds": 0.2135469219992956,
+      "largest_payload_bytes": 29154
+    },
+    "results": [
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69
+        },
+        "elapsed_seconds": 0.2080972040002962,
+        "payload_bytes": 29154,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": 0,
+          "lon": 0
+        },
+        "elapsed_seconds": 0.2135469219992956,
+        "payload_bytes": 29072,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 43.123,
+          "lon": 27.456
+        },
+        "elapsed_seconds": 0.17513628100095957,
+        "payload_bytes": 28890,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": -17.42,
+          "lon": 138.13
+        },
+        "elapsed_seconds": 0.16566388800129062,
+        "payload_bytes": 29067,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69,
+          "origin": [
+            24.89,
+            91.87
+          ],
+          "radius_km": 500
+        },
+        "elapsed_seconds": 0.1430062210001779,
+        "payload_bytes": 2315,
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0
+      }
+    ]
+  },
+  "concurrent": {
+    "workers": 10,
+    "wall_seconds": 1.5155929789998481,
+    "summary": {
+      "queries": 20,
+      "median_seconds": 0.7444806439998501,
+      "p95_seconds": 0.7920047322504615,
+      "maximum_seconds": 0.8379625260004104,
+      "largest_payload_bytes": 29153
+    },
+    "results": [
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69
+        },
+        "elapsed_seconds": 0.771236268001303,
+        "payload_bytes": 29152,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": 0,
+          "lon": 0
+        },
+        "elapsed_seconds": 0.7666079239988903,
+        "payload_bytes": 29071,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 43.123,
+          "lon": 27.456
+        },
+        "elapsed_seconds": 0.7717873120000149,
+        "payload_bytes": 28889,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": -17.42,
+          "lon": 138.13
+        },
+        "elapsed_seconds": 0.7469671329999983,
+        "payload_bytes": 29066,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69,
+          "origin": [
+            24.89,
+            91.87
+          ],
+          "radius_km": 500
+        },
+        "elapsed_seconds": 0.6826634859990008,
+        "payload_bytes": 2314,
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69
+        },
+        "elapsed_seconds": 0.788042152998969,
+        "payload_bytes": 29153,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": 0,
+          "lon": 0
+        },
+        "elapsed_seconds": 0.7713333249994321,
+        "payload_bytes": 29071,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 43.123,
+          "lon": 27.456
+        },
+        "elapsed_seconds": 0.7895859010004642,
+        "payload_bytes": 28889,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": -17.42,
+          "lon": 138.13
+        },
+        "elapsed_seconds": 0.8379625260004104,
+        "payload_bytes": 29066,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69,
+          "origin": [
+            24.89,
+            91.87
+          ],
+          "radius_km": 500
+        },
+        "elapsed_seconds": 0.7110189899995021,
+        "payload_bytes": 2313,
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69
+        },
+        "elapsed_seconds": 0.7807874899990566,
+        "payload_bytes": 29153,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": 0,
+          "lon": 0
+        },
+        "elapsed_seconds": 0.741994154999702,
+        "payload_bytes": 29071,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 43.123,
+          "lon": 27.456
+        },
+        "elapsed_seconds": 0.7597323789996153,
+        "payload_bytes": 28888,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": -17.42,
+          "lon": 138.13
+        },
+        "elapsed_seconds": 0.7105585230001452,
+        "payload_bytes": 29066,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69,
+          "origin": [
+            24.89,
+            91.87
+          ],
+          "radius_km": 500
+        },
+        "elapsed_seconds": 0.6510503589997825,
+        "payload_bytes": 2314,
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69
+        },
+        "elapsed_seconds": 0.7065355679987988,
+        "payload_bytes": 29153,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": 0,
+          "lon": 0
+        },
+        "elapsed_seconds": 0.681119265000234,
+        "payload_bytes": 29071,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 43.123,
+          "lon": 27.456
+        },
+        "elapsed_seconds": 0.7198987560004753,
+        "payload_bytes": 28889,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "moon",
+          "lat": -17.42,
+          "lon": 138.13
+        },
+        "elapsed_seconds": 0.7104791080000723,
+        "payload_bytes": 29066,
+        "status": "ok",
+        "candidate_count": 10
+      },
+      {
+        "query": {
+          "body": "mars",
+          "lat": 18.41,
+          "lon": 77.69,
+          "origin": [
+            24.89,
+            91.87
+          ],
+          "radius_km": 500
+        },
+        "elapsed_seconds": 0.6409429099985573,
+        "payload_bytes": 2314,
+        "status": "no_candidates_under_filters",
+        "candidate_count": 0
+      }
+    ]
+  },
+  "process_peak_rss_mib": 794.84375,
+  "memory_scope": "Linux process peak RSS across imports, manifest verification, warmup and both query runs; excludes other workers and browser memory.",
+  "interpretation": "A backend diagnostic, not proof that the complete app meets the blueprint end-to-end performance target."
+}

@@ -1,0 +1,81 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 191,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.37375,
+          34.74118
+        ]
+      },
+      "properties": {
+        "FID": 191,
+        "Name": "Pisgah Lava Flow",
+        "AnalogType": "Volcanic",
+        "AnalogBody": " ",
+        "Lat": 34.7412,
+        "Lon": -116.374
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 192,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.52165,
+          64.9282
+        ]
+      },
+      "properties": {
+        "FID": 192,
+        "Name": "Holuhraun Lava Flow",
+        "AnalogType": "Volcanic",
+        "AnalogBody": " ",
+        "Lat": 64.9282,
+        "Lon": -16.5217
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 209,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.71,
+          65.01
+        ]
+      },
+      "properties": {
+        "FID": 209,
+        "Name": "Oskjuvatn",
+        "AnalogType": "Volcanic",
+        "AnalogBody": " ",
+        "Lat": 65.01,
+        "Lon": -16.71
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 214,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.8511133156688,
+          64.8910229071218
+        ]
+      },
+      "properties": {
+        "FID": 214,
+        "Name": "Baugur",
+        "AnalogType": "Volcanic",
+        "AnalogBody": null,
+        "Lat": 64.85942,
+        "Lon": -16.85907
+      }
+    }
+  ]
+}

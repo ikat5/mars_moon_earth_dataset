@@ -1,0 +1,63 @@
+{
+  "target": "Shackleton center, 10 km planar context radius",
+  "lat": -89.67,
+  "lon_east": 129.78,
+  "coordinate_source": "https://planetarynames.wr.usgs.gov/Feature/5450",
+  "reference_frame": "MOON_ME, JPL DE421; nominal named-feature coordinate used without epoch/frame adjustment",
+  "radius_m": 10000,
+  "products": {
+    "roughness_400m": {
+      "key": "roughness_400m",
+      "path": "sources/lola_polar_context/LDRM_80S_1000MPP_ADJ_ROUGH_400M.TIF",
+      "url": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDRM_80S_1000MPP_ADJ_ROUGH_400M.TIF",
+      "source_page": "https://pgda.gsfc.nasa.gov/products/90",
+      "bytes": 1532181,
+      "sha256": "5ccf66fa521e32aa9ccdf6dda80090fc46c0cfce96ea148ea9057e49ddb2834c",
+      "publisher_checksum": "not_provided",
+      "units": "m",
+      "definition": "Spread of LOLA height residuals around a plane fit within a 400 m diameter window.",
+      "baseline_m": 400,
+      "raster_spacing_m": 1000,
+      "crs_wkt": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+      "pixel_centers_in_circle": 313,
+      "valid_pixels": 313,
+      "valid_center_fraction": 1.0,
+      "center_containing_pixel_value": 2.094745397567749,
+      "minimum": 1.133927583694458,
+      "median": 1.9529786109924316,
+      "p90": 3.4293935298919678,
+      "maximum": 5.132739543914795,
+      "aggregation": "Unweighted statistics of raster pixel centers inside projected circle; no claim of exact area coverage."
+    },
+    "slope_400m": {
+      "key": "slope_400m",
+      "path": "sources/lola_polar_context/LDRM_80S_1000MPP_ADJ_SLP_400M.TIF",
+      "url": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDRM_80S_1000MPP_ADJ_SLP_400M.TIF",
+      "source_page": "https://pgda.gsfc.nasa.gov/products/90",
+      "bytes": 1544190,
+      "sha256": "e165ae2a381f55aa49d8ed403f1eb109729409ab6b019c589b75fd9c8ed56e74",
+      "publisher_checksum": "not_provided",
+      "units": "degree",
+      "definition": "Slope of the fitted plane within a 400 m diameter window.",
+      "baseline_m": 400,
+      "raster_spacing_m": 1000,
+      "crs_wkt": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+      "pixel_centers_in_circle": 313,
+      "valid_pixels": 313,
+      "valid_center_fraction": 1.0,
+      "center_containing_pixel_value": 2.9011716842651367,
+      "minimum": 2.3385586738586426,
+      "median": 30.36711883544922,
+      "p90": 32.16175842285156,
+      "maximum": 33.94801330566406,
+      "aggregation": "Unweighted statistics of raster pixel centers inside projected circle; no claim of exact area coverage."
+    }
+  },
+  "matching_status": "context_only_not_admitted_to_score",
+  "limitations": [
+    "Product footprint and 400 m plane-fit definition differ from integrated-table slope and RMS roughness.",
+    "A center-based circle mixes crater floor, walls and nearby terrain; it is not a rim-base footprint.",
+    "The circle is defined in the source polar projection. It is not an ellipsoidal geodesic buffer.",
+    "This supplement does not fill original missing terrain columns or enable unsupported matching."
+  ]
+}
