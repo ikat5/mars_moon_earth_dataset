@@ -20,7 +20,24 @@ Use `prepared/0.2.0` for the current serving data and `prepared/app_0.2.0/cases.
 python -m processing.search --data-dir prepared/0.2.0 --profile dry_barren_terrain --body mars --lat 18.41 --lon 77.69 --output analysis/my_search.json
 ```
 
-Install `processing/requirements.txt` first. This is a backend data query; the frontend code and a deployed API are not included in this workspace.
+Install `processing/requirements.txt` first. This is a backend data query; a deployed API is not included in this workspace. The 3D globe frontend lives in [`frontend/`](frontend/) (see below).
+
+## Run the frontend (TerraTwin globes)
+
+The React + Vite 3D globe app is in `frontend/`. Requires Node.js 20.19+ (or 22.12+) and npm.
+
+```bash
+cd frontend
+npm install
+npm run dev        # starts the dev server, open the printed URL (default http://localhost:5173)
+```
+
+Production build:
+
+```bash
+npm run build      # outputs to frontend/dist
+npm run preview    # serves the built app locally
+```
 
 ## Clone and download
 

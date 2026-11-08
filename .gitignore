@@ -31,3 +31,9 @@ sources/landcover_2017/*.tif
 prepared/*.failed_*/
 prepared/**/*.building/
 prepared/environment_0.1.0/aridity/
+
+# TerraTwin globe frontend (React + Vite)
+!frontend/
+!frontend/**
+frontend/node_modules/
+frontend/dist/
