@@ -32,8 +32,9 @@ prepared/*.failed_*/
 prepared/**/*.building/
 prepared/environment_0.1.0/aridity/
 
-# TerraTwin globe frontend (React + Vite)
+# TerraTwin globe app (FastAPI + globe.gl); rasters, tile cache and generated textures stay local
 !frontend/
 !frontend/**
-frontend/node_modules/
-frontend/dist/
+frontend/*.tif
+frontend/tile_cache
+frontend/lunar_*.png

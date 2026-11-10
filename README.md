@@ -24,20 +24,19 @@ Install `processing/requirements.txt` first. This is a backend data query; a dep
 
 ## Run the frontend (TerraTwin globes)
 
-The React + Vite 3D globe app is in `frontend/`. Requires Node.js 20.19+ (or 22.12+) and npm.
+`frontend/` is a FastAPI server (`app.py`) plus one globe.gl page (`index.html`). It shows Moon (Kaguya), Mars (CTX + Viking color) and Earth (Esri) imagery, and samples the lunar elevation model on click. Requires Python 3.12+ and internet access for CDN scripts and imagery tiles.
+
+The lunar elevation model is required and too large for Git (1.06 GB). Download it into `frontend/` once:
 
 ```bash
 cd frontend
-npm install
-npm run dev        # starts the dev server, open the printed URL (default http://localhost:5173)
+curl -L -o ldem_64.tif https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_64.tif
+python -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python app.py                          # self-check: prints "self-check ok"
+.venv/bin/uvicorn app:app --port 8000            # open http://localhost:8000
 ```
 
-Production build:
-
-```bash
-npm run build      # outputs to frontend/dist
-npm run preview    # serves the built app locally
-```
+Run it from inside `frontend/`; paths are relative. The first start generates the lunar textures and fills `tile_cache/` in the background; both stay local. `mars_viking.jpg` and the place-name files are committed, so the 798 MB Viking mosaic (`https://planetarymaps.usgs.gov/mosaic/Mars_Viking_ClrMosaic_global_925m.tif`) is only needed to regenerate the Mars texture.
 
 ## Clone and download
 
