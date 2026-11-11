@@ -1,6 +1,10 @@
-"""Phase 1: 3D Lunar LDEM Explorer - FastAPI + rasterio backend.
+"""TerraTwin server: globe imagery/lunar-DEM explorer plus the analog-search API (terratwin_service).
 
-Run: uvicorn app:app --port 8000
+Run from the repository root:  .venv/bin/uvicorn --app-dir frontend app:app --port 8000
+Files resolve relative to this module, so the working directory does not matter.
+Environment: TERRATWIN_PREWARM=0 disables background tile prewarming; TERRATWIN_FETCH_LABELS=0 skips the
+Gazetteer download; TERRATWIN_LDEM overrides the lunar DEM path. The DEM is optional: without it, analog
+search still works and only lunar point telemetry is unavailable.
 """
 import http.client
 import io
@@ -13,7 +17,9 @@ import urllib.request
 import warnings
 import zipfile
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import asynccontextmanager
 from functools import lru_cache
+from pathlib import Path
 
 import numpy as np
 import rasterio
@@ -22,28 +28,52 @@ from rasterio.transform import from_bounds, rowcol
 from rasterio.windows import Window
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
 from PIL import Image, ImageFilter
 from matplotlib import colormaps
 
+import terratwin_service
+
+HERE = Path(__file__).resolve().parent
 # ldem_64 = 64 px/deg (~474 m/px). ldem_16 is intentionally not used.
-TIF = "ldem_64.tif"
-if not os.path.exists(TIF):
-    raise SystemExit("ldem_64.tif not found in current directory")
-
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore", rasterio.errors.NotGeoreferencedWarning)
-    dataset = rasterio.open(TIF)
-W, H = dataset.width, dataset.height
-# CGI Moon Kit LDEMs ship without a geotransform: they are global equirectangular,
-# -180..180 lon, 90..-90 lat (verified: max elev lands at 5.4N,158.6W = known lunar high point).
-TRANSFORM = dataset.transform if dataset.crs else from_bounds(-180, -90, 180, 90, W, H)
-M_PER_PX = 2 * np.pi * 1737400 / W  # 1895.1 m at 16 px/deg, 473.8 m at 64 px/deg
-print(f"Loaded DEM: {TIF} ({W}x{H} px, {M_PER_PX:.1f} m/px)")
+LDEM_URL = "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_64.tif"
+TIF = Path(os.environ.get("TERRATWIN_LDEM", HERE / "ldem_64.tif"))
 READ_LOCK = threading.Lock()  # GDAL dataset handles are not thread-safe; FastAPI runs sync routes in a pool
+dataset = None
+W = H = TRANSFORM = M_PER_PX = IS_KM = None
+DEM_ERROR = None
 
-# Detect units on a coarse nearest-neighbour peek (touches only a few scanlines, not the whole 1 GB file)
-IS_KM = np.nanmax(np.abs(dataset.read(1, out_shape=(360, 720)))) < 50
+
+def open_dem():
+    """Open the lunar DEM once. Missing/unreadable DEM disables only lunar point telemetry."""
+    global dataset, W, H, TRANSFORM, M_PER_PX, IS_KM, DEM_ERROR
+    if dataset is not None or DEM_ERROR is not None:
+        return dataset
+    if not TIF.exists():
+        DEM_ERROR = f"{TIF.name} not found in {TIF.parent}; download it from {LDEM_URL}"
+        print(f"Lunar telemetry disabled: {DEM_ERROR}")
+        return None
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", rasterio.errors.NotGeoreferencedWarning)
+            ds = rasterio.open(TIF)
+        W, H = ds.width, ds.height
+        # CGI Moon Kit LDEMs ship without a geotransform: they are global equirectangular,
+        # -180..180 lon, 90..-90 lat (verified: max elev lands at 5.4N,158.6W = known lunar high point).
+        TRANSFORM = ds.transform if ds.crs else from_bounds(-180, -90, 180, 90, W, H)
+        M_PER_PX = 2 * np.pi * 1737400 / W  # 1895.1 m at 16 px/deg, 473.8 m at 64 px/deg
+        # Detect units on a coarse nearest-neighbour peek (touches only a few scanlines, not the whole 1 GB file)
+        IS_KM = np.nanmax(np.abs(ds.read(1, out_shape=(360, 720)))) < 50
+        dataset = ds
+        print(f"Loaded DEM: {TIF.name} ({W}x{H} px, {M_PER_PX:.1f} m/px)")
+    except rasterio.errors.RasterioError as e:
+        DEM_ERROR = f"{TIF.name} unreadable: {e}"
+        print(f"Lunar telemetry disabled: {DEM_ERROR}")
+    return dataset
+
+
+def dem_status():
+    return {"available": dataset is not None, "source": TIF.name,
+            "m_per_px": round(M_PER_PX, 1) if dataset is not None else None, "detail": DEM_ERROR}
 
 
 def to_m(a):
@@ -51,27 +81,27 @@ def to_m(a):
 
 
 def build_textures():
-    if os.path.exists("lunar_bumpmap.png") and os.path.exists("lunar_hypsometric.png"):
+    if (HERE / "lunar_bumpmap.png").exists() and (HERE / "lunar_hypsometric.png").exists() or dataset is None:
         return
     elev = to_m(dataset.read(1, out_shape=(2048, 4096), resampling=Resampling.average).astype(np.float32))
     lo, hi = np.nanpercentile(elev, [0.5, 99.5])
     norm = np.clip((elev - lo) / (hi - lo), 0, 1)
-    Image.fromarray((norm * 255).astype(np.uint8), "L").save("lunar_bumpmap.png")
+    Image.fromarray((norm * 255).astype(np.uint8), "L").save(HERE / "lunar_bumpmap.png")
     rgb = (colormaps["turbo"](norm)[..., :3] * 255).astype(np.uint8)
-    Image.fromarray(rgb, "RGB").save("lunar_hypsometric.png")
-    print(f"Generated textures from {TIF} (elev range p0.5..p99.5: {lo:.0f}..{hi:.0f} m)")
+    Image.fromarray(rgb, "RGB").save(HERE / "lunar_hypsometric.png")
+    print(f"Generated textures from {TIF.name} (elev range p0.5..p99.5: {lo:.0f}..{hi:.0f} m)")
 
 
-MARS_TIF = "Mars_Viking_ClrMosaic_global_925m.tif"  # RGB imagery only (no elevation), global -180..180
+MARS_TIF = HERE / "Mars_Viking_ClrMosaic_global_925m.tif"  # RGB imagery only (no elevation), global -180..180
 
 
 def build_mars_texture():
-    if os.path.exists("mars_viking.jpg") or not os.path.exists(MARS_TIF):
+    if (HERE / "mars_viking.jpg").exists() or not MARS_TIF.exists():
         return
     with rasterio.open(MARS_TIF) as src:
         rgb = src.read((1, 2, 3), out_shape=(3, 2048, 4096), resampling=Resampling.average)
-    Image.fromarray(np.moveaxis(rgb, 0, -1), "RGB").save("mars_viking.jpg", quality=92)
-    print(f"Generated mars_viking.jpg from {MARS_TIF}")
+    Image.fromarray(np.moveaxis(rgb, 0, -1), "RGB").save(HERE / "mars_viking.jpg", quality=92)
+    print(f"Generated mars_viking.jpg from {MARS_TIF.name}")
 
 
 GAZETTEER = "https://asc-planetarynames-data.s3.us-west-2.amazonaws.com/{}_nomenclature_center_pts.zip"  # USGS/IAU names
@@ -95,14 +125,14 @@ def read_dbf(raw):
 
 def build_labels():
     for body in ("moon", "mars"):
-        path = f"labels_{body}.json"
-        if os.path.exists(path):
+        path = HERE / f"labels_{body}.json"
+        if path.exists():
             continue
         try:
             with urllib.request.urlopen(GAZETTEER.format(body.upper()), timeout=120) as r:
                 raw = zipfile.ZipFile(io.BytesIO(r.read())).read(f"{body.upper()}_nomenclature_center_pts.dbf")
         except OSError as e:  # labels are optional: the globe works without them, retried on next start
-            print(f"Skipping {path}: Gazetteer download failed ({e})")
+            print(f"Skipping {path.name}: Gazetteer download failed ({e})")
             continue
         feats = [[f["clean_name"], round(float(f["center_lat"]), 3), round((float(f["center_lon"]) + 180) % 360 - 180, 3),
                   round(float(f["diameter"]), 1)]
@@ -110,7 +140,7 @@ def build_labels():
         feats.sort(key=lambda f: -f[3])  # largest first: the page labels the biggest features that fit on screen
         with open(path, "w") as out:
             json.dump(feats, out, separators=(",", ":"))
-        print(f"Generated {path} ({len(feats)} named features)")
+        print(f"Generated {path.name} ({len(feats)} named features)")
 
 
 def _window(row, col, half_rows, half_cols):
@@ -123,6 +153,8 @@ def _window(row, col, half_rows, half_cols):
 
 
 def sample_ldem(lat, lng):
+    if open_dem() is None:
+        raise HTTPException(503, {"error": "lunar_dem_unavailable", "detail": DEM_ERROR})
     lng = ((lng + 180) % 360) - 180
     row, col = rowcol(TRANSFORM, lng, lat)
     row = int(np.clip(row, 0, H - 1))
@@ -142,7 +174,7 @@ def sample_ldem(lat, lng):
         "roughness_m": round(float(patch.std()), 1),
         "profile": [round(float(v), 1) for v in profile],
         "profile_step_km": round(dx / 1000, 3),
-        "source": TIF,
+        "source": TIF.name,
         "m_per_px": round(M_PER_PX, 1),
     }
 
@@ -190,10 +222,31 @@ SITES = {
     ],
 }
 
-build_textures()
-build_mars_texture()
-build_labels()
-app = FastAPI(title="Lunar LDEM Explorer")
+_STOP = threading.Event()  # set at shutdown so the prewarm thread stops scheduling work
+
+
+@asynccontextmanager
+async def lifespan(_app):
+    # One-time asset generation happens at startup, not import, so tests and tools can import this module cheaply.
+    open_dem()
+    build_textures()
+    build_mars_texture()
+    if os.environ.get("TERRATWIN_FETCH_LABELS", "1") != "0":
+        build_labels()
+    try:
+        terratwin_service.get_release()  # fail loudly in the log, but keep serving imagery + a 503 readiness state
+    except HTTPException:
+        pass
+    if os.environ.get("TERRATWIN_PREWARM", "1") != "0":
+        threading.Thread(target=_prewarm, daemon=True).start()
+    yield
+    _STOP.set()
+
+
+app = FastAPI(title="TerraTwin", lifespan=lifespan)
+terratwin_service.set_dem_status_provider(dem_status)
+terratwin_service.install_error_handlers(app)
+app.include_router(terratwin_service.router)
 
 # Equirectangular WMTS sources: level L is 2^(L+1) x 2^L tiles, -180..180 / 90..-90 (incl. poles).
 TILE_SOURCES = {
@@ -287,7 +340,7 @@ def _colorize_mars(ctx, z, x, y):
     return Image.fromarray(np.clip(color * detail[..., None], 0, 255).astype(np.uint8))
 
 
-TILE_CACHE = "tile_cache"  # upstream NASA/Esri tiles take 2-9 s each, so every rendered tile is kept on disk
+TILE_CACHE = str(HERE / "tile_cache")  # upstream NASA/Esri tiles take 2-9 s each, so every rendered tile is kept on disk
 
 
 def _cached_tile(body, z, x, y):
@@ -314,6 +367,8 @@ def _prewarm(max_level=4):
     jobs = [(b, z, x, y) for z in range(max_level + 1) for b in TILE_SOURCES for x in range(2**z) for y in range(2**z)]
 
     def job(j):
+        if _STOP.is_set():
+            return
         try:
             _cached_tile(*j)
         except Exception as e:  # upstream hiccup: the tile is simply fetched again on demand
@@ -321,10 +376,8 @@ def _prewarm(max_level=4):
 
     with ThreadPoolExecutor(8) as pool:
         list(pool.map(job, jobs))
-    print(f"Tile cache warm: levels 0-{max_level} for {', '.join(TILE_SOURCES)}")
-
-
-threading.Thread(target=_prewarm, daemon=True).start()
+    if not _STOP.is_set():
+        print(f"Tile cache warm: levels 0-{max_level} for {', '.join(TILE_SOURCES)}")
 
 
 @app.get("/tiles/{body}/{z}/{x}/{y}.jpg")
@@ -346,8 +399,9 @@ def tile(body: str, z: int, x: int, y: int):
 def sites(body: str = "moon"):
     if body not in SITES:
         raise HTTPException(404)
-    # only the Moon has a DEM loaded; other worlds' pins carry name and position only
-    return [{"name": n, "category": c, "lat": lat, "lng": lng, **(sample_ldem(lat, lng) if body == "moon" else {})}
+    # only the Moon has a DEM loaded; other worlds' pins (and the Moon without its DEM) carry name and position only
+    telemetry = body == "moon" and open_dem() is not None
+    return [{"name": n, "category": c, "lat": lat, "lng": lng, **(sample_ldem(lat, lng) if telemetry else {})}
             for n, c, lat, lng in SITES[body]]
 
 
@@ -356,19 +410,41 @@ def query(lat: float = Query(..., ge=-90, le=90), lng: float = Query(..., ge=-36
     return sample_ldem(lat, lng)
 
 
-app.mount("/", StaticFiles(directory=".", html=True), name="static")
+# Public static allowlist. The frontend folder also holds the DEM, virtualenvs and caches, which must not be served.
+STATIC = {"index.html": "text/html", "terratwin.js": "text/javascript", "terratwin.css": "text/css",
+          "labels_moon.json": "application/json", "labels_mars.json": "application/json",
+          "mars_viking.jpg": "image/jpeg", "lunar_bumpmap.png": "image/png", "lunar_hypsometric.png": "image/png"}
+
+
+@app.get("/")
+def index():
+    return static_file("index.html")
+
+
+@app.get("/{name}")
+def static_file(name: str):
+    if name not in STATIC or not (HERE / name).exists():
+        raise HTTPException(404)
+    cache = "no-cache" if name in ("index.html", "terratwin.js", "terratwin.css") else "public, max-age=86400"
+    return FileResponse(HERE / name, media_type=STATIC[name], headers={"Cache-Control": cache})
 
 
 if __name__ == "__main__":
+    open_dem()
+    if dataset is None:
+        raise SystemExit(f"self-check needs the lunar DEM: {DEM_ERROR}")
     # self-check: the known lunar high point (Selenean summit) must sample near the DEM max
     s = sample_ldem(5.41, -158.63)
     assert s["elev_m"] > 10000, s
     assert len(s["profile"]) == 21
     assert sample_ldem(-90, 180)["elev_m"] == sample_ldem(-90, -180)["elev_m"]
     # labels: Shackleton sits on the south pole; Olympus Mons at 226E must come out as a negative (west) longitude
-    moon_names = {n: (lat, lng) for n, lat, lng, _ in json.load(open("labels_moon.json"))}
-    mars_names = {n: (lat, lng) for n, lat, lng, _ in json.load(open("labels_mars.json"))}
+    moon_names = {n: (lat, lng) for n, lat, lng, _ in json.load(open(HERE / "labels_moon.json"))}
+    mars_names = {n: (lat, lng) for n, lat, lng, _ in json.load(open(HERE / "labels_mars.json"))}
     assert moon_names["Shackleton"][0] < -89 and "Marco Polo P" not in moon_names
     assert -134 < mars_names["Olympus Mons"][1] < -133, mars_names["Olympus Mons"]
     assert {s["category"] for s in sites("mars")} == {"landing", "icebase"}
-    print("self-check ok", TIF, s["elev_m"], s["slope_deg"], s["roughness_m"])
+    release = terratwin_service.get_release()
+    hit = terratwin_service.run_search(terratwin_service.SearchRequest(body="mars", lat=18.41, lon=77.69, profile="dry_barren_terrain"))
+    assert hit["status"] == "ok" and hit["dataset_version"] == release.version and len(hit["candidates"]) == 10, hit["status"]
+    print("self-check ok", TIF.name, s["elev_m"], s["slope_deg"], s["roughness_m"])
