@@ -1,5 +1,7 @@
 # TerraTwin project analysis
 
+> **Status update 2026-11-12:** This review predates the search integration. The globe is now connected to analog retrieval through `/api/v1` (`frontend/terratwin_service.py`, `frontend/terratwin.js`). See [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) for what is implemented and verified. The text below is preserved as written.
+
 Reviewed 2026-11-12 against the current local checkout, including the frontend added after the original preparation reports. This is a repository analysis; it does not establish field suitability or confirm external source claims independently.
 
 ## Project purpose

@@ -20,23 +20,23 @@ Use `prepared/0.2.0` for the current serving data and `prepared/app_0.2.0/cases.
 python -m processing.search --data-dir prepared/0.2.0 --profile dry_barren_terrain --body mars --lat 18.41 --lon 77.69 --output analysis/my_search.json
 ```
 
-Install `processing/requirements.txt` first. This is a backend data query; a deployed API is not included in this workspace. The 3D globe frontend lives in [`frontend/`](frontend/) (see below).
+Install `processing/requirements.txt` first. The same engine is served over HTTP by the app below (`POST /api/v1/search`); no public deployment exists yet.
 
-## Run the frontend (TerraTwin globes)
+## Run TerraTwin (search API + globes)
 
-`frontend/` is a FastAPI server (`app.py`) plus one globe.gl page (`index.html`). It shows Moon (Kaguya), Mars (CTX + Viking color) and Earth (Esri) imagery, and samples the lunar elevation model on click. Requires Python 3.12+ and internet access for CDN scripts and imagery tiles.
+`frontend/` is a FastAPI server (`app.py` + the `/api/v1` analog-search adapter in `terratwin_service.py`) and a globe.gl page (`index.html` + `terratwin.js`). Select a Moon or Mars region on the globe or by coordinates. The app resolves its regional cell, runs the real `prepared/0.2.0` search, animates the best Earth candidate's footprint at its true location, and lets you inspect evidence, compare candidates and export JSON/GeoJSON/a printable brief.
 
-The lunar elevation model is required and too large for Git (1.06 GB). Download it into `frontend/` once:
+From the repository root (Python 3.12+, Git LFS data pulled):
 
 ```bash
-cd frontend
-curl -L -o ldem_64.tif https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_64.tif
-python -m venv .venv && .venv/bin/pip install -r requirements.txt
-.venv/bin/python app.py                          # self-check: prints "self-check ok"
-.venv/bin/uvicorn app:app --port 8000            # open http://localhost:8000
+git lfs pull
+python3 -m venv .venv
+.venv/bin/pip install -r processing/requirements.txt -r frontend/requirements.txt -r requirements-dev.txt
+curl -L -o frontend/ldem_64.tif https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_64.tif   # optional, 1.06 GB
+.venv/bin/uvicorn --app-dir frontend app:app --port 8000          # open http://localhost:8000
 ```
 
-Run it from inside `frontend/`; paths are relative. The first start generates the lunar textures and fills `tile_cache/` in the background; both stay local. `mars_viking.jpg` and the place-name files are committed, so the 798 MB Viking mosaic (`https://planetarymaps.usgs.gov/mosaic/Mars_Viking_ClrMosaic_global_925m.tif`) is only needed to regenerate the Mars texture.
+The lunar DEM only adds lunar point telemetry; search works without it. Tests: `.venv/bin/python -m pytest processing frontend/test_api.py -q`. Browser workflow: `.venv/bin/python frontend/browser_check.py` (server running). See the [runbook](analysis/RUNBOOK.md) for configuration, API, degraded modes and deployment, [implementation status](analysis/IMPLEMENTATION_STATUS.md) for verified results, and [`submission/`](submission/) for review materials.
 
 ## Clone and download
 

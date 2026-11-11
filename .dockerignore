@@ -1,0 +1,19 @@
+# Send only what the server needs; large rasters, datasets and environments stay out of the image.
+*
+!processing/
+!frontend/
+!prepared/current_release.json
+!prepared/0.2.0/
+!prepared/app_0.2.0/
+!prepared/gobi_candidate_0.1.0/
+!prepared/local_pilot_0.1.1/
+!analysis/GOBI_CANDIDATE_BRIEF.md
+!analysis/JAFLONG_LOCAL_PILOT.md
+!analysis/KNOWN_ANALOG_REVIEW.md
+**/__pycache__
+frontend/.venv
+frontend/*.tif
+frontend/tile_cache
+frontend/lunar_*.png
+prepared/gobi_candidate_0.1.0/*.tif
+prepared/local_pilot_0.1.1/*.tif

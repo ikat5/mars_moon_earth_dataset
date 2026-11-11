@@ -1,5 +1,7 @@
 # TerraTwin — Master Project Blueprint
 
+> **Status update 2026-11-12:** Frontend-status statements in this blueprint are outdated. The globe is now connected to analog retrieval through `/api/v1` (`frontend/terratwin_service.py`, `frontend/terratwin.js`). See [IMPLEMENTATION_STATUS.md](analysis/IMPLEMENTATION_STATUS.md) for what is implemented and verified. The text below is preserved as written.
+
 **Version:** 1.0 · **Prepared:** 2026-11-06 · **Status:** actionable design proposal based on the supplied challenge, the team briefing, the audited local datasets, and the user's working 3D map UI.
 
 **Product statement:** Choose a place on the Moon or Mars, choose what you want to learn or test, and discover Earth locations that offer the relevant conditions—with evidence explaining both the analogy and its limits.

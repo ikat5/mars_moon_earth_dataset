@@ -3,7 +3,7 @@
 Run from the repository root:  .venv/bin/uvicorn --app-dir frontend app:app --port 8000
 Files resolve relative to this module, so the working directory does not matter.
 Environment: TERRATWIN_PREWARM=0 disables background tile prewarming; TERRATWIN_FETCH_LABELS=0 skips the
-Gazetteer download; TERRATWIN_LDEM overrides the lunar DEM path. The DEM is optional: without it, analog
+Gazetteer download; TERRATWIN_LDEM overrides the lunar DEM path; TERRATWIN_TILE_CACHE moves the tile cache. The DEM is optional: without it, analog
 search still works and only lunar point telemetry is unavailable.
 """
 import http.client
@@ -341,7 +341,7 @@ def _colorize_mars(ctx, z, x, y):
     return Image.fromarray(np.clip(color * detail[..., None], 0, 255).astype(np.uint8))
 
 
-TILE_CACHE = str(HERE / "tile_cache")  # upstream NASA/Esri tiles take 2-9 s each, so every rendered tile is kept on disk
+TILE_CACHE = os.environ.get("TERRATWIN_TILE_CACHE", str(HERE / "tile_cache"))  # upstream NASA/Esri tiles take 2-9 s each, so every rendered tile is kept on disk
 
 
 _FAILED = {}  # (body, z, x, y) -> monotonic time until which an upstream failure is remembered

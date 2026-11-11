@@ -50,3 +50,6 @@ frontend/*.tmp
 !.env.example
 !Dockerfile
 !.dockerignore
+!submission/
+!submission/**
+submission/media/
