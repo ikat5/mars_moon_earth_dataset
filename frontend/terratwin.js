@@ -29,6 +29,8 @@ window.TT = (() => {
     showStudies: false, studyGeo: {},
     savedCases: null,
     earthNote: null,
+    reveal: null,          // {stage: 'travel'|'emerge'|'done', t, result}; null when no reveal applies
+    revealSeq: 0,
   };
   let chart = null;
 
@@ -76,6 +78,7 @@ window.TT = (() => {
 
   // Anything that changes the question discards the previous answer: old data never describes a new selection.
   function invalidate(reason) {
+    cancelReveal();
     state.searchAbort?.abort();
     state.searchSeq++;
     state.searching = false;
@@ -142,6 +145,7 @@ window.TT = (() => {
     const payload = { body: t.body, lat: t.lat, lon: t.lonSupplied, profile: s.profile, limit: s.limit };
     if (s.originLat !== null) payload.origin = { lat: s.originLat, lon: s.originLon };
     if (s.radius !== null) payload.radius_km = s.radius;
+    cancelReveal();
     state.searchAbort?.abort();
     const ctl = state.searchAbort = new AbortController();
     const seq = ++state.searchSeq, key = queryKey();
@@ -159,6 +163,7 @@ window.TT = (() => {
     state.result = r.data; state.resultKey = key;
     showTab('results'); renderAll(); GLOBE.refresh();
     say(`${STATUS_TEXT[r.data.status]}: ${r.data.candidates.length} candidates`);
+    if (r.data.status === 'ok' && r.data.candidates.length) reveal(r.data); // never for empty/unsupported outcomes
   }
 
   async function loadSavedCase(id) {
@@ -167,6 +172,7 @@ window.TT = (() => {
     const d = r.data, t = d.target;
     await setTarget(t.body, t.requested_lat, t.requested_lon, d.saved_fixture.title, 'saved');
     d.client = { purpose: '', origin: d.configuration.origin ? { lat: d.configuration.origin[0], lon: d.configuration.origin[1] } : null };
+    cancelReveal(); // saved fixtures are not a completed live search, so they never get the reveal
     state.result = d; state.resultKey = null; state.staleNotice = null;
     showTab('results'); renderAll(); GLOBE.refresh();
   }
@@ -174,6 +180,7 @@ window.TT = (() => {
   function selectCandidate(i, fly = true) {
     const c = state.result?.candidates?.[i];
     if (!c) return;
+    interrupt();
     state.selected = i;
     if (fly) { GLOBE.setWorld('earth'); GLOBE.flyTo(c.lat, c.lon, 0.12); }
     showTab('evidence'); renderAll(); GLOBE.refresh();
@@ -188,7 +195,102 @@ window.TT = (() => {
   function returnToTarget() {
     const t = state.target;
     if (!t) return;
+    interrupt();
     GLOBE.setWorld(t.body); GLOBE.flyTo(t.lat, t.lon, 0.9); showTab('target');
+  }
+
+  // ------------------------------------------------------------------ Moon/Mars → Earth reveal
+  // Runs only after a completed real search with candidates. Uses the returned top candidate's coordinates and
+  // footprint. The final state (Earth view, #1 selected, all footprints selectable) is identical whether the
+  // animation plays, is skipped, or is replaced by reduced motion / no WebGL.
+  const sleep = ms => new Promise(res => setTimeout(res, ms));
+  const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches || !GLOBE.available;
+  const ease = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  async function reveal(result) {
+    const token = ++state.revealSeq, top = result.candidates[0], t = state.target;
+    const alive = () => token === state.revealSeq && state.result === result;
+    state.reveal = { stage: 'travel', t: 0, result };
+    renderReveal();
+    if (reducedMotion()) return finishReveal(token, true);
+    GLOBE.flyTo(t.lat, t.lon, 2.6, 900);                 // pull back from the planetary target
+    await sleep(950); if (!alive()) return;
+    GLOBE.fade(false);
+    await sleep(380); if (!alive()) return;
+    GLOBE.setWorld('earth');
+    GLOBE.flyTo(top.lat, top.lon, 3.0, 0);              // arrive above the returned candidate's true location
+    GLOBE.fade(true);
+    await sleep(200); if (!alive()) return;
+    GLOBE.flyTo(top.lat, top.lon, 0.2, 2200);
+    await sleep(2250); if (!alive()) return;
+    state.reveal.stage = 'emerge'; GLOBE.refresh(); renderReveal();
+    const start = performance.now();
+    while (alive()) {                                    // footprint rises and brightens at its returned geometry
+      const k = Math.min(1, (performance.now() - start) / 1100);
+      state.reveal.t = ease(k); GLOBE.repaint();
+      if (k >= 1) break;
+      await new Promise(requestAnimationFrame);
+    }
+    if (alive()) finishReveal(token, false);
+  }
+
+  function finishReveal(token, jump) {
+    if (token !== state.revealSeq || !state.reveal) return;
+    const top = state.reveal.result.candidates[0];
+    state.reveal = { ...state.reveal, stage: 'done', t: 1 };
+    GLOBE.fade(true);
+    if (GLOBE.world() !== 'earth') GLOBE.setWorld('earth');
+    if (jump) GLOBE.flyTo(top.lat, top.lon, 0.2, 0);
+    state.selected = 0;
+    showTab('evidence'); renderAll(); GLOBE.refresh(); renderReveal();
+    say(`Best Earth match: candidate 1, terrain resemblance ${fmt(top.observed_fit, 1)}.`);
+  }
+  function skipReveal() { if (state.reveal && state.reveal.stage !== 'done') finishReveal(state.revealSeq, true); }
+  // User action during the animation: finish instantly so the result state is consistent, then let them act.
+  function interrupt() { if (state.reveal && state.reveal.stage !== 'done') { const tok = state.revealSeq; finishRevealQuiet(tok); } }
+  function finishRevealQuiet(token) {
+    if (token !== state.revealSeq || !state.reveal) return;
+    state.revealSeq++;
+    state.reveal = { ...state.reveal, stage: 'done', t: 1 };
+    GLOBE.fade(true); renderReveal(); GLOBE.refresh();
+  }
+  function cancelReveal() {
+    state.revealSeq++;
+    if (state.reveal) { state.reveal = null; GLOBE.fade(true); }
+    renderReveal();
+  }
+
+  function renderReveal() {
+    const el = $('reveal'), rv = state.reveal;
+    if (!rv) { el.classList.add('hidden'); el.innerHTML = ''; return; }
+    const r = rv.result, top = r.candidates[0], s = strongest(top), src = BODY[r.target.body];
+    const route = `<div class="tt-route"><span class="from">${esc(src)} · ${esc(r.target.feature_id)}</span><span class="line"></span><span class="to">Earth · best match</span></div>`;
+    if (rv.stage !== 'done') {
+      el.innerHTML = `${route}<div class="flex items-center justify-between gap-2 mt-2">
+        <p class="tt-note">${rv.stage === 'travel' ? `<span class="tt-spin"></span> Search complete — moving to the highest-ranked Earth region…` : 'Revealing the returned regional footprint at its true location…'}</p>
+        <button id="revealSkip" class="tt-btn px-2 py-1">Skip animation</button></div>`;
+      $('revealSkip').onclick = skipReveal;
+    } else {
+      el.innerHTML = `${route}
+        <div class="flex justify-between items-start gap-2 mt-2"><div>
+          <p class="text-slate-50">#1 · ${esc(top.feature_id)} · ${fmt(top.lat, 3)}°, ${fmt(top.lon, 3)}°E</p>
+          <p class="tt-note">Closest on ${esc(label(s.feature))}; largest mismatch ${esc(label(top.largest_numeric_mismatch))}.</p></div>
+          <div class="text-right"><div class="text-green-300 text-base">${fmt(top.observed_fit, 1)}</div><div class="tt-note">Terrain resemblance</div></div></div>
+        <p class="tt-note mt-1">A data match between ~15 km regional terrain summaries — not a route, a certified site or a verified analog. ${r.candidates.length - 1} other candidate${r.candidates.length === 2 ? '' : 's'} shown as selectable footprints.</p>
+        <div class="flex gap-2 mt-2 flex-wrap"><button id="revealEvidence" class="tt-btn-primary px-2 py-1">Evidence</button>
+          <button id="revealOthers" class="tt-btn px-2 py-1">All candidates</button>
+          <button id="revealBack" class="tt-btn px-2 py-1">Return to ${esc(src)}</button>
+          <button id="revealClose" class="tt-btn px-2 py-1 ml-auto" aria-label="Dismiss match summary">×</button></div>`;
+      $('revealEvidence').onclick = () => selectCandidate(0, false);
+      $('revealOthers').onclick = () => showTab('results');
+      $('revealBack').onclick = returnToTarget;
+      $('revealClose').onclick = () => { el.classList.add('hidden'); };
+      if (matchMedia('(max-width: 767px)').matches) { // phones: the evidence sheet carries the same facts
+        const tok = state.revealSeq;
+        setTimeout(() => { if (tok === state.revealSeq) el.classList.add('hidden'); }, 5000);
+      }
+    }
+    el.classList.remove('hidden');
   }
 
   // ------------------------------------------------------------------ rendering
@@ -651,8 +753,11 @@ ${row('Review status', esc(c.review_status))}</table>` : ''}
   function overlayPoints(w) {
     const out = [], t = state.target;
     if (t && t.body === w) out.push({ category: 'target', lat: t.lat, lng: t.lon, name: t.name, label: `${t.name} (selected point)` });
-    if (w === 'earth' && state.result) state.result.candidates.forEach((c, i) =>
-      out.push({ category: 'candidate', lat: c.lat, lng: c.lon, name: `#${i + 1}`, idx: i, label: `#${i + 1} · terrain resemblance ${fmt(c.observed_fit, 1)}` }));
+    if (w === 'earth' && state.result) visibleCandidates().forEach(i => {
+      const c = state.result.candidates[i];
+      out.push({ category: 'candidate', lat: c.lat, lng: c.lon, name: i === 0 ? '#1 · best match' : `#${i + 1}`, idx: i, pulse: (i === 0 && state.reveal?.stage === 'emerge') || (state.selected === i && state.reveal?.stage !== 'travel'),
+                 label: `#${i + 1} · terrain resemblance ${fmt(c.observed_fit, 1)}` });
+    });
     return out;
   }
   // GeoJSON exports keep RFC 7946 winding (exterior counter-clockwise). globe.gl draws with d3-geo's spherical
@@ -666,15 +771,28 @@ ${row('Review status', esc(c.review_status))}</table>` : ''}
     if (g?.type === 'MultiPolygon') return { type: 'MultiPolygon', coordinates: g.coordinates.map(poly) };
     return g;
   }
+  // During the reveal no Earth candidate is drawn until the top one emerges; the others appear when it is done.
+  function visibleCandidates() {
+    const n = state.result?.candidates?.length || 0, stage = state.reveal?.stage;
+    if (!n || stage === 'travel') return [];
+    return stage === 'emerge' ? [0] : [...Array(n).keys()];
+  }
   function overlayPolygons(w) {
-    return rawPolygons(w).map(d => ({ ...d, geometry: forGlobe(d.geometry) }));
+    return rawPolygons(w).map(d => {
+      const out = { ...d, geometry: forGlobe(d.geometry) };
+      if (d.category === 'candidate' && d.idx === 0 && state.reveal?.stage === 'emerge') {
+        Object.defineProperty(out, 'alpha', { get: () => 0.05 + 0.6 * state.reveal.t });
+        Object.defineProperty(out, 'altitude', { get: () => 0.0005 + 0.02 * Math.sin(Math.PI * state.reveal.t) + 0.0035 * state.reveal.t });
+      }
+      return out;
+    });
   }
   function rawPolygons(w) {
     const out = [], t = state.target;
     if (t?.cell && t.body === w) out.push({ category: 'target', geometry: t.cell.geometry, label: `Regional cell containing this point · ${t.cell.feature_id}` });
     if (w === 'earth') {
-      state.result?.candidates.forEach((c, i) => out.push({ category: 'candidate', geometry: c.geometry, idx: i, selected: state.selected === i,
-        label: `#${i + 1} ${c.feature_id} · terrain resemblance ${fmt(c.observed_fit, 1)}` }));
+      visibleCandidates().forEach(i => { const c = state.result.candidates[i]; out.push({ category: 'candidate', geometry: c.geometry, idx: i,
+        selected: state.selected === i, label: `#${i + 1} ${c.feature_id} · terrain resemblance ${fmt(c.observed_fit, 1)}` }); });
       if (state.showStudies) Object.values(state.studyGeo).forEach(list => out.push(...list));
     }
     return out;
@@ -755,6 +873,7 @@ ${row('Review status', esc(c.review_status))}</table>` : ''}
   wireStatic();
   showTab('target');
   init();
-  return { overlayPoints, overlayPolygons, onGlobeClick, onPolygonClick, onPointClick, onWorldChanged, state, setTarget, runSearch, selectCandidate };
+  return { overlayPoints, overlayPolygons, onGlobeClick, onPolygonClick, onPointClick, onWorldChanged, interrupt, skipReveal,
+           state, setTarget, runSearch, selectCandidate };
 })();
 GLOBE.refresh();

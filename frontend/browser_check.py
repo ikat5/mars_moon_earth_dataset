@@ -57,6 +57,10 @@ def search(page):
     page.click("#searchBtn")
 
 
+def wait_reveal_done(page, timeout=30000):
+    page.wait_for_function("TT.state.reveal && TT.state.reveal.stage === 'done'", timeout=timeout)
+
+
 with sync_playwright() as pw:
     launch = {"channel": "chrome"} if args.browser == "chrome" else {}
     browser = pw.chromium.launch(headless=True, args=["--use-angle=swiftshader", "--enable-unsafe-swiftshader"], **launch)
@@ -79,11 +83,55 @@ with sync_playwright() as pw:
         direct = api.post(f"{args.url}/api/v1/search", data={"body": "mars", "lat": 18.41, "lon": 77.69, "profile": "dry_barren_terrain"}).json()
         first = direct["candidates"][0]
         expect(page.locator("[data-cand='0']")).to_contain_text(f"{first['observed_fit']:.1f}")
+        page.wait_for_function("TT.state.reveal && TT.state.reveal.stage === 'travel'", timeout=5000)
+        assert page.evaluate("TT.overlayPolygons('earth').filter(p => p.category === 'candidate').length") == 0
+        emerging = page.wait_for_function("""TT.state.reveal.stage === 'emerge' &&
+            TT.overlayPolygons('earth').filter(p => p.category === 'candidate').map(p => p.idx)""", timeout=10000).json_value()
+        assert emerging == [0], emerging  # only the top candidate emerges first
+        page.wait_for_timeout(350)
+        shot(page, "01a_reveal_emerging")
+        wait_reveal_done(page)
+        page.wait_for_timeout(600)
+        shot(page, "01b_reveal_done")
+        assert page.evaluate("GLOBE.world()") == "earth"
+        pov = page.evaluate("GLOBE.pov()")
+        assert abs(pov["lat"] - first["lat"]) < 0.5 and abs(pov["lng"] - first["lon"]) < 0.5, (pov, first["lat"], first["lon"])
+        assert page.evaluate("TT.state.selected") == 0
+        expect(page.locator("#reveal")).to_contain_text(first["feature_id"])
+        expect(page.locator("#reveal")).to_contain_text("not a route")
+        assert page.evaluate("TT.overlayPolygons('earth').filter(p => p.category === 'candidate').length") == 10
+        geom = page.evaluate("TT.state.result.candidates[0].geometry")
+        assert geom == first["geometry"]  # the revealed footprint is the returned geometry
+        page.click("[data-tab=results]")
         shot(page, "01_results_desktop")
-    check("search renders the same ranked candidates as the API", run_jezero)
+    check("search → animated Earth reveal of the returned top candidate, then all candidates", run_jezero)
+
+    def skip_and_stale_reveal():
+        enter(page, "moon", 0, 0)
+        expect(page.locator("#targetInfo")).to_contain_text("moon:", timeout=15000)
+        search(page)
+        page.wait_for_function("TT.state.reveal && TT.state.reveal.stage === 'travel'", timeout=30000)
+        page.click("#revealSkip")
+        assert page.evaluate("TT.state.reveal.stage") == "done" and page.evaluate("GLOBE.world()") == "earth"
+        assert page.evaluate("TT.state.selected") == 0
+        # a newer query during the animation cancels it: no stale Earth reveal afterwards
+        enter(page, "mars", 18.41, 77.69)
+        expect(page.locator("#targetInfo")).to_contain_text("mars:412870", timeout=15000)
+        search(page)
+        page.wait_for_function("TT.state.reveal && TT.state.reveal.stage === 'travel'", timeout=30000)
+        enter(page, "moon", 5, 5)
+        page.wait_for_timeout(4500)
+        assert page.evaluate("TT.state.reveal") is None
+        assert page.evaluate("GLOBE.world()") == "moon", page.evaluate("GLOBE.world()")
+        assert page.evaluate("TT.overlayPolygons('earth').filter(p => p.category === 'candidate').length") == 0
+    check("reveal can be skipped and is cancelled by a newer query", skip_and_stale_reveal)
 
     def inspect_and_return():
-        page.click("[data-cand='0']")
+        enter(page, "mars", 18.41, 77.69)
+        expect(page.locator("#targetInfo")).to_contain_text("mars:412870", timeout=15000)
+        search(page)
+        expect(page.locator("[data-cand]")).to_have_count(10, timeout=30000)
+        page.click("[data-cand='0']")  # selecting during the reveal takes over from it
         expect(page.locator("#panelEvidence")).to_contain_text("Terrain resemblance")
         expect(page.locator("#panelEvidence")).to_contain_text("Earth-only historical context")
         expect(page.locator("#returnBar")).to_be_visible()
@@ -198,10 +246,13 @@ with sync_playwright() as pw:
         expect(page.locator("#panelResults")).to_contain_text("No qualifying Earth regions", timeout=30000)
         expect(page.locator("#panelResults")).to_contain_text("nothing was relaxed automatically")
         assert page.evaluate("TT.state.result.configuration.radius_km") == 500
+        page.wait_for_timeout(1500)
+        assert page.evaluate("TT.state.reveal") is None and page.evaluate("GLOBE.world()") == "mars"  # no reveal for no-match
         shot(page, "05_no_match")
         page.select_option("#examples", "shackleton_center")
         expect(page.locator("#panelResults")).to_contain_text("Insufficient terrain evidence", timeout=30000)
         assert page.evaluate("TT.state.result.candidates.length") == 0
+        assert page.evaluate("TT.state.reveal") is None and page.evaluate("GLOBE.world()") == "moon"
         shot(page, "06_insufficient_evidence")
         page.select_option("#examples", "jezero_landing")
         expect(page.locator("#targetInfo")).to_contain_text("mars:412869", timeout=15000)
@@ -273,10 +324,28 @@ with sync_playwright() as pw:
         enter(n, "mars", 18.41, 77.69)
         expect(n.locator("#targetInfo")).to_contain_text("mars:412870", timeout=15000)
         search(n)
-        expect(n.locator("[data-cand]")).to_have_count(10, timeout=30000)
+        n.wait_for_function("TT.state.reveal && TT.state.reveal.stage === 'done'", timeout=30000)
+        expect(n.locator("#panelEvidence")).to_contain_text("Candidate #1")
+        n.click("[data-tab=results]")
+        expect(n.locator("[data-cand]")).to_have_count(10)
         shot(n, "08_no_webgl_fallback")
         nctx.close()
     check("search workflow works without the globe library/WebGL", no_globe)
+
+    def reduced_motion():
+        rctx = browser.new_context(viewport={"width": 1440, "height": 900}, reduced_motion="reduce")
+        r = rctx.new_page()
+        r.goto(args.url)
+        expect(r.locator("#dataVersion")).to_contain_text("release", timeout=20000)
+        enter(r, "mars", 18.41, 77.69)
+        expect(r.locator("#targetInfo")).to_contain_text("mars:412870", timeout=15000)
+        search(r)
+        r.wait_for_function("TT.state.result && TT.state.result.status === 'ok'", timeout=30000)
+        assert r.evaluate("TT.state.reveal.stage") == "done"  # no animation, same final state at once
+        assert r.evaluate("GLOBE.world()") == "earth" and r.evaluate("TT.state.selected") == 0
+        expect(r.locator("#panelEvidence")).to_contain_text("Candidate #1")
+        rctx.close()
+    check("reduced motion shows the same Earth result immediately", reduced_motion)
 
     def keyboard():
         kctx, k = open_page(browser, {"width": 1440, "height": 900})

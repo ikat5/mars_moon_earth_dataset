@@ -16,7 +16,9 @@ Help university rover teams, planetary science students and researchers answer:
 
 Complete this user journey:
 
-**Select Moon/Mars target → understand its regional footprint → choose supported terrain screening → optionally constrain Earth search distance → retrieve candidates → inspect evidence and mismatches → compare candidates → examine finer local evidence → export an investigation brief.**
+**Select a location on the 3D Moon or Mars globe → understand its regional footprint → choose supported terrain screening → optionally constrain Earth search distance → run the real analog search → transition to the 3D Earth globe → animate the best Earth candidate emerging at its actual location → inspect evidence and mismatches → compare other candidates → examine finer local evidence → export an investigation brief.**
+
+The Moon/Mars-to-Earth reveal is a defining product interaction. The visual transition must follow a completed real search, use returned candidate coordinates and geometry, and leave the result understandable without animation.
 
 The first release supports regional terrain/navigation investigation. Its two supported modes are terrain screening and terrain screening with historical dry/barren Earth filters. They use the same terrain score; the environmental mode changes candidate eligibility. Do not present these as two independently validated scientific task models.
 
@@ -120,15 +122,16 @@ Required behavior:
 3. Choose terrain screening or historical dry/barren screening. Explain the practical difference.
 4. Optionally enter an Earth origin and radius in kilometres. Browser geolocation is optional, user initiated and must have a manual-entry alternative. Do not persist the origin by default.
 5. Search with visible loading feedback and useful validation messages.
-6. Display ranked Earth results in a list and as cell footprints. Selecting either representation selects the same candidate.
-7. Preserve the planetary target while inspecting Earth and support returning to it without losing the query.
-8. Show score, region coordinates, footprint area, optional straight-line distance, strongest match/mismatch and review status.
-9. Cancel or ignore stale requests when the target, profile, radius or body changes. Previous data must never appear to describe a new selection.
-10. Provide useful empty/error states, retry behavior and explanatory guidance. Expanding a radius or changing a filter requires an explicit user action.
+6. When a successful search returns candidates, smoothly transition from the selected Moon/Mars view to Earth. Move the Earth camera to the highest-ranked candidate and animate its returned regional footprint and marker appearing at the true Earth coordinates. Pair the reveal with its rank, terrain resemblance label and brief reason for the match. Do not imply that the animation traces a physical path through space or certifies a site.
+7. Reveal other ranked candidates as clearly selectable Earth footprints and a synchronized result list. Keep the first result visually prominent, but let the user choose any returned candidate; selecting a list item or footprint focuses the same candidate and updates the evidence panel. Do not animate or create an Earth result for an empty or insufficient-evidence response.
+8. Preserve the planetary target while inspecting Earth and support returning to it without losing the query. The transition should make the source world and destination world unmistakable.
+9. Show score, region coordinates, footprint area, optional straight-line distance, strongest match/mismatch and review status.
+10. Cancel or ignore stale requests when the target, profile, radius or body changes. Previous data must never appear to describe a new selection. Cancel or safely finish an in-progress camera/reveal animation when a newer query takes over.
+11. Provide useful empty/error states, retry behavior and explanatory guidance. Expanding a radius or changing a filter requires an explicit user action.
 
-Support a usable laptop layout and a narrow mobile layout with keyboard-accessible controls, visible focus, readable contrast, labeled form fields and usable scrolling. Coordinate entry and the results list should provide a meaningful alternative when WebGL is unavailable. Avoid overlapping panels or animation that blocks interaction.
+Support a usable laptop layout and a narrow mobile layout with keyboard-accessible controls, visible focus, readable contrast, labeled form fields and usable scrolling. Honor `prefers-reduced-motion`, offer a visible way to skip the reveal, and render the same candidate/result state immediately when motion or WebGL is unavailable. Avoid overlapping panels or animation that blocks interaction.
 
-**Exit evidence:** an unfamiliar user can select an arbitrary supported target, run a search, find a candidate and return to the original target.
+**Exit evidence:** an unfamiliar user can select an arbitrary supported Moon/Mars target, run a search, watch a real Earth candidate emerge at its returned location, inspect alternatives and return to the original target. The same information is accessible when the animation is skipped.
 
 ## 7. Phase D — Evidence, comparison and export
 
@@ -160,7 +163,7 @@ Use the four existing cases as regressions for the current release and default p
 
 Compare IDs and scores with version-matched fixtures using justified numerical tolerances. If data/profile versions change, document the differences instead of blindly preserving old expected results.
 
-Add meaningful API and browser checks for the new integration. Cover arbitrary non-preset coordinates, longitude aliases, poles/antimeridian, cell boundaries, landing-point versus crater-center identity, invalid inputs, missing context, unsupported profiles, candidate selection, comparison, export and retry behavior.
+Add meaningful API and browser checks for the new integration. Cover arbitrary non-preset coordinates, longitude aliases, poles/antimeridian, cell boundaries, landing-point versus crater-center identity, invalid inputs, missing context, unsupported profiles, candidate selection, comparison, export and retry behavior. Verify that the Earth reveal uses the returned top candidate geometry, other results remain selectable, empty/unsupported searches do not reveal fabricated candidates, rapid query changes cannot show stale animations, and reduced-motion/skip paths retain the same evidence.
 
 Exercise rapid clicks and body/profile switches with deliberately delayed responses. Verify that rendered values, selected geometry and exports always refer to the current query. Test missing imagery/CDN access and unavailable backend behavior. Inspect browser console and server logs for unhandled errors. Check supported desktop and narrow viewports visually; automated tests alone do not establish usable layout.
 
@@ -212,7 +215,7 @@ Keep progress updates focused on verified findings, implemented behavior and the
 Do not stop at a plan, screenshots of a static mockup, a backend-only change or a frontend wired only to presets. Required completion means:
 
 - The documented app starts reliably.
-- Arbitrary supported Moon/Mars selections use the real selected-release search engine.
+- Arbitrary supported Moon/Mars selections use the real selected-release search engine, followed by a clear Earth transition and truthful animated reveal of the best returned candidate.
 - Target and result footprints, evidence, comparison and exports work together.
 - Scientific limits and all result/error states are preserved.
 - Relevant automated and browser checks pass, or a specific externally blocked check is disclosed.

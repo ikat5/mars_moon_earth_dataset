@@ -83,6 +83,8 @@
     <p id="live" class="sr-only" aria-live="polite"></p>
   </aside>
 
+  <div id="reveal" class="hidden fixed left-1/2 -translate-x-1/2 top-4 z-10 w-[min(30rem,calc(100vw-1rem))] tt-panel p-3 text-xs shadow-2xl max-md:top-2" role="status" aria-live="polite"></div>
+
   <div id="attrib" class="fixed bottom-2 left-4 text-[10px] text-slate-400 bg-slate-950/60 px-2 py-0.5 rounded hidden md:block">Imagery © Esri, Maxar, Earthstar Geographics, and the GIS User Community</div>
 
 <script>
@@ -144,10 +146,11 @@ if (HAS_GLOBE) {
     .ringColor(d => t => rgba(d.category, 1 - t))
     .ringMaxRadius(3).ringPropagationSpeed(1.5).ringRepeatPeriod(1200)
     .polygonGeoJsonGeometry('geometry')
-    .polygonCapColor(d => rgba(d.category, d.selected ? 0.55 : 0.28))
-    .polygonSideColor(d => rgba(d.category, 0.35))
+    // d.alpha / d.altitude are live getters on the revealed top candidate, so repaints animate its emergence
+    .polygonCapColor(d => rgba(d.category, d.alpha ?? (d.selected ? 0.55 : 0.28)))
+    .polygonSideColor(d => rgba(d.category, Math.min(0.6, (d.alpha ?? 0.28) + 0.1)))
     .polygonStrokeColor(d => rgba(d.category, 1))
-    .polygonAltitude(d => d.selected ? 0.004 : 0.002)
+    .polygonAltitude(d => d.altitude ?? (d.selected ? 0.004 : 0.002))
     .polygonLabel(d => `<div class="bg-slate-900/90 px-2 py-1 rounded text-xs">${d.label}</div>`)
     .polygonsTransitionDuration(0)
     .onPolygonClick((d, _e, { lat, lng }) => tt()?.onPolygonClick(d, lat, lng))
@@ -243,9 +246,9 @@ function showSites() {
     `<div><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:${rgba(c, 1)}"></span>${CAT[c].label}</div>`).join('');
   $('legend').classList.toggle('hidden', !cats.length);
   if (!globe || !placeTiles) return;
-  globe.pointsData(s).ringsData(s.filter(d => d.category !== 'candidate')).polygonsData(overlays);
+  globe.pointsData(s).ringsData(s.filter(d => d.category !== 'candidate' || d.pulse)).polygonsData(overlays);
   // a site already names its feature ("Gale Crater (Curiosity)" covers "Gale"), so skip the duplicate
-  labelPool = [...s.filter(d => d.category !== 'candidate'),
+  labelPool = [...s.filter(d => d.category !== 'candidate' || d.pulse), // the focused candidate gets a text label
                ...(featuresBy[world] || []).filter(f => !s.some(d => d.name === f.name || d.name.startsWith(f.name + ' ')))];
   placeLabels();
 }
@@ -293,10 +296,14 @@ window.GLOBE = {
   available: HAS_GLOBE,
   world: () => world,
   setWorld: w => { if (w !== world) (eqTiles || !globe) ? setWorld(w) : (world = w); },
-  flyTo: (lat, lng, altitude) => globe?.pointOfView({ lat, lng, altitude: altitude ?? Math.min(globe.pointOfView().altitude, 0.9) }, 1500),
+  flyTo: (lat, lng, altitude, ms = 1500) => globe?.pointOfView({ lat, lng, altitude: altitude ?? Math.min(globe.pointOfView().altitude, 0.9) }, ms),
+  pov: () => globe?.pointOfView() || null,
+  fade: visible => { $('globe').style.opacity = visible ? '1' : '0'; },
+  repaint: () => globe?.polygonAltitude(globe.polygonAltitude()).polygonCapColor(globe.polygonCapColor()),
   refresh: () => showSites(),
 };
-document.querySelectorAll('[data-world]').forEach(b => b.onclick = () => GLOBE.setWorld(b.dataset.world));
+// A manual world switch takes over from any running Earth reveal.
+document.querySelectorAll('[data-world]').forEach(b => b.onclick = () => { tt()?.interrupt(); GLOBE.setWorld(b.dataset.world); });
 if (HAS_GLOBE) initEqTiles(); else setTimeout(() => setWorld(world));
 
 for (const w of Object.keys(WORLDS)) {
