@@ -382,14 +382,15 @@ def _prewarm(max_level=4):
 
 @app.get("/tiles/{body}/{z}/{x}/{y}.jpg")
 def tile(body: str, z: int, x: int, y: int):
+    cors = {"Access-Control-Allow-Origin": "*"}  # errors too, or the browser reports a missing tile as a CORS block
     if body not in TILE_SOURCES or not (0 <= z <= TILE_SOURCES[body][1]) or not (0 <= x < 2**z and 0 <= y < 2**z):
-        raise HTTPException(404)
+        raise HTTPException(404, headers=cors)
     try:
         path = _cached_tile(body, z, x, y)
     except (http.client.HTTPException, OSError) as e:
-        raise HTTPException(502, f"upstream tile fetch failed: {e}")
+        raise HTTPException(502, f"upstream tile fetch failed: {e}", headers=cors)
     if path is None:
-        raise HTTPException(404)
+        raise HTTPException(404, headers=cors)
     # CORS: the page spreads tile requests over localhost + 127.0.0.1 to get past the browser's 6-connection limit
     return FileResponse(path, media_type="image/jpeg",
                         headers={"Cache-Control": "public, max-age=86400", "Access-Control-Allow-Origin": "*"})
