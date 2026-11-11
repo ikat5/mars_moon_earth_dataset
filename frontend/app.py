@@ -12,6 +12,7 @@ import json
 import os
 import struct
 import threading
+import time
 import urllib.parse
 import urllib.request
 import warnings
@@ -343,12 +344,23 @@ def _colorize_mars(ctx, z, x, y):
 TILE_CACHE = str(HERE / "tile_cache")  # upstream NASA/Esri tiles take 2-9 s each, so every rendered tile is kept on disk
 
 
+_FAILED = {}  # (body, z, x, y) -> monotonic time until which an upstream failure is remembered
+FAILURE_TTL_S = 120  # a failing upstream otherwise holds a browser connection for up to 20 s on every retry
+
+
 def _cached_tile(body, z, x, y):
     """Path of the rendered tile on disk (rendering + saving it first if needed), or None if upstream has no data."""
     path = os.path.join(TILE_CACHE, body, str(z), str(x), f"{y}.jpg")
     if os.path.exists(path):
         return path
-    out = _stitch(TILE_SOURCES[body][0], z, x, y)
+    key = (body, z, x, y)
+    if _FAILED.get(key, 0) > time.monotonic():
+        raise OSError("upstream tile recently failed; retry later")
+    try:
+        out = _stitch(TILE_SOURCES[body][0], z, x, y)
+    except (http.client.HTTPException, OSError):
+        _FAILED[key] = time.monotonic() + FAILURE_TTL_S
+        raise
     if out is None:
         return None
     if body == "moon":

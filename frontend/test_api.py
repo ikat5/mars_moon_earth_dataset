@@ -22,6 +22,10 @@ import terratwin_service  # noqa: E402
 from app import app  # noqa: E402
 from processing.search import search  # noqa: E402
 
+from processing.test_support import has_release_data  # noqa: E402
+
+pytestmark = pytest.mark.skipif(not has_release_data(terratwin_service.ROOT / "prepared" / "0.2.0"),
+                                reason="Serving release Parquet data required (git lfs pull)")
 client = TestClient(app)
 JEZERO = {"body": "mars", "lat": 18.41, "lon": 77.69, "profile": "dry_barren_terrain"}
 

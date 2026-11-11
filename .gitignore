@@ -42,3 +42,11 @@ frontend/.venv/
 frontend/**/__pycache__/
 frontend/.pytest_cache/
 frontend/*.tmp
+
+# CI, development requirements and deployment configuration
+!.github/
+!.github/**
+!requirements-dev.txt
+!.env.example
+!Dockerfile
+!.dockerignore

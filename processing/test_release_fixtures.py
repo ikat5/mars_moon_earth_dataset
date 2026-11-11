@@ -6,6 +6,8 @@ identical Parquet inputs; a 1e-9 tolerance only absorbs summation-order differen
 """
 import json
 import unittest
+
+from processing.test_support import has_release_data
 from pathlib import Path
 
 from processing.search import search
@@ -25,7 +27,7 @@ def serving_paths():
 VERSION, DATA_DIR, APP_INDEX = serving_paths()
 
 
-@unittest.skipUnless((DATA_DIR / "earth_features.parquet").exists(), "Serving release data required")
+@unittest.skipUnless(has_release_data(DATA_DIR), "Serving release data required (git lfs pull)")
 class ServingReleaseFixtureTests(unittest.TestCase):
     def rerun(self, fixture):
         target, config = fixture["target"], fixture["configuration"]
