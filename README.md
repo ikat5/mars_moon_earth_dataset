@@ -6,6 +6,7 @@ The recommended first product is **regional terrain and navigation investigation
 
 ## Start here
 
+- [Data and ML master plan](analysis/ML_MASTER_PLAN.md): teammate handoff, all supplied data portals, similarity methods, spatial evaluation, labeling, and the T4 compute budget.
 - [Master project blueprint](TERRATWIN_MASTER_BLUEPRINT.md): product decisions, innovations, scientific rules, architecture, priorities, validation and demonstration.
 - [Measured preparation results](analysis/PREPARATION_RESULTS.md): what the current data actually supports.
 - [App data handoff](analysis/APP_DATA_HANDOFF.md): callable, JSON/GeoJSON contract and globe integration requirements.
