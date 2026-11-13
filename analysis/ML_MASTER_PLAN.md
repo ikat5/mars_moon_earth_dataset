@@ -2,6 +2,8 @@
 
 Prepared: 2026-11-14. Audience: data, ML, science-review, and application teammates.
 
+Revision: explicit distance/economic ranking and task-specific seasonal campaign planning added on 2026-11-14; see section 13.
+
 **Handoff status:** implementation plan, not a claim that new datasets, models, labels, or scientific capabilities have been delivered. The serving release remains `0.2.0`. No cloud training is launched by this document.
 
 ## 1. Objective and recommended approach
@@ -155,6 +157,21 @@ All supplied portals are covered by the register; not all must become model inpu
 
 Do not infer novelty from absence in USGS feeds. Do not tune the score until Atacama, Haughton, or Death Valley always ranks high: each is useful for particular processes, not every target.
 
+### 3.6 Additional data for seasonal suitability and campaign planning
+
+These supporting sources extend the supplied resource brief. Acquire bounded site/time windows for section 13 rather than treating the existing annual aridity and static ASTER climatology as monthly operating conditions.
+
+| ID / priority | Data / official link | Planned use and limitation |
+|---|---|---|
+| T01 / P1 for planning | [ERA5-Land hourly data](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=overview) | Historical temperature, precipitation, soil/snow conditions, and appropriate wind fields after variable review. Reanalysis is modeled gridded evidence, not a local forecast or measured road condition. Pin extraction interval and variable definitions. |
+| T02 / P2 | [NASA GPM IMERG](https://gpm.nasa.gov/data/imerg) | Precipitation seasonality and supported wet-day/event statistics. Inspect product version, coverage, run type, and error over snow, mountains, and arid terrain; rainfall alone does not establish flood/access safety. |
+| T03 / P2 | [MODIS snow-cover products](https://modis.gsfc.nasa.gov/data/dataprod/mod10.php) | Snow-covered versus exposed-ground seasons and freeze/thaw context with other evidence. Cloud/QA gaps are unknown; visible snow absence does not establish an unfrozen subsurface. |
+| T04 / P2 | [NASA POWER climatology API](https://power.larc.nasa.gov/docs/services/api/temporal/climatology/); [daily API](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) | Lightweight meteorological/solar context and independent workflow checks where useful. Record underlying products, units, climatology period, and support; shared upstream sources are not independent validation. Monthly averages cannot establish consecutive usable days. |
+| T05 / P1 for planning | Existing Sentinel-2/WorldCover, MODIS vegetation/LST, Sentinel-1, and relevant local stations/field studies | Seasonal exposed surface, vegetation, wetness, surface-temperature, and access evidence at the selected footprint. Keep observations, modeled estimates, and inferred accessibility separate. |
+| T06 / P1 for planning | Official site operator, park/land manager, transport provider, local authority, station records, or dated user-supplied evidence | Access calendars, closures, permits, route availability, local support, and dated cost quotes. No universal satellite portal supplies these. Store exact per-site source URLs, verification dates, scope, and expiry. |
+
+ERA5-Land, IMERG, and POWER documentation was accessible during this revision; the MODIS snow product entry returned a gateway error in the research client and needs an acquisition-time check. No seasonal product or local planning record is downloaded by this revision. No named site's suitable months have yet been established.
+
 ### Link-verification status
 
 Official documentation/product pages were checked through web research on 2026-11-14 where accessible. LOLA, Diviner, MOLA, HiRISE, THEMIS, ECOSTRESS, CDSE, RCM, and JAXA LST supplied accessible documentation. Some Earthdata catalog, MODIS, USGS, and JPL pages returned 403/502/503 through the research client; retain canonical links but do not call their downloads tested. Discovery links, account flows, archive asset downloads, and every source's current terms require an acquisition-time check. The dataset manifest must record the actual resolution of the source used, not a resolution copied from this plan.
@@ -307,7 +324,7 @@ For active review, prioritize disagreements between methods and gaps in task/reg
 | WP6: supervised refinement | ML + science | R1 baseline/ranker and optional R2, relevance/constraint/region metrics, model card. | Only after independent labels pass audit; otherwise retain self-supervised/physical experiments. |
 | WP7: candidate science | Science + data | One or two independently checked dossiers, task fit, novelty-search scope, and where analogy breaks. | Candidate model cannot replace local observations/review. |
 | WP8: integration | App + ML | Versioned dimensions/model/index contract, cached CPU inference, comparisons/export, fallback, performance report. | Promotion gate and provenance complete; existing API regressions pass. |
-| WP9: operational scenarios | App + science | Eligible-site alternatives under declared travel/budget/schedule assumptions, uncertainty and source dates. | Preserve scientific requirements; unknown costs are not zero. |
+| WP9: distance, economic, and seasonal planning | App + science + data | Date/task-specific monthly suitability calendars, campaign windows, route/time/cost scenarios, and eligible-site rankings using section 13. | Preserve scientific requirements; dated access/seasonal evidence required; unknown cost, access, and weather support remain unknown. |
 
 Hypothesis regions for diverse discovery: Puna/Altiplano salars, Tibesti, Arabian Harrat lava fields, Qaidam Basin, Siberian basalt plateaus. Known-site checks: appropriate footprints in Atacama, Haughton/Devon Island, and Death Valley plus unsuitable controls. Register actual AOIs and literature before assigning relevance; these names are hypotheses, not new discoveries or universal positive labels.
 
@@ -386,16 +403,102 @@ dimension results [{name, status, score_definition, score_if_supported,
 essential requirements [{name, pass/fail/unknown, evidence}],
 model/index/data versions, ranking method, experimental status,
 local verification and novelty-review states,
-where the analogy breaks, recommended next observations
+where the analogy breaks, recommended next observations,
+optional campaign plan {origin_privacy_policy, requested_dates, task_id,
+  seasonal_profile_version, month_statuses, suitable_windows, access_status,
+  distance_method, distance_km, travel_time, cost_range_and_currency,
+  usable_field_hours_estimate_and_method, ranking_mode, assumptions,
+  evidence_dates, missing_inputs, uncertainty}
 ```
 
 Do not replace current `observed_fit` with a learned score under the same semantics. Keep model similarity separate from physical evidence. Build the model/index offline; load prepared artifacts for CPU queries. Benchmark p95/RAM under declared concurrency; fall back to the supported physical method when model artifacts fail. Model failure and scientific no-match must remain different outcomes.
 
 Interactive map: dimension toggles, target/candidate footprint and scale, source dates/coverage, missing-dimension explanations, candidate comparisons, downloadable evidence, and explicit physical mismatches. Fine inspection shows actual finer footprints rather than implying that all regional results have high-resolution data.
 
-Operational scenario comparison follows scientific eligibility: optional team origin, travel/time/cost assumptions, seasonal access, equipment needs, and uncertainty. Straight-line distance is not actual travel cost; a cheap location cannot satisfy an experiment with missing essential conditions. Leave unknown cost/access unknown and keep organization inputs private by default.
+Operational scenario comparison follows scientific eligibility and the date-aware rules in section 13. Straight-line distance is not actual travel cost; a cheap location cannot satisfy an experiment with missing essential conditions. Leave unknown cost/access unknown and keep organization inputs private by default.
 
-## 13. Decision log and release checklist
+## 13. Distance, economic efficiency, and suitable time of year
+
+**Explicit user requirements:** provide ranking options based on distance and economic efficiency, and show when during the year an Earth analog is suitable. This expands the earlier roadmap's campaign simulation requirement. It is planned functionality; the current origin/radius terrain search is not an implemented travel-cost or seasonal planner.
+
+### 13.1 Define suitability for the experiment and the campaign
+
+A site has no universal "best season." Its scientific usefulness and operating conditions may change differently. A frozen-substrate experiment may require a season unsuitable for exposed dry-ground rover testing. Compute suitability for `(candidate footprint, planetary target profile, experiment, proposed dates)`.
+
+Keep three separate results: scientific relevance (including date-dependent surface conditions where relevant), campaign operating conditions, and access/logistical feasibility. Preserve stable terrain/material descriptors separately from changing snow, water, vegetation, thermal, or illumination evidence. Define task thresholds with the team/reviewer rather than hard-code a global comfortable-temperature or dry-season rule.
+
+Inputs: optional team origin; experiment and mandatory scientific conditions; acceptable temperature/wind/precipitation/snow/soil conditions; required daylight; team size; equipment and transport; budget/currency; earliest/latest dates; duration and required usable field hours/days; flexibility; maximum travel time; and whether repeat campaigns are needed. If dates are omitted, show a January-December calendar. If origin or budget is absent, retain scientific/seasonal results and mark dependent planning ranks unavailable rather than inventing values.
+
+### 13.2 Build a task-specific seasonal calendar
+
+For each month or supported date window, report `supported`, `conditional`, `unsuitable`, or `insufficient_evidence`, with the conditions and sources behind the state. "Supported" means the declared historical evidence/requirements support planning that window; it is not guaranteed future weather or safe access.
+
+| Evidence | Calendar output / condition to evaluate |
+|---|---|
+| Temperature and surface thermal data | Relevant quantiles/extremes and periods within the experiment's operating envelope; air temperature and surface LST remain separate. |
+| Precipitation / surface wetness | Wet-day frequency, dry-spell evidence, and expected interference with dry-ground testing; flood susceptibility needs independent local evidence. |
+| Snow, freeze/thaw, and ice | Exposed-ground availability or required frozen/snow/ice conditions, according to the experiment; snow cover is not subsurface ice depth. |
+| Wind / dust | Exposure to task-specific wind limits and supported dust-event evidence; atmospheric AOD alone does not measure local visibility or equipment exposure. |
+| Daylight / illumination | Usable daylight and relevant sun geometry for the actual coordinates, date, and task; polar conditions and local horizons need appropriate treatment. |
+| Vegetation / water seasonality | Whether the target surface is exposed in the observation period and whether seasonal water/vegetation changes the scientific analogy. |
+| Local access / support | Operator-confirmed open dates, permits, road/transport windows, infrastructure, and support availability; absent evidence remains unknown. |
+
+Use a declared multi-year reference interval with enough temporal/QA coverage, chosen for available products and local relevance. Save year counts, missing days, sensor changes, trend/stationarity caveats, and source dates. Hemisphere-specific seasons emerge from site observations, never from globally fixed "summer" month labels. Month windows can cross the December/January boundary.
+
+Monthly means support only a coarse climatological screen. Estimating usable hours, consecutive days, or campaign completion needs compatible hourly/daily observations or historical sequences. Evaluate the joint required conditions at each supported timestamp; multiplying independent marginal probabilities assumes independence and must not be used without validation. Never sum the full month's nominal field days for a campaign lasting only part of that month.
+
+For window W and valid historical year y, a possible explicitly labeled historical estimate is:
+
+```text
+usable_hours_y(W) = sum over time bins in W of
+  bin_duration_hours * I(all observed/model-supported task conditions pass)
+```
+
+Unknown essential conditions produce unknown support, not a passing indicator. Report valid coverage and per-year distributions, with exclusions. A consecutive-days requirement needs run-length evaluation, not just a total. Do not turn historical pass frequency into a calibrated future success probability. Use near-term forecasts, current site reports, and operator checks as a separately dated planning update when available; climatology is not a forecast.
+
+### 13.3 Rank eligible campaign alternatives
+
+First enforce mandatory scientific requirements, access/date conditions, and the user's budget/time constraints wherever evidence permits. Unknown essential requirements produce a conditional/unassessed alternative, not a fully eligible recommendation. Then expose these ranking modes:
+
+| Mode | Ranking objective / display |
+|---|---|
+| Best scientific fit | Existing per-dimension relevance, with the selected season's scientific limitations visible. |
+| Nearest eligible analog | Real route distance where supported; otherwise clearly labeled great-circle proximity. Keep road, air, and local approach legs distinct. |
+| Shortest campaign travel time | Supported route/time estimates plus equipment-transfer and setup assumptions; distance alone cannot determine it. |
+| Lowest estimated campaign cost | Total comparable campaign cost, with ranges and missing components shown. |
+| Best economic efficiency | Estimated total cost per supported usable field hour/day for the declared experiment, only if both cost and usable-time estimates are supported. |
+| Best window / practical trade-off | Suitable date windows and the non-dominated choices across scientific fit, cost, travel time, and usable field time. Explain trade-offs rather than hide them in one score. |
+
+Campaign cost includes supported travel, equipment shipping, accommodation, local transport, access/permits, local support, setup, and declared contingency. Record quote dates, currency/base date, exchange-rate source when converting, team/equipment assumptions, and uncertainty. A single static price per site is insufficient; prices and transport/access may vary by requested dates.
+
+```text
+economic_efficiency_cost = estimated_total_campaign_cost
+                          / estimated_usable_field_hours_within_campaign
+```
+
+This ratio is a planning estimate, not scientific similarity or expected hardware success. A missing numerator/denominator makes it unavailable; a supported zero usable-time denominator makes the campaign infeasible. Show cost/time ranges and scenario sensitivity rather than false precision. Repeated visits may change fixed setup/transport costs; state how shared costs are allocated.
+
+Default to visible trade-offs/Pareto alternatives. If the user requests a combined practical score, expose weights, directions, normalization/reference ranges, constraint rules, and sensitivity. Keep the scientific dimensions visible and do not let affordability compensate for a failed essential experiment condition. Ranking thresholds and currency conversion must be versioned with the scenario.
+
+### 13.4 Application output and comparison scenarios
+
+Add a "Plan a field campaign" option after scientific retrieval: origin and travel constraints, budget/team/equipment, task, date window/duration, and ranking mode. Show a 12-month suitability strip per candidate, recommended supported windows, reasons for conditional/unsuitable months, historical support/uncertainty, travel distance/time, cost range, usable field time, and comparison with the strongest scientific match. Exports retain the same sources/assumptions while omitting private organization inputs unless explicitly included.
+
+Support scenarios such as choosing another month, reducing the budget, moving the team origin, shortening the campaign, or planning repeat visits. Recompute seasonal evidence, eligible alternatives, and date-dependent costs. Explain which scientific differences the team accepts by choosing a nearer/cheaper site. If no supported plan qualifies, report the limiting conditions and possible user-controlled changes without silently relaxing requirements.
+
+Illustrative behavior only: a distant candidate may provide stronger morphology, while a closer candidate offers lower campaign cost and more usable field time during the requested dates. The planner shows both and their scientific limitations. No named site's suitable months, actual routes, prices, or permissions are asserted by this example.
+
+### 13.5 Planner implementation and validation handoff
+
+Start with transparent CPU calculations over dated environmental summaries and user/provider planning inputs. This planner does not require a new GPU model. Seasonal ML is optional later, only with independent labels/observations and demonstrated value.
+
+Data teammate: publish versioned site/month or site/window evidence with source dates, support/QA, reference period, and task-independent measurements. Science reviewer: approve task requirements and distinguish scientific-season fit from operating convenience. App/planner teammate: implement date/route/cost scenarios, ranking modes, privacy, explanations, and exports. ML teammate: expose stable versus date-dependent descriptors and retain the independent scientific score; do not learn economic desirability from geographic or wealth proxies.
+
+Validate joint-condition/hour calculations against direct source sequences; compare seasonal recommendations with independent local station/field/operator evidence where available. Hold out years for temporal evaluation as a separate test from geographic/target generalization; fit any seasonal model using training periods only. Check missing data, clouds versus snow, unsupported routes/costs, currency/date changes, hemispheres, polar day/night, leap years, cross-year windows, campaign duration, consecutive-day requirements, closures, zero usable time, and ranking sensitivity. Record local-versus-grid resolution limitations.
+
+Planner acceptance: every recommended window and practical rank has task/date-specific evidence and explicit uncertainty; unknown values cannot improve a rank; mandatory scientific conditions cannot be bought away; UI and exports reproduce the same scenario. Current forecasts/access reports may override a historical planning window when dated evidence supports it, with the change explained.
+
+## 14. Decision log and release checklist
 
 | Decision | Alternatives considered | Reason |
 |---|---|---|
@@ -406,6 +509,7 @@ Operational scenario comparison follows scientific eligibility: optional team or
 | Frozen/pretrained benchmark before new training | Spend all GPUs on pretraining | Establish whether added training is necessary and affordable. |
 | Conservative 300 GPU-hour planning cap | Assume 600 GPU-hours immediately | Quota accounting remains unconfirmed. |
 | No silent replacement of serving release | Experiment directly in `prepared/0.2.0` | Preserve reproducibility, rollback, and current application behavior. |
+| Explicit distance/economic ranking and suitable-season planner | Static all-year site rank or distance-only affordability proxy | User requested practical efficiency and when in the year an analog is suitable; eligibility and recommendations depend on the experiment, dates, and supported logistics. |
 
 Before promoting a new scientific/ML release:
 
@@ -420,5 +524,7 @@ Before promoting a new scientific/ML release:
 - [ ] Model card, environment, index mapping, source terms, and reproduction instructions are complete.
 - [ ] Existing regression checks and new meaningful data/API checks pass for the intended release.
 - [ ] Runtime/fallback and source-outage behavior are measured before changing the serving pointer.
+- [ ] Seasonal calendars/windows identify task, reference years, QA coverage, access status, and uncertainty; historical climatology is distinguished from current forecasts.
+- [ ] Distance/time/cost/usable-field-time ranks are reproducible for the requested dates, preserve essential scientific conditions, and do not reward unknown inputs.
 
 Success is a reproducible, independently evaluated improvement in finding useful, explainable candidates for declared investigations. A model that does not beat the physical baseline remains an experiment; source count, GPU consumption, and visually attractive results are not success criteria.
