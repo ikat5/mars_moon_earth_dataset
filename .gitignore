@@ -17,6 +17,8 @@
 !prepared/**
 !sources/
 !sources/**
+!ml/
+!ml/**
 
 # Regenerable downloads, environments and superseded/failed builds
 __pycache__/
@@ -53,3 +55,4 @@ frontend/*.tmp
 !submission/
 !submission/**
 submission/media/
+ml_work/
