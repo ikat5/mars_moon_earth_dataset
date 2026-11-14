@@ -1,0 +1,20 @@
+{
+ "version": "ml_0.3.0",
+ "status": "experimental_unvalidated_no_relevance_labels",
+ "model": "S1 SimCLR terrain encoder (ml/models.py), best of 3 seeds",
+ "model_sha256": "3ba59da315a43d83bd0feb924cb30a37fe6057bd23f4cc50e03ca1edac835e30",
+ "representation": "PCA-64 (fit on train-split cells) of 256-d S1 embeddings, int8 per-vector quantized; cosine similarity",
+ "recall_at_100_vs_full_s1": 0.9466999999999999,
+ "recall_queries": 200,
+ "counts": {
+  "earth": 1079622,
+  "moon": 230400,
+  "mars": 921600
+ },
+ "coverage": "eligible 0.2.0 cells with |lat| <= 80",
+ "file": "s1_index.npz",
+ "bytes": 151818826,
+ "sha256": "bcccb6a7a504ea999235a5bd63a8f29588a4c6698ff7da7db4f315480b10c2e9",
+ "download": "gh release download ml-0.3.0 -R ikat5/mars_moon_earth_dataset -p s1_index.npz -D prepared/ml_0.3.0  (or: python -m ml.serve fetch)",
+ "use": "Order Earth candidates that already pass the physical screen; never a confidence, probability or suitability score."
+}

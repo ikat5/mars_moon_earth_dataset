@@ -210,3 +210,27 @@ def test_ten_concurrent_searches_are_consistent():
         d = r.json()
         by_body.setdefault(d["target"]["body"], set()).add(tuple(c["feature_id"] for c in d["candidates"]))
     assert all(len(v) == 1 for v in by_body.values())
+
+
+def test_learned_ranking_falls_back_to_physical_without_index(monkeypatch):
+    monkeypatch.setattr(terratwin_service, "get_learned", lambda: None)
+    physical, learned = post(JEZERO).json(), post({**JEZERO, "ranking": "learned_experimental"}).json()
+    assert learned["ranking_method"] == "physical_terrain_fit" and learned["learned_status"] == "index_unavailable"
+    assert [c["feature_id"] for c in learned["candidates"]] == [c["feature_id"] for c in physical["candidates"]]
+    assert "ranking_method" not in physical  # default contract unchanged
+
+
+def test_learned_ranking_reorders_only_physically_screened_candidates(monkeypatch):
+    import numpy as np
+
+    class Fake:  # similarity = cell id: deterministic, no index file needed
+        meta = {"version": "test"}
+        def similarity(self, row, ids):
+            return np.asarray(ids, float)
+    monkeypatch.setattr(terratwin_service, "get_learned", lambda: Fake())
+    r = post({**JEZERO, "ranking": "learned_experimental"}).json()
+    assert r["status"] == "ok" and r["ranking_method"] == "learned_experimental_within_physical_screen"
+    sims = [c["learned_similarity"] for c in r["candidates"]]
+    assert sims == sorted(sims, reverse=True)
+    assert all(c["observed_fit"] >= r["configuration"]["minimum_fit"] for c in r["candidates"])
+    assert r["learned_caveat"]

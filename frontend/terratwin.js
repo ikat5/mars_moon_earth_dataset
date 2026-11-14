@@ -68,12 +68,13 @@ window.TT = (() => {
     const num = id => (val(id) === '' ? null : Number(val(id)));
     const profile = document.querySelector('input[name="profile"]:checked')?.value || 'dry_barren_terrain';
     return { profile, limit: Number($('sLimit').value), originLat: num('sOriginLat'), originLon: num('sOriginLon'),
-             radius: num('sRadius'), purpose: val('sPurpose'), includeOrigin: $('sIncludeOrigin').checked };
+             radius: num('sRadius'), purpose: val('sPurpose'), includeOrigin: $('sIncludeOrigin').checked,
+             ranking: $('sLearned')?.checked ? 'learned_experimental' : 'physical' };
   }
   function queryKey() {
     const t = state.target, s = settings();
     if (!t) return null;
-    return JSON.stringify([t.body, t.lat, t.lon, s.profile, s.limit, s.originLat, s.originLon, s.radius]);
+    return JSON.stringify([t.body, t.lat, t.lon, s.profile, s.limit, s.originLat, s.originLon, s.radius, s.ranking]);
   }
 
   // Anything that changes the question discards the previous answer: old data never describes a new selection.
@@ -145,6 +146,7 @@ window.TT = (() => {
     const payload = { body: t.body, lat: t.lat, lon: t.lonSupplied, profile: s.profile, limit: s.limit };
     if (s.originLat !== null) payload.origin = { lat: s.originLat, lon: s.originLon };
     if (s.radius !== null) payload.radius_km = s.radius;
+    if (s.ranking !== 'physical') payload.ranking = s.ranking;
     cancelReveal();
     state.searchAbort?.abort();
     const ctl = state.searchAbort = new AbortController();
@@ -424,12 +426,14 @@ window.TT = (() => {
         <label class="tt-note flex gap-2 mt-1"><input type="checkbox" id="sIncludeOrigin"> Include my origin and distances in exports</label>
         <p id="geoMsg" class="tt-note"></p>
       </details>
+      ${m.learned_ranking?.available ? `<label class="tt-card flex gap-2 items-start cursor-pointer"><input type="checkbox" id="sLearned" class="mt-0.5">
+        <span><span class="text-slate-100">Experimental: order by learned terrain shape</span><br><span class="tt-note">${esc(m.learned_ranking.caveat)}</span></span></label>` : ''}
       <div class="flex items-end gap-2">
         <label class="tt-note">Results<select id="sLimit" class="tt-input mt-1 block"><option>5</option><option selected>10</option><option>20</option></select></label>
         <button id="searchBtn" class="tt-btn-primary flex-1 py-2">Find Earth candidates</button>
       </div>
       <div id="searchMsg"></div>`;
-    $('searchForm').querySelectorAll('input[name="profile"], #sLimit').forEach(i => i.addEventListener('change',
+    $('searchForm').querySelectorAll('input[name="profile"], #sLimit, #sLearned').forEach(i => i.addEventListener('change',
       () => invalidate('The screening settings changed after the last search. Run the search again.')));
     ['sOriginLat', 'sOriginLon', 'sRadius'].forEach(id => $(id).addEventListener('input',
       () => invalidate('The distance constraint changed after the last search. Run the search again.')));
@@ -485,6 +489,11 @@ window.TT = (() => {
     } else if (r.status === 'profile_unavailable') {
       html += `<div class="tt-warn">This investigation profile is not available: missing ${esc((r.missing_evidence || []).join(', ').replace(/_/g, ' '))}. No results are invented.</div>`;
     }
+    if (r.request?.ranking === 'learned_experimental') {
+      html += r.ranking_method === 'learned_experimental_within_physical_screen'
+        ? `<div class="tt-warn"><strong>Experimental learned ordering.</strong> ${esc(r.learned_caveat || '')} Terrain resemblance below is still the physical score.</div>`
+        : `<div class="tt-warn">Learned ordering was not used (${esc((r.learned_status || 'unavailable').replace(/_/g, ' '))}); results use the physical terrain ranking.</div>`;
+    }
     if (r.candidates.length) {
       html += `<p class="tt-note">Score: <strong class="text-slate-200">${esc(r.score_label || 'Terrain resemblance')}</strong> — ${esc(state.meta.score.explanation)} Shown: top ${r.candidates.length}, at least ${esc(cfg.minimum_separation_km)} km apart.</p><ol class="space-y-1">`;
       r.candidates.forEach((c, i) => {
@@ -492,7 +501,7 @@ window.TT = (() => {
         html += `<li><div class="tt-result" role="button" tabindex="0" data-cand="${i}" aria-current="${state.selected === i}">
           <div class="flex justify-between gap-2"><span class="text-slate-100">#${i + 1} · ${fmt(c.lat, 3)}°, ${fmt(c.lon, 3)}°E</span><span class="text-green-300">${fmt(c.observed_fit, 1)}</span></div>
           <div class="tt-bar my-1"><span style="width:${Math.max(0, Math.min(100, c.observed_fit))}%"></span></div>
-          <div class="tt-note">${fmt(c.area_km2, 0)} km² cell${isNum(c.distance_from_origin_km) ? ` · ${fmt(c.distance_from_origin_km, 0)} km from origin` : ''} · closest: ${esc(label(s.feature))} · largest mismatch: ${esc(label(c.largest_numeric_mismatch))}</div>
+          <div class="tt-note">${fmt(c.area_km2, 0)} km² cell${isNum(c.distance_from_origin_km) ? ` · ${fmt(c.distance_from_origin_km, 0)} km from origin` : ''} · closest: ${esc(label(s.feature))} · largest mismatch: ${esc(label(c.largest_numeric_mismatch))}${isNum(c.learned_similarity) ? ` · learned shape similarity ${fmt(c.learned_similarity, 3)} (experimental)` : ''}</div>
           <div class="flex justify-between items-center mt-1"><span class="tt-note">Unreviewed screening candidate</span>
           <label class="tt-note flex gap-1 items-center" onclick="event.stopPropagation()"><input type="checkbox" data-compare="${i}" ${state.compare.includes(i) ? 'checked' : ''}> compare</label></div>
         </div></li>`;

@@ -56,3 +56,4 @@ frontend/*.tmp
 !submission/**
 submission/media/
 ml_work/
+prepared/ml_*/*.npz

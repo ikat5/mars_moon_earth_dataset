@@ -32,3 +32,15 @@ Large artifacts (patches, embeddings, checkpoints) stay on Kaggle and in the git
 - Cosine similarity is not a probability. Do not present any score here as confidence or suitability.
 
 Results: [analysis/ml_0.3.0/REPORT.md](../analysis/ml_0.3.0/REPORT.md).
+
+## Website: experimental learned ordering (WP8)
+
+The app offers an opt-in "Experimental: order by learned terrain shape" toggle (`POST /api/v1/search` with `"ranking": "learned_experimental"`). It reorders **only** candidates that already pass the profile's physical screen. `observed_fit` stays the physical score; each candidate also carries `learned_similarity`. Without the index, or for an unindexed target, the response falls back to physical ranking and says so (`learned_status`). The default requests and responses are unchanged.
+
+Install the index (152 MB, SHA-256 checked; it is a GitHub release asset, not stored in git):
+
+```bash
+python -m ml.serve fetch     # needs gh auth with repo access; rebuild locally with: python -m ml.serve build
+```
+
+`prepared/ml_0.3.0/s1_index.json` records the index's recall@100 against the full S1 model (0.947), its counts and its hashes.

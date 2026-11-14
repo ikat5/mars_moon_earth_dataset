@@ -215,6 +215,31 @@ def reset_release():  # tests
         _release, _release_error = None, None
 
 
+_learned = None
+_learned_error = None
+
+
+def get_learned():
+    """Optional experimental S1 index (prepared/ml_0.3.0, fetched with `python -m ml.serve fetch`).
+    Absent or broken -> None; searches then fall back to physical ranking, never fail."""
+    global _learned, _learned_error
+    with _release_lock:
+        if _learned is None and _learned_error is None:
+            try:
+                from ml.serve import LearnedIndex, NPZ
+                _learned = LearnedIndex(NPZ) if NPZ.exists() else None
+                _learned_error = None if _learned else "index not installed (python -m ml.serve fetch)"
+            except Exception as e:  # noqa: BLE001 - model failure must degrade to the physical method
+                _learned_error = f"index failed to load: {type(e).__name__}"
+                log.error("learned index unavailable: %s", e)
+    return _learned
+
+
+LEARNED_CAVEAT = ("Experimental: a self-supervised terrain-shape model reorders only candidates that already pass the "
+                  "physical screen. Learned similarity is not accuracy, confidence or suitability, and it has not been "
+                  "validated against reviewed analog judgments.")
+
+
 _search_slots = threading.BoundedSemaphore(MAX_CONCURRENT_SEARCHES)
 _dem_status = lambda: {"available": False, "detail": "lunar DEM telemetry not configured"}  # noqa: E731
 
@@ -257,6 +282,7 @@ class SearchRequest(BaseModel):
     origin: Optional[Origin] = None
     radius_km: Optional[float] = Field(default=None, ge=0, le=MAX_RADIUS_KM, **_strict_float)
     weights: Optional[dict[str, float]] = None
+    ranking: Literal["physical", "learned_experimental"] = "physical"
 
     @field_validator("lat", "lon", "radius_km", mode="before")
     @classmethod
@@ -325,6 +351,8 @@ def meta():
             "core_terrain": CORE, "features": release.features, "grids": release.grids,
             "examples": EXAMPLES, "named_targets": release.named_targets, "investigations": INVESTIGATIONS,
             "limits": {"max_limit": MAX_LIMIT, "max_radius_km": MAX_RADIUS_KM},
+            "learned_ranking": {"available": get_learned() is not None, "detail": _learned_error, "caveat": LEARNED_CAVEAT,
+                                "version": (get_learned().meta.get("version") if get_learned() else None)},
             "historical_epochs": {"landcover": "2017", "aridity": "1970–2000", "vegetation": "2001–2017"}}
 
 
@@ -369,10 +397,12 @@ def run_search(request: SearchRequest):
     if not _search_slots.acquire(timeout=SEARCH_QUEUE_TIMEOUT_S):
         raise HTTPException(503, {"error": "busy", "detail": "Search capacity exhausted; retry shortly."})
     started = time.perf_counter()
+    learned = get_learned() if request.ranking == "learned_experimental" else None
     try:
         origin = (request.origin.lat, request.origin.lon) if request.origin else None
         result = search(request.body, request.lat, request.lon, data_dir=release.data_dir, profile=request.profile,
-                        limit=request.limit, origin=origin, radius_km=request.radius_km, weight_overrides=request.weights)
+                        limit=request.limit, origin=origin, radius_km=request.radius_km, weight_overrides=request.weights,
+                        similarity=learned.similarity if learned else None)
     except ValueError as e:  # engine-level input rejection (e.g. no cell, invalid weights): still a client error
         return _validation_error(str(e))
     except Exception:  # never echo internals or the private origin
@@ -383,7 +413,12 @@ def run_search(request: SearchRequest):
     lat, lon = normalize_location(request.lat, request.lon)
     result["request"] = {"body": request.body, "lat": lat, "lon": lon, "lon_as_supplied": request.lon,
                          "profile": request.profile, "limit": request.limit, "radius_km": request.radius_km,
-                         "origin_supplied": origin is not None, "weights": request.weights}
+                         "origin_supplied": origin is not None, "weights": request.weights, "ranking": request.ranking}
+    if request.ranking == "learned_experimental":
+        if learned is None:
+            result.update({"ranking_method": "physical_terrain_fit", "learned_status": "index_unavailable"})
+        result["learned_caveat"] = LEARNED_CAVEAT
+        result["learned_index_version"] = learned.meta.get("version") if learned else None
     result["api_version"] = API_VERSION
     result["score_label"] = SCORE_LABEL
     result["served_at_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
