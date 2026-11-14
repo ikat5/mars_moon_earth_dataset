@@ -1,5 +1,7 @@
 # TerraTwin: preparation results and scientific interpretation
 
+> **Status update 2026-11-12:** Statements here that the frontend is absent or unconnected are outdated. The globe is now connected to analog retrieval through `/api/v1` (`frontend/terratwin_service.py`, `frontend/terratwin.js`). See [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) for what is implemented and verified. The text below is preserved as written.
+
 **Use `prepared/0.2.0` and `prepared/app_0.2.0` for the completed regional screening data package.** It combines the original three-body measurements, Earth land-cover/aridity screening, and the full 2001–2017 vegetation series as provisional, unscored context. All 410 planned NDVI/aridity source files completed checksum verification. The existing globe's frontend code is not present here and its integration has not been verified.
 
 The strongest product direction is **task-specific analog search with visible evidence and mismatches**, starting with regional terrain/navigation investigations. The [master blueprint](../TERRATWIN_MASTER_BLUEPRINT.md) specifies the broader design, innovations, architecture, validation and demonstration. The [data catalog](DATA_CATALOG.md) records sources and interpretation limits.

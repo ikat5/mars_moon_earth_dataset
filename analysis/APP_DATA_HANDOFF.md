@@ -1,5 +1,7 @@
 # TerraTwin data handoff for the existing globe
 
+> **Status update 2026-11-12:** This handoff said the UI source was not present; the frontend now exists in `frontend/`. The globe is now connected to analog retrieval through `/api/v1` (`frontend/terratwin_service.py`, `frontend/terratwin.js`). See [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) for what is implemented and verified. The text below is preserved as written.
+
 The prepared package supports **regional terrain resemblance** and an optional **historical dry/barren Earth screen**. The current serving release is `prepared/0.2.0`, including the complete 2001–2017 vegetation series as provisional, unscored context. This document concerns data integration, not an implemented web server or a replacement globe.
 
 ## What to load

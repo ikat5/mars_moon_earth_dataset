@@ -2,6 +2,8 @@
 import json
 import math
 import unittest
+
+from processing.test_support import has_release_data
 import numpy as np
 from processing.config import DEFAULT_OUTPUT
 from processing.search import normalize_location, cell_id_for_location, distances_km, normalized_fit, search
@@ -29,7 +31,7 @@ class MathematicalChecks(unittest.TestCase):
         with self.assertRaises(ValueError):normalized_fit([[1,2]],[0,0],[1,1],[0,10])
 
 
-@unittest.skipUnless(DEFAULT_OUTPUT.exists(),"Prepared integration fixture not built")
+@unittest.skipUnless(has_release_data(DEFAULT_OUTPUT),"Prepared integration fixture not built (git lfs pull)")
 class DatasetChecks(unittest.TestCase):
     def test_shackleton_no_fabricated_match(self):
         result=search('moon',-89.67,129.78)

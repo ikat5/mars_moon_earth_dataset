@@ -89,7 +89,10 @@ def resolve_target(db, data_dir, body, lat, lon):
 
 
 def search(body, lat, lon, data_dir=DEFAULT_OUTPUT, profile="terrain_screening", limit=10,
-           origin=None, radius_km=None, separation_km=None, weight_overrides=None):
+           origin=None, radius_km=None, separation_km=None, weight_overrides=None, similarity=None):
+    """similarity: optional experimental reorder, callable(target_row, earth_cell_ids) -> array (NaN = not indexed)
+    or None when the target is not indexed. It only orders candidates that already pass every physical screen;
+    observed_fit keeps its physical meaning."""
     started = time.perf_counter()
     data_dir = Path(data_dir)
     if not isinstance(limit, int) or not 1 <= limit <= 100:
@@ -153,8 +156,17 @@ def search(body, lat, lon, data_dir=DEFAULT_OUTPUT, profile="terrain_screening",
     scores, diffs = normalized_fit(matrix, target_values, weights, tolerances)
     supported = scores >= config["minimum_fit"]
     response["above_minimum_fit"] = int(supported.sum())
+    key = -scores
+    learned = similarity(row, arr["cell_id"]) if similarity is not None else None
+    if similarity is not None:
+        response["ranking_method"] = "physical_terrain_fit" if learned is None else "learned_experimental_within_physical_screen"
+        response["learned_status"] = "target_not_indexed" if learned is None else "used"
+    if learned is not None:
+        learned = np.asarray(learned, dtype=float)
+        key = np.where(np.isfinite(learned), -learned, np.inf)
+        supported = supported & np.isfinite(learned)
     # Deterministic tie break by cell ID. Geographic thinning retains real cell footprints.
-    order = np.lexsort((arr["cell_id"], -scores))
+    order = np.lexsort((arr["cell_id"], key))
     chosen = []
     for index in order:
         if not supported[index]:
@@ -184,6 +196,8 @@ def search(body, lat, lon, data_dir=DEFAULT_OUTPUT, profile="terrain_screening",
             "earth_environment_context":{name:candidate_row[name] for name in context_columns},
             "environment_evidence":config.get('environment_evidence',{}),
             "local_site_verified": False, "rank_stability": None})
+        if learned is not None:
+            response["candidates"][-1]["learned_similarity"] = float(learned[i])
     response["status"] = "ok" if chosen else "no_candidates_under_filters"
     response["elapsed_seconds"] = time.perf_counter()-started
     return response

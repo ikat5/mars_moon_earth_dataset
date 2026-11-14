@@ -17,6 +17,8 @@
 !prepared/**
 !sources/
 !sources/**
+!ml/
+!ml/**
 
 # Regenerable downloads, environments and superseded/failed builds
 __pycache__/
@@ -38,3 +40,20 @@ prepared/environment_0.1.0/aridity/
 frontend/*.tif
 frontend/tile_cache
 frontend/lunar_*.png
+frontend/.venv/
+frontend/**/__pycache__/
+frontend/.pytest_cache/
+frontend/*.tmp
+
+# CI, development requirements and deployment configuration
+!.github/
+!.github/**
+!requirements-dev.txt
+!.env.example
+!Dockerfile
+!.dockerignore
+!submission/
+!submission/**
+submission/media/
+ml_work/
+prepared/ml_*/*.npz

@@ -4,13 +4,15 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+
+from processing.test_support import has_release_data
 import duckdb
 from processing.config import DEFAULT_OUTPUT
 from processing.search import search
 from processing.prepare import sql_path
 
 
-@unittest.skipUnless(DEFAULT_OUTPUT.exists(),'Prepared source fixture required')
+@unittest.skipUnless(has_release_data(DEFAULT_OUTPUT),'Prepared source fixture required (git lfs pull)')
 class EarthOnlyScreeningTests(unittest.TestCase):
     def test_rejects_best_terrain_when_environment_fails_and_preserves_null_context(self):
         baseline=search('mars',18.41,77.69,limit=2)

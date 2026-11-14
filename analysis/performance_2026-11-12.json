@@ -1,0 +1,114 @@
+{
+ "measured_utc": "2026-11-11T20:02:52+00:00",
+ "machine": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-1235U",
+  "logical_cpus": 12,
+  "memory_mib": 15144,
+  "os": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4"
+ },
+ "server": {
+  "url": "http://localhost:8000",
+  "health": {
+   "status": "ready",
+   "api_version": "1",
+   "release": {
+    "dataset_version": "0.2.0",
+    "data_directory": "0.2.0"
+   },
+   "lunar_dem": {
+    "available": true,
+    "source": "ldem_64.tif",
+    "m_per_px": 473.8,
+    "detail": null
+   },
+   "search_slots": 4
+  },
+  "rss_mib_before": {
+   "VmHWM": 197.5,
+   "VmRSS": 197.5
+  },
+  "rss_mib_after": {
+   "VmHWM": 1176.8,
+   "VmRSS": 445.9
+  }
+ },
+ "workload": {
+  "queries": 40,
+  "concurrency": 10,
+  "seed": 20261112,
+  "targets": "seeded random Moon/Mars coordinates in \u00b160\u00b0 latitude; profiles alternate",
+  "cache_state": "cold = first request per query on this server process; OS page cache not dropped"
+ },
+ "cold_sequential": {
+  "n": 40,
+  "median_s": 0.169,
+  "p95_s": 0.36,
+  "max_s": 0.382,
+  "mean_server_s": 0.197,
+  "max_response_bytes": 29582,
+  "median_response_bytes": 29059,
+  "status_counts": {
+   "ok": 40
+  },
+  "http_errors": 0,
+  "p95_under_2s": true
+ },
+ "warm_sequential": {
+  "n": 40,
+  "median_s": 0.168,
+  "p95_s": 0.359,
+  "max_s": 0.37,
+  "mean_server_s": 0.198,
+  "max_response_bytes": 29582,
+  "median_response_bytes": 29060,
+  "status_counts": {
+   "ok": 40
+  },
+  "http_errors": 0,
+  "p95_under_2s": true
+ },
+ "concurrent": {
+  "n": 80,
+  "median_s": 1.393,
+  "p95_s": 1.81,
+  "max_s": 2.207,
+  "mean_server_s": 0.561,
+  "max_response_bytes": 29582,
+  "median_response_bytes": 29058,
+  "status_counts": {
+   "ok": 80
+  },
+  "http_errors": 0,
+  "p95_under_2s": true,
+  "wall_s": 11.52,
+  "throughput_qps": 6.94,
+  "note": "10 client workers; server admits at most 4 searches at once (TERRATWIN_MAX_CONCURRENT_SEARCHES)"
+ },
+ "browser": {
+  "runs": [
+   {
+    "dom_content_loaded_s": 0.86,
+    "panels_ready_s": 1.33,
+    "search_fetch_roundtrip_ms": 856,
+    "click_to_results_wall_s": 12.9,
+    "click_to_reveal_done_wall_s": 17.23
+   },
+   {
+    "dom_content_loaded_s": 1.4,
+    "panels_ready_s": 1.52,
+    "search_fetch_roundtrip_ms": 3928,
+    "click_to_results_wall_s": 4.15,
+    "click_to_reveal_done_wall_s": 10.48
+   },
+   {
+    "dom_content_loaded_s": 1.97,
+    "panels_ready_s": 2.09,
+    "search_fetch_roundtrip_ms": 204,
+    "click_to_results_wall_s": 0.39,
+    "click_to_reveal_done_wall_s": 10.04
+   }
+  ],
+  "note": "Headless Chrome with software WebGL. Panels-ready = release metadata loaded. search_fetch_roundtrip_ms is measured inside the page around fetch(). Wall times poll via the page and are inflated by software rendering in headless Chrome. Reveal includes ~4.5 s of intentional animation. Imagery tile latency is a separate external dependency."
+ }
+}

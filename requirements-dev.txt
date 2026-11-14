@@ -1,0 +1,5 @@
+# Test tooling (in addition to processing/ and frontend/ requirements)
+pytest==9.2.0
+httpx==0.28.1
+# Optional: browser workflow and performance checks (uses system Chrome via channel="chrome")
+playwright==1.65.0
