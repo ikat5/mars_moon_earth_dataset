@@ -42,4 +42,4 @@ Matching nominal DEM grid spacing is insufficient to match effective resolution.
 
 It does not measure wheel-scale boulders, soil cohesion, bearing capacity, exposed chemistry, subsurface ice accessibility, actual biological absence, current weather, site access or an approved base location. Earth locations also cannot reproduce reduced gravity, lunar vacuum or the complete Martian atmosphere/radiation environment. Candidate briefs specify the narrower investigation each location could support.
 
-Use [PREPARATION_RESULTS.md](PREPARATION_RESULTS.md) for the current release and measured results, [APP_DATA_HANDOFF.md](APP_DATA_HANDOFF.md) for integration, and the [master blueprint](../TERRATWIN_MASTER_BLUEPRINT.md) for future product work.
+See the [README](README.md) for the folder layout and every source link, and [ATTRIBUTION.md](ATTRIBUTION.md) for citations and terms.

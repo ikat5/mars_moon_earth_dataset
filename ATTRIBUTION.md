@@ -1,6 +1,6 @@
 # Data, imagery and software attribution
 
-Compiled from the integrated datasets' `*_metadata.json`, `prepared/0.2.0/feature_registry.json`, [DATA_CATALOG.md](../analysis/DATA_CATALOG.md) and the frontend source. Per-source terms recorded in metadata take precedence. **The repository has no single license, and none is asserted here.**
+Compiled from the integrated datasets' `*_metadata.json`, `prepared/0.2.0/feature_registry.json`, [DATA_CATALOG.md](DATA_CATALOG.md) and the frontend source. Per-source terms recorded in metadata take precedence. **The repository has no single license, and none is asserted here.**
 
 ## Data that feeds the terrain resemblance score
 
